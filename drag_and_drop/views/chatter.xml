@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="mail.chatter.Attachment.Button">
+        <button t-attf-class="btn btn-sm btn-link o_chatter_button_attachment" title="View all the attachments of the current record">
+            <span>
+                <i class="fa fa-paperclip"/>
+                <span class="o_chatter_attachment_button_count">
+                    <t t-esc="' ('+count+')'"/>
+                </span>
+            </span>
+        </button>
+    </t>
+
+    <div t-name="mail.chatter.AttachmentBox" class="o_mail_chatter_attachments">
+        <div class="o_chatter_attachment">
+            <div class="o_border_dashed">
+                <span class="o_attach_title">Attachments</span>
+            </div>
+            <div t-if="widget.imageList.length > 0" class="o_attachments_previews">
+                <t t-foreach="widget.imageList" t-as="attachment">
+                    <t t-call="mail.AttachmentPreview"/>
+                </t>
+            </div>
+            <div t-if="widget.otherList.length > 0" class="o_attachments_list">
+                <t t-foreach="widget.otherList" t-as="attachment">
+                    <t t-call="mail.Attachment"/>
+                </t>
+            </div>
+        </div>
+        <div class="o_chatter_dnd_attachment o_chatter_dnd_attachment_hidden">
+            <p>Drag &amp; Drop</p>
+        </div>
+    </div>
+
+    <t t-name="drag_and_drop.dnd_area_chatter">
+        <div class="o_chatter_dnd_attachment o_chatter_dnd_attachment_hidden" id="dnd_area_chatter">
+            <p>Drag &amp; Drop</p>
+        </div>
+    </t>
+
+    <t t-name="drag_and_drop.uploadFile">
+        <span class="d-none">
+            <t t-call="HiddenInputFile">
+                <t t-set="fileupload_id" t-value="0" />
+                <t t-set="fileupload_action" t-translation="off">/web/binary/upload_attachment</t>
+                <input type="hidden" name="model" t-att-value="widget.modelName" />
+                <input type="hidden" name="id" t-att-value="widget.id" />
+                <input type="hidden" name="session_id" t-att-value="widget.getSession().session_id" />
+            </t>
+        </span>
+    </t>
+    <t t-name="drag_and_drop.uploadScreenshot">
+        <span class="d-none">
+            <t t-call="HiddenInputFile">
+                <t t-set="fileupload_id" t-value="0" />
+                <t t-set="fileupload_action" t-translation="off">/web/binary/upload_attachment</t>
+                <input type="hidden" name="model" t-att-value="widget.modelName" />
+                <input type="hidden" name="id" t-att-value="widget.id" />
+                <input type="hidden" name="session_id" t-att-value="widget.getSession().session_id" />
+            </t>
+        </span>
+    </t>
+
+</templates>

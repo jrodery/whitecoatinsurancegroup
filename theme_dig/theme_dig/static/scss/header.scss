@@ -1,0 +1,71 @@
+#my_header{
+    #top-header{
+        padding: 10px 0px;
+        background-color: #175677;
+        color: #FFF;
+        font-size: 18px;
+        font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+        font-weight: 500;
+        
+        img{
+            float:right;
+            padding-right:20px;
+        }
+    }
+    .navbar{
+        padding: 0 16px;
+        background-color: #f2f2f2;
+        border-bottom: 3px solid #92aebc;
+        
+        .container{
+            height: 93px;
+            .img{
+                height: auto;
+            }
+            #top_menu_collapse, #top_menu_collapse_clone{
+                height: 100%;
+                
+                #top_menu{
+                    height: 100%;
+                    display: block;
+                }                   
+                li{
+                    font-size: 16px;
+                    font-weight: 700;
+                    display: table-cell;
+                    font-family: 'Lato', Arial;
+                    vertical-align: middle;
+                    height: 93px;
+                    padding: 0px 23px 0px 20px;
+                    line-height: 1.2em;
+                    -webkit-transition: background-color 0.4s, color 0.4s;
+
+                    &:hover {
+                        background-color:#2092ce;
+                        a.nav-link{
+                            color:white;
+                        }
+                    }
+                    .nav-link {
+                        display: inline;
+                        color:#175677;
+          
+                        a{
+                            vertical-align: middle;
+                            height: 100%;
+                            -webkit-transition: color 0.4s;
+
+                            &:hover{
+                                color:white;
+                            }
+                        }
+                    }
+                    a.nav-link.active{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+    

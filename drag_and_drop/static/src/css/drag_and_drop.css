@@ -1,0 +1,32 @@
+.o_mail_chatter_attachments {
+    position: relative;
+}
+.o_mail_chatter_attachments.dragover  *{
+   pointer-events: none;
+}
+
+.o_chatter_dnd_attachment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed #bbb;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.o_chatter_dnd_attachment_hidden {
+    display: none;
+}
+
+.o_chatter_dnd_attachment p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#screenshot_modal_bg {
+    opacity: 0.5;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Customize header  -->
+    <template id="custom_portal_my_home" inherit_id="website.layout" name="Custom Content">
+        <!-- Assign an id  -->
+        <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+            <attribute name="id">my_header</attribute>
+        </xpath>
+    </template>    
+</odoo>

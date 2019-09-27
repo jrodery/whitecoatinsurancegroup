@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Customize header  -->
+    <template id="custom_header" inherit_id="website.layout" name="Custom Header">
+        <!-- Assign an id  -->
+        <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+            <attribute name="id">my_header</attribute>
+        </xpath>
+        
+        <!-- Add an element before the top menu  -->    
+        <xpath expr="//div[@id='wrapwrap']/header/nav" position="before">
+            <div id="top-header">
+                <div class="container">
+                    INSURANCE SOLUTIONS FOR DOCTORS
+                    <img src="/web/image/912/ssl-white.png"/>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//li[contains(@class, 'nav-item dropdown')]" position="before">                           
+            <li class="nav-item" t-ignore="true" t-if="not user_id._is_public()">
+                <a role="menuitem" href="/web/session/logout?redirect=/" class="nav-link">
+                    <span data-oe-model="website.menu" data-oe-id="12" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">LOGOUT</span>
+                </a>
+            </li>
+        </xpath>
+
+        <xpath expr="//li[contains(@class, 'nav-item dropdown')]" position="attributes">
+            <attribute name="style">display:none</attribute>
+        </xpath>
+
+        <xpath expr="//li[contains(@class, 'divider')]" position="attributes">
+            <attribute name="style">display:none</attribute>
+        </xpath>
+        
+        <xpath expr="//div[@id='wrapwrap']/header/nav" position="after">
+            <script>
+            var styles = {
+                backgroundColor : "#2092ce"
+            };
+            var active_parent_li = document.querySelector(".active").closest("li");
+            jQuery(active_parent_li).css(styles);
+            </script>
+        </xpath>        
+    </template>
+    
+    <!-- Override Footer -->
+    <template id="custom_footer" inherit_id="website.layout" name="Custom Footer">
+        <xpath expr="//div[@id='wrapwrap']/footer" position="attributes">
+            <attribute name="id">my_footer</attribute>
+        </xpath>
+        
+        <xpath expr="//div[@id='footer']" position="before">
+            <div class="img-footer">
+                <img src="/web/image/908/logo-secure.png"/>
+           </div>
+        </xpath>
+
+        <xpath expr="//div[contains(@class, 'o_footer_copyright')]" position="replace"/>
+        
+        <xpath expr="//div[@id='footer']" position="after">
+            <div class="o_footer_copyright">
+                <div class="container"
+                     >© DOCTOR INSURANCE GROUP - 2018. All Rights Reserved  |  <a href="#">Terms &amp; Condition</a>  |  <a href="#">Privacy Policy</a>  |  <a href="#">Sitemap</a> 
+                </div>
+            </div>                
+        </xpath>
+    </template>    
+</odoo>

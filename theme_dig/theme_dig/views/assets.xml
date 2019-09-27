@@ -1,0 +1,10 @@
+<odoo>
+    <template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_dig/static/scss/header.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_dig/static/scss/main.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_dig/static/scss/footer.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_dig/static/scss/my-portal.scss"/>
+        </xpath>
+    </template>
+</odoo>

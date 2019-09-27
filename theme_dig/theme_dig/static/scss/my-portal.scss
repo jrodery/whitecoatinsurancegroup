@@ -1,0 +1,110 @@
+#my-portal{
+    background: white;
+    margin: 20px 0px;
+    padding: 10px 30px 25px 30px;
+    
+    h1{
+        margin: 18px 0 22px;
+    }
+    
+    span{
+        margin: 8px 0;
+    }
+    img.logo-my-profile{
+        margin-right:12px;
+    }
+
+    input.form-control {
+        background-color: #eee;
+        border: none;
+        border-radius:0;
+    }
+
+    select.form-control {
+        background-color: #eee;
+        border: none;
+        border-radius:0;
+    }
+    
+    button.btn.btn-primary.float-left.mb32 {
+        background-color: #2092ce;
+    }    
+    
+    .info-personal{
+        text-align: center;
+        border: 1px solid #c6c6c6;
+        margin: 0 0 20px;
+        
+        h2 {
+            width: 100%;
+            background-color: #2092ce;
+            padding: 8px 10px;
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: 'Cabin', sans-serif;
+        }
+        
+        .in-process-case{
+               text-align: center;
+               display: inline-block;
+               padding: 5px 20px 20px;
+               font-size: 14px;
+               font-family: 'Cabin', sans-serif;
+            
+            h3 {
+                color: #000000;
+                font-weight: 600;
+                font-size: 16px;
+                font-family: 'Cabin', sans-serif;
+                text-transform: uppercase;
+            }
+            span{
+                color: #2092ce;
+            }
+            a {
+                border-radius: 0px;
+                width: 100%;
+                display: block;
+                margin-top:5px;
+                padding: 2px 10px;
+                background-color: #175677;
+                border: 0;
+                color: #fff !important;
+                font-family: 'Cabin', sans-serif;
+                font-size: 14px;
+                text-decoration: none !important;
+                -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    background-color: #76A9DA;
+                }
+            }    
+        }
+    }
+    .file-oid{
+        color: #2796d0;
+        margin-right: 15px;
+    }
+    
+    
+    .consultant-info{
+        margin-top: 30px;
+        
+        .col-8{
+            margin-top: 7px;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
