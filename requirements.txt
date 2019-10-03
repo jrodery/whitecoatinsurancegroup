@@ -1,4 +1,1 @@
 flask
-string
-random
-uuid
