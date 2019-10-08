@@ -16,6 +16,8 @@ class MailOpportunity(models.Model):
                 'subject': mail_template.subject,
                 'body_html': body,
                 'email_to': self.partner_id.email,
+                'res_id' : self.id,
+                'model' : 'crm.lead',
                 # 'email_from': "info@whitecoatinsurancegroup.com",
             }
             create_and_send_email = self.env['mail.mail'].create(mail_values).send()
