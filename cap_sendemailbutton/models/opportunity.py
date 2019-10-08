@@ -22,7 +22,7 @@ class MailOpportunity(models.Model):
 
             self.env['mail.message'].create({
               'author_id': self.user_id.id,
-              'body': "[" + datetime.datetime.today() + "] Quotations sent by email",
+              'body': "[" + str(datetime.datetime.now()) + "] Quotations sent by email",
               'description': "Quotes Comparison",
               'message_type' : 'system_notification',
               'subtype_id': 2,
