@@ -24,7 +24,7 @@ class MailOpportunity(models.Model):
               'author_id': self.user_id.id,
               'body': "[" + str(datetime.datetime.now()) + "] Quotations sent by email",
               'description': "Quotes Comparison",
-              'message_type' : 'system_notification',
+              'message_type' : 'notification',
               'subtype_id': 2,
               'res_id' : self.id,
               'model' : 'crm.lead',
