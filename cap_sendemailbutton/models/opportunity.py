@@ -1,6 +1,6 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
-from datetime import date, datetime, time
+import datetime
 
 class MailOpportunity(models.Model):
     _inherit = "crm.lead"
