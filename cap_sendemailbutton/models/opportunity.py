@@ -31,5 +31,5 @@ class MailOpportunity(models.Model):
               'subtype_id': 2,
               'res_id' : self.id,
               'model' : 'crm.lead',
-              'x_do_not_duplicate' : 1
+              'x_do_not_duplicate' : 0
             })
