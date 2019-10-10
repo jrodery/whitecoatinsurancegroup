@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_activity">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <!-- <div class="font"> -->
+                    <div class="page">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <t t-if="is_model">
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span>Model:</span>
+                                        </div>
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span t-esc="is_model[1]"/>
+                                        </div>
+                                    </t>
+                                    <t t-if="is_activity">
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span>Activity:</span>
+                                        </div>
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span t-esc="is_activity[1]"/>
+                                        </div>
+                                    </t>
+                                    <t t-if="is_state">
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span>State:</span>
+                                        </div>
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span t-esc="is_state"/>
+                                        </div>
+                                    </t>
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <t t-if="start_date">
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span>Start Date:</span>
+                                        </div>
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span t-esc="start_date"/>
+                                        </div>
+                                    </t>
+                                    <t t-if="end_date">
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span>End Date:</span>
+                                        </div>
+                                        <div class="col-md-6" style="display: inline;">
+                                            <span t-esc="end_date"/>
+                                        </div>
+                                    </t>
+                                </div> -->
+                            </div>
+                        </div>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Due Date</th>
+                                    <th>Document</th>
+                                    <t t-if="not is_activity">
+                                        <th>Activity</th>
+                                    </t>
+                                    <th>User</th>
+                                    <th>Summary</th>
+                                    <t t-if="not is_model">
+                                        <th>Model</th>
+                                    </t>
+                                    <t t-if="not is_state">
+                                        <th>Status</th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="get_data" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="line_index + 1"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line['date_deadline']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line['doc_name']"/>
+                                        </td>
+                                        <t t-if="not is_activity">
+                                            <td>
+                                                <span t-esc="line['activity']"/>
+                                            </td>
+                                        </t>
+                                        <td>
+                                            <span t-esc="line['user']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line['summary']"/>
+                                        </td>
+                                        <t t-if="not is_model">
+                                            <td>
+                                                <span t-esc="line['model']"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="not is_state">
+                                            <td>
+                                                <span t-esc="line['status']" style="text-transform: capitalize;"/>
+                                            </td>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                <!-- </div> -->
+            </t>
+        </t>
+    </template>
+</odoo>

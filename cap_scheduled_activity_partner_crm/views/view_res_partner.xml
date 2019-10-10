@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_partners_form_activity_inherited" model="ir.ui.view">
+        <field name="name">view.res.partner.form.activity.inherited1</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <button name="toggle_active" position="before">
+                <button class="oe_stat_button" type="object"
+                        name="crm_activity_log_details"
+                        icon="fa-clock-o"
+                        context="{'search_default_partner_id': active_id, 'search_default_res_model': 'crm.lead'}">
+                    <field string="Case Activities" name="crm_activity_count" widget="statinfo"/>
+                </button>
+            </button>
+        </field>
+    </record>
+</odoo>

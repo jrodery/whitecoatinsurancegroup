@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_activity_report_wiz_form" model="ir.ui.view">
+        <field name="name">view.activity.report.wiz.form</field>
+        <field name="model">activity.report.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Activity Report">
+                <group>
+                    <group>
+                        <field name="model_id"/>
+                        <field name="type_id"/>
+                        <field name="state"/>
+                    </group>
+                    <group>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_activity_report_wizard" model="ir.actions.act_window">
+        <field name="name">Activity Report</field>
+        <field name="res_model">activity.report.wiz</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="mail_activity_report_menu"
+              parent="base.menu_email"
+              action="action_activity_report_wizard"
+              sequence="50"/>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report id="action_report_activity"
+                model="mail.activity"
+                string="Activity Report"
+                report_type="qweb-pdf"
+                name="cap_scheduled_activity_partner_crm.report_activity"
+                file="cap_scheduled_activity_partner_crm.report_activity"
+                menu="False"/>
+    </data>
+</odoo>
