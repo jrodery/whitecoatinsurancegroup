@@ -43,7 +43,9 @@ class Lead(models.Model):
                     'state': 'today',
                     'res_model': self._name,
                     'res_id': self.id,
-                    'res_model_id': stage.res_doc_id,
+                    'res_model_id': self.env['ir.model'].search([
+                        ('model', '=', 'crm.lead')
+                    ], limit=1).id,
                 }
                 self.env['mail.activity'].create(vals)
         return res

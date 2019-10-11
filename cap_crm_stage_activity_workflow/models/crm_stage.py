@@ -17,5 +17,3 @@ class Stage(models.Model):
     activity_type = fields.Many2one('mail.activity.type', string="Activity")
     activity_title = fields.Char(string="Activity Title")
     scheduler_day_interval = fields.Char(string="Scheduler Day Interval")
-    res_doc_id = fields.Integer(default=lambda x: x.env['ir.model'].search(
-        [('model', '=', 'crm.lead')], limit=1).id)

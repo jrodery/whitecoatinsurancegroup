@@ -24,7 +24,6 @@
                        attrs="{
                        'invisible': [('mail_template_id', '=', False)],
                        'required': [('mail_template_id', '!=', False)]}"/>
-                <field name="res_doc_id" invisible="1"/>
             </field>
         </field>
     </record>
