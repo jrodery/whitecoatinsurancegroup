@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_stage_form_mail_template_workflow_inherit" model="ir.ui.view">
+        <field name="name">crm.stage.form.mail_template.workflow.inherit</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form"/>
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="define_stage_activity"/>
+                <field name="activity_title"
+                       attrs="{
+                       'invisible': [('define_stage_activity', '=', False)],
+                       'required': [('define_stage_activity', '=', True)]}"/>
+                <field name="activity_user_id"
+                       attrs="{
+                       'invisible': [('define_stage_activity', '=', False)],
+                       'required': [('define_stage_activity', '=', True)]}"/>
+                <field name="activity_type"
+                       attrs="{
+                       'invisible': [('define_stage_activity', '=', False)],
+                       'required': [('define_stage_activity', '=', True)]}"/>
+                <field name="mail_template_id"/>
+                <field name="scheduler_day_interval"
+                       attrs="{
+                       'invisible': [('mail_template_id', '=', False)],
+                       'required': [('mail_template_id', '!=', False)]}"/>
+                <field name="res_doc_id" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_stage_tree_mail_template_workflow_inherit" model="ir.ui.view">
+        <field name="name">crm.stage.tree.mail_template.workflow.inherit</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_tree"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="define_stage_activity"/>
+                <field name="mail_template_id"/>
+                <field name="activity_user_id" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
+                <field name="activity_type" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
+                <field name="activity_title" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
+                <field name="scheduler_day_interval" attrs="{'invisible': [('mail_template_id', '=', False)]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>
