@@ -13,7 +13,7 @@ class Lead(models.Model):
     iteration_scheduler = fields.Integer(string="Scheduler Iteration")
     stage_changed_sent_mail_date = fields.Date(string="Stage Changed Mail At")
     next_changed_sent_mail_date = fields.Date(string="Next Mail Send On")
-    dont_send_emails = fields.Boolean(string="Receive Email")
+    dont_send_emails = fields.Boolean(string="Do not send emails")
 
     @api.multi
     def write(self, vals):
