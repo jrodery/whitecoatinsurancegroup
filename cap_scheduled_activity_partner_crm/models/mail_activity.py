@@ -11,11 +11,13 @@ class MailActivity(models.Model):
     @api.model
     def create(self, values):
         res = super(MailActivity, self).create(values)
-        partner_id = self.env['crm.lead'].browse(res.res_id)
+        partner_id = False
+        if res.res_model == 'crm.lead':
+            partner_id = self.env['crm.lead'].browse(res.res_id).partner_id.id
         vals = {
             'activity_id': res.id,
             'user_id': res.user_id.id,
-            'partner_id': partner_id and partner_id.partner_id.id or False,
+            'partner_id': partner_id,
             'name': res.res_name,
             'activity_type_id': res.activity_type_id.id,
             'summary': res.summary,

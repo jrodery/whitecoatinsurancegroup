@@ -2,7 +2,7 @@
 # Part of CAPTIVEA. Odoo 12 EE
 
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class MailActivityLog(models.Model):
@@ -25,3 +25,14 @@ class MailActivityLog(models.Model):
     activity_id = fields.Many2one('mail.activity')
     user_id = fields.Many2one("res.users", string="User")
     partner_id = fields.Many2one("res.partner", string="Partner")
+
+    @api.multi
+    def action_redirect_to_record(self):
+        return {
+            'res_model': self.res_model,
+            'res_id': self.res_id,
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'target': 'current'
+        }
