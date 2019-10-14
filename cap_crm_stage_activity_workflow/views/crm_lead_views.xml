@@ -5,6 +5,9 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="receive_mail_for_stage"/>
+            </field>
             <notebook position="inside">
                 <page string="Stage Scheduler" invisible="1">
                     <group>

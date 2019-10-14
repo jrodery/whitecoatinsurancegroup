@@ -13,6 +13,7 @@ class Lead(models.Model):
     iteration_scheduler = fields.Integer(string="Scheduler Iteration")
     stage_changed_sent_mail_date = fields.Date(string="Stage Changed Mail At")
     next_changed_sent_mail_date = fields.Date(string="Next Mail Send On")
+    receive_mail_for_stage = fields.Boolean(string="Receive Email")
 
     @api.multi
     def write(self, vals):
@@ -57,6 +58,8 @@ class Lead(models.Model):
             ('next_changed_sent_mail_date', '=', today)
         ])
         for lead in leads:
+            if not lead.receive_mail_for_stage:
+                continue
             int_days = [int(x) for x in lead.stage_id.scheduler_day_interval.split(',')]
             iteration = lead.iteration_scheduler
             iteration = iteration + 1 if iteration < len(int_days) else iteration
