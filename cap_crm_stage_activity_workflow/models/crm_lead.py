@@ -40,8 +40,8 @@ class Lead(models.Model):
                     'user_id': stage.activity_user_id.id,
                     'summary': stage.activity_title,
                     'activity_type_id': stage.activity_type.id,
-                    'date_deadline': today,
-                    'state': 'today',
+                    'date_deadline': today + timedelta(stage.due_date),
+                    'state': 'today' if stage.due_date == 0 else 'planned',
                     'res_model': self._name,
                     'res_id': self.id,
                     'res_model_id': self.env['ir.model'].search([

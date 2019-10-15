@@ -14,6 +14,8 @@ class MailActivity(models.Model):
         partner_id = False
         if res.res_model == 'crm.lead':
             partner_id = self.env['crm.lead'].browse(res.res_id).partner_id.id
+        elif res.res_model == 'res.partner':
+            partner_id = res.res_id
         vals = {
             'activity_id': res.id,
             'user_id': res.user_id.id,
@@ -39,3 +41,23 @@ class MailActivity(models.Model):
             if log:
                 log.state = 'done'
         return super(MailActivity, self.sudo()).unlink()
+
+    @api.multi
+    def write(self, vals):
+        res = super(MailActivity, self).write(vals)
+        log = self.env['mail.activity.log'].search([
+            ('activity_id', '=', self.id)
+        ])
+        if not log:
+            return res
+        update_log = {}
+        if 'activity_type_id' in vals:
+            update_log.update({'activity_type_id': self.activity_type_id.id})
+        if 'date_deadline' in vals:
+            update_log.update({'date_deadline': self.date_deadline})
+        if 'summary' in vals:
+            update_log.update({'summary': self.summary})
+        if 'user_id' in vals:
+            update_log.update({'user_id': self.user_id.id})
+        log.write(update_log)
+        return res

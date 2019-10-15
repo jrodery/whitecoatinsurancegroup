@@ -8,7 +8,8 @@
     'category': 'Report',
     'version': '1.0',
     'depends': [
-        'mail'
+        'mail',
+        'crm'
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -17,6 +18,7 @@
         'wizards/activity_report_wiz_view.xml',
         'views/mail_activity_log.xml',
         'views/view_res_partner.xml',
+        'views/view_crm_lead.xml',
     ],
     'installable': True,
     'application': False,

@@ -8,8 +8,7 @@
             <button name="toggle_active" position="before">
                 <button class="oe_stat_button" type="object"
                         name="crm_activity_log_details"
-                        icon="fa-clock-o"
-                        context="{'search_default_partner_id': active_id, 'search_default_res_model': 'crm.lead'}">
+                        icon="fa-clock-o">
                     <field string="Case Activities" name="crm_activity_count" widget="statinfo"/>
                 </button>
             </button>

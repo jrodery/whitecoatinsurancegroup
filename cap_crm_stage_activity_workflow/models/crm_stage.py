@@ -17,3 +17,5 @@ class Stage(models.Model):
     activity_type = fields.Many2one('mail.activity.type', string="Activity")
     activity_title = fields.Char(string="Activity Title")
     scheduler_day_interval = fields.Char(string="Scheduler Day Interval")
+    due_date = fields.Integer(string="Due Date")
+

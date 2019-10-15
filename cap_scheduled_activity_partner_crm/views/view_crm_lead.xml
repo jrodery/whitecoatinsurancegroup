@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_crm_form_activity_inherited" model="ir.ui.view">
+        <field name="name">view.res.crm.form.activity.inherited1</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <button name="action_schedule_meeting" position="before">
+                <button class="oe_stat_button" type="object"
+                        name="crm_partner_activity_log_details"
+                        icon="fa-clock-o" attrs="{'invisible': [('partner_id', '=', False)]}">
+                    <field string="Case Activities" name="crm_partner_activity_count" widget="statinfo"/>
+                </button>
+            </button>
+        </field>
+    </record>
+</odoo>

@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
+from datetime import date, datetime
+
+import pytz
 
 from odoo import models, fields, api
 
