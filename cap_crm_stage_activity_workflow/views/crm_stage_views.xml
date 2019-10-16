@@ -3,6 +3,7 @@
     <record id="crm_stage_form_mail_template_workflow_inherit" model="ir.ui.view">
         <field name="name">crm.stage.form.mail_template.workflow.inherit</field>
         <field name="model">crm.stage</field>
+        <field name="priority" eval="200"/>
         <field name="inherit_id" ref="crm.crm_stage_form"/>
         <field name="arch" type="xml">
             <field name="fold" position="after">
