@@ -29,10 +29,17 @@ class Lead(models.Model):
             if stage.mail_template_id and stage.scheduler_day_interval:
                 interval_day = stage.scheduler_day_interval.split(',')
             if interval_day:
+                day = int(interval_day[0])
+                iteration_scheduler = 0
+                if day == 0 and len(interval_day) > 1:
+                    day = int(interval_day[1])
+                    iteration_scheduler = 1
                 vals.update({
+                    'iteration_scheduler': iteration_scheduler,
                     'next_changed_sent_mail_date': today + timedelta(
-                        days=int(interval_day[0])),
+                        days=day),
                 })
+                stage.mail_template_id.send_mail(self.id, force_send=True)
         res = super(Lead, self).write(vals)
         if stage:
             if stage.define_stage_activity:
