@@ -65,7 +65,7 @@ class Lead(models.Model):
             iteration = iteration + 1 if iteration < len(int_days) else iteration
             if iteration > lead.iteration_scheduler:
                 lead.stage_id.mail_template_id.send_mail(lead.id, force_send=True)
-                next_date = today + timedelta(days=int_days[iteration])
+                next_date = today if int_days[lead.iteration_scheduler] == 0 else today + timedelta(days=int_days[lead.iteration_scheduler])
                 lead.write({
                     'iteration_scheduler': iteration,
                     'stage_changed_sent_mail_date': today,

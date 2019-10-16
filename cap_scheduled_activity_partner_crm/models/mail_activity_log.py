@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
-from datetime import date, datetime
-
-import pytz
-
 from odoo import models, fields, api
 
 
@@ -31,9 +27,15 @@ class MailActivityLog(models.Model):
 
     @api.multi
     def action_redirect_to_record(self):
+        view_id = self.env.ref(
+            'crm.crm_case_form_view_oppor'
+        ) if self.res_model == 'crm.lead' else self.env.ref(
+            'base.view_partner_form')
         return {
             'res_model': self.res_model,
             'res_id': self.res_id,
+            'view_id': view_id.id,
+            'views': [(view_id.id, 'form')],
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'view_type': 'form',

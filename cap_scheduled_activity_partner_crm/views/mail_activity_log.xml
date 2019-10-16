@@ -49,7 +49,11 @@
                 <field name="res_id"/>
                 <field name="res_model_id"/>
                 <field name="state"/>
-                <button name="action_redirect_to_record" type="object" string="Open" class="oe_highlight"/>
+                <button name="action_redirect_to_record"
+                        string="Open"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('res_model', 'not in', ('crm.lead', 'res.partner'))]}"/>
             </tree>
         </field>
     </record>

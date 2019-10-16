@@ -15,7 +15,8 @@ class ResPartner(models.Model):
         for res in self:
             res.crm_activity_count = self.env['mail.activity.log'].search_count([
                 ('res_model', '=', 'crm.lead'),
-                ('partner_id', '=', res.id)
+                ('partner_id', '=', res.id),
+                ('activity_id', '!=', False)
             ])
 
     @api.multi
@@ -29,4 +30,5 @@ class ResPartner(models.Model):
             'cap_scheduled_activity_partner_crm.mail_activity_log_action'
         ).read()[0]
         action['context'] = ctx
+        action['domain'] = [('state', '!=', 'done')]
         return action
