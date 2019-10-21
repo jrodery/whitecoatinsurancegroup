@@ -34,12 +34,13 @@ class Lead(models.Model):
                 if day == 0 and len(interval_day) > 1:
                     day = int(interval_day[1])
                     iteration_scheduler = 1
+                next_date = today + timedelta(days=day)
                 vals.update({
                     'iteration_scheduler': iteration_scheduler,
-                    'next_changed_sent_mail_date': today + timedelta(
-                        days=day),
+                    'next_changed_sent_mail_date': next_date,
                 })
-                stage.mail_template_id.send_mail(self.id, force_send=True)
+                stage.mail_template_id.scheduled_date = next_date
+                stage.mail_template_id.send_mail(self.id, force_send=False)
         res = super(Lead, self).write(vals)
         if stage:
             if stage.define_stage_activity:
@@ -72,7 +73,8 @@ class Lead(models.Model):
             iteration = iteration + 1 if iteration < len(int_days) else iteration
             if iteration > lead.iteration_scheduler:
                 lead.stage_id.mail_template_id.send_mail(lead.id, force_send=True)
-                next_date = today if int_days[lead.iteration_scheduler] == 0 else today + timedelta(days=int_days[lead.iteration_scheduler])
+                next_date = today if int_days[lead.iteration_scheduler] == 0 else today + timedelta(
+                    days=int_days[lead.iteration_scheduler])
                 lead.write({
                     'iteration_scheduler': iteration,
                     'stage_changed_sent_mail_date': today,
