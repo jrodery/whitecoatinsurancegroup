@@ -19,7 +19,7 @@ class Lead(models.Model):
     def write(self, vals):
         today = date.today()
         stage = False
-        if 'stage_id' in vals and !self.dont_send_emails:            
+        if 'stage_id' in vals:
             vals.update({
                 'stage_changed_date': today,
                 'iteration_scheduler': 0
@@ -45,6 +45,8 @@ class Lead(models.Model):
                     'iteration_scheduler': iteration_scheduler,
                     'next_changed_sent_mail_date': next_date,
                 })
+                if self.dont_send_emails:
+                    continue
                 stage.mail_template_id.send_mail(self.id, force_send=immediate_mail)
         res = super(Lead, self).write(vals)
         if stage:
