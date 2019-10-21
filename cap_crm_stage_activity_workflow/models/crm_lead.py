@@ -45,9 +45,8 @@ class Lead(models.Model):
                     'iteration_scheduler': iteration_scheduler,
                     'next_changed_sent_mail_date': next_date,
                 })
-                if self.dont_send_emails:
-                    continue
-                stage.mail_template_id.send_mail(self.id, force_send=immediate_mail)
+                if not self.dont_send_emails:
+                    stage.mail_template_id.send_mail(self.id, force_send=immediate_mail)
         res = super(Lead, self).write(vals)
         if stage:
             if stage.define_stage_activity:
