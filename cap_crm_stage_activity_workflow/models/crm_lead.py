@@ -24,23 +24,28 @@ class Lead(models.Model):
                 'stage_changed_date': today,
                 'iteration_scheduler': 0
             })
+            immediate_mail = False
             stage = self.env['crm.stage'].browse(vals['stage_id'])
+            stage.mail_template_id.scheduled_date = ''
             interval_day = []
             if stage.mail_template_id and stage.scheduler_day_interval:
                 interval_day = stage.scheduler_day_interval.split(',')
             if interval_day:
                 day = int(interval_day[0])
                 iteration_scheduler = 0
+                next_date = today
+                if day == 0:
+                    immediate_mail = True
                 if day == 0 and len(interval_day) > 1:
                     day = int(interval_day[1])
                     iteration_scheduler = 1
-                next_date = today + timedelta(days=day)
+                    next_date = today + timedelta(days=day)
+                    stage.mail_template_id.scheduled_date = next_date
                 vals.update({
                     'iteration_scheduler': iteration_scheduler,
                     'next_changed_sent_mail_date': next_date,
                 })
-                stage.mail_template_id.scheduled_date = next_date
-                stage.mail_template_id.send_mail(self.id, force_send=False)
+                stage.mail_template_id.send_mail(self.id, force_send=immediate_mail)
         res = super(Lead, self).write(vals)
         if stage:
             if stage.define_stage_activity:
