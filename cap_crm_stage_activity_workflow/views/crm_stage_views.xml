@@ -36,12 +36,12 @@
         <field name="inherit_id" ref="crm.crm_stage_tree"/>
         <field name="arch" type="xml">
             <field name="team_id" position="after">
-                <field name="due_date"/>
                 <field name="define_stage_activity"/>
-                <field name="mail_template_id"/>
+                <field name="due_date"/>
                 <field name="activity_user_id" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
                 <field name="activity_type" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
                 <field name="activity_title" attrs="{'invisible': [('define_stage_activity', '=', False)]}"/>
+                <field name="mail_template_id"/>
                 <field name="scheduler_day_interval" attrs="{'invisible': [('mail_template_id', '=', False)]}"/>
             </field>
         </field>

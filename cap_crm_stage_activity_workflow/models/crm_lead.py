@@ -22,11 +22,11 @@ class Lead(models.Model):
         if 'stage_id' in vals:
             vals.update({
                 'stage_changed_date': today,
-                'iteration_scheduler': 0
+                'iteration_scheduler': 0,
+                'next_changed_sent_mail_date': False,
             })
             immediate_mail = False
             stage = self.env['crm.stage'].browse(vals['stage_id'])
-            stage.mail_template_id.scheduled_date = ''
             interval_day = []
             if stage.mail_template_id and stage.scheduler_day_interval:
                 interval_day = stage.scheduler_day_interval.split(',')
@@ -40,13 +40,18 @@ class Lead(models.Model):
                     day = int(interval_day[1])
                     iteration_scheduler = 1
                     next_date = today + timedelta(days=day)
-                    stage.mail_template_id.scheduled_date = next_date
                 vals.update({
                     'iteration_scheduler': iteration_scheduler,
                     'next_changed_sent_mail_date': next_date,
                 })
                 if not self.dont_send_emails:
-                    stage.mail_template_id.send_mail(self.id, force_send=immediate_mail)
+                    if immediate_mail:
+                        stage.mail_template_id.send_mail(
+                            self.id, force_send=True)
+                    stage.mail_template_id.scheduled_date = next_date
+                    stage.mail_template_id.send_mail(
+                        self.id, force_send=False)
+                    stage.mail_template_id.scheduled_date = False
         res = super(Lead, self).write(vals)
         if stage:
             if stage.define_stage_activity:
@@ -72,7 +77,7 @@ class Lead(models.Model):
             ('next_changed_sent_mail_date', '=', today)
         ])
         for lead in leads:
-            if lead.dont_send_emails:
+            if lead.dont_send_emails or not lead.stage_id.mail_template_id:
                 continue
             int_days = [int(x) for x in lead.stage_id.scheduler_day_interval.split(',')]
             iteration = lead.iteration_scheduler
