@@ -14,6 +14,7 @@
         'data/scheduler.xml',
         'views/crm_lead_views.xml',
         'views/crm_stage_views.xml',
+        'views/res_partner.xml',
     ],
     'installable': True,
     'application': False,
