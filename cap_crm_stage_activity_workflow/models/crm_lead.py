@@ -34,6 +34,9 @@ class Lead(models.Model):
             ])
             if mail_mail:
                 for m in mail_mail:
+                    related_message = self.env['mail.mail'].search([('message_id','=',m['message_id'])], limit=1)
+                    if related_message:
+                      related_message.unlink()
                     m.unlink()
             stage = self.env['crm.stage'].browse(vals['stage_id'])
             interval_day = []
