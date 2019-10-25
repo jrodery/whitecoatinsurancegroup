@@ -13,7 +13,7 @@
                         name="crm_lead_opportunities"
                         icon="fa-star"
                         groups="sales_team.group_sale_salesman">
-                    <field string="Opportunitiessssssssssssss" name="opportunity_count" widget="statinfo"/>
+                    <field string="Opportunities" name="opportunity_count" widget="statinfo"/>
                 </button>
             </xpath>
         </field>

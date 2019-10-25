@@ -43,6 +43,15 @@ class Lead(models.Model):
                     'iteration_scheduler': iteration_scheduler,
                 })
                 if not self.dont_send_emails:
+                    mail_mail = self.env['mail.mail'].search([
+                        ('model', '=', 'crm.lead'),
+                        ('res_id', '=', self.id),
+                        ('message_type', '=', 'email'),
+                        ('state', '=', 'outgoing')
+                    ])
+                    if mail_mail:
+                        for m in mail_mail:
+                            m.unlink()
                     if immediate_mail:
                         stage.mail_template_id.send_mail(
                             self.id, force_send=True)
