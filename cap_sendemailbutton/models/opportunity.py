@@ -24,7 +24,7 @@ class MailOpportunity(models.Model):
             create_and_send_email = self.env['mail.mail'].create(mail_values).send()
 
             self.env['mail.message'].create({
-              'author_id': self.user_id.partner_id.id,
+              'author_id': self.env.user.partner_id.id,
               'body': "[" + str(datetime.datetime.now()) + "] Quotations sent by email",
               'description': "Quotes Comparison",
               'message_type' : 'comment',
