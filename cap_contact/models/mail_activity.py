@@ -9,7 +9,7 @@ from dateutil.relativedelta import relativedelta
 
 class MailActivity(models.Model):
     _inherit = "mail.activity"
-    
+
     @api.multi
     def action_view_partner(self):
         if self.res_model == 'res.partner':
@@ -31,6 +31,21 @@ class MailActivity(models.Model):
                     'view_type': 'form',
                     'view_mode': 'form',
                     'view_id': self.env.ref('base.view_partner_form').id,
+                    'target':'current',
+                }
+        return True
+
+    @api.multi
+    def action_view_case(self):
+        if self.res_model == 'crm.lead':
+            lead_id = self.env['crm.lead'].browse(self.res_id)
+            return {
+                    'res_model':'crm.lead',
+                    'res_id': lead_id.id,
+                    'type': 'ir.actions.act_window',
+                    'view_type': 'form',
+                    'view_mode': 'form',
+                    'view_id': self.env.ref('crm.crm_case_form_view_oppor').id,
                     'target':'current',
                 }
         return True
