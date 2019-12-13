@@ -54,11 +54,14 @@ class MailActivity(models.Model):
     def action_show_partner_cases(self):
         if self.res_model == 'res.partner':
             action = self.env.ref('crm.crm_lead_opportunities').read()[0]
+
             partner = self.env['res.partner'].browse(self.res_id)
-            action['domain'] = [('id', 'in', partner.lead_ids.ids), ('type', '=', 'opportunity')]
+            action['domain'] = [('id', 'in', partner.opportunity_ids.ids), ('type', '=', 'opportunity')]
             return action
+
         if self.res_model == 'crm.lead':
-            lead_id = self.env['crm.lead'].browse(self.res_id)
             action = self.env.ref('crm.crm_lead_opportunities').read()[0]
-            action['domain'] = [('id', 'in', lead_id.partner_id.lead_ids.ids), ('type', '=', 'opportunity')]
+
+            lead_id = self.env['crm.lead'].browse(self.res_id)
+            action['domain'] = [('id', 'in', lead_id.partner_id.opportunity_ids.ids), ('type', '=', 'opportunity')]
             return action
