@@ -6,12 +6,14 @@
     'summary': 'Define activity For CRM',
     'description': 'Activity will be created when stage has changed, mail will be sent as per stage configuration.',
     'category': 'CRM',
-    'version': '1.1',
+    'version': '1.2',
     'depends': [
         'crm'
     ],
     'data': [
+        # 'security/ir.model.access.csv',
         'data/scheduler.xml',
+        'views/assets.xml',
         'views/crm_lead_views.xml',
         'views/crm_stage_views.xml',
         'views/res_partner.xml',
