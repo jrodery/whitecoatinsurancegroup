@@ -11,12 +11,13 @@
         'crm'
     ],
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'data/scheduler.xml',
         'views/assets.xml',
         'views/crm_lead_views.xml',
         'views/crm_stage_views.xml',
         'views/res_partner.xml',
+        'wizards/crm_stage_line_update.xml',
     ],
     'installable': True,
     'application': False,
