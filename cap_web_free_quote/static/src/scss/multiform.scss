@@ -13,7 +13,6 @@
     /*background: white;*/
     border: 0 none;
     border-radius: 0px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     box-sizing: border-box;
     width: 80%;
@@ -36,16 +35,17 @@
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: montserrat;
-    color: $o-enterprise-color;
+    // font-family: montserrat;
+    color: #1b557a;
     font-size: 13px;
+    border-radius: 0.25em;
 }
 
 #msform input:focus, #msform textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid $o-enterprise-color;
+    border: 1px solid #1b557a;
     outline-width: 0;
     transition: All 0.5s ease-in;
     -webkit-transition: All 0.5s ease-in;
@@ -56,7 +56,7 @@
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: $o-enterprise-color;
+    background: #1b557a;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -67,12 +67,12 @@
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px $o-enterprise-color;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1b557a;
 }
 
 #msform .action-button-previous {
     width: 100px;
-    background: #C5C5F1;
+    background: #2294cf;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -88,10 +88,10 @@
 
 /*headings*/
 .fs-title {
-    font-size: 18px;
+    font-size: 28px;
     text-transform: uppercase;
-    color: $o-enterprise-color;
-    margin-bottom: 10px;
+    color: #1b557a;
+    margin-bottom: 28px;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -116,7 +116,7 @@
     color: white;
     text-transform: uppercase;
     font-size: 9px;
-    width: 5%;
+    width: 25%;
     float: left;
     position: relative;
     letter-spacing: 1px;
@@ -156,6 +156,6 @@
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: $o-enterprise-color;
+    background: #1b557a;
     color: white;
 }
