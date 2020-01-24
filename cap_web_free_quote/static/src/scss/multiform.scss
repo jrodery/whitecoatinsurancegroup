@@ -17,7 +17,6 @@
     box-sizing: border-box;
     width: 80%;
     margin: 0 10%;
-
     /*stacking fieldsets above each other*/
     position: relative;
 }
@@ -35,7 +34,6 @@
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    // font-family: montserrat;
     color: #1b557a;
     font-size: 13px;
     border-radius: 0.25em;
@@ -158,4 +156,9 @@
 #progressbar li.active:before, #progressbar li.active:after {
     background: #1b557a;
     color: white;
+}
+
+.fill-required {
+    border-color: #FF0000 !important;
+    color: #FF0000 !important;
 }
