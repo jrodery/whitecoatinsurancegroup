@@ -15,7 +15,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require) {
             var email = $(this).val();
             var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if(!regex.test(email)) {
-                $(this).focus();
+                // $(this).focus();
                 if(!$(this).hasClass('fill-required')){
                     $(this).addClass('fill-required');
                 }
