@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="multiform_assets_frontend" name="Multiform frontend assets"
+              inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/cap_web_free_quote/static/src/js/multiform.js"/>
+            <script type="text/javascript"
+                    src="/cap_web_free_quote/static/src/js/date-field.js"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/cap_web_free_quote/static/src/scss/multiform.scss"/>
+        </xpath>
+    </template>
+</odoo>
