@@ -8,11 +8,10 @@
     'category': 'CRM',
     'version': '1.0',
     'depends': [
-        'website'
+        'website_form'
     ],
     'data': [
         'views/assets.xml',
-        # 'views/web_free_quote_form.xml'
     ],
     'installable': True,
     'application': False,
