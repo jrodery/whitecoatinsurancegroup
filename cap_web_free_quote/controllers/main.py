@@ -29,8 +29,9 @@ class WebsiteForm(WebsiteForm):
                 values = OrderedDict([(
                     '<span style="line-height: 1 !important;">%s</span>' % x,
                     '<span style="color: #1aa3ff; line-height: 1 !important; display: block;">%s</span>' % values[x]
-                ) for x in values.keys() if x != 'email_to'] + [
-                                         ('email_to', values['email_to'])])
+                ) for x in values.keys() if x not in ['email_to', 'subject']] + [
+                                         ('email_to', values['email_to']),
+                                         ('subject', values['subject'])])
             data = self.extract_data(model_record, values)
         # If we encounter an issue while extracting data
         except ValidationError as e:
