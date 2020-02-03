@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="life_insurance_estimate_form" model="ir.ui.view">
+            <field name="name">Life Insurance</field>
+            <field name="type">qweb</field>
+            <field name="key">website.life_insurance_estimate_form</field>
+            <field name="arch" type="xml">
+                <t name="Life Insurance Estimate Form" t-name="website.life_insurance_estimate_form">
+                    <t t-call="website.layout">
+                        <div class="container">
+                            <div class="col-md-12">
+                                <form id="msform"
+                                      action="/website_form/"
+                                      method="post"
+                                      class="s_website_form container-fluid mt32"
+                                      enctype="multipart/form-data"
+                                      _lpchecked="1">
+                                    <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_1" required="True" placeholder="Your Current Age?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_2" required="True"
+                                               placeholder="Your Desired Retirement Age?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_3" required="True" placeholder="Does your spouse work?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_4" required="True"
+                                               placeholder="How much income does your spouse earn per year?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_5" required="True"
+                                               placeholder="Will your spouse continue to work if you passed away?"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_6" required="True"
+                                               placeholder="Do you currently have or plan to have children?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_7" required="True"
+                                               placeholder="If yes, How many do you have or plan to have?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_8" required="True"
+                                               placeholder="Age of your youngest child?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_9" required="True"
+                                               placeholder="Will your untimely death result in added child care expense?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_10" required="True"
+                                               placeholder="If Yes, How much per year to you anticipate you’d have to add to your annual budget to cover for child care?"/>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_11" required="True"
+                                               placeholder="Do you plan on paying for college?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_12" required="True"
+                                               placeholder="If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_13" required="True"
+                                               placeholder="Do you currently have any money saved for college?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_14" required="True"
+                                               placeholder="If yes, what is the approx balance of your college savings?"/>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_15" required="True"
+                                               placeholder="Do you have have a mortgage?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_16" required="True"
+                                               placeholder="If Yes, What is your mortgage balance?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_17" required="True"
+                                               placeholder="Do you own money on credit cards?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_18" required="True"
+                                               placeholder="If Yes What is your credit Card Balance?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_19" required="True"
+                                               placeholder="Do you have car payments?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_20" required="True"
+                                               placeholder="If yes what are your car payments balances?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_21" required="True"
+                                               placeholder="Do you have any additional Debt (student loans, personal loans, etc.)"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_22" required="True"
+                                               placeholder="If Yes, What is the total balance you owe?"/>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_23" required="True"
+                                               placeholder="If you own your own home what are your annual property taxes? If you rent, what is your monthly rent?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_24" required="True"
+                                               placeholder="What is the cost of your Homeowners or renters insurance policy annually?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_25" required="True"
+                                               placeholder="Are you responsible for paying HOA fees?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_26" required="True"
+                                               placeholder="If yes, what is your monthly HOA amount?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_27" required="True"
+                                               placeholder="Excluding your Mortgage Payment, Credit Card Payments, Car Payments, or the cost of any additional debt, how much per month do you spend on additional living expenses (Food, Fuel, Electricity, Gas, Private School, Entertainment, Landscaping, Cleaning services, etc)?"/>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_28" required="True"
+                                               placeholder="What is your First Name?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_29" required="True"
+                                               placeholder="What is your Last Name?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_30" required="True"
+                                               placeholder="Where can we email your report to?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_31" required="True"
+                                               placeholder="Whats your best contact phone number?"/>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
+                                        <input type="submit" class="submit estimate_next submit_estimate action-button o_website_form_send"
+                                               value="Submit" name="submit"/>
+                                    </fieldset>
+
+                                    <input class="form-field"
+                                           type="hidden"
+                                           name="freequote"
+                                           value="True"/>
+                                    <input class="form-field"
+                                           type="hidden"
+                                           name="subject"
+                                           value="Testing Inside subject"/>
+                                    <input class="form-field"
+                                           type="hidden"
+                                           name="email_to"
+                                           value="isufi.kapasi@aktivsoftware.com"/>
+                                </form>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <record id="menu_web_life_insurance_estimate_form" model="website.page">
+            <field name="name">Life Insurance</field>
+            <field name="url">/life-insurance-estimate-form</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="cap_web_free_quote.life_insurance_estimate_form"/>
+        </record>
+    </data>
+</odoo>

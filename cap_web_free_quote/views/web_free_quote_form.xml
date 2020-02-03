@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="free_quote" model="ir.ui.view">
+            <field name="name">Contact Us</field>
+            <field name="type">qweb</field>
+            <field name="key">website.contactus</field>
+            <field name="arch" type="xml">
+                <t name="Free Quote" t-name="website.free_quote">
+                    <t t-call="website.layout">
+                        <div class="container">
+                            <div class="col-md-12">
+                                <form id="msform"
+                                      action="/website_form/"
+                                      method="post"
+                                      class="s_website_form container-fluid mt32"
+                                      enctype="multipart/form-data"
+                                      _lpchecked="1"
+                                      data-model_name="mail.mail">
+                                    <fieldset>
+                                        <h2 class="fs-title">Social Profiles</h2>
+                                        <h3 class="fs-subtitle">Your presence on the social network</h3>
+                                        <input class="form-field"
+                                               type="hidden"
+                                               name="freequote"
+                                               value="True"/>
+                                        <input class="form-field"
+                                               type="hidden"
+                                               name="subject"
+                                               value="Testing Inside subject"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_1" required="True" placeholder="First Name"
+                                               value="yusuf"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               value="kapasi"
+                                               name="Last Name" required="True" placeholder="Last Name"/>
+                                        <input type="email" value="test@test.com"
+                                               class="form-control form-input-text o_website_form_input format-email"
+                                               name="Email" required="True" placeholder="Email"/>
+                                        <input type="text" value="1234567890"
+                                               class="form-control form-input-text o_website_form_input format-phone"
+                                               name="Phone" step="1" required="" placeholder="Phone: 000-000-0000"
+                                               maxlength="10"/>
+                                        <input type="submit"
+                                               name="submit"
+                                               class="submit action-button o_website_form_send"
+                                               value="Submit"/>
+                                    </fieldset>
+                                    <input class="form-field"
+                                           type="hidden"
+                                           name="email_to"
+                                           value="isufi.kapasi@aktivsoftware.com"/>
+                                </form>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <record id="menu_free_quote_send" model="website.page">
+            <field name="name">Free Quote Send</field>
+            <field name="url">/freequote</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="cap_web_free_quote.free_quote"/>
+        </record>
+    </data>
+</odoo>

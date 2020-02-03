@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="life_insurance_estimate_form_view_tree" model="ir.ui.view">
+        <field name="name">life.insurance.estimate.tree.view</field>
+        <field name="model">life.insurance.estimate</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="question_28" string="First Name"/>
+                <field name="question_29" string="Last Name"/>
+                <field name="question_30" string="Email"/>
+                <field name="question_31" string="Phone"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="life_insurance_estimate_form_view_form" model="ir.ui.view">
+        <field name="name">life.insurance.estimate.form.view</field>
+        <field name="model">life.insurance.estimate</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           options="{'clickable': '1'}"
+                           statusbar_visible="draft,submitted,done"/>
+                </header>
+                <separator string="Step-1"/>
+                <group>
+                    <field name="question_1"/>
+                    <field name="question_2"/>
+                    <field name="question_3"/>
+                    <field name="question_4"/>
+                    <field name="question_5"/>
+                </group>
+                <separator string="Step-2"/>
+                <group>
+                    <field name="question_6"/>
+                    <field name="question_7"/>
+                    <field name="question_8"/>
+                    <field name="question_9"/>
+                    <field name="question_10"/>
+                </group>
+                <separator string="Step-3"/>
+                <group>
+                    <field name="question_11"/>
+                    <field name="question_12"/>
+                    <field name="question_13"/>
+                    <field name="question_14"/>
+                </group>
+                <separator string="Step-4"/>
+                <group>
+                    <field name="question_15"/>
+                    <field name="question_16"/>
+                    <field name="question_17"/>
+                    <field name="question_18"/>
+                    <field name="question_19"/>
+                    <field name="question_20"/>
+                    <field name="question_21"/>
+                    <field name="question_22"/>
+                </group>
+                <separator string="Step-5"/>
+                <group>
+                    <field name="question_23"/>
+                    <field name="question_24"/>
+                    <field name="question_25"/>
+                    <field name="question_26"/>
+                    <field name="question_27"/>
+                </group>
+                <separator string="Step-6"/>
+                <group>
+                    <field name="question_28"/>
+                    <field name="question_29"/>
+                    <field name="question_30"/>
+                    <field name="question_31"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_life_insurance_estimate_form" model="ir.actions.act_window">
+        <field name="name">Life Insurance</field>
+        <field name="res_model">life.insurance.estimate</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_menu_life_insurance_estimate_form"
+              string="Life Insurance"
+              sequence="50"
+              action="action_life_insurance_estimate_form"/>
+</odoo>

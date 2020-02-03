@@ -54,3 +54,16 @@ class WebsiteForm(WebsiteForm):
         request.session['form_builder_model'] = model_record.name
         request.session['form_builder_id'] = id_record
         return json.dumps({'id': id_record})
+
+    # Check and insert values from the form on the model <model>
+    @http.route('/insurance/estimate-form', type='json',
+                auth="public", methods=['POST'])
+    def estimate_form(self, **kw):
+        estimate_form_obj = request.env['life.insurance.estimate']
+        vals = {'create': False, 'res_id': False}
+        if kw.get('rec_id'):
+            estimate_form_obj.browse(int(kw.get('rec_id'))).write(kw.get('input_args'))
+        else:
+            vals['create'] = True
+            vals['res_id'] = estimate_form_obj.create(kw.get('input_args')).id
+        return vals
