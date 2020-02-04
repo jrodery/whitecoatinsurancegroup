@@ -6,6 +6,7 @@ from odoo import models, fields, api
 
 class LifeInsuranceEstimate(models.Model):
     _name = 'life.insurance.estimate'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Life Insurance Estimate Form'
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
@@ -15,7 +16,7 @@ class LifeInsuranceEstimate(models.Model):
         ('draft', 'Draft'),
         ('submitted', 'Submitted'),
         ('done', 'Done')
-    ], string="Status", default="draft")
+    ], string="Status", default="draft", track_visibility="onchange")
 
     # Step - 1
     question_1 = fields.Integer(string="Your Current Age?")
@@ -79,3 +80,14 @@ class LifeInsuranceEstimate(models.Model):
         vals['name'] = self.env['ir.sequence'].next_by_code(
             'life.insurance.estimate')
         return super(LifeInsuranceEstimate, self).create(vals)
+
+    @api.onchange('state')
+    def _onchange_state(self):
+        for res in self:
+            if res.state == 'done':
+                res.send_estimation_mail()
+
+    @api.multi
+    def _send_estimation_mail(self):
+        for res in self:
+            print("inside send_estimation_mail")
