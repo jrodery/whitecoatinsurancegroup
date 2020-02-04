@@ -13,6 +13,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',
+        'data/insurance_estimate_template.xml',
         'views/assets.xml',
         # 'views/web_free_quote_form.xml',
         'views/life_insurance_estimate_form_views.xml',

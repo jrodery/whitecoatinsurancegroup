@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_life_insurance_estimate_form" model="mail.template">
+        <field name="name">Life Insurance Estimation Mail</field>
+        <field name="email_from">${(user.email or '')|safe}</field>
+        <field name="subject">Life Insurance Estimation Mail</field>
+        <field name="model_id" ref="cap_web_free_quote.model_life_insurance_estimate"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+Mail for ESTIMATION.
+            ]]></field>
+    </record>
+</odoo>
