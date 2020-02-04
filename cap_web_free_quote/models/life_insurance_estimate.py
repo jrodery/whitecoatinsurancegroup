@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class LifeInsuranceEstimate(models.Model):
@@ -18,9 +18,17 @@ class LifeInsuranceEstimate(models.Model):
         ('done', 'Done')
     ], string="Status", default="draft", track_visibility="onchange")
 
+
     # Step - 1
+    question_28 = fields.Char(string="What is your First Name?")
+    question_29 = fields.Char(string="What is your Last Name?")
+    question_30 = fields.Char(string="Where can we email your report to?")
+    question_31 = fields.Char(string="Whats your best contact phone number?")
+
+    # Step - 2
     question_1 = fields.Integer(string="Your Current Age?")
     question_2 = fields.Integer(string="Your Desired Retirement Age?")
+    remaining_age = fields.Integer(string="Years Until Retirement")
     question_3 = fields.Selection(select_boolean,
                                   string="Does your spouse work?")
     question_4 = fields.Integer(
@@ -29,7 +37,7 @@ class LifeInsuranceEstimate(models.Model):
         select_boolean, string="Will your spouse continue to work "
                                "if you passed away?")
 
-    # Step - 2
+    # Step - 3
     question_6 = fields.Selection(
         select_boolean,
         string="Do you currently have or plan to have children?")
@@ -43,7 +51,7 @@ class LifeInsuranceEstimate(models.Model):
         string="If Yes, How much per year to you anticipate you’d have to add "
                "to your annual budget to cover for child care?")
 
-    # Step - 3
+    # Step - 4
     question_11 = fields.Selection(
         select_boolean, string="Do you plan on paying for college?")
     question_12 = fields.Char(
@@ -56,7 +64,7 @@ class LifeInsuranceEstimate(models.Model):
     question_14 = fields.Float(string="If yes, what is the approx balance of "
                                       "your college savings?")
 
-    # Step - 4
+    # Step - 5
     question_15 = fields.Selection(select_boolean,
                                    string="Do you have have a mortgage?")
     question_16 = fields.Float(
@@ -75,7 +83,7 @@ class LifeInsuranceEstimate(models.Model):
     question_22 = fields.Float(
         string="If Yes, What is the total balance you owe?")
 
-    # Step - 5
+    # Step - 6
     question_23 = fields.Float(
         string="If you own your own home what are your annual property taxes? "
                "If you rent, what is your monthly rent?")
@@ -92,11 +100,17 @@ class LifeInsuranceEstimate(models.Model):
                "Electricity, Gas, Private School, Entertainment, Landscaping, "
                "Cleaning services, etc)?")
 
-    # Step - 6
-    question_28 = fields.Char(string="What is your First Name?")
-    question_29 = fields.Char(string="What is your Last Name?")
-    question_30 = fields.Char(string="Where can we email your report to?")
-    question_31 = fields.Char(string="Whats your best contact phone number?")
+    @api.constrains('question_1', 'question_2')
+    def _check_age(self):
+        for res in self:
+            if res.question_1 > res.question_2:
+                raise ValueError(_('Please add valid age.'))
+
+    @api.onchange('question_1', 'question_2')
+    def _onchange_age(self):
+        for res in self:
+            if res.question_1 and res.question_2:
+                res.remaining_age = res.question_2 - res.question_1
 
     @api.model
     def create(self, vals):

@@ -19,6 +19,23 @@
                                     <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
                                     <fieldset>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_28" required="True"
+                                               placeholder="What is your First Name?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_29" required="True"
+                                               placeholder="What is your Last Name?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_30" required="True"
+                                               placeholder="Where can we email your report to?"/>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
+                                               name="question_31" required="True"
+                                               placeholder="Whats your best contact phone number?"/>
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
+                                               data-store-model="life.insurance.estimate"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_1" required="True" placeholder="Your Current Age?"/>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_2" required="True"
@@ -54,11 +71,11 @@
                                                 <label class="custom-control-label" for="question_5_no">No</label>
                                             </div>
                                         </div>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                               value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
+                                               value="Next" data-store-model="life.insurance.estimate"/>
                                     </fieldset>
-
                                     <fieldset>
                                         <div class="text-left form-control mb-2" data-next="2">
                                             <p class="custom-control-inline">Do you currently have or plan to have
@@ -103,10 +120,8 @@
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
+                                               value="Next" data-store-model="life.insurance.estimate"/>
                                     </fieldset>
-
                                     <fieldset>
                                         <div class="text-left form-control mb-2" data-next="1">
                                             <p class="custom-control-inline">Do you plan on paying for college?</p>
@@ -151,7 +166,6 @@
                                                value="Next"
                                                data-store-model="life.insurance.estimate"/>
                                     </fieldset>
-
                                     <fieldset>
                                         <div class="text-left form-control mb-2" data-next="1">
                                             <p class="custom-control-inline">Do you have have a mortgage?</p>
@@ -170,7 +184,6 @@
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_16" style="display: none;"
                                                placeholder="If Yes, What is your mortgage balance?"/>
-
                                         <div class="text-left form-control mb-2" data-next="1">
                                             <p class="custom-control-inline">Do you own money on credit cards?</p>
                                             <div class="custom-control custom-radio custom-control-inline">
@@ -228,10 +241,8 @@
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
+                                               value="Next" data-store-model="life.insurance.estimate"/>
                                     </fieldset>
-
                                     <fieldset>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_23" required="True"
@@ -260,28 +271,6 @@
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_27" required="True"
                                                placeholder="Excluding your Mortgage Payment, Credit Card Payments, Car Payments, or the cost of any additional debt, how much per month do you spend on additional living expenses (Food, Fuel, Electricity, Gas, Private School, Entertainment, Landscaping, Cleaning services, etc)?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_28" required="True"
-                                               placeholder="What is your First Name?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_29" required="True"
-                                               placeholder="What is your Last Name?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_30" required="True"
-                                               placeholder="Where can we email your report to?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_31" required="True"
-                                               placeholder="Whats your best contact phone number?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
                                         <input type="submit" value="Submit" name="submit"
                                                data-store-model="life.insurance.estimate"
                                                class="estimate_next submit_estimate estimate_next action-button o_website_form_send"/>
