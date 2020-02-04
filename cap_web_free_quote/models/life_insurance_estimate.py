@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class LifeInsuranceEstimate(models.Model):
@@ -10,6 +10,7 @@ class LifeInsuranceEstimate(models.Model):
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
+    name = fields.Char(string="Log")
     state = fields.Selection([
         ('draft', 'Draft'),
         ('submitted', 'Submitted'),
@@ -24,17 +25,26 @@ class LifeInsuranceEstimate(models.Model):
     question_5 = fields.Selection(select_boolean, string="Will your spouse continue to work if you passed away?")
 
     # Step - 2
-    question_6 = fields.Selection(select_boolean, string="Do you currently have or plan to have children?")
-    question_7 = fields.Integer(string="If yes, How many do you have or plan to have?")
+    question_6 = fields.Selection(
+        select_boolean,
+        string="Do you currently have or plan to have children?")
+    question_7 = fields.Integer(
+        string="If yes, How many do you have or plan to have?")
     question_8 = fields.Integer(string="Age of your youngest child?")
-    question_9 = fields.Selection(select_boolean, string="Will your untimely death result in added child care expense?")
+    question_9 = fields.Selection(
+        select_boolean, string="Will your untimely death result in added child"
+                               " care expense?")
     question_10 = fields.Char(
-        string="If Yes, How much per year to you anticipate you’d have to add to your annual budget to cover for child care?")
+        string="If Yes, How much per year to you anticipate you’d have to add "
+               "to your annual budget to cover for child care?")
 
     # Step - 3
-    question_11 = fields.Selection(select_boolean, string="Do you plan on paying for college?")
+    question_11 = fields.Selection(
+        select_boolean, string="Do you plan on paying for college?")
     question_12 = fields.Char(
-        string="If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?")
+        string="If Yes, by the time your child reaches collage - how much do "
+               "you think it will cost to send each individual child through "
+               "school?")
     question_13 = fields.Selection(select_boolean, string="Do you currently have any money saved for college?")
     question_14 = fields.Float(string="If yes, what is the approx balance of your college savings?")
 
@@ -63,3 +73,9 @@ class LifeInsuranceEstimate(models.Model):
     question_29 = fields.Char(string="What is your Last Name?")
     question_30 = fields.Char(string="Where can we email your report to?")
     question_31 = fields.Char(string="Whats your best contact phone number?")
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code(
+            'life.insurance.estimate')
+        return super(LifeInsuranceEstimate, self).create(vals)

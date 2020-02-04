@@ -5,6 +5,7 @@
         <field name="model">life.insurance.estimate</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="name"/>
                 <field name="question_28" string="First Name"/>
                 <field name="question_29" string="Last Name"/>
                 <field name="question_30" string="Email"/>
@@ -25,6 +26,11 @@
                            statusbar_visible="draft,submitted,done"/>
                 </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
                     <separator string="Step-1"/>
                     <group col="3">
                         <field name="question_1"/>
