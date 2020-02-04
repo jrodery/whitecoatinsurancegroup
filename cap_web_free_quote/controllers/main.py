@@ -12,7 +12,7 @@ from odoo import http
 from odoo.addons.website_form.controllers.main import WebsiteForm
 
 
-class WebsiteForm(WebsiteForm):
+class FreeQuoteWebsiteForm(WebsiteForm):
 
     # Check and insert values from the form on the model <model>
     @http.route('/website_form/<string:model_name>', type='http',
@@ -66,4 +66,16 @@ class WebsiteForm(WebsiteForm):
         else:
             vals['create'] = True
             vals['res_id'] = estimate_form_obj.create(kw.get('input_args')).id
+        return vals
+
+    # Set as done and send mail
+    @http.route('/insurance/estimate-form-done', type='json',
+                auth="public", methods=['POST'])
+    def estimate_form_done(self, **kw):
+        estimate_form_obj = request.env['life.insurance.estimate']
+        vals = {'write': False, 'res_id': False}
+        if kw.get('rec_id'):
+            vals['write'] = estimate_form_obj.browse(int(kw.get('rec_id'))).write({
+                'state': 'done'
+            })
         return vals

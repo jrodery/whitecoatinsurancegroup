@@ -118,8 +118,5 @@ odoo.define('cap_web_free_quote.free_quote', function (require) {
                 easing: 'easeInOutBack'
             });
         });
-        $(".submit").click(function(){
-            return false;
-        })
     });
 });
