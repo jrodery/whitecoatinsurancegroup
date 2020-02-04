@@ -8,7 +8,7 @@ class LifeInsuranceEstimate(models.Model):
     _name = 'life.insurance.estimate'
     _description = 'Life Insurance Estimate Form'
 
-    select_boolean = [('yes', 'Yes'), ('no', 'No')]
+    select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
     state = fields.Selection([
         ('draft', 'Draft'),

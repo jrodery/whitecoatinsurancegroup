@@ -24,55 +24,57 @@
                            options="{'clickable': '1'}"
                            statusbar_visible="draft,submitted,done"/>
                 </header>
-                <separator string="Step-1"/>
-                <group>
-                    <field name="question_1"/>
-                    <field name="question_2"/>
-                    <field name="question_3"/>
-                    <field name="question_4"/>
-                    <field name="question_5"/>
-                </group>
-                <separator string="Step-2"/>
-                <group>
-                    <field name="question_6"/>
-                    <field name="question_7"/>
-                    <field name="question_8"/>
-                    <field name="question_9"/>
-                    <field name="question_10"/>
-                </group>
-                <separator string="Step-3"/>
-                <group>
-                    <field name="question_11"/>
-                    <field name="question_12"/>
-                    <field name="question_13"/>
-                    <field name="question_14"/>
-                </group>
-                <separator string="Step-4"/>
-                <group>
-                    <field name="question_15"/>
-                    <field name="question_16"/>
-                    <field name="question_17"/>
-                    <field name="question_18"/>
-                    <field name="question_19"/>
-                    <field name="question_20"/>
-                    <field name="question_21"/>
-                    <field name="question_22"/>
-                </group>
-                <separator string="Step-5"/>
-                <group>
-                    <field name="question_23"/>
-                    <field name="question_24"/>
-                    <field name="question_25"/>
-                    <field name="question_26"/>
-                    <field name="question_27"/>
-                </group>
-                <separator string="Step-6"/>
-                <group>
-                    <field name="question_28"/>
-                    <field name="question_29"/>
-                    <field name="question_30"/>
-                    <field name="question_31"/>
-                </group>
+                <sheet>
+                    <separator string="Step-1"/>
+                    <group col="3">
+                        <field name="question_1"/>
+                        <field name="question_2"/>
+                        <field name="question_3"/>
+                        <field name="question_4" attrs="{'readonly': [('question_3', '!=', 'Yes')]}"/>
+                        <field name="question_5"/>
+                    </group>
+                    <separator string="Step-2"/>
+                    <group col="3">
+                        <field name="question_6"/>
+                        <field name="question_7" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
+                        <field name="question_8"/>
+                        <field name="question_9"/>
+                        <field name="question_10" attrs="{'readonly': [('question_9', '!=', 'Yes')]}"/>
+                    </group>
+                    <separator string="Step-3"/>
+                    <group col="3">
+                        <field name="question_11"/>
+                        <field name="question_12" attrs="{'readonly': [('question_11', '!=', 'Yes')]}"/>
+                        <field name="question_13"/>
+                        <field name="question_14" attrs="{'readonly': [('question_13', '!=', 'Yes')]}"/>
+                    </group>
+                    <separator string="Step-4"/>
+                    <group col="3">
+                        <field name="question_15"/>
+                        <field name="question_16" attrs="{'readonly': [('question_15', '!=', 'Yes')]}"/>
+                        <field name="question_17"/>
+                        <field name="question_18" attrs="{'readonly': [('question_17', '!=', 'Yes')]}"/>
+                        <field name="question_19"/>
+                        <field name="question_20" attrs="{'readonly': [('question_19', '!=', 'Yes')]}"/>
+                        <field name="question_21"/>
+                        <field name="question_22" attrs="{'readonly': [('question_21', '!=', 'Yes')]}"/>
+                    </group>
+                    <separator string="Step-5"/>
+                    <group col="3">
+                        <field name="question_23"/>
+                        <field name="question_24"/>
+                        <field name="question_25"/>
+                        <field name="question_26" attrs="{'readonly': [('question_25', '!=', 'Yes')]}"/>
+                        <field name="question_27"/>
+                    </group>
+                    <separator string="Step-6"/>
+                    <group col="3">
+                        <field name="question_28"/>
+                        <field name="question_29"/>
+                        <field name="question_30"/>
+                        <field name="question_31"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
