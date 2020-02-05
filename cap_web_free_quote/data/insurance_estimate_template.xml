@@ -9,7 +9,7 @@
         <field name="body_html"><![CDATA[
 <table class="table">
     <thead class="thead-dark">
-        <<tr></tr>
+        <tr></tr>
             <th>Question</th>
             <th>Answer</th>
         </tr>
