@@ -32,15 +32,15 @@ class LifeInsuranceEstimate(models.Model):
     question_1 = fields.Integer(string="Your Current Age?")
     question_2 = fields.Integer(string="Your Desired Retirement Age?")
     remaining_age = fields.Integer(string="Years Until Retirement")
-    question_3 = fields.Selection(select_boolean,
+    question_3 = fields.Selection(select_boolean, default='No',
                                   string="Does your spouse work?")
-    question_4 = fields.Integer(
+    question_4 = fields.Float(
         string="How much income does your spouse earn per year?")
     question_5 = fields.Selection(
-        select_boolean, string="Will your spouse continue to work "
-                               "if you passed away?")
+        select_boolean, default='No',
+        string="Will your spouse continue to work if you passed away?")
     question_5_1 = fields.Selection(
-        select_boolean,
+        select_boolean, default='No',
         string="If yes, will you have an added child care expense?")
     question_5_2 = fields.Float(
         string="If Yes what do you anticipate the annual child care expense "
@@ -61,28 +61,29 @@ class LifeInsuranceEstimate(models.Model):
 
     # Step - 3
     question_6 = fields.Selection(
-        select_boolean,
+        select_boolean, default='No',
         string="Do you currently have or plan to have children?")
     question_7 = fields.Integer(
         string="If yes, How many do you have or plan to have?")
     question_8 = fields.Integer(string="Age of your youngest child?")
     question_9 = fields.Selection(
-        select_boolean, string="Will your untimely death result in added child"
-                               " care expense?")
-    question_10 = fields.Char(
+        select_boolean, default='No',
+        string="Will your untimely death result in added child care expense?")
+    question_10 = fields.Float(
         string="If Yes, How much per year to you anticipate you’d have to add "
                "to your annual budget to cover for child care?")
 
     # Step - 4
     question_11 = fields.Selection(
-        select_boolean, string="Do you plan on paying for college?")
+        select_boolean, default='No',
+        string="Do you plan on paying for college?")
     question_12 = fields.Float(
         string="If Yes, by the time your child reaches collage - how much do "
                "you think it will cost to send each individual child through "
                "school?")
     question_13 = fields.Selection(
-        select_boolean, string="Do you currently have any money saved "
-                               "for college?")
+        select_boolean, default='No',
+        string="Do you currently have any money saved for college?")
     question_14 = fields.Float(string="If yes, what is the approx balance of "
                                       "your college savings?")
     question_14_1 = fields.Float(string="Total College Expense")
@@ -96,21 +97,23 @@ class LifeInsuranceEstimate(models.Model):
             self.question_14_2 = self.question_14_1 - self.question_14
 
     # Step - 5
-    question_15 = fields.Selection(select_boolean,
+    question_15 = fields.Selection(select_boolean, default='No',
                                    string="Do you have have a mortgage?")
     question_16 = fields.Float(
         string="If Yes, What is your mortgage balance?")
     question_17 = fields.Selection(
-        select_boolean, string="Do you own money on credit cards?")
+        select_boolean, default='No',
+        string="Do you own money on credit cards?")
     question_18 = fields.Float(
         string="If Yes What is your credit Card Balance?")
-    question_19 = fields.Selection(select_boolean,
+    question_19 = fields.Selection(select_boolean, default='No',
                                    string="Do you have car payments?")
     question_20 = fields.Float(
         string="If yes what are your car payments balances?")
     question_21 = fields.Selection(
-        select_boolean, string="Do you have any additional Debt (student loans,"
-                               " personal loans, etc.)")
+        select_boolean, default='No',
+        string="Do you have any additional Debt (student loans, "
+               "personal loans, etc.)")
     question_22 = fields.Float(
         string="If Yes, What is the total balance you owe?")
     question_22_1 = fields.Float(string="Total Debt")
@@ -135,7 +138,8 @@ class LifeInsuranceEstimate(models.Model):
         self.question_24_1 = self.question_23 + self.question_24
 
     question_25 = fields.Selection(
-        select_boolean, string="Are you responsible for paying HOA fees?")
+        select_boolean, default='No',
+        string="Are you responsible for paying HOA fees?")
     question_26 = fields.Float(
         string="If yes, what is your monthly HOA amount?")
     question_27 = fields.Float(
