@@ -18,12 +18,15 @@ class LifeInsuranceEstimate(models.Model):
         ('done', 'Done')
     ], string="Status", default="draft", track_visibility="onchange")
 
-
     # Step - 1
-    question_28 = fields.Char(string="What is your First Name?")
-    question_29 = fields.Char(string="What is your Last Name?")
-    question_30 = fields.Char(string="Where can we email your report to?")
-    question_31 = fields.Char(string="Whats your best contact phone number?")
+    question_28 = fields.Char(string="What is your First Name?",
+                              track_visibility="onchange")
+    question_29 = fields.Char(string="What is your Last Name?",
+                              track_visibility="onchange")
+    question_30 = fields.Char(string="Where can we email your report to?",
+                              track_visibility="onchange")
+    question_31 = fields.Char(string="Whats your best contact phone number?",
+                              track_visibility="onchange")
 
     # Step - 2
     question_1 = fields.Integer(string="Your Current Age?")
@@ -36,6 +39,25 @@ class LifeInsuranceEstimate(models.Model):
     question_5 = fields.Selection(
         select_boolean, string="Will your spouse continue to work "
                                "if you passed away?")
+    question_5_1 = fields.Selection(
+        select_boolean,
+        string="If yes, will you have an added child care expense?")
+    question_5_2 = fields.Float(
+        string="If Yes what do you anticipate the annual child care expense "
+               "would add to your budget")
+    question_5_3 = fields.Float(string="Spouses income minus Additional "
+                                       "child care expense")
+    question_5_4 = fields.Float(
+        string="Spouses potential pre tax career earnings")
+
+    @api.onchange('question_4', 'question_5_2', 'remaining_age')
+    def _onchange_spouse_income(self):
+        if self.question_4 and self.question_5_2 and self.remaining_age:
+            remains = self.question_4 - self.question_5_2
+            self.question_5_3 = remains
+            self.question_5_4 = remains * self.remaining_age
+        else:
+            self.question_5_3 = self.question_5_4 = 0.0
 
     # Step - 3
     question_6 = fields.Selection(
@@ -54,7 +76,7 @@ class LifeInsuranceEstimate(models.Model):
     # Step - 4
     question_11 = fields.Selection(
         select_boolean, string="Do you plan on paying for college?")
-    question_12 = fields.Char(
+    question_12 = fields.Float(
         string="If Yes, by the time your child reaches collage - how much do "
                "you think it will cost to send each individual child through "
                "school?")
@@ -63,6 +85,15 @@ class LifeInsuranceEstimate(models.Model):
                                "for college?")
     question_14 = fields.Float(string="If yes, what is the approx balance of "
                                       "your college savings?")
+    question_14_1 = fields.Float(string="Total College Expense")
+    question_14_2 = fields.Float(string="Total Remaining College Expense")
+
+    @api.onchange('question_7', 'question_12', 'question_14')
+    def _onchange_college_saving(self):
+        if self.question_7 and self.question_12:
+            self.question_14_1 = self.question_7 * self.question_12
+        if self.question_14 and self.question_14_1:
+            self.question_14_2 = self.question_14_1 - self.question_14
 
     # Step - 5
     question_15 = fields.Selection(select_boolean,
@@ -82,6 +113,14 @@ class LifeInsuranceEstimate(models.Model):
                                " personal loans, etc.)")
     question_22 = fields.Float(
         string="If Yes, What is the total balance you owe?")
+    question_22_1 = fields.Float(string="Total Debt")
+
+    @api.onchange('question_16', 'question_18', 'question_20', 'question_22')
+    def _onchange_total_deb(self):
+        self.question_22_1 = sum([
+            self.question_16, self.question_18,
+            self.question_20, self.question_22
+        ])
 
     # Step - 6
     question_23 = fields.Float(
@@ -89,6 +128,12 @@ class LifeInsuranceEstimate(models.Model):
                "If you rent, what is your monthly rent?")
     question_24 = fields.Float(string="What is the cost of your Homeowners or "
                                       "renters insurance policy annually?")
+    question_24_1 = fields.Float(string="Total")
+
+    @api.onchange('question_23', 'question_24')
+    def _onchange_property_tax(self):
+        self.question_24_1 = self.question_23 + self.question_24
+
     question_25 = fields.Selection(
         select_boolean, string="Are you responsible for paying HOA fees?")
     question_26 = fields.Float(
@@ -99,6 +144,27 @@ class LifeInsuranceEstimate(models.Model):
                "month do you spend on additional living expenses (Food, Fuel, "
                "Electricity, Gas, Private School, Entertainment, Landscaping, "
                "Cleaning services, etc)?")
+    question_27_1 = fields.Float(string="Total annual Recurring expenses "
+                                        "minus remaining spousal income")
+    question_27_2 = fields.Float(string="Recurring expenses multiplied by the "
+                                        "amount of years until retirement")
+
+    @api.onchange('question_5_3', 'question_24_1',
+                  'question_26', 'question_27', 'remaining_age')
+    def _onchange_annual_recurring_expenses(self):
+        self.question_27_1 = self.question_24_1 + self.question_26 * 12 + self.question_27 * 12 - self.question_5_3
+        self.question_27_2 = self.question_27_1 * self.remaining_age
+
+    total_insurance = fields.Float(
+        string="Calculate how much life insurance I need")
+
+    @api.onchange('question_14_2', 'question_22_1', 'question_27_2')
+    def _onchange_total_calculation(self):
+        self.total_insurance = sum([
+            self.question_14_2,
+            self.question_22_1,
+            self.question_27_2
+        ])
 
     @api.constrains('question_1', 'question_2')
     def _check_age(self):

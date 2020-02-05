@@ -46,13 +46,17 @@
                         <field name="remaining_age" readonly="1" force_save="1"/>
                         <field name="question_3"/>
                         <field name="question_4" attrs="{'readonly': [('question_3', '!=', 'Yes')]}"/>
-                        <field name="question_5"/>
+                        <field name="question_5" attrs="{'readonly': [('question_4', '&lt;', 1)]}"/>
+                        <field name="question_5_1" attrs="{'readonly': [('question_5', '!=', 'Yes')]}"/>
+                        <field name="question_5_2" attrs="{'readonly': [('question_5_1', '!=', 'Yes')]}"/>
+                        <field name="question_5_3" readonly="1" force_save="1"/>
+                        <field name="question_5_4" readonly="1" force_save="1"/>
                     </group>
                     <separator string="Step-3"/>
                     <group col="3">
                         <field name="question_6"/>
                         <field name="question_7" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
-                        <field name="question_8"/>
+                        <field name="question_8" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
                         <field name="question_9"/>
                         <field name="question_10" attrs="{'readonly': [('question_9', '!=', 'Yes')]}"/>
                     </group>
@@ -60,8 +64,10 @@
                     <group col="3">
                         <field name="question_11"/>
                         <field name="question_12" attrs="{'readonly': [('question_11', '!=', 'Yes')]}"/>
-                        <field name="question_13"/>
+                        <field name="question_13" attrs="{'readonly': [('question_11', '!=', 'Yes')]}"/>
                         <field name="question_14" attrs="{'readonly': [('question_13', '!=', 'Yes')]}"/>
+                        <field name="question_14_1" readonly="1" force_save="1"/>
+                        <field name="question_14_2" readonly="1" force_save="1"/>
                     </group>
                     <separator string="Step-5"/>
                     <group col="3">
@@ -73,14 +79,22 @@
                         <field name="question_20" attrs="{'readonly': [('question_19', '!=', 'Yes')]}"/>
                         <field name="question_21"/>
                         <field name="question_22" attrs="{'readonly': [('question_21', '!=', 'Yes')]}"/>
+                        <field name="question_22_1" readonly="1" force_save="1"/>
                     </group>
                     <separator string="Step-6"/>
                     <group col="3">
                         <field name="question_23"/>
                         <field name="question_24"/>
+                        <field name="question_24_1" readonly="1" force_save="1"/>
                         <field name="question_25"/>
                         <field name="question_26" attrs="{'readonly': [('question_25', '!=', 'Yes')]}"/>
                         <field name="question_27"/>
+                        <field name="question_27_1" readonly="1" force_save="1"/>
+                        <field name="question_27_2" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Total Insureance"/>
+                    <group col="3">
+                        <field name="total_insurance" readonly="1" force_save="1"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
