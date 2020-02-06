@@ -32,8 +32,6 @@
         <tr><td>Do you currently have or plan to have children?</td><td>${object.question_6}</td></tr>
         <tr><td>If yes, How many do you have or plan to have?</td><td>${object.question_7}</td></tr>
         <tr><td>Age of your youngest child?</td><td>${object.question_8}</td></tr>
-        <tr><td>Will your untimely death result in added child care expense?</td><td>${object.question_9}</td></tr>
-        <tr><td>If Yes, How much per year to you anticipate you’d have to add to your annual budget to cover for child care?</td><td>${object.question_10}</td></tr>
         <tr><td>Do you plan on paying for college?</td><td>${object.question_11}</td></tr>
         <tr><td>If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?</td><td>${object.question_12}</td></tr>
         <tr><td>Do you currently have any money saved for college?</td><td>${object.question_13}</td></tr>
