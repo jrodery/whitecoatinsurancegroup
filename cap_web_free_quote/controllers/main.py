@@ -65,7 +65,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             estimate_form_obj.browse(int(kw.get('rec_id'))).write(kw.get('input_args'))
         else:
             vals['create'] = True
-            vals['res_id'] = estimate_form_obj.create(kw.get('input_args')).id
+            vals['res_id'] = estimate_form_obj.create(kw.get('input_args', {})).id
         return vals
 
     # Set as done and send mail

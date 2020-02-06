@@ -28,7 +28,6 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
         });
 
         $(".submit_estimate").click(function() {
-            console.log("Submit call");
             var rec_id = $('#msform').find("input[name='res_id']").val();
             ajax.jsonRpc('/insurance/estimate-form-done', 'call', {
                 'rec_id': rec_id,
@@ -55,6 +54,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     current_next = current_next.next();
                 }
             }
+            current_div.prev().val($(this).val());
         });
 
     });

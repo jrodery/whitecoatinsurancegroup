@@ -10,6 +10,7 @@
                 <field name="question_29" string="Last Name"/>
                 <field name="question_30" string="Email"/>
                 <field name="question_31" string="Phone"/>
+                <field name="question_32" string="Zip Code"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -38,6 +39,7 @@
                         <field name="question_29" string="Last Name"/>
                         <field name="question_30" string="Email"/>
                         <field name="question_31" string="Phone"/>
+                        <field name="question_32" string="Zip Code"/>
                     </group>
                     <separator string="Step-2"/>
                     <group col="3">
@@ -57,8 +59,6 @@
                         <field name="question_6"/>
                         <field name="question_7" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
                         <field name="question_8" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
-                        <field name="question_9"/>
-                        <field name="question_10" attrs="{'readonly': [('question_9', '!=', 'Yes')]}"/>
                     </group>
                     <separator string="Step-4"/>
                     <group col="3">
