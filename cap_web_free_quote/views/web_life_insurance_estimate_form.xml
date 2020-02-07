@@ -8,316 +8,341 @@
             <field name="arch" type="xml">
                 <t name="Life Insurance Estimate Form" t-name="website.life_insurance_estimate_form">
                     <t t-call="website.layout">
-                        <div class="container">
-                            <div class="col-md-12">
-                                <form id="msform"
-                                      action="/website_form/"
-                                      method="post"
-                                      class="s_website_form container-fluid mt32"
-                                      enctype="multipart/form-data"
-                                      _lpchecked="1">
-                                    <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
-                                    <fieldset>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_28" required="True"
-                                               placeholder="What is your First Name?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_29" required="True"
-                                               placeholder="What is your Last Name?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_30" required="True"
-                                               placeholder="Where can we email your report to?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_31" required="True"
-                                               placeholder="Whats your best contact phone number?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_32" required="True"
-                                               placeholder="What is the zip code of your area?"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_1" required="True" placeholder="Your Current Age?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_2" required="True"
-                                               placeholder="Your Desired Retirement Age?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="remaining_age" readonly="True" style="display: none;"
-                                               placeholder="Years Until Retirement"/>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="offset-md-2 col-md-6">
+                                    <form id="msform"
+                                          action="/website_form/"
+                                          method="post"
+                                          class="s_website_form container-fluid mt32"
+                                          enctype="multipart/form-data"
+                                          _lpchecked="1">
+                                        <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
+                                        <fieldset>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_28" required="True"
+                                                   placeholder="What is your First Name?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_29" required="True"
+                                                   placeholder="What is your Last Name?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_30" required="True"
+                                                   placeholder="Where can we email your report to?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_31" required="True"
+                                                   placeholder="Whats your best contact phone number?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_32" required="True"
+                                                   placeholder="What is the zip code of your area?"/>
+                                            <input type="button" name="next" class="next estimate_next action-button"
+                                                   value="Next"
+                                                   data-store-model="life.insurance.estimate"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_1" required="True" placeholder="Your Current Age?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_2" required="True"
+                                                   placeholder="Your Desired Retirement Age?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="remaining_age" readonly="True" style="display: none;"
+                                                   placeholder="Years Until Retirement"/>
 
-                                        <input type="hidden" name="question_3"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Does your spouse work?</p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_3_yes" name="question_3_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_3_yes">Yes</label>
+                                            <input type="hidden" name="question_3"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Does your spouse work?</p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_3_yes" name="question_3_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_3_yes">Yes</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_3_no" value="No" name="question_3_bool"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_3_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_3_no" value="No" name="question_3_bool"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_3_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_4" style="display: none;"
-                                               placeholder="How much income does your spouse earn per year?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_4" style="display: none;"
+                                                   placeholder="How much income does your spouse earn per year?"/>
 
-                                        <input type="hidden" name="question_5"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="2">
-                                            <p class="custom-control-inline">Will your spouse continue to work if you
-                                                passed away?
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_5_yes" name="question_5_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_5_yes">Yes</label>
+                                            <input type="hidden" name="question_5"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="2">
+                                                <p class="custom-control-inline">Will your spouse continue to work if
+                                                    you
+                                                    passed away?
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_5_yes" name="question_5_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_5_yes">Yes</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_5_no" name="question_5_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_5_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_5_no" name="question_5_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_5_no">No</label>
-                                            </div>
-                                        </div>
 
-                                        <input type="hidden" name="question_5_1"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div style="display: none;" class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">If yes, will you have an added child care
-                                                expense?
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_5_1_yes" name="question_5_1_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_5_1_yes">Yes</label>
+                                            <input type="hidden" name="question_5_1"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div style="display: none;" class="text-left form-control mb-2"
+                                                 data-next="1">
+                                                <p class="custom-control-inline">If yes, will you have an added child
+                                                    care
+                                                    expense?
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_5_1_yes" name="question_5_1_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_5_1_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_5_1_no" name="question_5_1_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_5_1_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_5_1_no" name="question_5_1_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_5_1_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_5_2" style="display: none;"
-                                               placeholder="If Yes what do you anticipate the annual child care expense would add to your budget"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_5_2" style="display: none;"
+                                                   placeholder="If Yes what do you anticipate the annual child care expense would add to your budget"/>
 
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next" data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input type="hidden" name="question_6"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="2">
-                                            <p class="custom-control-inline">Do you currently have or plan to have
-                                                children?
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_6_yes" name="question_6_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_6_yes">Yes</label>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous"/>
+                                            <input type="button" name="next" class="next estimate_next action-button"
+                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="hidden" name="question_6"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="2">
+                                                <p class="custom-control-inline">Do you currently have or plan to have
+                                                    children?
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_6_yes" name="question_6_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_6_yes">Yes</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_6_no" name="question_6_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_6_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_6_no" name="question_6_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_6_no">No</label>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   style="display: none;"
+                                                   name="question_7"
+                                                   placeholder="If yes, How many do you have or plan to have?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_8" style="display: none;"
+                                                   placeholder="Age of your youngest child?"/>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous"/>
+                                            <input type="button" name="next" class="next estimate_next action-button"
+                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="hidden" name="question_11"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you plan on paying for college?</p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_11_yes" name="question_11_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_11_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_11_no" name="question_11_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_11_no">No</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               style="display: none;"
-                                               name="question_7"
-                                               placeholder="If yes, How many do you have or plan to have?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_8" style="display: none;"
-                                               placeholder="Age of your youngest child?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next" data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input type="hidden" name="question_11"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you plan on paying for college?</p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_11_yes" name="question_11_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_11_yes">Yes</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_11_no" name="question_11_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_11_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_12" style="display: none;"
-                                               placeholder="If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_12" style="display: none;"
+                                                   placeholder="If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?"/>
 
-                                        <input type="hidden" name="question_13"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you currently have any money saved for
-                                                college?
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_13_yes" name="question_13_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_13_yes">Yes</label>
+                                            <input type="hidden" name="question_13"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you currently have any money saved
+                                                    for
+                                                    college?
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_13_yes" name="question_13_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_13_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_13_no" name="question_13_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_13_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_13_no" name="question_13_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_13_no">No</label>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_14" style="display: none;"
+                                                   placeholder="If yes, what is the approx balance of your college savings?"/>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous"/>
+                                            <input type="button" name="next" class="next estimate_next action-button"
+                                                   value="Next"
+                                                   data-store-model="life.insurance.estimate"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="hidden" name="question_15"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you have have a mortgage?</p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_15_yes" name="question_15_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_15_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_15_no" name="question_15_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_15_no">No</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_14" style="display: none;"
-                                               placeholder="If yes, what is the approx balance of your college savings?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input type="hidden" name="question_15"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you have have a mortgage?</p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_15_yes" name="question_15_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_15_yes">Yes</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_15_no" name="question_15_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_15_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_16" style="display: none;"
-                                               placeholder="If Yes, What is your mortgage balance?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_16" style="display: none;"
+                                                   placeholder="If Yes, What is your mortgage balance?"/>
 
 
-                                        <input type="hidden" name="question_17"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you own money on credit cards?</p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_17_yes" name="question_17_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_17_yes">Yes</label>
+                                            <input type="hidden" name="question_17"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you own money on credit cards?</p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_17_yes" name="question_17_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_17_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_17_no" name="question_17_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_17_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_17_no" name="question_17_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_17_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_18" style="display: none;"
-                                               placeholder="If Yes What is your credit Card Balance?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_18" style="display: none;"
+                                                   placeholder="If Yes What is your credit Card Balance?"/>
 
-                                        <input type="hidden" name="question_19"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you have car payments?</p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_19_yes" name="question_19_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_19_yes">Yes</label>
+                                            <input type="hidden" name="question_19"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you have car payments?</p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_19_yes" name="question_19_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_19_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_19_no" name="question_19_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_19_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_19_no" name="question_19_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_19_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_20" style="display: none;"
-                                               placeholder="If yes what are your car payments balances?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_20" style="display: none;"
+                                                   placeholder="If yes what are your car payments balances?"/>
 
-                                        <input type="hidden" name="question_21"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Do you have any additional Debt (student
-                                                loans, personal loans, etc.)
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_21_yes" name="question_21_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_21_yes">Yes</label>
+                                            <input type="hidden" name="question_21"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Do you have any additional Debt
+                                                    (student
+                                                    loans, personal loans, etc.)
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_21_yes" name="question_21_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_21_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_21_no" name="question_21_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_21_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_21_no" name="question_21_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_21_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_22" style="display: none;"
-                                               placeholder="If Yes, What is the total balance you owe?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next" data-store-model="life.insurance.estimate"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_23" required="True"
-                                               placeholder="If you own your own home what are your annual property taxes? If you rent, what is your monthly rent?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_24" required="True"
-                                               placeholder="What is the cost of your Homeowners or renters insurance policy annually?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_22" style="display: none;"
+                                                   placeholder="If Yes, What is the total balance you owe?"/>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous"/>
+                                            <input type="button" name="next" class="next estimate_next action-button"
+                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="text"
+                                                   class="form-control form-input-text o_website_form_input check_amount_format"
+                                                   name="question_23" required="True"
+                                                   placeholder="If you own your own home what are your annual property taxes? If you rent, what is your monthly rent? : Eg. 15231.50"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_24" required="True"
+                                                   placeholder="What is the cost of your Homeowners or renters insurance policy annually?"/>
 
-                                        <input type="hidden" name="question_25"
-                                               class="form-control form-input-text o_website_form_input"/>
-                                        <div class="text-left form-control mb-2" data-next="1">
-                                            <p class="custom-control-inline">Are you responsible for paying HOA fees?
-                                            </p>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_25_yes" name="question_25_bool" value="Yes"/>
-                                                <label class="custom-control-label" for="question_25_yes">Yes</label>
+                                            <input type="hidden" name="question_25"
+                                                   class="form-control form-input-text o_website_form_input"/>
+                                            <div class="text-left form-control mb-2" data-next="1">
+                                                <p class="custom-control-inline">Are you responsible for paying HOA
+                                                    fees?
+                                                </p>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_25_yes" name="question_25_bool" value="Yes"/>
+                                                    <label class="custom-control-label" for="question_25_yes">Yes
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input question_radio"
+                                                           id="question_25_no" name="question_25_bool" value="No"
+                                                           checked="True"/>
+                                                    <label class="custom-control-label" for="question_25_no">No</label>
+                                                </div>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input question_radio"
-                                                       id="question_25_no" name="question_25_bool" value="No"
-                                                       checked="True"/>
-                                                <label class="custom-control-label" for="question_25_no">No</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_26" style="display: none;"
-                                               placeholder="If yes, what is your monthly HOA amount?"/>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_27" required="True"
-                                               placeholder="Excluding your Mortgage Payment, Credit Card Payments, Car Payments, or the cost of any additional debt, how much per month do you spend on additional living expenses (Food, Fuel, Electricity, Gas, Private School, Entertainment, Landscaping, Cleaning services, etc)?"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="submit" value="Submit" name="submit"
-                                               data-store-model="life.insurance.estimate"
-                                               class="estimate_next submit_estimate estimate_next action-button o_website_form_send"/>
-                                    </fieldset>
-                                </form>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_26" style="display: none;"
+                                                   placeholder="If yes, what is your monthly HOA amount?"/>
+                                            <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_27" required="True"
+                                                   placeholder="Excluding your Mortgage Payment, Credit Card Payments, Car Payments, or the cost of any additional debt, how much per month do you spend on additional living expenses (Food, Fuel, Electricity, Gas, Private School, Entertainment, Landscaping, Cleaning services, etc)?"/>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous"/>
+                                            <button data-store-model="life.insurance.estimate"
+                                                    class="estimate_next submit_estimate estimate_next action-button o_website_form_send">
+                                                Submit
+                                            </button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="col-md-3 insurance_block mt-5 mb-5 text-center pt-4 pb-4">
+                                    <p>
+                                        <span>Calculate how much life insurance I need...</span><br />
+                                        <span class="insurance_amount" name="insurance_amount"></span>
+                                    </p>
+                                </div>
+                                <div class="offset-md-1"/>
                             </div>
                         </div>
                     </t>

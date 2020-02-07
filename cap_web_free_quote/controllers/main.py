@@ -60,12 +60,16 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 auth="public", methods=['POST'])
     def estimate_form(self, **kw):
         estimate_form_obj = request.env['life.insurance.estimate']
-        vals = {'create': False, 'res_id': False}
+        vals = {'create': False, 'res_id': False, 'total_insurance': 0.0}
         if kw.get('rec_id'):
-            estimate_form_obj.browse(int(kw.get('rec_id'))).write(kw.get('input_args'))
+            res = estimate_form_obj.browse(int(kw.get('rec_id')))
+            res.write(kw.get('input_args'))
+            vals['total_insurance'] = res.total_insurance
         else:
             vals['create'] = True
-            vals['res_id'] = estimate_form_obj.create(kw.get('input_args', {})).id
+            res = estimate_form_obj.create(kw.get('input_args', {}))
+            vals['total_insurance'] = res.total_insurance
+            vals['res_id'] = res.id
         return vals
 
     # Set as done and send mail
@@ -73,9 +77,11 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 auth="public", methods=['POST'])
     def estimate_form_done(self, **kw):
         estimate_form_obj = request.env['life.insurance.estimate']
-        vals = {'write': False, 'res_id': False}
+        vals = {'write': False, 'res_id': False, 'total_insurance': 0.0}
         if kw.get('rec_id'):
-            vals['write'] = estimate_form_obj.browse(int(kw.get('rec_id'))).write({
+            form_obj = estimate_form_obj.browse(int(kw.get('rec_id')))
+            vals['write'] = form_obj.write({
                 'state': 'done'
             })
+            vals['total_insurance'] = form_obj.total_insurance
         return vals

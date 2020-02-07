@@ -23,18 +23,32 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     if(data['create']) {
                         $('#msform').find("input[name='res_id']").val(data['res_id']);
                     }
+                    $('#msform').parent().next().find('.insurance_amount').html(data['total_insurance'].toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
                 });
             }
         });
 
         $(".submit_estimate").click(function() {
+            var self = $(this);
             var rec_id = $('#msform').find("input[name='res_id']").val();
             ajax.jsonRpc('/insurance/estimate-form-done', 'call', {
                 'rec_id': rec_id,
             }).then(function (data) {
-
+                $('#msform').parent().next().find('.insurance_amount').html(data['total_insurance'].toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
             });
         });
+
+//        $(".check_amount_format").focusout(function(){
+//            var regex = /^\d+\.{0,1}\d{0,2}\Z/gm;
+//
+//            var str = $(this).val();
+//            var subst = ``;
+//
+//            // The substituted value will be contained in the result variable
+//            var result = str.replace(regex, subst);
+//
+//            console.log('Substitution result: ', result);
+//        });
 
         $('.question_radio').on('change', function(){
             var display_block = $(this).val() == 'Yes';
