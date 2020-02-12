@@ -64,11 +64,13 @@ class FreeQuoteWebsiteForm(WebsiteForm):
         if kw.get('rec_id'):
             res = estimate_form_obj.browse(int(kw.get('rec_id')))
             res.write(kw.get('input_args'))
-            vals['total_insurance'] = res.total_insurance
+            amount = res.total_insurance
+            vals['total_insurance'] = amount if amount > 0 else 0.0
         else:
             vals['create'] = True
             res = estimate_form_obj.create(kw.get('input_args', {}))
-            vals['total_insurance'] = res.total_insurance
+            amount = res.total_insurance
+            vals['total_insurance'] = amount if amount > 0 else 0.0
             vals['res_id'] = res.id
         return vals
 
@@ -83,5 +85,6 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             vals['write'] = form_obj.write({
                 'state': 'done'
             })
-            vals['total_insurance'] = form_obj.total_insurance
+            amount = form_obj.total_insurance
+            vals['total_insurance'] = amount if amount > 0 else 0.0
         return vals
