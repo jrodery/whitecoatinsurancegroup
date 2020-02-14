@@ -29,7 +29,7 @@
                                                    placeholder="Where can we email your report to?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_31" required="True"
-                                                   placeholder="Whats your best contact phone number?"/>
+                                                   placeholder="What's your best contact phone number?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_32" required="True"
                                                    placeholder="What is the zip code of your area?"/>
@@ -70,9 +70,7 @@
                                             <input type="hidden" name="question_5"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="2">
-                                                <p class="custom-control-inline">Will your spouse continue to work if
-                                                    you
-                                                    passed away?
+                                                <p class="custom-control-inline">Will your spouse continue to work if you passed away?
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
@@ -91,9 +89,7 @@
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div style="display: none;" class="text-left form-control mb-2"
                                                  data-next="1">
-                                                <p class="custom-control-inline">If yes, will you have an added child
-                                                    care
-                                                    expense?
+                                                <p class="custom-control-inline">If yes, will you have an added child care expense?
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
@@ -110,7 +106,7 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_5_2" style="display: none;"
-                                                   placeholder="If Yes what do you anticipate the annual child care expense would add to your budget"/>
+                                                   placeholder="If yes, what do you anticipate the annual child care expense would add to your budget"/>
 
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
@@ -139,7 +135,7 @@
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    style="display: none;"
                                                    name="question_7"
-                                                   placeholder="If yes, How many do you have or plan to have?"/>
+                                                   placeholder="If yes, how many do you have or plan to have?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_8" style="display: none;"
                                                    placeholder="Age of your youngest child?"/>
@@ -168,7 +164,7 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_12" style="display: none;"
-                                                   placeholder="If Yes, by the time your child reaches collage - how much do you think it will cost to send each individual child through school?"/>
+                                                   placeholder="If yes, by the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
 
                                             <input type="hidden" name="question_13"
                                                    class="form-control form-input-text o_website_form_input"/>
@@ -219,7 +215,7 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_16" style="display: none;"
-                                                   placeholder="If Yes, What is your mortgage balance?"/>
+                                                   placeholder="If yes, What is your mortgage balance?"/>
 
 
                                             <input type="hidden" name="question_17"
@@ -241,7 +237,7 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_18" style="display: none;"
-                                                   placeholder="If Yes What is your credit Card Balance?"/>
+                                                   placeholder="If yes, what is your total Credit Cards Balance?"/>
 
                                             <input type="hidden" name="question_19"
                                                    class="form-control form-input-text o_website_form_input"/>
@@ -262,14 +258,13 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_20" style="display: none;"
-                                                   placeholder="If yes what are your car payments balances?"/>
+                                                   placeholder="If yes, what is your total car payments balances?"/>
 
                                             <input type="hidden" name="question_21"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have any additional Debt
-                                                    (student
-                                                    loans, personal loans, etc.)
+                                                    (student loans, personal loans, etc...)
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
@@ -286,7 +281,7 @@
                                             </div>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_22" style="display: none;"
-                                                   placeholder="If Yes, What is the total balance you owe?"/>
+                                                   placeholder="If yes, what is the total balance you owe?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
@@ -296,16 +291,15 @@
                                             <input type="text"
                                                    class="form-control form-input-text o_website_form_input check_amount_format"
                                                    name="question_23" required="True"
-                                                   placeholder="If you own your own home what are your annual property taxes? If you rent, what is your monthly rent? : Eg. 15231.50"/>
+                                                   placeholder="What are your annual property taxes? If you rent, put 0"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_24" required="True"
-                                                   placeholder="What is the cost of your Homeowners or renters insurance policy annually?"/>
+                                                   placeholder="What is the cost of your Homeowners or Renters insurance policy annually?"/>
 
                                             <input type="hidden" name="question_25"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
-                                                <p class="custom-control-inline">Are you responsible for paying HOA
-                                                    fees?
+                                                <p class="custom-control-inline">Are you responsible for paying HOA fees?
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
@@ -325,7 +319,7 @@
                                                    placeholder="If yes, what is your monthly HOA amount?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_27" required="True"
-                                                   placeholder="Excluding your Mortgage Payment, Credit Card Payments, Car Payments, or the cost of any additional debt, how much per month do you spend on additional living expenses (Food, Fuel, Electricity, Gas, Private School, Entertainment, Landscaping, Cleaning services, etc)?"/>
+                                                   placeholder="How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="compute"

@@ -29,15 +29,13 @@
                                                name="subject"
                                                value="Testing Inside subject"/>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_1" required="True" placeholder="First Name"
-                                               value="yusuf"/>
+                                               name="question_1" required="True" placeholder="First Name"/>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
-                                               value="kapasi"
                                                name="Last Name" required="True" placeholder="Last Name"/>
-                                        <input type="email" value="test@test.com"
+                                        <input type="email"
                                                class="form-control form-input-text o_website_form_input format-email"
                                                name="Email" required="True" placeholder="Email"/>
-                                        <input type="text" value="1234567890"
+                                        <input type="text"
                                                class="form-control form-input-text o_website_form_input format-phone"
                                                name="Phone" step="1" required="" placeholder="Phone: 000-000-0000"
                                                maxlength="10"/>
@@ -49,7 +47,7 @@
                                     <input class="form-field"
                                            type="hidden"
                                            name="email_to"
-                                           value="isufi.kapasi@aktivsoftware.com"/>
+                                           value="nathan.quijoux@captivea.com"/>
                                 </form>
                             </div>
                         </div>
