@@ -53,7 +53,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                 'return_val': return_val
             }).then(function (data) {
                 if(data){
-                    if('total_insurance'){
+                    if('total_insurance' in data){
                         $('#msform').parent().next().find('.insurance_amount').html(data['total_insurance'].toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
                     }
                 }
