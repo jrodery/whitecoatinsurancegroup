@@ -13,11 +13,13 @@
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',
+        'data/free_disability_quote_template.xml',
         'data/insurance_estimate_template.xml',
         'views/assets.xml',
-        # 'views/web_free_quote_form.xml',
         'views/life_insurance_estimate_form_views.xml',
-        'views/web_life_insurance_estimate_form.xml'
+        'views/web_life_insurance_estimate_form.xml',
+        'views/free_quote_form_views.xml',
+        'views/web_free_quote_form.xml',
     ],
     'installable': True,
     'application': False,

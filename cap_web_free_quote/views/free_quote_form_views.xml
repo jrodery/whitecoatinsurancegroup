@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="free_disability_quote_form_view" model="ir.ui.view">
+        <field name="name">free.disability.quote.form</field>
+        <field name="model">free.disability.quote</field>
+        <field name="arch" type="xml">
+            <form string="Free Disability Quote">
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           options="{'clickable': '1'}"
+                           statusbar_visible="draft,submitted,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <separator string="Step-1"/>
+                    <group col="4">
+                        <field name="question_1"/>
+                        <field name="question_2"/>
+                        <field name="question_3"/>
+                        <field name="question_4"/>
+                        <field name="question_5"/>
+                    </group>
+                    <separator string="Step-2"/>
+                    <group col="4">
+                        <field name="question_6"/>
+                        <field name="question_7"/>
+                        <field name="question_8"/>
+                        <field name="question_9"/>
+                    </group>
+                    <separator string="Step-3"/>
+                    <group col="4">
+                        <field name="question_10"/>
+                        <field name="question_11"/>
+                        <field name="question_12"/>
+                        <field name="question_13"/>
+                    </group>
+                    <separator string="Step-4"/>
+                    <group col="4">
+                        <field name="question_14"/>
+                        <field name="question_15"/>
+                        <field name="question_16"/>
+                        <field name="question_18"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="free_disability_quote_tree_view" model="ir.ui.view">
+        <field name="name">free.disability.quote.tree</field>
+        <field name="model">free.disability.quote</field>
+        <field name="arch" type="xml">
+            <tree string="Free Disability Quote">
+                <field name="create_date"/>
+                <field name="question_1"/>
+                <field name="question_2"/>
+                <field name="question_3"/>
+                <field name="question_4"/>
+                <field name="question_5"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="free_disability_quote_act_window" model="ir.actions.act_window">
+        <field name="name">Free Disability Quote</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">free.disability.quote</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Free Disability Quote.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_free_disability_quote"
+              name="Free Disability Quote"
+              parent="menu_whitecoat_web_form"
+              action="free_disability_quote_act_window"/>
+</odoo>

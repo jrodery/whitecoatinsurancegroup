@@ -35,7 +35,9 @@
                                                    placeholder="What is the zip code of your area?"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
                                                    value="Next"
-                                                   data-store-model="life.insurance.estimate"/>
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
@@ -111,7 +113,10 @@
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
-                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                                   value="Next"
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
                                             <input type="hidden" name="question_6"
@@ -142,7 +147,10 @@
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
-                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                                   value="Next"
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
                                             <input type="hidden" name="question_11"
@@ -193,7 +201,9 @@
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
                                                    value="Next"
-                                                   data-store-model="life.insurance.estimate"/>
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
                                             <input type="hidden" name="question_15"
@@ -216,7 +226,6 @@
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_16" style="display: none;"
                                                    placeholder="If yes, What is your mortgage balance?"/>
-
 
                                             <input type="hidden" name="question_17"
                                                    class="form-control form-input-text o_website_form_input"/>
@@ -285,7 +294,10 @@
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
-                                                   value="Next" data-store-model="life.insurance.estimate"/>
+                                                   value="Next"
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
                                             <input type="text"
@@ -324,10 +336,15 @@
                                                    value="Previous"/>
                                             <input type="button" name="compute"
                                                    data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form"
                                                    class="estimate_next action-button"
                                                    value="Calculate"/>
-                                            <input type="button" name="done" data-store-model="life.insurance.estimate"
+                                            <input type="button" name="done"
                                                    class="submit_estimate next action-button"
+                                                   data-store-model="life.insurance.estimate"
+                                                   data-return="total_insurance"
+                                                   data-route="/insurance/estimate-form-done"
                                                    value="Done"/>
                                         </fieldset>
                                         <fieldset>
@@ -339,7 +356,7 @@
                                     <p>
                                         <span>Calculate how much life insurance I need...</span>
                                         <br/>
-                                        <span class="insurance_amount" name="insurance_amount"></span>
+                                        <span class="total_insurance insurance_amount" name="total_insurance"></span>
                                     </p>
                                 </div>
                                 <div class="offset-md-1"/>

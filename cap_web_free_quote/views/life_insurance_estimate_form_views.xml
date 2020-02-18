@@ -113,8 +113,13 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem id="menu_whitecoat_web_form"
+              name="Insurance"
+              sequence="50"/>
+
     <menuitem id="menu_menu_life_insurance_estimate_form"
-              string="Life Insurance"
-              sequence="50"
+              name="Life Insurance"
+              sequence="10"
+              parent="menu_whitecoat_web_form"
               action="action_life_insurance_estimate_form"/>
 </odoo>

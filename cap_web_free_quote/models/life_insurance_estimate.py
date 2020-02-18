@@ -203,11 +203,11 @@ class LifeInsuranceEstimate(models.Model):
     def write(self, vals):
         res = super(LifeInsuranceEstimate, self).write(vals)
         if vals.get('state', '') == 'done':
-            self.send_estimation_mail()
+            self.send_form_mail()
         return res
 
     @api.multi
-    def send_estimation_mail(self):
+    def send_form_mail(self):
         template = self.env.ref(
             'cap_web_free_quote.mail_life_insurance_estimate_form',
             raise_if_not_found=False)

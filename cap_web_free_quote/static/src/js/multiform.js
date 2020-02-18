@@ -1,7 +1,7 @@
-odoo.define('cap_web_free_quote.free_quote', function (require) {
+odoo.define('cap_web_free_quote.free_quote', function (require){
     "use strict";
 
-    $(document).ready(function () {
+    $(document).ready(function (){
         //jQuery time
         var current_fs, next_fs, previous_fs; //fieldsets
         var left, opacity, scale; //fieldset properties which we will animate
@@ -14,19 +14,19 @@ odoo.define('cap_web_free_quote.free_quote', function (require) {
         $(".format-email").focusout(function(){
             var email = $(this).val();
             var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if(!regex.test(email)) {
-                // $(this).focus();
+            if(!regex.test(email)){
+                $(this).focus();
                 if(!$(this).hasClass('fill-required')){
                     $(this).addClass('fill-required');
                 }
-            }  else {
+            } else {
                 if($(this).hasClass('fill-required')){
                     $(this).removeClass('fill-required');
                 }
             }
         });
 
-        $('.format-phone').focusout(function() {
+        $('.format-phone').focusout(function(){
             $(this).val(
                 $(this).val().replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1-$2-$3')
             );
@@ -58,8 +58,8 @@ odoo.define('cap_web_free_quote.free_quote', function (require) {
                 //show the next fieldset
                 next_fs.show();
                 //hide the current fieldset with style
-                current_fs.animate({opacity: 0}, {
-                    step: function(now, mx) {
+                current_fs.animate({opacity: 0},{
+                    step: function(now, mx){
                         //as the opacity of current_fs reduces to 0 - stored in "now"
                         //1. scale current_fs down to 80%
                         scale = 1 - (1 - now) * 0.2;
@@ -97,8 +97,8 @@ odoo.define('cap_web_free_quote.free_quote', function (require) {
             //show the previous fieldset
             previous_fs.show();
             //hide the current fieldset with style
-            current_fs.animate({opacity: 0}, {
-                step: function(now, mx) {
+            current_fs.animate({opacity: 0},{
+                step: function(now, mx){
                     //as the opacity of current_fs reduces to 0 - stored in "now"
                     //1. scale previous_fs from 80% to 100%
                     scale = 0.8 + (1 - now) * 0.2;
