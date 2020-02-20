@@ -180,3 +180,54 @@
     color: #1b557a;
     font-weight : bold;
 }
+
+.insurance_data_css{
+    background-color : #00aff0;
+}
+
+.fonts{
+    margin: auto;
+    padding:50px;
+    color : #ffffff;
+    font: 10px arial, sans-serif;
+}
+
+.flex-item{
+     justify-content: center;
+}
+
+.insurance_data_row{
+    flex-wrap : wrap;
+    align: center;
+    flex-direction: column;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+.total_background{
+    background-color:#00aff0;
+}
+
+.total_button {
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: #00aff0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.flex-container{
+    justify-content: center;
+    display:inline;
+}

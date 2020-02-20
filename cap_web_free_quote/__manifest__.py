@@ -20,6 +20,9 @@
         'views/web_life_insurance_estimate_form.xml',
         'views/free_quote_form_views.xml',
         'views/web_free_quote_form.xml',
+        'views/insurance_data_display.xml',
+        'views/online_insurance_application_views.xml',
+        'views/web_online_insurance_application_form.xml'
     ],
     'installable': True,
     'application': False,

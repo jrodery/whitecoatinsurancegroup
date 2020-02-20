@@ -79,7 +79,7 @@ class LifeInsuranceEstimate(models.Model):
         select_boolean, default='No',
         string="Do you plan on paying for college?")
     question_12 = fields.Float(
-        string="If Yes, by the time your child reaches collage - how much do "
+        string="If Yes, by the time your child reaches college - how much do "
                "you think it will cost to send each individual child through "
                "school?")
     question_13 = fields.Selection(

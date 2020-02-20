@@ -92,7 +92,7 @@
                         <field name="question_27_1" readonly="1" force_save="1"/>
                         <field name="question_27_2" readonly="1" force_save="1"/>
                     </group>
-                    <separator string="Total Insureance"/>
+                    <separator string="Total Insurance"/>
                     <group col="3">
                         <field name="total_insurance" readonly="1" force_save="1"/>
                     </group>

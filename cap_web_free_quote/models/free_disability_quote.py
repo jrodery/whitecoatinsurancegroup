@@ -28,7 +28,7 @@ class FreeDisabilityQuote(models.Model):
 
     # Step - 2
     question_6 = fields.Char(string="Medical Speciality")
-    question_7 = fields.Char(string="Date of Birth")
+    question_7 = fields.Date(string="Date of Birth")
     question_8 = fields.Selection([
         ('Male', 'Male'),
         ('Female', 'Female'),

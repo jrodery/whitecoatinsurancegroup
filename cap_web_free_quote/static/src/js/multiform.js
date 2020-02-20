@@ -32,13 +32,27 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             );
         });
 
+        $(".check_amount_format").focusout(function(){
+            var str = $(this).val();
+            if(!$.isNumeric(str)){
+                $(this).focus();
+                $(this).val('');
+                $(this).attr('placeholder', 'Please follow this format. Ex.: 12345.11');
+                $(this).addClass('fill-required');
+            } else {
+                if($(this).hasClass('fill-required')){
+                    $(this).removeClass('fill-required');
+                }
+            }
+        });
+
         $(".next").click(function(){
-            var self = $(this)
+            var self = $(this);
             if(animating) return false;
             animating = true;
             var missed_required_input = false;
             current_fs = self.parent();
-            next_fs = self.parent().next();
+            next_fs = self.closest('fieldset').next();
             current_fs.find('input').each(function(){
                 if($(this).prop('required') && !$(this).val().trim()){
                     missed_required_input = true;
@@ -81,6 +95,9 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                     //this comes from the custom easing plugin
                     easing: 'easeInOutBack'
                 });
+                if(self.hasClass('show_total')) {
+                    $('#msform').parent().next().css("display", "block");
+                }
             }
         });
 
@@ -89,7 +106,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             animating = true;
 
             current_fs = $(this).parent();
-            previous_fs = $(this).parent().prev();
+            previous_fs = $(this).closest('fieldset').prev();
 
             //de-activate current step on progressbar
             $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
@@ -117,6 +134,9 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                 //this comes from the custom easing plugin
                 easing: 'easeInOutBack'
             });
+            if($(this).hasClass('hide_total')) {
+                $('#msform').parent().next().css("display", "none")
+            }
         });
     });
 });

@@ -10,9 +10,17 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var store_data_model = self.attr('data-store-model');
             if(store_data_model){
                 current_fs = self.parent();
+                var element = '';
                 var input_args = {};
+                var inp_data = '';
                 current_fs.find('input').each(function(){
-                    input_args[$(this).context['name']] = $(this).val();
+                    element = $(this);
+                    inp_data = element.val();
+                    if(element.hasClass('input-date-save')) {
+                        inp_data = inp_data.split(" / ");
+                        inp_data = inp_data[2] + '-' + inp_data[0] + '-' + inp_data[1];
+                    }
+                    input_args[element.context['name']] = inp_data;
                 });
                 current_fs.find('select').each(function(){
                     input_args[$(this).context['name']] = $(this).val();
@@ -50,27 +58,22 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             ajax.jsonRpc(route, 'call', {
                 'rec_id': rec_id,
                 'store_data_model': store_data_model,
-                'return_val': return_val
             }).then(function (data) {
                 if(data){
                     if('total_insurance' in data){
-                        $('#msform').parent().next().find('.insurance_amount').html(data['total_insurance'].toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
+                        $('#msform').parent().next()
+                        .find('.insurance_amount').html(data['total_insurance']
+                        .toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
                     }
                 }
             });
         });
 
-//        $(".check_amount_format").focusout(function(){
-//            var regex = /^\d+\.{0,1}\d{0,2}\Z/gm;
-//
-//            var str = $(this).val();
-//            var subst = ``;
-//
-//            // The substituted value will be contained in the result variable
-//            var result = str.replace(regex, subst);
-//
-//            console.log('Substitution result: ', result);
-//        });
+        $("#insurance_done").on('click', function(e){
+            var self = $(this);
+            var rec_id = $('#msform').find("input[name='res_id']").val();
+            window.location.href = "/life/insurance-done?rec_id=" + rec_id;
+        });
 
         $('.question_radio').on('change', function() {
             var display_block = $(this).val() == 'Yes';

@@ -50,9 +50,9 @@
                                                name="question_6" required="True" placeholder="Medical Speciality"/>
                                         <p class="col-form-label label_text">Date Of Birth:</p>
                                         <input id="date_of_birth" type="text"
-                                               class="form-control form-input-text o_website_form_input"
+                                               class="form-control form-input-text o_website_form_input format-date input-date-save"
                                                name="question_7" required="True"
-                                               placeholder="Date of date_of_birth: MM/DD/YYYY"/>
+                                               placeholder="Date of birth: MM/DD/YYYY"/>
                                         <p class="col-form-label label_text">State:</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_9" required="True" placeholder="State"/>
