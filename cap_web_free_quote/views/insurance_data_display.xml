@@ -5,286 +5,218 @@
                 <section class="features">
                     <div class="container">
                         <div class="row">
-                        <t t-set="life" t-value="insurance_data"/>
-                                <div class="fonts" t-field="life.question_28" />
-                                <div class="fonts" t-field="life.question_29" />
-                                <div class="fonts">- Age</div>
-                                <div class="fonts" t-field="life.question_1" />
-                        <div class="insurance_data_row">                            
-                            <div class="flex-container">
-                                <img src="/cap_web_free_quote/static/src/img/retirement.PNG" height="100px" width="100px" />
-                                <div>
+                            <t t-set="life" t-value="insurance_data" />
+                            <div class="name_align">
+                                <span class="fonts" t-field="life.question_28" />
+                                <span class="fonts" t-field="life.question_29" />
+                                <span class="fonts">- Age</span>
+                                <span class="fonts" t-field="life.question_1" />
+                            </div>
+                            <div class="insurance_data_row">
+                                <div class="main_content">
                                     <div>
+                                        <img src="/cap_web_free_quote/static/src/img/retirement.PNG" height="100px" width="100px" />
+                                        <div>
+                                            <div>
                                         Desired Retirement Age
-                                    </div> 
-                                    <div t-field="life.question_2" />
-                                </div>
-                            </div>
-                            <div class="flex-container">
-                                <img src="/cap_web_free_quote/static/src/img/children.PNG" height="100px" width="100px" />
-                                <div>
+                                    </div>
+                                            <div t-field="life.question_2" />
+                                        </div>
+                                    </div>
                                     <div>
+                                        <img src="/cap_web_free_quote/static/src/img/children.PNG" height="100px" width="100px" />
+                                        <div>
+                                            <div>
                                         Kids/Future Kids
-                                    </div> 
-                                    <div t-field="life.question_7" />
-                                </div>
-                            </div>
-                            <div class="flex-container">
-                                <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100px" width="100px" />
-                                <div>
+                                    </div>
+                                            <div t-field="life.question_7" />
+                                        </div>
+                                    </div>
                                     <div>
+                                        <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100px" width="100px" />
+                                        <div>
+                                            <div>
                                         Tution Responsibility
-                                    </div> 
-                                    <div t-field="life.question_14_1" />
-                                </div>
-                            </div>
-                            <div class="flex-container">
-                                <img src="/cap_web_free_quote/static/src/img/debt_white.PNG" height="100px" width="100px" />
-                                <div>
+                                    </div>
+                                            <div t-field="life.question_14_1" />
+                                        </div>
+                                    </div>
                                     <div>
+                                        <img src="/cap_web_free_quote/static/src/img/debt_white.PNG" height="100px" width="100px" />
+                                        <div>
+                                            <div>
                                         Total Debt
-                                    </div> 
-                                    <div t-field="life.question_22_1" />
-                                </div>
-                            </div>
-                            <div class="flex-container">
-                                <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100px" width="100px" />
-                                <div>
+                                    </div>
+                                            <div t-field="life.question_22_1" />
+                                        </div>
+                                    </div>
                                     <div>
+                                        <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100px" width="100px" />
+                                        <div>
+                                            <div>
                                         Annual Recurring Expenses
-                                    </div> 
-                                    <div t-field="life.question_27_2" />
+                                    </div>
+                                            <div t-field="life.question_27_2" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
                                 <div>
+                                    <div class="text_css">
                                     Total Life Insurance Death Benefit<br />
                                     Required to cover your lifestyle
                                 </div>
-                                <div class="total_button">
-                                    <div t-field="life.total_insurance" />
+                                    <div class="total_button">
+                                        <div t-field="life.total_insurance" />
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- <t t-foreach="insurance_data" t-as="life">
-                                <table align="center">
-                                    <tr>
-                                        <td>
-                                            <span class="fonts" t-field="life.question_28" />
-                                            <span class="fonts" t-field="life.question_29" />
-                                            <span class="fonts">- Age</span>
-                                            <span class="fonts" t-field="life.question_1" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>111111111111111111111111111111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <img src="/cap_web_free_quote/static/src/img/retirement.PNG" height="100" width="100" />
-                                            Desired Retirement Age
-                                            <span t-field="life.question_2" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <img src="/cap_web_free_quote/static/src/img/children.PNG" height="100" width="100" />
-                                            Kids/Future Kids
-                                            <span t-field="life.question_7" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100" width="100" />
-                                            Tution Responsibility
-                                            <span t-field="life.question_14_1" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <img src="/cap_web_free_quote/static/src/img/debt_white.PNG" height="100" width="100" />
-                                            Total Debt
-                                            <span t-field="life.question_22_1" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100" width="100" />
-                                            Annual Recurring Expenses
-                                            <span t-field="life.question_27_2" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Total Life Insurance Death Benefit<br />
-                                            Required to cover your lifestyle
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span t-field="life.total_insurance" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22222222222222222222222222222</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            What's The Plan If You Die?
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            1 Pay Off Debt and Set Aside Funds for your Children's Education
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_14" />
-                                            Tution Savings
-                                            <img src="/cap_web_free_quote/static/src/img/savings_tuition.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_22_1" />
-                                            Pay Off Debt
-                                            <img src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        Total Remaining Balance After Debts/Education are Paid
-                                        <span t-field="life.question_22_1" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>333333333333333333333333333333</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            2 Invest the Balance Annual Interest Earned Used to Pay Recuring Annual Expenses
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_18" />
+                            <div>
+                                <div class="two_tabs">
+                                What's The Plan If You Die?
+                            </div>
+                            </div>
+                            <div class="insurance_data_row">
+                                <div class="square_box">
+                                    1
+                                </div>
+                                <div>
+                                    Pay Off Debt and Set Aside Funds for your Children's Education 
+                                </div>
+                                <div>
+                                    <div class="flex-container">
+                                        <div t-field="life.question_14" />
+                                    Tution Savings
+                                    <img src="/cap_web_free_quote/static/src/img/savings_tuition.PNG" height="100px" width="100px" /></div>
+                                </div>
+                                <div class="flex-container">
+                                    <div>
+                                    Pay Off Debt
+                                </div>
+                                    <div>
+                                        <div t-field="life.question_21" />
+                                        <img src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG" height="100" width="100" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text_css">
+                                    Total Remaining Balance After Debts/Education are Paid
+                                </div>
+                                    <div class="big_integer">
+                                        <div t-field="life.total_insurance" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="insurance_data_row">
+                                <div>
+                                    <div class="square_box">
+                                    2
+                                </div>
+                                    <div>
+                                        Invest the Balance Annual Interest Earned Used to Pay Recuring Annual Expenses 
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div t-field="life.question_18" />
                                             Invest Balance
-                                            <img src="/cap_web_free_quote/static/src/img/invest_balance.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_27_1" />
-                                            Annual Investment Income Covers Annual Recurring Expenses
-                                            <img src="/cap_web_free_quote/static/src/img/annual_investment.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>44444444444444444444444444444444</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_27_1" />
-                                            Death Benefit
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Pays Off Your Debt
-                                            <img src="/cap_web_free_quote/static/src/img/debt.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Funds Your Kids Education
-                                            <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Covers All Your Annual Recurring Expenses
-                                            <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100" width="100" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            And Still Leaves Behind A Financial Legacy Worth:
-                                            <span t-field="life.question_5_3" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>55555555555555555555555555555555</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Request Quotes
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            <span t-field="life.question_28" />
-                                            <span t-field="life.question_29" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Death Benefit:
-                                            <span t-field="life.question_27_1" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Date Of Birth
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Sex
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            State
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Do You Smoke?
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Rate Your Health
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Choose Policy Type(s)
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            10 Year Level Term
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            10 Year Level Term
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            15 Year Level Term
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            20 Year Level Term
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            30 Year Level Term
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="flex-container">
-                                            Life Time Coverage
-                                        </td>
-                                    </tr>
-                                </table>
-                            </t> -->
+                                            <img src="/cap_web_free_quote/static/src/img/invest_balance.PNG" height="100" width="100" />
+                                        </div>
+                                    </div>
+                                <div>
+                                    <div class="flex-container">
+                                        <div t-field="life.question_27_1" />
+                                    Annual Investment Income<br /> Covers Annual Recurring<br /> Expenses
+                                    <img src="/cap_web_free_quote/static/src/img/annual_investment.PNG" height="100" width="100" /></div>
+                                </div>
+                            </div>
+                            <div class="insurance_data_row">
+                                <div class="big_integer">
+                                    <div t-field="life.question_27_1" />
+                                Death Benefit
+                            </div>
+                                <div class="big_fonts">
+                                    <div>
+                                    Pays Off Your Debt
+                                    <img src="/cap_web_free_quote/static/src/img/debt.PNG" height="100" width="100" /></div>
+                                </div>
+                                <div class="big_fonts">
+                                    <div>
+                                    Funds Your Kids Education
+                                    <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100" width="100" /></div>
+                                </div>
+                                <div class="big_fonts">
+                                    <div>
+                                    Covers All Your Annual Recurring Expenses
+                                    <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100" width="100" /></div>
+                                </div>
+                                <div>
+                                    <div class="text_css">
+                                    And Still Leaves Behind A Financial Legacy Worth:
+                                    <div class="big_integer" t-field="life.question_5_3" /></div>
+                                </div>
+                            </div>
+                            <div class="two_tabs">
+                            Request Quotes
                         </div>
-                    </div>
+                            <div class="insurance_data_row">
+                                <div class="request_name">
+                                    <span t-field="life.question_28" />
+                                    <span t-field="life.question_29" />
+                                </div>
+                                <div class="big_fonts">
+                                    <span>
+                                Death Benefit: $
+                                <span t-field="life.question_27_1" /></span>
+                                </div>
+                                <div class="four_round">
+                                Date Of Birth
+                            </div>
+                                <div class="four_round">
+                                Sex
+                            </div>
+                                <div class="four_round">
+                                State
+                            </div>
+                                <div class="four_round">
+                                Do You Smoke?
+                            </div>
+                                <div class="rating_star">
+                                    <span>Rate Your Health☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                </div>
+                                <div class="border_line"></div>
+                                <div>
+                                    <div class="big_fonts">
+                                Choose Policy Type(s)
+                            </div>
+                                    <div class="five_radio">
+                                        <div>
+                                            <input type="radio" name="colors" id="red" />
+                                10 Year Level Term
+                            </div>
+                                        <div>
+                                            <input type="radio" name="colors" id="red" />
+                                15 Year Level Term
+                            </div>
+                                        <div>
+                                            <input type="radio" name="colors" id="red" />
+                                20 Year Level Term
+                            </div>
+                                        <div>
+                                            <input type="radio" name="colors" id="red" />
+                                30 Year Level Term
+                            </div>
+                                        <div>
+                                            <input type="radio" name="colors" id="red" />
+                                Life Time Coverage
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

@@ -88,3 +88,8 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             vals['create'] = True
             vals['res_id'] = form_object.create(kw.get('input_args', {})).id
         return vals
+
+    @http.route('/life/insurance-done', type='http', auth="public", methods=['POST','GET'], csrf=False, website=True)
+    def insurance_done(self,**kw):
+        res = request.env['life.insurance.estimate'].browse(int(kw.get('rec_id')))
+        return request.render('cap_web_free_quote.life_insurance_data_display_template',{"insurance_data":res})
