@@ -47,7 +47,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 auth="public", methods=['POST'])
     def freequote_form(self, **kw):
         form_object = request.env[kw['store_data_model']]
-        vals = {'create': False, 'res_id': False, 'total_insurance': 0.0}
+        vals = {'create': False, 'res_id': False}
         if kw.get('rec_id'):
             res = form_object.browse(int(kw.get('rec_id')))
             res.sudo().write(kw.get('input_args'))
