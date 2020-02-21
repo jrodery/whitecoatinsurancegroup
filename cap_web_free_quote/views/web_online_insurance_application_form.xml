@@ -24,7 +24,7 @@
                                           <label class="col-form-label label_insurance_app" for="First Name"> First Name</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_1" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_1" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -32,7 +32,7 @@
                                           <label class="col-form-label label_insurance_app" for="Last Name"> Last Name</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_2" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_2" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="col-md-8" style="">
                                           <div class="o_website_form_date input-group date" id="datepicker6" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker6" name="question_3" t_required="False"/>
+                                            <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker6" name="question_3" required="True"/>
                                             <div class="input-group-append" data-target="#datepicker6" data-toggle="datetimepicker">
                                               <div class="input-group-text">
                                                 <i class="fa fa-calendar"/>
@@ -55,7 +55,7 @@
                                           <label class="col-form-label label_insurance_app" for="Sex"> Sex</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_4" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_4" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -63,7 +63,7 @@
                                           <label class="col-form-label label_insurance_app" for="Home Street Address"> Home Street Address</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_5" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_5" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -71,7 +71,7 @@
                                           <label class="col-form-label label_insurance_app" for="Home City"> Home City</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_6" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_6" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -79,7 +79,7 @@
                                           <label class="col-form-label label_insurance_app" for="Home State"> Home State</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_7" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_7" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -87,7 +87,7 @@
                                           <label class="col-form-label label_insurance_app" for="Home Zip"> Home Zip</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_8" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_8" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -95,7 +95,7 @@
                                           <label class="col-form-label label_insurance_app" for="Phone Number">Phone Number</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="number" class="form-control o_website_form_input" name="question_9" t_required="False"/>
+                                          <input type="number" class="form-control o_website_form_input" name="question_9" required="True"/>
                                         </div>
                                       </div>
                                       <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -103,15 +103,15 @@
                                           <label class="col-form-label label_insurance_app" for="Email Address"> Email Address</label>
                                         </div>
                                         <div class="col-md-8">
-                                          <input type="text" class="form-control o_website_form_input" name="question_10" t_required="False"/>
+                                          <input type="text" class="form-control o_website_form_input" name="question_10" required="True"/>
                                         </div>
                                       </div>
-<!--                                       <div class="form-group row">
-                                        <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
- -->                                          <input type="button" name="next" class="next estimate_next action-button" value="Next" data-route="/insurance/insurance-application" data-store-model="online.insurance.application"/>
-<!--                                         </div>
-                                      </div>
- -->                                    </fieldset>
+                                      <!-- <div class="form-group row">
+                                        <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7"> -->
+                                          <input type="button" name="next" class="next estimate_next action-button" value="Next" data-route="/insurance/insurance-application" data-store-model="online.insurance.application"/>
+                                        <!-- </div>
+                                      </div> -->
+                                    </fieldset>
 
                                     <!-- # Step - 2 -->
                                     <fieldset>
@@ -120,7 +120,7 @@
                                             <label class="col-form-label label_insurance_app" for="Social Security Number"> Social Security Number</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="number" class="form-control o_website_form_input" name="question_11" step="1" t_required="False"/>
+                                            <input type="number" class="form-control o_website_form_input" name="question_11" step="1" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -128,7 +128,7 @@
                                             <label class="col-form-label label_insurance_app" for="Drivers License Number"> Drivers License Number</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_12" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_12" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -136,7 +136,7 @@
                                             <label class="col-form-label label_insurance_app" for="License Issue State"> License Issue State</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_13" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_13" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -145,7 +145,7 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_date input-group date" id="datepicker16" data-target-input="nearest">
-                                              <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker16" name="question_14" t_required="False"/>
+                                              <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker16" name="question_14" required="True"/>
                                               <div class="input-group-append" data-target="#datepicker16" data-toggle="datetimepicker">
                                                 <div class="input-group-text">
                                                   <i class="fa fa-calendar"/>
@@ -159,7 +159,7 @@
                                             <label class="col-form-label label_insurance_app" for="Years lived at the current address?"> Years lived at the current address?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_15" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_15" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -167,7 +167,7 @@
                                             <label class="col-form-label label_insurance_app" for="Country/State of birth"> Country/State of birth</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_16" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_16" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -175,17 +175,18 @@
                                             <label class="col-form-label label_insurance_app" for="Are you a US Citizen?"> Are you a US Citizen?</label>
                                           </div>
                                           <div class="col-md-8">
+                                            <input type="hidden" name="question_17"/>
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_17" value="Yes" t_required="False"/>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="question_radio o_website_form_input" name="question_17_yes" value="Yes"/>
                                                   <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_17" value="No" t_required="False"/>
-                                                  <span> No&amp;nbsp;</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="question_radio o_website_form_input" name="question_17_no" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -220,7 +221,7 @@
                                             <label class="col-form-label label_insurance_app" for="Employer Name"> Employer Name</label>
                                           </div>
                                           <div class="col-md-8" style="">
-                                            <input type="text" class="form-control o_website_form_input" name="question_21" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_21" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -228,7 +229,7 @@
                                             <label class="col-form-label label_insurance_app" for="Employer Street Address"> Employer Street Address</label>
                                           </div>
                                           <div class="col-md-8" style="">
-                                            <input type="text" class="form-control o_website_form_input" name="question_22" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_22" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -236,7 +237,7 @@
                                             <label class="col-form-label label_insurance_app" for="Employer City"> Employer City</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_23" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_23" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -244,7 +245,7 @@
                                             <label class="col-form-label label_insurance_app" for="Employer State"> Employer State</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_24" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_24" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -252,7 +253,7 @@
                                             <label class="col-form-label label_insurance_app" for="Employer Zip Code"> Employer Zip Code</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_25" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_25" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -260,7 +261,7 @@
                                             <label class="col-form-label label_insurance_app" for="Occupation/Specialty"> Occupation/Specialty</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_26" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_26" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -268,7 +269,7 @@
                                             <label class="col-form-label label_insurance_app" for="Occupational duties"> Occupational duties</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <textarea class="form-control o_website_form_input" name="question_27" spellcheck="false" t_required="False"/>
+                                            <textarea class="form-control o_website_form_input" name="question_27" required="True"/>
                                           </div>
                                         </div>
                                         <!-- <div class="form-group row">
@@ -294,7 +295,7 @@
                                             <label class="col-form-label label_insurance_app" for="Occupational duties">The total number of years with the same employer?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_29" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_29"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -303,16 +304,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_30" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_30" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="Do you work at least 30 hours per week?" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_30" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -324,16 +325,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_31" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_31" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_31" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_31" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -353,16 +354,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_33" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_33" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_33" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_33" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -381,7 +382,7 @@
                                             <label class="col-form-label label_insurance_app" for="If Yes, what type of business is it?"> If Yes, what type of business is it? </label>
                                           </div>
                                           <div class="col-md-8 o_animate_preview">
-                                            <select class="form-control o_website_form_input" name="question_35" t_required="False">
+                                            <select class="form-control o_website_form_input" name="question_35">
                                               <option value="LLC">
                                                           LLC
                                                       </option>
@@ -396,20 +397,20 @@
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
                                           <div class="col-md-4 text-md-right" style="">
-                                            <label class="col-form-label label_insurance_app" for="Are there more than 10 people employed with your current employer?"><span style="font-size: 0.875rem;">Are there more than 10 people employed with your current employer?</span>&amp;nbsp;</label>
+                                            <label class="col-form-label label_insurance_app" for="Are there more than 10 people employed with your current employer?">Are there more than 10 people employed with your current employer?</label>
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_36" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_36" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_36" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_36" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -420,7 +421,7 @@
                                             <label class="col-form-label label_insurance_app" for="What is your current projected YTD income?"> What is your current projected YTD income?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_37" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_37" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -428,7 +429,7 @@
                                             <label class="col-form-label label_insurance_app" for="What was last year's Adjusted Gross Income Total?"> What was last year's Adjusted Gross Income Total?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_38" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_38" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -436,7 +437,7 @@
                                             <label class="col-form-label label_insurance_app" for="What was 2 years ago Adjusted Gross Income Total?"> What was 2 years ago Adjusted Gross Income Total?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_39" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_39" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -445,16 +446,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_40" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_40" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_40" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_40" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -482,18 +483,18 @@
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Do you have any existing Group or Individual Disability Insurance?"> Do you have any existing Group or Individual Disability Insurance?</label>
                                           </div>
-                                          <div class="col-md-8 o_animate_preview">
+                                          <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_42" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_42" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_42" value="No" t_required="False"/>
-                                                  <span> No&amp;nbsp;</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_42" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -532,36 +533,21 @@
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
-                                          <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="" style="display: none;">
-                                              <option value="Option 1">
-                                                          Option 1
-                                                      </option>
-                                              <option value="Option 2">
-                                                          Option 2
-                                                      </option>
-                                              <option value="Option 3">
-                                                          Option 3
-                                                      </option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="row form-group form-field o_website_form_custom">
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Is Carrier 1 employer paid?"> Is Carrier 1 employer paid?</label>
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
                                                   <input type="radio" class="o_website_form_input" name="question_47" value="Yes"/>
-                                                  <span> Yes&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;</span>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_47" value="No"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_47" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -573,16 +559,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
                                                   <input type="radio" class="o_website_form_input" name="question_48" value="Yes"/>
-                                                  <span> Yes</span>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_48" value="No"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_48" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -594,15 +580,17 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
                                                   <input type="radio" class="o_website_form_input" name="question_49" value="Yes"/>
-                                                  <span> Yes&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;</span>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_49" value="No"/>&amp;nbsp;No<span>&amp;nbsp;</span></label>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_49" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
                                               </div>
                                             </div>
                                           </div>
@@ -619,18 +607,18 @@
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Have you used tobacco or nicotine products in any form within the last 5 years?"> Have you used tobacco or nicotine products in any form within the last 5 years?</label>
                                           </div>
-                                          <div class="col-md-8" style="">
+                                          <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_51" value="Yes" t_required="False"/>
-                                                  <span>&amp;nbsp; Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_51" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="Hquestion_51" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_51" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -640,16 +628,18 @@
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?"> Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</label>
                                           </div>
-                                          <div class="col-md-8" style="">
+                                          <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_52" value="Yes" t_required="False"/>&amp;nbsp;<span>Yes</span></label>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_52" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_52" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_52" value="No"  checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -659,18 +649,18 @@
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?"> Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</label>
                                           </div>
-                                          <div class="col-md-8" style="">
+                                          <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_53" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_53" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_53" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_53" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -680,18 +670,18 @@
                                           <div class="col-md-4 text-md-right">
                                             <label class="col-form-label label_insurance_app" for="Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?"> Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</label>
                                           </div>
-                                          <div class="col-md-8" style="">
+                                          <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_54" value="Yes" t_required="False"/>
-                                                  <span>Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_54" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_54" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_54" value="No"  checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -703,14 +693,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_55" value="Yes"/>Yes</label>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_55" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_55" value="No"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_55" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -722,16 +714,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_56" value="Yes" t_required="False"/>
-                                                  <span>Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_56" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_56" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_56" value="No"  checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -743,20 +735,20 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_57" value="Yes" t_required="False"/>
-                                                  <span>Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_57" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_57" value="No" t_required="False"/>
-                                                  <span>No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_57" value="No"  checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
-                                          </div>
+                                          </div> 
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
                                           <div class="col-md-4 text-md-right" style="">
@@ -764,16 +756,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_58" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_58" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_58" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_58" value="No"  checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -799,7 +791,7 @@
                                             <label class="col-form-label label_insurance_app" for="What is your Height?"> What is your Height?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="text" class="form-control o_website_form_input" name="question_60" t_required="False"/>
+                                            <input type="text" class="form-control o_website_form_input" name="question_60" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -807,7 +799,7 @@
                                             <label class="col-form-label label_insurance_app" for="What is your weight?"> What is your weight?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <input type="number" class="form-control o_website_form_input" name="question_61" step="1" t_required="False"/>
+                                            <input type="number" class="form-control o_website_form_input" name="question_61" step="1" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -816,16 +808,16 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_62" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_62" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_62" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_62" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -872,15 +864,17 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_64" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_64" value="Yes" />
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_64" value="No" t_required="False"/>&amp;nbsp;No&amp;nbsp;</label>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_64" value="No" checked="True"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
                                               </div>
                                             </div>
                                           </div>
@@ -900,10 +894,7 @@
                                             <label class="col-form-label label_insurance_app" for="Has your weight changed by more than 10 lbs in the last twelve months?"> Has your weight changed by more than 10 lbs in the last twelve months? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_66" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_66" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -918,10 +909,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?"> Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_67" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_67" required="True">
                                               <option value="Yes">
                                                   Yes        
                                               </option>
@@ -936,10 +924,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system?"> Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_68" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_68" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -954,10 +939,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?"> Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_69" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_69" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -972,10 +954,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having chest pain, irregular heartbeat, heart murmur, heart valve disease, heart attack, coronary artery disease, heart failure, aneurysm or other heart or blood vessel disorder?"> Have you ever been treated or diagnosed as having chest pain, irregular heartbeat, heart murmur, heart valve disease, heart attack, coronary artery disease, heart failure, aneurysm or other heart or blood vessel disorder? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_70" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_70" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -990,10 +969,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?"> Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder? </label>
                                           </div>
                                           <div class="col-md-8 o_animate_preview">
-                                            <select class="form-control o_website_form_input" name="question_71" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_71" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1008,10 +984,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues?"> Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_72" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_72" required="True">
                                               <option value="Yes">
                                                     Yes
                                               </option>
@@ -1026,10 +999,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having diabetes, elevated blood sugar, thyroid, pituitary, adrenal or any other endocrine (glandular) disorders?"> Have you ever been treated or diagnosed as having diabetes, elevated blood sugar, thyroid, pituitary, adrenal or any other endocrine (glandular) disorders? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_73" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_73" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1044,10 +1014,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having breast, reproductive organ or prostate disorder?"> Have you ever been treated or diagnosed as having breast, reproductive organ or prostate disorder? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_74" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_74" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1062,10 +1029,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever had a C-section, miscarriage, or complication of pregnancy?"> Have you ever had a C-section, miscarriage, or complication of pregnancy? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_75" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_75" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1080,10 +1044,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having a mass, polyp, cyst, tumor or cancer?"> Have you ever been treated or diagnosed as having a mass, polyp, cyst, tumor or cancer? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_76" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_76" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1098,10 +1059,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder?"> Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_77" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_77" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1116,10 +1074,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other psychiatric or mental health disorders?"> Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other psychiatric or mental health disorders? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_78" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_78" required="True">>
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1134,10 +1089,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever been treated or diagnosed as having chronic fatigue, chronic pain, fibromyalgia, or fever of unknown cause?"> Have you ever been treated or diagnosed as having chronic fatigue, chronic pain, fibromyalgia, or fever of unknown cause? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_79" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_79" required="True">>
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1153,20 +1105,22 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_80" value="Yes" t_required="False"/><span> Yes</span>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</label>
-                                              </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_80" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_80" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_80" value="N/A" t_required="False"/>
-                                                  <span> N/A&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_80" value="No"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
+                                              </div>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_80" value="N/A" required="True" checked="True"/>
+                                                  <span> N/A &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1177,10 +1131,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the last 5 years have you received treatment from a licensed Chiropractor?"> In the last 5 years have you received treatment from a licensed Chiropractor? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_81" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_81" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1195,10 +1146,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?"> In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_82" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_82" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1213,10 +1161,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?"> In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_83" t_required="False">
-                                              <option value="">
-                                                          
-                                               </option>
+                                            <select class="form-control o_website_form_input" name="question_83" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1231,10 +1176,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?"> In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_84" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_84" required="True">
                                               <option value="Yes">
                                                     Yes
                                               </option>
@@ -1249,10 +1191,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?"> In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_85" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_85" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1277,10 +1216,7 @@
                                             <label class="col-form-label label_insurance_app" for="In the past 10 years have you consumed alcoholic beverages?"> In the past 10 years have you consumed alcoholic beverages? </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_87" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_87" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1305,10 +1241,7 @@
                                             <label class="col-form-label label_insurance_app" for="Have you ever tested positive for HIV or Aids"> Have you ever tested positive for HIV or Aids </label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_89" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_89" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1323,10 +1256,7 @@
                                             <label class="col-form-label label_insurance_app" for="To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?">To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <select class="form-control o_website_form_input" name="question_90" t_required="False">
-                                              <option value="">
-                                                          
-                                              </option>
+                                            <select class="form-control o_website_form_input" name="question_90" required="True">
                                               <option value="Yes">
                                                   Yes
                                               </option>
@@ -1352,20 +1282,22 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_92" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_92" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_92" value="No" t_required="False"/>&amp;nbsp;No&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</label>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_92" value="No"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
+                                                </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_92" value="Unknown" t_required="False"/>
-                                                  <span> Unknown</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_92" value=" Unknown" checked="True"/>
+                                                  <span> Unknown &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1376,7 +1308,7 @@
                                             <label class="col-form-label label_insurance_app" for="If Yes, how old is he - If No, At what age did he die and what was his cause of death?"> If Yes, how old is he - If No, At what age did he die and what was his cause of death?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <textarea class="form-control o_website_form_input" name="question_93" t_required="False"/>
+                                            <textarea class="form-control o_website_form_input" name="question_93" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
@@ -1385,22 +1317,22 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
                                                   <input type="radio" class="o_website_form_input" name="question_94" value="Yes"/>
-                                                  <span> Yes</span>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
                                                   <input type="radio" class="o_website_form_input" name="question_94" value="No"/>
-                                                  <span> No</span>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_94" value="Unknown"/>
-                                                  <span> Unknown</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_94" value=" Unknown" checked="True"/>
+                                                  <span> Unknown &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1411,7 +1343,7 @@
                                             <label class="col-form-label label_insurance_app" for="If Yes, how old is she - If No, At what age did she die and what was her cause of death?"> If Yes, how old is she - If No, At what age did she die and what was her cause of death?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <textarea class="form-control o_website_form_input" name="question_95" t_required="False"/>
+                                            <textarea class="form-control o_website_form_input" name="question_95" required="True"/>
                                           </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1420,22 +1352,22 @@
                                           </div>
                                           <div class="col-md-8">
                                             <div class="o_website_form_flex">
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_96" value="Yes" t_required="False"/>
-                                                  <span> Yes</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_96" value="Yes"/>
+                                                  <span> Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_96" value="No" t_required="False"/>
-                                                  <span> No</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_96" value="No"/>
+                                                  <span> No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
-                                              <div class="radio o_website_form_flex_item">
-                                                <label class="col-form-label label_insurance_app">
-                                                  <input type="radio" class="o_website_form_input" name="question_96" value="N/A" t_required="False"/>
-                                                  <span> N/A</span>
+                                              <div class="radio">
+                                                <label class="label_insurance_app">
+                                                  <input type="radio" class="o_website_form_input" name="question_96" value="N/A" checked="True"/>
+                                                  <span> N/A &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1446,7 +1378,7 @@
                                             <label class="col-form-label label_insurance_app" for="If Yes How old is each one - If No, at what age did they die and what was their cause of death?"> If Yes How old is each one - If No, at what age did they die and what was their cause of death?</label>
                                           </div>
                                           <div class="col-md-8">
-                                            <textarea class="form-control o_website_form_input" name="question_97" t_required="False"/>
+                                            <textarea class="form-control o_website_form_input" name="question_97" required="True"/>
                                           </div>
                                         </div>
                                       <!--   <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">

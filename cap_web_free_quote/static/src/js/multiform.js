@@ -51,7 +51,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             if(animating) return false;
             animating = true;
             var missed_required_input = false;
-            current_fs = self.parent();
+            current_fs = self.closest('fieldset');
             next_fs = self.closest('fieldset').next();
             current_fs.find('input').each(function(){
                 if($(this).prop('required') && !$(this).val().trim()){
@@ -66,6 +66,36 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                     }
                 }
             });
+            if(!missed_required_input) {
+                current_fs.find('textarea').each(function(){
+                    if($(this).prop('required') && !$(this).val().trim()){
+                        missed_required_input = true;
+                        animating = false;
+                        if(!$(this).hasClass('fill-required')){
+                            $(this).addClass('fill-required');
+                        }
+                    } else {
+                        if($(this).hasClass('fill-required')){
+                            $(this).removeClass('fill-required');
+                        }
+                    }
+                });
+            }
+            if(!missed_required_input) {
+                current_fs.find('select').each(function(){
+                    if($(this).prop('required') && !$(this).val().trim()){
+                        missed_required_input = true;
+                        animating = false;
+                        if(!$(this).hasClass('fill-required')){
+                            $(this).addClass('fill-required');
+                        }
+                    } else {
+                        if($(this).hasClass('fill-required')){
+                            $(this).removeClass('fill-required');
+                        }
+                    }
+                });
+            }
             if(!missed_required_input){
                 //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -124,7 +154,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                     //3. increase opacity of previous_fs to 1 as it moves in
                     opacity = 1 - now;
                     current_fs.css({'left': left});
-                    previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+                    previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity, 'position': 'relative'});
                 },
                 duration: 800,
                 complete: function(){

@@ -17,12 +17,15 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     element = $(this);
                     inp_data = element.val();
                     if(element.hasClass('input-date-save')) {
-                        inp_data = inp_data.split(" / ");
-                        inp_data = inp_data[2] + '-' + inp_data[0] + '-' + inp_data[1];
+                        inp_data = inp_data.split("/");
+                        inp_data = inp_data[2].trim() + '-' + inp_data[0].trim() + '-' + inp_data[1].trim();
                     }
                     input_args[element.context['name']] = inp_data;
                 });
                 current_fs.find('select').each(function(){
+                    input_args[$(this).context['name']] = $(this).val();
+                });
+                current_fs.find('textarea').each(function(){
                     input_args[$(this).context['name']] = $(this).val();
                 });
                 var rec_id = $('#msform').find("input[name='res_id']").val();
@@ -93,7 +96,8 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     current_next = current_next.next();
                 }
             }
-            current_div.prev().val($(this).val());
+            current_div.closest("input[type='hidden']").val($(this).val());
+            // current_div.prev().val($(this).val());
         });
     });
 });

@@ -227,7 +227,17 @@
     border-bottom-left-radius: 5px;
 }
 
-.flex-container{
+.flex-container {
     justify-content: center;
     display:inline;
+}
+
+.label_insurance_app {
+    margin:0;
+    font-family: "Open Sans", sans-serif;
+    color: #1b557a;
+}
+
+#msform input[type='radio'] {
+    width: auto!important;
 }
