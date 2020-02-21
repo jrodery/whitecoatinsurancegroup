@@ -17,6 +17,7 @@
                                           enctype="multipart/form-data"
                                           _lpchecked="1">
                                         <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
+                                        <input type="hidden" class="form-control" id="ref_code" name="ref_code" value=''/>
                                         <fieldset>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_28" required="True"

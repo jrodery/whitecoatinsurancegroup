@@ -31,6 +31,7 @@
                     <div class="oe_title">
                         <h1>
                             <field name="name" readonly="1"/>
+                            <field name="ref_code" readonly="1" class="pull-right"/>
                         </h1>
                     </div>
                     <separator string="Step-1"/>

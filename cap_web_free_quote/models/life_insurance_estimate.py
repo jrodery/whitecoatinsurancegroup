@@ -2,7 +2,7 @@
 # Part of CAPTIVEA. Odoo 12 EE
 
 from odoo import models, fields, api, _
-
+import uuid
 
 class LifeInsuranceEstimate(models.Model):
     _name = 'life.insurance.estimate'
@@ -11,6 +11,7 @@ class LifeInsuranceEstimate(models.Model):
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
+    ref_code = fields.Char(string="Reference", default=uuid.uuid1())
     name = fields.Char(string="Log")
     state = fields.Selection([
         ('draft', 'Draft'),

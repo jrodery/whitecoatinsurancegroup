@@ -41,6 +41,9 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     if(data['create']) {
                         $('#msform').find("input[name='res_id']").val(data['res_id']);
                     }
+                    if(data['ref_code']){
+                        $('#msform').find("input[name='ref_code']").val(data['ref_code']);
+                    }
                     if(return_val == 'total_insurance') {
                         form.next().find('.total_insurance')
                         .html(data['total_insurance']

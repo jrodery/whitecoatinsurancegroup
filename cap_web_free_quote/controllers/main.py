@@ -25,6 +25,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             amount = res.total_insurance
             vals['total_insurance'] = amount if amount > 0 else 0.0
             vals['res_id'] = res.id
+            vals['ref_code'] = res.ref_code
         return vals
 
     # Set as done and send mail
