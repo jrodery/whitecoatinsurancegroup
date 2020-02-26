@@ -31,7 +31,8 @@
                     <div class="oe_title">
                         <h1>
                             <field name="name" readonly="1"/>
-                            <field name="ref_code" readonly="1" class="pull-right"/>
+                            <field name="ref_code" readonly="1" class="pull-right"
+                                   attrs="{'invisible': [('name', '=', False)]}"/>
                         </h1>
                     </div>
                     <separator string="Step-1"/>
