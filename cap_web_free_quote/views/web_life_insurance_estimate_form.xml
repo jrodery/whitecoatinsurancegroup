@@ -17,7 +17,8 @@
                                           enctype="multipart/form-data"
                                           _lpchecked="1">
                                         <input type="hidden" class="form-control" id="res_id" name="res_id" value=''/>
-                                        <input type="hidden" class="form-control" id="ref_code" name="ref_code" value=''/>
+                                        <input type="hidden" class="form-control" id="ref_code" name="ref_code"
+                                               value=''/>
                                         <fieldset>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_28" required="True"
@@ -363,7 +364,7 @@
                                     <p>
                                         <span>Calculate how much life insurance I need...</span>
                                         <br/>
-                                        <span class="total_insurance insurance_amount" name="total_insurance"></span>
+                                        <span class="total_insurance insurance_amount" name="total_insurance"/>
                                     </p>
                                 </div>
                                 <div class="offset-md-1"/>
