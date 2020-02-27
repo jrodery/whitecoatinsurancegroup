@@ -270,7 +270,7 @@
     margin-bottom: 20px;
 }
 .text_css{
-    
+
     font-size: 20px;
     font-family: sans-serif;
     color: #1b557a;
@@ -307,7 +307,7 @@
     height: auto;
 }
 .thankyou_content_wrapper{
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     padding-bottom: 10px;
 }
@@ -320,6 +320,12 @@
     border-radius: 5px;
     background-color: #fff;
 }
+
+.thankyou_request_content_wrapper_panel{
+    border-radius: 5px;
+    background-color: #fff;
+}
+
 .thankyou_pannel_1{
     padding: 15px 20px;
 }
@@ -330,7 +336,8 @@
     padding: 10px;
     width:70%;
 }
-.panel_1_gray_block{
+
+.panel_1_gray_block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,20 +348,81 @@
     height: 100px;
     flex-basis: 100px;
 }
-.panel_1_gray_block_content_wrapper{
+
+.panel_1_gray_block_content_wrapper {
     flex-grow: 2;
     padding: 10px;
 }
-.panel_1_gray_block_content_title{
+
+.panel_1_gray_block_content_title {
     font-weight: bold;
     color: #07aff0;
 }
-.panel_1_gray_block_content_details{
+
+.panel_2_gray_block_content_wrapper {
+    flex-grow: 2;
+    padding: 10px;
+    flex-basis: 100px;
+}
+
+.panel_2_white_block_content_wrapper {
+    flex-grow: 2;
+    flex-basis: 100px;
+}
+
+.panel_2_gray_block_content_details {
     font-size: xx-large;
     font-weight: bold;
     color: #19557a;
 }
-.thankyou_pannel_overall_info_text{
+
+.panel_2_white_block_content_details {
+    font-size: large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.panel_2_gray_block_content_title {
+    font-weight: bold;
+    color: #07aff0;
+}
+
+.panel_2_white_block_image_title {
+    font-weight: bold;
+    color: #07aff0;
+    font-size: x-large;
+}
+
+.panel_2_white_block_content_title {
+    font-weight: bold;
+    color: #19557a;
+}
+
+.panel_2_gray_block_content_img {
+    width: 100px;
+    height: 100px;
+}
+
+.thankyou_panel_content_white_block {
+    margin:0px auto 15px auto;
+    padding: 10px;
+    width:80%;
+}
+
+.panel_white_block_content_details {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #07aff0;
+}
+
+
+.panel_1_gray_block_content_details {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.thankyou_pannel_overall_info_text {
     text-align: center;
     word-break: break-word;
     color: #19557a;
@@ -394,8 +462,74 @@
 .thankyou_content_inner_title {
     word-break: break-word;
     margin:0px auto 0px auto;
-    padding: 10px;
+    padding: 5px;
     color: #19557a;
+    font-weight: bold;
+    font-size: large;
+}
+
+.thankyou_total_insurance {
+    word-break: break-word;
+    margin:0px auto 0px auto;
+    color: #19557a;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.panel_2_white_block_legacy_worth_title {
+    word-break: break-word;
+    color: #19557a;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.panel_2_white_block_legacy_worth_amount {
+    word-break: break-word;
+    color: #19597a;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.thankyou_panel_legacy_white_block {
+    margin:0px auto 15px auto;
+    padding: 10px;
+    width:90%;
+}
+
+.thankyou_panel_request_death_benefit_content {
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 5px auto 10px auto;
+    color: #07aff0;
+}
+
+.thankyou_input_data {
+    border-radius: 25px;
+    border: 5px solid #a79f9f;
+    padding: 5px;
+    width: 220px;
+    margin: 5px;
+    text-align: center;
+    font-size: large;
+    color: #07aff0;
+    background-color: #fff;
+}
+
+.thankyou_rate_health {
+    font-size: x-large;
+    color: #07aff0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px
+}
+
+.thankyou_input_data:focus {
+    outline: none;
 }
 
 .four_round{
@@ -408,6 +542,79 @@
     margin-right: 185px;
     margin-left: 170px;
     border-color: #C8C8C8;
+}
+
+
+.thankyou_policy_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: large;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.thankyou_policy_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.thankyou_policy_radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.thankyou_policy_radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.thankyou_policy_radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.thankyou_policy_radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    flex-basis: 100px;
+}
+
+.thankyou_policy_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .flex-container{
@@ -469,7 +676,7 @@
 .five_radio{
     margin-bottom: 15px;
     color: #1b557a;
-    text-align: center;   
+    text-align: center;
 }
 
 .border_line{

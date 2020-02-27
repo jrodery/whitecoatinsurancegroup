@@ -1,5 +1,5 @@
 <odoo>
-    <template id="life_insurance_data_display_template" name="Index Page">
+    <template id="life_insurance_data_display_template" name="Thank You">
         <t t-call="website.layout">
             <div id="wrap" class="insurance_data_css">
                 <section class="features">
@@ -18,9 +18,10 @@
                                 </h3>
                             </div>
 
-                            <t t-set="thk_invest_balance" t-value="life.total_insurance - (life.question_14_1 + life.question_22_1)"/>
+                            <t t-set="thk_invest_balance"
+                               t-value="life.total_insurance - (life.question_14_1 + life.question_22_1)"/>
 
-                            <!--Panel 1-->
+                            <!--Panel 1 Start-->
                             <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                     <img class="panel_1_gray_block_content_img"
@@ -47,28 +48,38 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                     <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/tuition_white.PNG"/>
+                                         src="/cap_web_free_quote/static/src/img/tuition.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
                                         <div class="panel_1_gray_block_content_title">
                                             Tuition Responsibility
                                         </div>
                                         <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_14_2"/>
+                                            <t t-esc="life.question_14_2"
+                                               t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                     <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/debt_white.PNG"/>
+                                         src="/cap_web_free_quote/static/src/img/debt.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
                                         <div class="panel_1_gray_block_content_title">
                                             Total Debt
                                         </div>
                                         <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_22_1"/>
+                                            <t t-esc="life.question_22_1"
+                                               t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +92,12 @@
                                             Annual Recurring Expenses
                                         </div>
                                         <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_24_1 + life.question_27_1"/>
+                                            <t t-esc="life.question_24_1 + life.question_27_1"
+                                               t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -91,25 +107,35 @@
                                 </div>
 
                                 <div class="thankyou_panel_1_total_btn">
-                                    <t t-esc="life.total_insurance"/>
+                                    <t t-esc="life.total_insurance"
+                                       t-options="{
+                                       'widget': 'monetary',
+                                       'display_currency': currency_id
+                                       }"
+                                    />
                                 </div>
                             </div>
                             <!--Panel 1 End-->
 
-                            <!--Panel 2-->
+                            <!--Panel 2 Start-->
                             <div class="thankyou_content_wrapper_panel_title">
                                 <span>What's The Plan If you Die?</span>
                             </div>
+
                             <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
                                 <div class="thankyou_content_inner_title">
                                     <span>Pay Off Debt abd Set Aside Funds for your Children's Education</span>
                                 </div>
+
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                     <div class="panel_1_gray_block_content_wrapper">
                                         <div class="panel_1_gray_block_content_details">
-                                            <span>-
-                                                <t t-esc="life.question_14_2"/>
-                                            </span>
+                                            <span t-esc="0 - life.question_14_2"
+                                                  t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"
+                                            />
                                         </div>
                                         <div class="panel_1_gray_block_content_title">
                                             Tuition Savings
@@ -122,9 +148,12 @@
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                     <div class="panel_1_gray_block_content_wrapper">
                                         <div class="panel_1_gray_block_content_details">
-                                            <span>-
-                                                <t t-esc="life.question_22_1"/>
-                                            </span>
+                                            <span t-esc="0 - life.question_22_1"
+                                                  t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"
+                                            />
                                         </div>
                                         <div class="panel_1_gray_block_content_title">
                                             Pay Off Debt
@@ -139,181 +168,219 @@
                                 </div>
 
                                 <div class="thankyou_panel_1_total_amount">
-                                    <t t-esc="thk_invest_balance"/>
+                                    <t t-esc="thk_invest_balance"
+                                       t-options="{
+                                       'widget': 'monetary',
+                                       'display_currency': currency_id
+                                       }"
+                                    />
                                 </div>
                             </div>
+
                             <!--Panel 2 End-->
 
+                            <!--Panel 3 Start-->
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                                <div class="thankyou_content_inner_title">
+                                    <span>Invest the Balance Annual Interest Earned Used to Pay Recurring Annual
+                                        Expenses.
+                                    </span>
+                                </div>
+
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                    <div class="panel_2_gray_block_content_wrapper">
+                                        <div class="panel_2_gray_block_content_details">
+                                            <span t-esc="thk_invest_balance"
+                                                  t-options="{
+                                               'widget': 'monetary',
+                                               'display_currency': currency_id
+                                               }"
+                                            />
+                                        </div>
+                                        <div class="panel_2_gray_block_content_title">
+                                            Invest Balance
+                                        </div>
+                                    </div>
+                                    <img class="panel_2_gray_block_content_img"
+                                         src="/cap_web_free_quote/static/src/img/invest_balance.PNG"/>
+                                </div>
+
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                    <div class="panel_2_gray_block_content_wrapper">
+                                        <div class="panel_2_gray_block_content_details">
+                                            <span t-esc="thk_invest_balance * 0.05"
+                                                  t-options="{
+                                                    'widget': 'monetary',
+                                                    'display_currency': currency_id
+                                                  }"
+                                            />
+                                        </div>
+                                        <div class="panel_2_gray_block_content_title">
+                                            Annual Investment Income Covers Annual Recurring Expenses
+                                        </div>
+                                    </div>
+                                    <img class="panel_1_gray_block_content_img"
+                                         src="/cap_web_free_quote/static/src/img/annual_investment.PNG"/>
+                                </div>
+                            </div>
+                            <!--Panel 3 End-->
+
+                            <!--Panel 4 Start-->
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                                <div class="thankyou_content_death_benefit">
+                                    <div class="thankyou_total_insurance">
+                                        <span t-esc="life.total_insurance"
+                                              t-options="{
+                                                'widget': 'monetary',
+                                                'display_currency': currency_id
+                                              }"
+                                        />
+                                    </div>
+                                    <div class="thankyou_total_insurance">
+                                        <span>Death Benefit</span>
+                                    </div>
+                                </div>
+
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                    <div class="panel_2_white_block_content_wrapper">
+                                        <div class="panel_2_white_block_image_title">
+                                            Pays Off Your Debt
+                                        </div>
+                                    </div>
+                                    <img class="panel_2_gray_block_content_img"
+                                         src="/cap_web_free_quote/static/src/img/debt_white.PNG"/>
+                                </div>
+
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                    <div class="panel_2_white_block_content_wrapper">
+                                        <div class="panel_2_white_block_image_title">
+                                            Funds Your Kids Education
+                                        </div>
+                                    </div>
+                                    <img class="panel_2_gray_block_content_img"
+                                         src="/cap_web_free_quote/static/src/img/tuition_white.PNG"/>
+                                </div>
+
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                    <div class="panel_2_white_block_content_wrapper">
+                                        <div class="panel_2_white_block_image_title">
+                                            Covers All Your Annual Recurring Expenses
+                                        </div>
+                                    </div>
+                                    <img class="panel_2_gray_block_content_img"
+                                         src="/cap_web_free_quote/static/src/img/expenses_white.PNG"/>
+                                </div>
+
+                                <div class="thankyou_panel_legacy_white_block">
+                                    <div class="panel_2_white_block_legacy_worth_title pb-4">
+                                        And Still Leaves Behind A Financial Legacy Worth:
+                                    </div>
+                                    <div class="panel_2_white_block_legacy_worth_amount">
+                                        <span t-esc="thk_invest_balance"
+                                              t-options="{
+                                                'widget': 'monetary',
+                                                'display_currency': currency_id
+                                              }"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Panel 4 End-->
+
+                            <!--Panel 5 Start-->
+                            <div class="thankyou_content_wrapper_panel_title">
+                                <span>Request Quotes
+                                    <i class="fa fa-sign-in pull-right mt-1 pr-2"
+                                       style="font-size: larger;"
+                                       title="Click to save below details"/>
+                                </span>
+                            </div>
+
+                            <div class="thankyou_request_content_wrapper_panel">
+                                <div class="thankyou_content_inner_title">
+                                    <span t-esc="life.question_28 + ' ' + life.question_29"/>
+                                </div>
+                                <div class="thankyou_panel_request_death_benefit_content">
+                                    <span>Death Benefit:
+                                        <t t-esc="life.total_insurance"
+                                           t-options="{
+                                                'widget': 'monetary',
+                                               'display_currency': currency_id
+                                           }"
+                                        />
+                                    </span>
+                                </div>
+                                <div>
+                                    <input id="date_of_birth" type="text" class="thankyou_input_data"
+                                           name="date_of_birth" required="True"
+                                           placeholder="Date of birth: MM/DD/YYYY"/>
+                                </div>
+                                <div>
+                                    <select type="text" class="thankyou_input_data"
+                                            name="gender" required="True">
+                                        <option value="">Sex</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="text" class="thankyou_input_data"
+                                           name="state" required="True"
+                                           placeholder="State"/>
+                                </div>
+                                <div>
+                                    <select type="text" class="thankyou_input_data"
+                                            name="do_you_smoke" required="True">
+                                        <option value="">Do You Smoke?</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="thankyou_rate_health">
+                                    Rate Your Health 
+                                </div>
+
+                            </div>
+                            <!--Panel 5 End-->
+                            <div class="thankyou_content_wrapper_panel">
+                                <div class="thankyou_panel_request_death_benefit_content">
+                                    Choose Policy Type(s)
+                                </div>
+                                <div class="thankyou_policy_content">
+                                    <div class="thankyou_policy_radio">
+                                        <label>10 Year Level Term
+                                            <input type="radio" checked="checked" name="radio"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                        <label>15 Year Level Term
+                                            <input type="radio" name="radio"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                        <label>20 Year Level Term
+                                            <input type="radio" name="radio"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                        <label>30 Year Level Term
+                                            <input type="radio" name="radio"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                        <label>LifeTime Coverage
+                                            <input type="radio" name="radio"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-
-                        <!--Old content-->
-                        <!--                        <div>-->
-                        <!--                            <div>-->
-                        <!--                                <div class="two_tabs">-->
-                        <!--                                    What's The Plan If You Die?-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                            <div class="insurance_data_row">-->
-                        <!--                                <div class="square_box">-->
-                        <!--                                    1-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    Pay Off Debt and Set Aside Funds for your Children's Education-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="flex-container">-->
-                        <!--                                        <div t-field="life.question_14"/>-->
-                        <!--                                        Tution Savings-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/savings_tuition.PNG" height="100px"-->
-                        <!--                                             width="100px"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="flex-container">-->
-                        <!--                                    <div>-->
-                        <!--                                        Pay Off Debt-->
-                        <!--                                    </div>-->
-                        <!--                                    <div>-->
-                        <!--                                        <div t-field="life.question_21"/>-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="text_css">-->
-                        <!--                                        Total Remaining Balance After Debts/Education are Paid-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="big_integer">-->
-                        <!--                                        <div t-field="life.total_insurance"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                            <div class="insurance_data_row">-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="square_box">-->
-                        <!--                                        2-->
-                        <!--                                    </div>-->
-                        <!--                                    <div>-->
-                        <!--                                        Invest the Balance Annual Interest Earned Used to Pay Recuring Annual Expenses-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div>-->
-                        <!--                                        <div t-field="life.question_18"/>-->
-                        <!--                                        Invest Balance-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/invest_balance.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="flex-container">-->
-                        <!--                                        <div t-field="life.question_27_1"/>-->
-                        <!--                                        Annual Investment Income-->
-                        <!--                                        <br/>-->
-                        <!--                                        Covers Annual Recurring-->
-                        <!--                                        <br/>-->
-                        <!--                                        Expenses-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/annual_investment.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                            <div class="insurance_data_row">-->
-                        <!--                                <div class="big_integer">-->
-                        <!--                                    <div t-field="life.question_27_1"/>-->
-                        <!--                                    Death Benefit-->
-                        <!--                                </div>-->
-                        <!--                                <div class="big_fonts">-->
-                        <!--                                    <div>-->
-                        <!--                                        Pays Off Your Debt-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/debt.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="big_fonts">-->
-                        <!--                                    <div>-->
-                        <!--                                        Funds Your Kids Education-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/tuition_white.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="big_fonts">-->
-                        <!--                                    <div>-->
-                        <!--                                        Covers All Your Annual Recurring Expenses-->
-                        <!--                                        <img src="/cap_web_free_quote/static/src/img/expenses.PNG" height="100"-->
-                        <!--                                             width="100"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="text_css">-->
-                        <!--                                        And Still Leaves Behind A Financial Legacy Worth:-->
-                        <!--                                        <div class="big_integer" t-field="life.question_5_3"/>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                            <div class="two_tabs">-->
-                        <!--                                Request Quotes-->
-                        <!--                            </div>-->
-                        <!--                            <div class="insurance_data_row">-->
-                        <!--                                <div class="request_name">-->
-                        <!--                                    <span t-field="life.question_28"/>-->
-                        <!--                                    <span t-field="life.question_29"/>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="big_fonts">-->
-                        <!--                                    <span>-->
-                        <!--                                        Death Benefit: $-->
-                        <!--                                        <span t-field="life.question_27_1"/>-->
-                        <!--                                    </span>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="four_round">-->
-                        <!--                                    Date Of Birth-->
-                        <!--                                </div>-->
-                        <!--                                <div class="four_round">-->
-                        <!--                                    Sex-->
-                        <!--                                </div>-->
-                        <!--                                <div class="four_round">-->
-                        <!--                                    State-->
-                        <!--                                </div>-->
-                        <!--                                <div class="four_round">-->
-                        <!--                                    Do You Smoke?-->
-                        <!--                                </div>-->
-                        <!--                                <div class="rating_star">-->
-                        <!--                                    <span>Rate Your Health☆</span>-->
-                        <!--                                    <span>☆</span>-->
-                        <!--                                    <span>☆</span>-->
-                        <!--                                    <span>☆</span>-->
-                        <!--                                    <span>☆</span>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="border_line"></div>-->
-                        <!--                                <div>-->
-                        <!--                                    <div class="big_fonts">-->
-                        <!--                                        Choose Policy Type(s)-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="five_radio">-->
-                        <!--                                        <div>-->
-                        <!--                                            <input type="radio" name="colors" id="red"/>-->
-                        <!--                                            10 Year Level Term-->
-                        <!--                                        </div>-->
-                        <!--                                        <div>-->
-                        <!--                                            <input type="radio" name="colors" id="red"/>-->
-                        <!--                                            15 Year Level Term-->
-                        <!--                                        </div>-->
-                        <!--                                        <div>-->
-                        <!--                                            <input type="radio" name="colors" id="red"/>-->
-                        <!--                                            20 Year Level Term-->
-                        <!--                                        </div>-->
-                        <!--                                        <div>-->
-                        <!--                                            <input type="radio" name="colors" id="red"/>-->
-                        <!--                                            30 Year Level Term-->
-                        <!--                                        </div>-->
-                        <!--                                        <div>-->
-                        <!--                                            <input type="radio" name="colors" id="red"/>-->
-                        <!--                                            Life Time Coverage-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
                     </div>
                 </section>
             </div>
