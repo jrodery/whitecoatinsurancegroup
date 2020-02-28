@@ -60,7 +60,7 @@
                                                    name="remaining_age" readonly="True" style="display: none;"
                                                    placeholder="Years Until Retirement"/>
 
-                                            <input type="hidden" name="question_3"
+                                            <input type="hidden" name="question_3" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Does your spouse work?</p>
@@ -81,7 +81,7 @@
                                                    name="question_4" style="display: none;"
                                                    placeholder="How much income does your spouse earn per year?"/>
 
-                                            <input type="hidden" name="question_5"
+                                            <input type="hidden" name="question_5" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="2">
                                                 <p class="custom-control-inline">Will your spouse continue to work if
@@ -100,7 +100,7 @@
                                                 </div>
                                             </div>
 
-                                            <input type="hidden" name="question_5_1"
+                                            <input type="hidden" name="question_5_1" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div style="display: none;" class="text-left form-control mb-2"
                                                  data-next="1">
@@ -137,7 +137,7 @@
                                         </fieldset>
 
                                         <fieldset>
-                                            <input type="hidden" name="question_6"
+                                            <input type="hidden" name="question_6" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="2">
                                                 <p class="custom-control-inline">Do you currently have or plan to have
@@ -173,7 +173,7 @@
                                                    data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
-                                            <input type="hidden" name="question_11"
+                                            <input type="hidden" name="question_11" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you plan on paying for college?</p>
@@ -195,7 +195,7 @@
                                                    name="question_12" style="display: none;"
                                                    placeholder="If yes, by the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
 
-                                            <input type="hidden" name="question_13"
+                                            <input type="hidden" name="question_13" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you currently have any money saved
@@ -229,7 +229,7 @@
                                         </fieldset>
 
                                         <fieldset>
-                                            <input type="hidden" name="question_15"
+                                            <input type="hidden" name="question_15" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have have a mortgage?</p>
@@ -251,7 +251,7 @@
                                                    name="question_16" style="display: none;"
                                                    placeholder="If yes, What is your mortgage balance?"/>
 
-                                            <input type="hidden" name="question_17"
+                                            <input type="hidden" name="question_17" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you own money on credit cards?</p>
@@ -273,7 +273,7 @@
                                                    name="question_18" style="display: none;"
                                                    placeholder="If yes, what is your total Credit Cards Balance?"/>
 
-                                            <input type="hidden" name="question_19"
+                                            <input type="hidden" name="question_19" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have car payments?</p>
@@ -295,7 +295,7 @@
                                                    name="question_20" style="display: none;"
                                                    placeholder="If yes, what is your total car payments balances?"/>
 
-                                            <input type="hidden" name="question_21"
+                                            <input type="hidden" name="question_21" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have any additional Debt
@@ -337,7 +337,7 @@
                                                    name="question_24" required="True"
                                                    placeholder="What is the cost of your Homeowners or Renters insurance policy annually?"/>
 
-                                            <input type="hidden" name="question_25"
+                                            <input type="hidden" name="question_25" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Are you responsible for paying HOA
@@ -366,12 +366,6 @@
                                                    placeholder="How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
-<!--                                            <input type="button" name="compute"-->
-<!--                                                   data-store-model="life.insurance.estimate"-->
-<!--                                                   data-return="total_insurance"-->
-<!--                                                   data-route="/insurance/estimate-form"-->
-<!--                                                   class="next action-button"-->
-<!--                                                   value="Calculate"/>-->
                                             <input type="button" id="insurance_done" name="done"
                                                    class="next estimate_next submit_estimate action-button"
                                                    data-store-model="life.insurance.estimate"
