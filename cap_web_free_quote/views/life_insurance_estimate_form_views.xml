@@ -98,6 +98,14 @@
                     <group col="3">
                         <field name="total_insurance" readonly="1" force_save="1"/>
                     </group>
+                    <separator string="Thank You Page Request Quote"/>
+                    <group col="4">
+                        <field name="date_of_birth"/>
+                        <field name="gender"/>
+                        <field name="quote_state"/>
+                        <field name="smoke"/>
+                        <field name="policy_type"/>
+                    </group>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>

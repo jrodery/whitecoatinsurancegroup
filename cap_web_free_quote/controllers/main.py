@@ -109,3 +109,16 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 "currency_id": currency_id
             }
         )
+
+    @http.route('/thankyou/request_quote', type='json', auth="public",
+                methods=['POST', 'GET'], csrf=False, website=True)
+    def request_quote(self, **kw):
+        res = request.env['life.insurance.estimate'].search([
+            ('ref_code', '=', kw.get('reference'))
+        ], limit=1)
+
+        print("\n\n\n\n KW :: ", kw)
+
+        return {
+            'request_quote': res.sudo().write(kw)
+        }

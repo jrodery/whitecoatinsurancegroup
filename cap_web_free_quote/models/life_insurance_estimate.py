@@ -182,6 +182,21 @@ class LifeInsuranceEstimate(models.Model):
             self.question_27_2
         ])
 
+    date_of_birth = fields.Date(string="Date of Birth")
+    gender = fields.Selection([
+        ('Male', 'Male'),
+        ('Female', 'Female')
+    ], string="Gender")
+    quote_state = fields.Char(string="State")
+    smoke = fields.Boolean(string="Do You Smoke?")
+    policy_type = fields.Selection([
+        ('10 Year Level Term', '10 Year Level Term'),
+        ('15 Year Level Term', '15 Year Level Term'),
+        ('20 Year Level Term', '20 Year Level Term'),
+        ('30 Year Level Term', '30 Year Level Term'),
+        ('Life Coverage', 'Life Coverage'),
+    ], string="Policy Type")
+
     @api.constrains('question_1', 'question_2')
     def _check_age(self):
         for res in self:

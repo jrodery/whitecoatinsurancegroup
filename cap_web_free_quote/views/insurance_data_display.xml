@@ -292,12 +292,12 @@
                             <!--Panel 5 Start-->
                             <div class="thankyou_content_wrapper_panel_title">
                                 <span>Request Quotes
-                                    <i class="fa fa-sign-in pull-right mt-1 pr-2"
+                                    <i class="fa fa-sign-in pull-right mt-1 pr-2 thankyou_req_quote"
                                        style="font-size: larger;"
                                        title="Click to save below details"/>
                                 </span>
                             </div>
-
+                            <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
                             <div class="thankyou_request_content_wrapper_panel">
                                 <div class="thankyou_content_inner_title">
                                     <span t-esc="life.question_28 + ' ' + life.question_29"/>
@@ -319,7 +319,7 @@
                                 </div>
                                 <div>
                                     <select type="text" class="thankyou_input_data"
-                                            name="gender" required="True" style="text-align-last:center;">
+                                            id="gender" name="gender" required="True" style="text-align-last:center;">
                                         <option value="">Sex</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -327,12 +327,12 @@
                                 </div>
                                 <div>
                                     <input type="text" class="thankyou_input_data"
-                                           name="state" required="True"
+                                           id="state" name="state" required="True"
                                            placeholder="State"/>
                                 </div>
                                 <div>
                                     <select type="text" class="thankyou_input_data"
-                                            name="do_you_smoke" required="True" style="text-align-last:center;">
+                                            id="do_you_smoke" name="do_you_smoke" required="True" style="text-align-last:center;">
                                         <option value="">Do You Smoke?</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -359,31 +359,31 @@
                                 <div class="thankyou_policy_content pb-2">
                                     <div class="thankyou_policy_radio">
                                         <label class="thankyou_policy_radio_label">10 Year Level Term
-                                            <input type="radio" checked="checked" name="radio"/>
+                                            <input type="radio" value="10 Year Level Term" name="policy_type" id="policy_type"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
                                         <label class="thankyou_policy_radio_label">15 Year Level Term
-                                            <input type="radio" name="radio"/>
+                                            <input type="radio" name="policy_type" value="15 Year Level Term" id="policy_type"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
                                         <label class="thankyou_policy_radio_label">20 Year Level Term
-                                            <input type="radio" name="radio"/>
+                                            <input type="radio" name="policy_type" value="20 Year Level Term" id="policy_type"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
                                         <label class="thankyou_policy_radio_label">30 Year Level Term
-                                            <input type="radio" name="radio"/>
+                                            <input type="radio" name="policy_type" value="30 Year Level Term" id="policy_type"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
                                         <label class="thankyou_policy_radio_label">LifeTime Coverage
-                                            <input type="radio" name="radio"/>
+                                            <input type="radio" name="policy_type" value="LifeTime Coverage" id="policy_type"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
