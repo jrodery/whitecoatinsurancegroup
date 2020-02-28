@@ -70,7 +70,7 @@ class FreeDisabilityQuote(models.Model):
         ('24 Month Limitation', '24 Month Limitation'),
         ('Unlimited', 'Unlimited'),
     ], string="Mental/Nervous Limitation")
-    question_18 = fields.Char(string="Hospital Affiliation")
+    question_18 = fields.Float(string="Hospital Affiliation")
 
     @api.multi
     def send_form_mail(self):
