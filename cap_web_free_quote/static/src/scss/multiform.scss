@@ -569,12 +569,14 @@
 /* Create a custom radio button */
 .checkmark {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    height: 25px;
-    width: 25px;
+    transform: translate(0px, -50%);
+    height: 21px;
+    width: 21px;
     background-color: #eee;
-    border-radius: 50%;
+    border-radius: 3px;
+    border: 2px solid #2196F3;
 }
 
 /* On mouse-over, add a grey background color */
@@ -601,20 +603,21 @@
 
 /* Style the indicator (dot/circle) */
 .thankyou_policy_radio .checkmark:after {
-    top: 9px;
-    left: 9px;
+    top: 5px;
+    left: 5px;
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    border-radius: 2px;
     background: white;
-    flex-basis: 100px;
+}
+.thankyou_policy_radio_label{
+    margin: 0px;
 }
 
 .thankyou_policy_content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align:left;
+    width: fit-content;
+    margin: auto;
 }
 
 .flex-container{

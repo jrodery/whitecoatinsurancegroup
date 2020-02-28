@@ -60,7 +60,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var self = $(this);
             var rec_id = $('#msform').find("input[name='res_id']").val();
             var store_data_model = self.attr('data-store-model');
-            var route = self.attr('data-route');
+            var route = self.attr('data-route-done');
             ajax.jsonRpc(route, 'call', {
                 'rec_id': rec_id,
                 'store_data_model': store_data_model,

@@ -108,6 +108,7 @@
                                                data-route="/insurance/freequote-form"
                                                data-store-model="free.disability.quote"/>
                                     </fieldset>
+
                                     <!-- # Step - 4 -->
                                     <fieldset>
                                         <p class="col-form-label label_text"
@@ -163,9 +164,11 @@
                                                value="Previous"/>
                                         <input type="button" name="done"
                                                data-store-model="free.disability.quote"
-                                               data-route="/insurance/freequote-form-done"
-                                               class="next submit_estimate action-button" value="Done"/>
+                                               data-route="/insurance/freequote-form"
+                                               data-route-done="/insurance/freequote-form-done"
+                                               class="next estimate_next submit_estimate action-button" value="Done"/>
                                     </fieldset>
+
                                     <!-- Thank You -->
                                     <fieldset>
                                         Thank You

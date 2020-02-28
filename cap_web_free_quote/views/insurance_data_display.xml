@@ -347,33 +347,33 @@
                                 <div class="thankyou_panel_request_death_benefit_content">
                                     Choose Policy Type(s)
                                 </div>
-                                <div class="thankyou_policy_content">
+                                <div class="thankyou_policy_content pb-2">
                                     <div class="thankyou_policy_radio">
-                                        <label>10 Year Level Term
+                                        <label class="thankyou_policy_radio_label">10 Year Level Term
                                             <input type="radio" checked="checked" name="radio"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
-                                        <label>15 Year Level Term
+                                        <label class="thankyou_policy_radio_label">15 Year Level Term
                                             <input type="radio" name="radio"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
-                                        <label>20 Year Level Term
+                                        <label class="thankyou_policy_radio_label">20 Year Level Term
                                             <input type="radio" name="radio"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
-                                        <label>30 Year Level Term
+                                        <label class="thankyou_policy_radio_label">30 Year Level Term
                                             <input type="radio" name="radio"/>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="thankyou_policy_radio">
-                                        <label>LifeTime Coverage
+                                        <label class="thankyou_policy_radio_label">LifeTime Coverage
                                             <input type="radio" name="radio"/>
                                             <span class="checkmark"></span>
                                         </label>

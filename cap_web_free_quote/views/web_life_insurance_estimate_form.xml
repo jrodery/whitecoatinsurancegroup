@@ -348,10 +348,11 @@
                                                    class="estimate_next action-button"
                                                    value="Calculate"/>
                                             <input type="button" id="insurance_done" name="done"
-                                                   class="submit_estimate next action-button"
+                                                   class="next estimate_next submit_estimate action-button"
                                                    data-store-model="life.insurance.estimate"
                                                    data-return="total_insurance"
-                                                   data-route="/insurance/estimate-form-done"
+                                                   data-route="/insurance/estimate-form"
+                                                   data-route-done="/insurance/estimate-form-done"
                                                    value="Done"/>
                                         </fieldset>
                                         <fieldset>

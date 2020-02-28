@@ -115,7 +115,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                             'transform': 'scale('+scale+')',
                             'position': 'absolute'
                           });
-                        next_fs.css({'left': left, 'opacity': opacity});
+                        next_fs.css({'left': left, 'opacity': opacity, 'position': 'relative'});
                     },
                     duration: 800,
                     complete: function(){
