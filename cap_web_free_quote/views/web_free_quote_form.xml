@@ -19,22 +19,24 @@
 
                                     <!-- # Step - 1 -->
                                     <fieldset>
-                                        <p class="col-form-label label_text">First name:</p>
+                                        <p class="col-form-label label_text">First Name * :</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_1" required="True" placeholder="First Name"/>
-                                        <p class="col-form-label label_text">Last name:</p>
+                                               name="question_1" required="True" placeholder="First Name"
+                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                        <p class="col-form-label label_text">Last Name*:</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_2" required="True" placeholder="Last Name"/>
-                                        <p class="col-form-label label_text">Email:</p>
+                                               name="question_2" required="True" placeholder="Last Name"
+                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                        <p class="col-form-label label_text">Email * :</p>
                                         <input type="email"
                                                class="form-control form-input-text o_website_form_input format-email"
                                                name="question_3" required="True" placeholder="Email"/>
-                                        <p class="col-form-label label_text">Phone number:</p>
+                                        <p class="col-form-label label_text">Phone Number * :</p>
                                         <input type="text" step="1"
                                                class="format-phone form-control form-input-text o_website_form_input"
                                                name="question_4" required="True" placeholder="Phone: 000-000-0000"
                                                maxlength="10"/>
-                                        <p class="col-form-label label_text">Zip code:</p>
+                                        <p class="col-form-label label_text">Zip Code * :</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_5" required="True" placeholder="Area Code"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
@@ -45,18 +47,19 @@
 
                                     <!-- # Step - 2 -->
                                     <fieldset>
-                                        <p class="col-form-label label_text">Medical Speciality:</p>
+                                        <p class="col-form-label label_text">Medical Speciality * :</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input "
                                                name="question_6" required="True" placeholder="Medical Speciality"/>
-                                        <p class="col-form-label label_text">Date Of Birth:</p>
+                                        <p class="col-form-label label_text">Date of Birth * :</p>
                                         <input id="date_of_birth" type="text"
                                                class="form-control form-input-text o_website_form_input format-date input-date-save"
                                                name="question_7" required="True"
                                                placeholder="Date of birth: MM/DD/YYYY"/>
-                                        <p class="col-form-label label_text">State:</p>
+                                        <p class="col-form-label label_text">State * :</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_9" required="True" placeholder="State"/>
-                                        <p class="col-form-label label_text">Sex:</p>
+                                               name="question_9" required="True" placeholder="State"
+                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                        <p class="col-form-label label_text">Sex * :</p>
                                         <select class="form-control o_website_form_input" name="question_8"
                                                 required="True">
                                             <option value="Male">Male</option>
@@ -72,13 +75,13 @@
 
                                     <!-- # Step - 3 -->
                                     <fieldset>
-                                        <p class="col-form-label label_text" title="">Desired Monthly Benefit:</p>
-                                        <input type="text" class="form-control  o_website_form_input"
+                                        <p class="col-form-label label_text" title="">Desired Monthly Benefit * :</p>
+                                        <input type="number" class="form-control  o_website_form_input"
                                                placeholder="Desired Monthly Benefit" name="question_10"
                                                required="True"/>
                                         <p class="col-form-label label_text"
                                            title="Most Physicians choose True Own Occupation. True Own Occupation allows you to work in another occupation and collect your full disability benefit. Modified Own Occupation pays your full benefit so long as you are not working in any other occupation">
-                                            Definition of Total Disability:
+                                            Definition of Total Disability * :
                                             <i class="fa fa-info-circle"/>
                                         </p>
                                         <select class="form-control o_website_form_input" name="question_11"
@@ -104,7 +107,8 @@
                                         </select>
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button" value="Next"
+                                        <input type="button" name="next" class="next estimate_next action-button"
+                                               value="Next"
                                                data-route="/insurance/freequote-form"
                                                data-store-model="free.disability.quote"/>
                                     </fieldset>
@@ -113,7 +117,7 @@
                                     <fieldset>
                                         <p class="col-form-label label_text"
                                            title="Residual coverage pays you if you suffer a disability where you are still working in your Regular Occupation but you've suffered a loss of income of at least 20%.">
-                                            Choose if you want Residual/Partial Coverage:
+                                            Choose if you want Residual/Partial Coverage * :
                                             <i class="fa fa-info-circle"/>
                                         </p>
                                         <select class="form-control o_website_form_input" name="question_14"
@@ -125,7 +129,7 @@
                                         </select>
                                         <p class="col-form-label label_text"
                                            title="COLA provides a cost of living increase to your monthly benefit after 12 months of consecutive disability. Each carrier offers capped increase amounts with options for both simple and compounded interest.">
-                                            Choose if you want Cost of Living rider (COLA):
+                                            Choose if you want Cost of Living rider (COLA) * :
                                             <i class="fa fa-info-circle"/>
                                         </p>
                                         <select class="form-control o_website_form_input" name="question_15"
@@ -137,7 +141,7 @@
                                         </select>
                                         <p class="col-form-label label_text"
                                            title="Most physicians choose Non-Cancellable however, Guaranteed Renewable premiums are less expensive and the likelihood of increased premiums is small. Non-Cancellable means your premiums and contract provisions are fully guaranteed until your age of 65. Guaranteed Renewable means that your contract is guaranteed until your age of 65, but your premium is not">
-                                            Choose your Guarantee:
+                                            Choose your Guarantee * :
                                             <i class="fa fa-info-circle"/>
                                         </p>
                                         <select class="form-control o_website_form_input" name="question_16"
@@ -148,7 +152,7 @@
                                         </select>
                                         <p class="col-form-label label_text"
                                            title="Most carriers limit payment for Mental/Nervous disabilities such as Anxiety - Depression - and Substance Abuse to 2 years. Three of the Six carriers have an option to provide unlimited coverage for Mental/Nervous disabilities">
-                                            Choose Mental/Nervous Limitation:
+                                            Choose Mental/Nervous Limitation * :
                                             <i class="fa fa-info-circle"/>
                                         </p>
                                         <select class="form-control o_website_form_input" name="question_17"
@@ -158,7 +162,7 @@
                                             <option value="Unlimited">Unlimited</option>
                                         </select>
                                         <p class="col-form-label label_text" title="">Hospital Affiliation:</p>
-                                        <input type="text" class="form-control o_website_form_input" name="question_18"
+                                        <input type="number" class="form-control o_website_form_input" name="question_18"
                                                required="" placeholder="Hospital Affiliation"/>
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
@@ -181,6 +185,7 @@
             </field>
         </record>
     </data>
+
     <data noupdate="1">
         <record id="menu_free_quote_send" model="website.page">
             <field name="name">Free Quote Send</field>

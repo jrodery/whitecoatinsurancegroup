@@ -3,6 +3,8 @@
         <t t-call="website.layout">
             <div id="wrap" class="insurance_data_css">
                 <section class="features">
+                    <script>
+                    </script>
                     <div class="container">
                         <t t-set="life" t-value="insurance_data"/>
                         <div class="thankyou_content_wrapper text-center">
@@ -317,7 +319,7 @@
                                 </div>
                                 <div>
                                     <select type="text" class="thankyou_input_data"
-                                            name="gender" required="True">
+                                            name="gender" required="True" style="text-align-last:center;">
                                         <option value="">Sex</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -330,7 +332,7 @@
                                 </div>
                                 <div>
                                     <select type="text" class="thankyou_input_data"
-                                            name="do_you_smoke" required="True">
+                                            name="do_you_smoke" required="True" style="text-align-last:center;">
                                         <option value="">Do You Smoke?</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -338,9 +340,16 @@
                                 </div>
 
                                 <div class="thankyou_rate_health">
-                                    Rate Your Health
+                                    <div class="rating">
+                                        Rate Your Health
+                                        <span class="fa fa-star addStar" id="star1" val="1"/>
+                                        <span class="fa fa-star addStar" id="star2" val="2"/>
+                                        <span class="fa fa-star addStar" id="star3" val="3"/>
+                                        <span class="fa fa-star addStar" id="star4" val="4"/>
+                                        <span class="fa fa-star addStar" id="star5" val="5"/>
+                                    </div>
+                                    <input type="hidden" id="rating" value="1"/>
                                 </div>
-
                             </div>
                             <!--Panel 5 End-->
                             <div class="thankyou_content_wrapper_panel">
