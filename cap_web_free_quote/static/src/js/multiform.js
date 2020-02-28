@@ -127,6 +127,8 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                     easing: 'easeInOutBack'
                 });
                 if(self.hasClass('show_total')) {
+                    $('#msform').parent().addClass('offset-md-2');
+                    $('#msform').parent().removeClass('offset-md-3');
                     $('#msform').parent().next().css("display", "block");
                 }
 
@@ -228,6 +230,8 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                 easing: 'easeInOutBack'
             });
             if($(this).hasClass('hide_total')) {
+                $('#msform').parent().removeClass('offset-md-2');
+                $('#msform').parent().addClass('offset-md-3');
                 $('#msform').parent().next().css("display", "none")
             }
         });
