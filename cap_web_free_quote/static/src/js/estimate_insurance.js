@@ -93,8 +93,8 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
         $("#insurance_done").on('click', function(e){
             var self = $(this);
-            var rec_id = $('#msform').find("input[name='ref_code']").val();
-            window.location.href = "/life/insurance-done?reference=" + ref_Code;
+            var ref_code = $('#msform').find("input[name='ref_code']").val();
+            window.location.href = "/life/insurance-done?reference=" + ref_code;
         });
 
         $('.question_radio').on('change', function() {
