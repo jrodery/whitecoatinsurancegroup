@@ -17,6 +17,14 @@
                                       _lpchecked="1">
                                     <input type="hidden" class="form-control" id="res_id" name="res_id" value=""/>
 
+                                    <!-- progressbar -->
+                                    <ul id="progressbar">
+                                        <li class="active">Personal Details</li>
+                                        <li>Step - 2</li>
+                                        <li>Step - 3</li>
+                                        <li>Final</li>
+                                    </ul>
+
                                     <!-- # Step - 1 -->
                                     <fieldset>
                                         <p class="col-form-label label_text">First Name * :</p>
@@ -162,7 +170,8 @@
                                             <option value="Unlimited">Unlimited</option>
                                         </select>
                                         <p class="col-form-label label_text" title="">Hospital Affiliation:</p>
-                                        <input type="number" class="form-control o_website_form_input" name="question_18"
+                                        <input type="number" class="form-control o_website_form_input"
+                                               name="question_18"
                                                required="" placeholder="Hospital Affiliation"/>
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
