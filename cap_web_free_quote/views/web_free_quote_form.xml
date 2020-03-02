@@ -19,10 +19,10 @@
 
                                     <!-- progressbar -->
                                     <ul id="progressbar">
-                                        <li class="active">Personal Details</li>
-                                        <li>Step - 2</li>
-                                        <li>Step - 3</li>
-                                        <li>Final</li>
+                                        <li style="width: 25%;" class="active">Personal Details</li>
+                                        <li style="width: 25%;">Step - 2</li>
+                                        <li style="width: 25%;">Step - 3</li>
+                                        <li style="width: 25%;">Final</li>
                                     </ul>
 
                                     <!-- # Step - 1 -->

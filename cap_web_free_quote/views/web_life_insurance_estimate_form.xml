@@ -20,6 +20,17 @@
                                                name="res_id" value=''/>
                                         <input type="hidden" class="form-control" id="ref_code"
                                                name="ref_code" value=''/>
+
+                                        <!-- progressbar -->
+                                        <ul id="progressbar">
+                                            <li style="width: 18%;" class="active">Personal Details</li>
+                                            <li style="width: 16%;">Step - 2</li>
+                                            <li style="width: 16%;">Step - 3</li>
+                                            <li style="width: 16%;">Step - 4</li>
+                                            <li style="width: 16%;">Step - 5</li>
+                                            <li style="width: 18%;">Final</li>
+                                        </ul>
+
                                         <fieldset>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_28" required="True"
