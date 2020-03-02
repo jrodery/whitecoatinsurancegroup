@@ -95,7 +95,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var gender = $('#gender').val();
             var state = $('#state').val();
             var smoke = $('#do_you_smoke').val();
-            var policy_type = $('#policy_type').val();
+            var policy_type = $('#policy_type:checked').val();
             var reference = $('#reference').val();
             var birth_date = $('#date_of_birth').val();
 
@@ -150,5 +150,31 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             current_div.closest("input[type='hidden']").val($(this).val());
             // current_div.prev().val($(this).val());
         });
+
+        //Star Rating Thankyou page
+
+        var $star_rating = $('.star-rating .fa');
+
+        var SetRatingStar = function() {
+          return $star_rating.each(function() {
+            if (parseInt($star_rating.siblings('#rating').val()) >= parseInt($(this).data('rating'))) {
+              return $(this).removeClass('fa-star-o').addClass('fa-star');
+            } else {
+              return $(this).removeClass('fa-star').addClass('fa-star-o');
+            }
+          });
+        };
+
+        $star_rating.on('click', function() {
+           console.log("called Star")
+          $star_rating.siblings('#rating').val($(this).data('rating'));
+          return SetRatingStar();
+        });
+
+        SetRatingStar();
+
+        //Star RAting Ends.
+
+
     });
 });

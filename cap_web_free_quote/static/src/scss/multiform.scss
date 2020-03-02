@@ -525,7 +525,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 10px
+    padding: 10px 10px 25px 10px;
 }
 
 .thankyou_input_data:focus {
@@ -668,7 +668,8 @@
     text-align: center;
     font-size: 20px;
 }
-.rating_star{
+
+.rating_star {
     color: #1b557a;
     text-align: center;
     font-size: 15px;
@@ -676,24 +677,24 @@
     margin-bottom: 10px;
 }
 
-.five_radio{
+.five_radio {
     margin-bottom: 15px;
     color: #1b557a;
     text-align: center;
 }
 
-.border_line{
+.border_line {
 
     color: #00aff0;
     border: 2px solid;
 }
 
-.request_name{
+.request_name {
     text-align: center;
     margin-left: -19px;
 }
 
-.main_content{
+.main_content {
     margin-right: 190px;
     text-align: center;
     margin-top: 20px;
@@ -701,4 +702,41 @@
 
 .checked {
     color: orange;
+}
+
+// Star Ratings css
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+}
+
+.star-rating .fa-star {
+color: #00aff0;
+}
+
+.star_label {
+    position:relative;
+}
+
+.star_label::after {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    color: #07aff0;
+    font-size: 16px;
+}
+
+.star1::after {
+    content: "Poor";
+}
+
+.star3::after {
+    content: "Good";
+}
+
+.star5::after {
+    content: "Excellent";
+    transform:none;
+    left:0px;
 }

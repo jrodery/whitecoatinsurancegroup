@@ -340,15 +340,17 @@
                                 </div>
 
                                 <div class="thankyou_rate_health">
-                                    <div class="rating">
-                                        Rate Your Health
-                                        <span class="fa fa-star addStar" id="star1" val="1"/>
-                                        <span class="fa fa-star addStar" id="star2" val="2"/>
-                                        <span class="fa fa-star addStar" id="star3" val="3"/>
-                                        <span class="fa fa-star addStar" id="star4" val="4"/>
-                                        <span class="fa fa-star addStar" id="star5" val="5"/>
+                                    <div>
+                                        <span>Rate Your Health</span>
                                     </div>
-                                    <input type="hidden" id="rating" value="1"/>
+                                    <div class="star-rating">
+                                        <span class="fa fa-star-o star1 star_label"  data-rating="1"></span>
+                                        <span class="fa fa-star-o" data-rating="2"></span>
+                                        <span class="fa fa-star-o star3 star_label" data-rating="3"></span>
+                                        <span class="fa fa-star-o" data-rating="4"></span>
+                                        <span class="fa fa-star-o star5 star_label" data-rating="5"></span>
+                                        <input type="hidden" id="rating" value="0"/>
+                                    </div>
                                 </div>
                             </div>
                             <!--Panel 5 End-->
