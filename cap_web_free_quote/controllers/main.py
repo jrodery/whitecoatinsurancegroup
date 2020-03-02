@@ -99,7 +99,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
     def insurance_done(self, **kw):
         res = request.env['life.insurance.estimate'].search([
             ('ref_code', '=', kw.get('reference'))
-        ])
+        ], limit=1)
 
         currency_id = request.env['res.company'].browse(1).currency_id
         return request.render(

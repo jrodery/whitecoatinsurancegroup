@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
-from odoo import models, fields, api, _
 import uuid
+
+from odoo import models, fields, api, _
+
 
 class LifeInsuranceEstimate(models.Model):
     _name = 'life.insurance.estimate'
@@ -204,7 +206,7 @@ class LifeInsuranceEstimate(models.Model):
         ('3', 'Star : 3'),
         ('4', 'Star : 4'),
         ('5', 'Star : 5'),
-        ], size=1, string="Rate Your Health")
+    ], size=1, string="Rate Your Health")
 
     @api.constrains('question_1', 'question_2')
     def _check_age(self):
@@ -237,6 +239,10 @@ class LifeInsuranceEstimate(models.Model):
             'cap_web_free_quote.mail_life_insurance_estimate_form',
             raise_if_not_found=False)
         template.send_mail(self.id)
+        template = self.env.ref(
+            'cap_web_free_quote.mail_customer_life_insurance_estimate_form',
+            raise_if_not_found=False)
+        template.send_mail(self.id)
 
     @api.multi
     def unlink(self):
@@ -246,3 +252,7 @@ class LifeInsuranceEstimate(models.Model):
         except Exception as e:
             return False
         return True
+
+    def get_quote_link(self):
+        return self.env['ir.config_parameter'].sudo().get_param(
+            'web.base.url') + '/life/insurance-done?reference=' + self.ref_code
