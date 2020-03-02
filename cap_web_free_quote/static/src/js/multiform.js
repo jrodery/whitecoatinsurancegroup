@@ -9,6 +9,12 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
 
+        $(".format-ssn").on('keypress', function(){
+            var ssn = $(this).val();
+            console.log( ssn, ssn.length);
+
+        });
+
         $(".format-amount").focusout(function(){
             $(this).val(Number($(this).val()).toLocaleString('en-US'));
         });

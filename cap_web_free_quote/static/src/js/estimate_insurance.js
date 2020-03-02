@@ -119,7 +119,11 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                 'rate_your_health': rate_your_health
             }).then(function (data) {
                 if(data['thank_you_request_quote']) {
-                    // Animation on redirect on spacific page
+                    $('#thankyou_quote_receive_error_msg').hide();
+                    $('#thankyou_quote_receive_msg').show();
+                } else {
+                    $('#thankyou_quote_receive_msg').hide();
+                    $('#thankyou_quote_receive_error_msg').show();
                 }
             });
 

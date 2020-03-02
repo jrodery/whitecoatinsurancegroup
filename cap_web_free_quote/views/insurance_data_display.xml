@@ -301,6 +301,8 @@
                             <div class="thankyou_request_content_wrapper_panel">
                                 <div class="thankyou_content_inner_title">
                                     <span t-esc="life.question_28 + ' ' + life.question_29"/>
+                                    <span id="thankyou_quote_receive_msg" style="color: #056705; display: none;"> - Quote Request received! We will get back to you shortly.</span>
+                                    <span id="thankyou_quote_receive_error_msg" style="color: #ff0000; display: none;"> - There is some problem to save.</span>
                                 </div>
                                 <div class="thankyou_panel_request_death_benefit_content">
                                     <span>Death Benefit:

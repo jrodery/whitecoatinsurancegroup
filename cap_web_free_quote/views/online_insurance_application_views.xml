@@ -17,12 +17,13 @@
                             <field name="name" readonly="1"/>
                         </h1>
                     </div>
+
                     <separator string="Step-1"/>
                     <group col="4">
                         <field name="question_1"/>
                         <field name="question_2"/>
                         <field name="question_3"/>
-                        <field name="question_4"/>
+                        <field name="question_4" widget="radio"/>
                         <field name="question_5"/>
                         <field name="question_6"/>
                         <field name="question_7"/>
@@ -30,6 +31,7 @@
                         <field name="question_9"/>
                         <field name="question_10"/>
                     </group>
+
                     <separator string="Step-2"/>
                     <group col="3">
                         <field name="question_11"/>
@@ -50,6 +52,7 @@
                         <field name="question_26"/>
                         <field name="question_27"/>
                     </group>
+
                     <separator string="Step-3"/>
                     <group col="3">
                         <field name="question_28"/>
@@ -67,6 +70,7 @@
                         <field name="question_40"/>
                         <field name="question_41"/>
                     </group>
+
                     <separator string="Step-4"/>
                     <group col="3">
                         <field name="question_42"/>
@@ -88,6 +92,7 @@
                         <field name="question_58"/>
                         <field name="question_59"/>
                     </group>
+
                     <separator string="Step-5"/>
                     <group col="3">
                         <field name="question_60"/>

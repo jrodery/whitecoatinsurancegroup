@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Part of CAPTIVEA. Odoo 12 EE
+
 from odoo import models, fields, api
 
 
@@ -14,11 +17,13 @@ class OnlineInsuranceApplication(models.Model):
     ], string="Status", default="draft", track_visibility="onchange")
 
     # Step - 1
-
     question_1 = fields.Char(string="First Name")
     question_2 = fields.Char(string="Last Name")
-    question_3 = fields.Char(string="Date of Birth")
-    question_4 = fields.Char(string="Sex")
+    question_3 = fields.Date(string="Date of Birth")
+    question_4 = fields.Selection([
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+    ], string="Sex")
     question_5 = fields.Char(string="Home Street Address")
     question_6 = fields.Char(string="Home City")
     question_7 = fields.Char(string="Home State")
@@ -29,11 +34,10 @@ class OnlineInsuranceApplication(models.Model):
                               track_visibility="onchange")
 
     # Step - 2
-
     question_11 = fields.Char(string="Social Security Number")
     question_12 = fields.Char(string="Drivers License Number")
     question_13 = fields.Char(string="License Issue State")
-    question_14 = fields.Char(string="License Expiration Date")
+    question_14 = fields.Date(string="License Expiration Date")
     question_15 = fields.Char(string="Years lived at the current address?")
     question_16 = fields.Char(string="Country/State of birth")
     question_17 = fields.Char(string="Are you a US Citizen?")
@@ -49,10 +53,9 @@ class OnlineInsuranceApplication(models.Model):
     question_27 = fields.Char(string="Occupational duties")
 
     # Step - 3
-
-    question_28 = fields.Char(
+    question_28 = fields.Integer(
         string="The total number of years working in this occupation?")
-    question_29 = fields.Char(
+    question_29 = fields.Integer(
         string="The total number of years with the same employer?")
     question_30 = fields.Char(string="Do you work at least 30 hours per week?")
     question_31 = fields.Char(
@@ -60,7 +63,7 @@ class OnlineInsuranceApplication(models.Model):
     question_32 = fields.Char(string="If yes, please explain?")
     question_33 = fields.Char(
         string="Do you have any ownership in the business where you work?")
-    question_34 = fields.Char(string="If yes, what percentage do you own?")
+    question_34 = fields.Float(string="If yes, what percentage do you own?")
     question_35 = fields.Char(string="If Yes, what type of business is it?")
     question_36 = fields.Char(
         string="Are there more than 10 people employed with your current employer?")
@@ -76,7 +79,6 @@ class OnlineInsuranceApplication(models.Model):
         string="If Yes, please provide details including discharge date")
 
     # Step - 4
-
     question_42 = fields.Char(
         string="Do you have any existing Group or Individual Disability Insurance?")
     question_43 = fields.Char(string="If Yes, Carrier 1 name?")
@@ -111,7 +113,6 @@ class OnlineInsuranceApplication(models.Model):
         string="Provide details to any of the 8 questions above where you answered: ""Yes")
 
     # Step - 5
-
     question_60 = fields.Char(string="What is your Height?")
     question_61 = fields.Char(string="What is your weight?")
     question_62 = fields.Char(
@@ -126,12 +127,14 @@ class OnlineInsuranceApplication(models.Model):
         string="Has your weight changed by more than 10 lbs in the last twelve months?")
     question_67 = fields.Char(
         string="Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?")
-    question_68 = fields.Char(string="Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system? ")
+    question_68 = fields.Char(
+        string="Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system? ")
     question_69 = fields.Char(
         string="Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?")
     question_70 = fields.Char(
         string="Have you ever been treated or diagnosed as having chest pain, irregular heartbeat, heart murmur, heart valve disease, heart attack, coronary artery disease, heart failure, aneurysm or other heart or blood vessel disorder?")
-    question_71 = fields.Char(string="Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?")
+    question_71 = fields.Char(
+        string="Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?")
     question_72 = fields.Char(
         string="Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues?")
     question_73 = fields.Char(
@@ -151,7 +154,8 @@ class OnlineInsuranceApplication(models.Model):
     question_80 = fields.Char(string="Are you currently pregnant?")
     question_81 = fields.Char(
         string="In the last 5 years have you received treatment from a licensed Chiropractor?")
-    question_82 = fields.Char(string="In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?")
+    question_82 = fields.Char(
+        string="In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?")
     question_83 = fields.Char(
         string="In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?")
     question_84 = fields.Char(
@@ -165,7 +169,8 @@ class OnlineInsuranceApplication(models.Model):
     question_88 = fields.Char(string="If yes, how often do you drink?")
     question_89 = fields.Char(
         string="Have you ever tested positive for HIV or Aids")
-    question_90 = fields.Char(string="To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?")
+    question_90 = fields.Char(
+        string="To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?")
     question_91 = fields.Char(
         string="Please provide details if you answered yes")
     question_92 = fields.Char(string="Is your father still living?")
