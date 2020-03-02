@@ -197,6 +197,15 @@ class LifeInsuranceEstimate(models.Model):
         ('Life Coverage', 'Life Coverage'),
     ], string="Policy Type")
 
+    rate_your_health = fields.Selection([
+        ('0', 'Low'),
+        ('1', 'Star : 1'),
+        ('2', 'Star : 2'),
+        ('3', 'Star : 3'),
+        ('4', 'Star : 4'),
+        ('5', 'Star : 5'),
+        ], size=1, string="Rate Your Health")
+
     @api.constrains('question_1', 'question_2')
     def _check_age(self):
         for res in self:

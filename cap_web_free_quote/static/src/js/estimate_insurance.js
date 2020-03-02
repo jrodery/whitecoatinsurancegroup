@@ -98,27 +98,29 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var policy_type = $('#policy_type:checked').val();
             var reference = $('#reference').val();
             var birth_date = $('#date_of_birth').val();
+            var rate_your_health = $('#rating').val();
 
             if(!birth_date || !gender || !state || !smoke || !policy_type) {
                 alert("Please fill below details");
                 $('#date_of_birth').focus();
                 return;
             }
-
             if(birth_date) {
                 birth_date = birth_date.split("/");
                 birth_date = birth_date[2].trim() + '-' + birth_date[0].trim() + '-' + birth_date[1].trim();
             }
-
             ajax.jsonRpc('/thankyou/request_quote', 'call', {
                 'gender': gender.trim(),
                 'quote_state': state.trim(),
                 'smoke': smoke == "Yes" ? true : false,
-//                'policy_type': policy_type.trim(),
+                'policy_type': policy_type.trim(),
                 'reference': reference,
-                'date_of_birth': birth_date.trim()
+                'date_of_birth': birth_date.trim(),
+                'rate_your_health': rate_your_health
             }).then(function (data) {
-
+                if(data['thank_you_request_quote']) {
+                    // Animation on redirect on spacific page
+                }
             });
 
         });
@@ -152,29 +154,20 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
         });
 
         //Star Rating Thankyou page
-
         var $star_rating = $('.star-rating .fa');
-
         var SetRatingStar = function() {
-          return $star_rating.each(function() {
-            if (parseInt($star_rating.siblings('#rating').val()) >= parseInt($(this).data('rating'))) {
-              return $(this).removeClass('fa-star-o').addClass('fa-star');
-            } else {
-              return $(this).removeClass('fa-star').addClass('fa-star-o');
-            }
-          });
+            return $star_rating.each(function() {
+                if (parseInt($star_rating.siblings('#rating').val()) >= parseInt($(this).data('rating'))) {
+                    return $(this).removeClass('fa-star-o').addClass('fa-star');
+                } else {
+                    return $(this).removeClass('fa-star').addClass('fa-star-o');
+                }
+            });
         };
-
         $star_rating.on('click', function() {
-           console.log("called Star")
-          $star_rating.siblings('#rating').val($(this).data('rating'));
-          return SetRatingStar();
+            $star_rating.siblings('#rating').val($(this).data('rating'));
+            return SetRatingStar();
         });
-
         SetRatingStar();
-
-        //Star RAting Ends.
-
-
     });
 });

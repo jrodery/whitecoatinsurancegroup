@@ -105,6 +105,7 @@
                         <field name="quote_state"/>
                         <field name="smoke"/>
                         <field name="policy_type"/>
+                        <field name="rate_your_health" widget="priority" readonly="True"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
