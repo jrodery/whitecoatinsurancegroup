@@ -40,9 +40,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     $('#thankyou_quote_receive_error_msg').show();
                 }
             });
-
         });
-
 
         $('.question_radio').on('change', function() {
             var display_block = $(this).val() == 'Yes';
@@ -63,7 +61,6 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                 }
             }
             current_div.closest("input[type='hidden']").val($(this).val());
-            // current_div.prev().val($(this).val());
         });
 
         //Star Rating Thankyou page

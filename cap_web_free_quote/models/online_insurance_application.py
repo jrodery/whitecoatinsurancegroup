@@ -69,9 +69,9 @@ class OnlineInsuranceApplication(models.Model):
         string="Are there more than 10 people employed with your current employer?")
     question_37 = fields.Char(
         string="What is your current projected YTD income?")
-    question_38 = fields.Char(
+    question_38 = fields.Float(
         string="What was last year's Adjusted Gross Income Total?")
-    question_39 = fields.Char(
+    question_39 = fields.Float(
         string="What was 2 years ago Adjusted Gross Income Total?")
     question_40 = fields.Char(
         string="Have you ever filed for personal or business bankruptcy?")

@@ -149,7 +149,11 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                     var inp_data = '';
                     current_fs.find('input').each(function() {
                         element = $(this);
-                        inp_data = element.val();
+                        if(element.attr("type") == 'radio') {
+                            inp_data = $("input[name='" + element.attr('name') + "']:checked").val();
+                        } else {
+                            inp_data = element.val();
+                        }
                         if(element.hasClass('input-date-save')) {
                             inp_data = inp_data.split("/");
                             inp_data = inp_data[2].trim() + '-' + inp_data[0].trim() + '-' + inp_data[1].trim();
@@ -249,20 +253,6 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                 $('#msform').parent().addClass('offset-md-3');
                 $('#msform').parent().next().css("display", "none")
             }
-        });
-
-        $('.addStar').click(function(ths,sno) {
-            for(var i = 1; i <= 5; i++) {
-                var cur = document.getElementById("star" + i);
-                cur.className = "fa fa-star";
-            }
-            for(var i = 1; i <= sno; i++) {
-                var cur = document.getElementById("star" + i)
-                if(cur.className == "fa fa-star") {
-                    cur.className = "fa fa-star checked"
-                }
-            }
-            $(this).parent().next().val(sno);
         });
     });
 });

@@ -244,12 +244,11 @@
                                                        name="question_16" required="True"/>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="question_17" value="No"/>
-                                        <div class="row form-group form-field o_website_form_custom o_website_form_required_custom"
-                                             data-next="1">
-                                            <div class="col-md-4 text-md-right" style="">
+                                        <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
+                                            <div class="col-md-4 text-md-right">
                                                 <label class="col-form-label label_insurance_app"
-                                                       for="Are you a US Citizen?">Are you a US Citizen?
+                                                       for="Are you a US Citizen?"><span
+                                                        style="font-size: 0.875rem;">Are you a US Citizen?</span>&amp;nbsp;
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
@@ -257,8 +256,8 @@
                                                     <div class="radio">
                                                         <label class="label_insurance_app">
                                                             <input type="radio"
-                                                                   class="question_radio o_website_form_input"
-                                                                   name="question_17_yes" value="Yes"/>
+                                                                   class="o_website_form_input question_radio"
+                                                                   name="question_17" value="Yes"/>
                                                             <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
@@ -268,8 +267,8 @@
                                                     <div class="radio">
                                                         <label class="label_insurance_app">
                                                             <input type="radio"
-                                                                   class="question_radio o_website_form_input"
-                                                                   name="question_17_no" value="No" checked="True"/>
+                                                                   class="o_website_form_input question_radio"
+                                                                   name="question_17" value="No" checked="True"/>
                                                             <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
@@ -390,15 +389,11 @@
                                                           required="True"/>
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group row">
-                                          <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7"> -->
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
                                                value="Next" data-route="/insurance/insurance-application"
                                                data-store-model="online.insurance.application"/>
-                                        <!--      </div>
-                                           </div> -->
                                     </fieldset>
 
                                     <!-- # Step - 3 -->
@@ -625,7 +620,7 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control o_website_form_input"
+                                                <input type="number" class="form-control o_website_form_input"
                                                        name="question_38" required="True"/>
                                             </div>
                                         </div>
@@ -637,7 +632,7 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control o_website_form_input"
+                                                <input type="number" class="form-control o_website_form_input"
                                                        name="question_39" required="True"/>
                                             </div>
                                         </div>
@@ -685,15 +680,11 @@
                                                 <textarea class="form-control o_website_form_input" name="question_41"/>
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group row">
-                                          <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7"> -->
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
                                                value="Next" data-route="/insurance/insurance-application"
                                                data-store-model="online.insurance.application"/>
-                                        <!-- </div>
-                                      </div> -->
                                     </fieldset>
 
                                     <!-- # Step - 4 -->
@@ -1167,7 +1158,6 @@
                                                data-store-model="online.insurance.application"/>
                                     </fieldset>
 
-
                                     <!-- # Step - 5 -->
                                     <fieldset>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1177,8 +1167,8 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control o_website_form_input"
-                                                       name="question_60" required="True"/>
+                                                <input type="number" class="form-control o_website_form_input"
+                                                       name="question_60" required="True" step="0.05"/>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1316,7 +1306,6 @@
                                                 <textarea class="form-control o_website_form_input" name="question_65"/>
                                             </div>
                                         </div>
-
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
                                             <div class="col-md-4 text-md-right o_animate_preview">
                                                 <label class="col-form-label label_insurance_app"
@@ -1359,15 +1348,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_67"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_67" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_67" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1381,15 +1383,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_68"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_68" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_68" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1402,15 +1417,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_69"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_69" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_69" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1424,15 +1452,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_70"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_70" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_70" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1446,16 +1487,29 @@
                                                     liver or gallbladder disorder?
                                                 </label>
                                             </div>
-                                            <div class="col-md-8 o_animate_preview">
-                                                <select class="form-control o_website_form_input" name="question_71"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                            <div class="col-md-8">
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_71" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_71" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1469,15 +1523,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_72"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_72" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_72" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1490,15 +1557,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_73"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_73" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_73" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1510,15 +1590,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_74"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_74" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_74" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1530,15 +1623,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_75"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_75" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_75" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1550,15 +1656,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_76"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_76" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_76" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1570,36 +1689,61 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_77"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_77" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_77" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
                                             <div class="col-md-4 text-md-right o_animate_preview">
                                                 <label class="col-form-label label_insurance_app"
-                                                       for="Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other psychiatric or mental health disorders?">
-                                                    Have you ever been treated or diagnosed as having anxiety,
-                                                    depression, stress, ADHD, eating disorder or other psychiatric or
-                                                    mental health disorders?
+                                                       for="Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder?">
+                                                    Have you ever been treated or diagnosed as having allergies, skin
+                                                    disorders, anemia, bleeding, clotting, or other blood disorder?
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_78"
-                                                        required="True">>
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_78" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_78" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1611,15 +1755,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_79"
-                                                        required="True">>
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_79" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_79" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1673,15 +1830,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_81"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_81" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_81" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1696,15 +1866,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_82"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_82" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_82" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1717,15 +1900,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_83"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_83" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_83" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1738,15 +1934,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_84"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_84" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_84" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1760,15 +1969,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_85"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_85" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_85" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
@@ -1792,15 +2014,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_87"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_87" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_87" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
@@ -1824,15 +2059,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_89"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_89" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_89" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -1847,15 +2095,28 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <select class="form-control o_website_form_input" name="question_90"
-                                                        required="True">
-                                                    <option value="Yes">
-                                                        Yes
-                                                    </option>
-                                                    <option value="No">
-                                                        No
-                                                    </option>
-                                                </select>
+                                                <div class="o_website_form_flex">
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_90" value="Yes"/>
+                                                            <span>Yes &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label class="label_insurance_app">
+                                                            <input type="radio" class="o_website_form_input"
+                                                                   name="question_90" value="No" checked="True"/>
+                                                            <span>No &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
@@ -2034,16 +2295,13 @@
                                                           required="True"/>
                                             </div>
                                         </div>
-                                        <!--   <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
-                                            <div class="col-md-12"> -->
                                         <input type="button" name="previous" class="previous action-button-previous"
                                                value="Previous"/>
                                         <input type="button" name="next" class="next estimate_next action-button"
                                                value="Submit" data-route="/insurance/insurance-application"
                                                data-store-model="online.insurance.application"/>
-                                        <!-- </div>
-                                      </div> -->
                                     </fieldset>
+
                                     <!-- Thank You -->
                                     <fieldset>
                                         Thank You
