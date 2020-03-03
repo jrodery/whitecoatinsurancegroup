@@ -9,17 +9,21 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
 
-        $(".format-ssn").on('keypress', function(){
+        $(".format-ssn").on('keypress', function() {
             var ssn = $(this).val();
-            console.log( ssn, ssn.length);
-
         });
 
-        $(".format-amount").focusout(function(){
+        var insurance_done = function() {
+            var self = $(this);
+            var ref_code = $('#msform').find("input[name='ref_code']").val();
+            window.location.href = "/life/insurance-done?reference=" + ref_code;
+        }
+
+        $(".format-amount").focusout(function() {
             $(this).val(Number($(this).val()).toLocaleString('en-US'));
         });
 
-        $(".format-email").focusout(function(){
+        $(".format-email").focusout(function() {
             var email = $(this).val();
             var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if(!regex.test(email)){
@@ -34,13 +38,13 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             }
         });
 
-        $('.format-phone').focusout(function(){
+        $('.format-phone').focusout(function() {
             $(this).val(
                 $(this).val().replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1-$2-$3')
             );
         });
 
-        $(".check_amount_format").focusout(function(){
+        $(".check_amount_format").focusout(function() {
             var str = $(this).val();
             if(!$.isNumeric(str)){
                 $(this).focus();
@@ -54,7 +58,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             }
         });
 
-        $(".next").click(function(){
+        $(".next").click(function() {
             var self = $(this);
             if(animating) return false;
             animating = true;
@@ -63,46 +67,45 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             var all_required_select = true;
             current_fs = self.closest('fieldset');
             next_fs = self.closest('fieldset').next();
-            current_fs.find('input').each(function(){
-                if($(this).prop('required') && !$(this).val().trim()){
+            current_fs.find('input').each(function() {
+                if($(this).prop('required') && !$(this).val().trim()) {
                     all_required_input = false;
                     animating = false;
-                    if(!$(this).hasClass('fill-required')){
+                    if(!$(this).hasClass('fill-required')) {
                         $(this).addClass('fill-required');
                     }
                 } else {
-                    if($(this).hasClass('fill-required')){
+                    if($(this).hasClass('fill-required')) {
                         $(this).removeClass('fill-required');
                     }
                 }
             });
-            current_fs.find('textarea').each(function(){
-                if($(this).prop('required') && !$(this).val().trim()){
+            current_fs.find('textarea').each(function() {
+                if($(this).prop('required') && !$(this).val().trim()) {
                     all_required_textarea = false;
                     animating = false;
-                    if(!$(this).hasClass('fill-required')){
+                    if(!$(this).hasClass('fill-required')) {
                         $(this).addClass('fill-required');
                     }
                 } else {
-                    if($(this).hasClass('fill-required')){
+                    if($(this).hasClass('fill-required')) {
                         $(this).removeClass('fill-required');
                     }
                 }
             });
-            current_fs.find('select').each(function(){
-                if($(this).prop('required') && !$(this).val().trim()){
+            current_fs.find('select').each(function() {
+                if($(this).prop('required') && !$(this).val().trim()) {
                     all_required_select = false;
                     animating = false;
-                    if(!$(this).hasClass('fill-required')){
+                    if(!$(this).hasClass('fill-required')) {
                         $(this).addClass('fill-required');
                     }
                 } else {
-                    if($(this).hasClass('fill-required')){
+                    if($(this).hasClass('fill-required')) {
                         $(this).removeClass('fill-required');
                     }
                 }
             });
-
             if(all_required_input && all_required_textarea && all_required_select){
                 //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -125,13 +128,14 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                         next_fs.css({'left': left, 'opacity': opacity, 'position': 'relative'});
                     },
                     duration: 800,
-                    complete: function(){
+                    complete: function() {
                         current_fs.hide();
                         animating = false;
                     },
                     //this comes from the custom easing plugin
                     easing: 'easeInOutBack'
                 });
+
                 if(self.hasClass('show_total')) {
                     $('#msform').parent().addClass('offset-md-2');
                     $('#msform').parent().removeClass('offset-md-3');
@@ -182,6 +186,7 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                                 currency: 'USD'
                             }));
                         }
+
                         route = self.attr('data-route-done');
                         if(route) {
                             ajax.jsonRpc(route, 'call', {
@@ -191,11 +196,15 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                                 if(data) {
                                     if('total_insurance' in data) {
                                         $('#msform').parent().next()
-                                            .find('.insurance_amount').html(data['total_insurance']
+                                            .find('.insurance_amount')
+                                            .html(data['total_insurance']
                                             .toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
                                     }
                                 }
                             });
+                        }
+                        if(self.hasClass('insurance_done')) {
+                            insurance_done();
                         }
                     });
                 }
@@ -255,7 +264,5 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
             }
             $(this).parent().next().val(sno);
         });
-
-
     });
 });

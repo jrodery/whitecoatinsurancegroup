@@ -119,9 +119,7 @@
         <tr><td>Calculate how much life insurance I need</td><td>${'${0:,.2f}'.format(object.total_insurance)}</td></tr>
     </tbody>
 </table>
-
-    <span>You can see your quotation at here : ${object.get_quote_link()}</span>
-
+<span>You can see your quotation <a target="_blank" href=${object.get_quote_link()}>at here</a></span>
 ]]></field>
     </record>
 </odoo>

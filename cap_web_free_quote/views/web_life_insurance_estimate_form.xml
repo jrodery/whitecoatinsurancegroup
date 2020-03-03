@@ -46,7 +46,8 @@
                                                    placeholder="Where can we email your report to?"/>
                                             <input type="text"
                                                    class="form-control form-input-text o_website_form_input format-phone"
-                                                   name="question_31" required="True"
+                                                   name="question_31" required="True" maxlength="10"
+                                                   onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58 || event.charCode &gt; 95 &amp;&amp; event.charCode &lt; 106)"
                                                    placeholder="What's your best contact phone number?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_32" required="True"
@@ -377,8 +378,8 @@
                                                    placeholder="How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
-                                            <input type="button" id="insurance_done" name="done"
-                                                   class="next estimate_next submit_estimate action-button"
+                                            <input type="button" name="done"
+                                                   class="next estimate_next submit_estimate action-button insurance_done"
                                                    data-store-model="life.insurance.estimate"
                                                    data-return="total_insurance"
                                                    data-route="/insurance/estimate-form"
