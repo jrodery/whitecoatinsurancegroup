@@ -47,7 +47,7 @@
                                             <input type="text"
                                                    class="form-control form-input-text o_website_form_input format-phone"
                                                    name="question_31" required="True" maxlength="10"
-                                                   onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58 || event.charCode &gt; 95 &amp;&amp; event.charCode &lt; 106)"
+                                                   onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"
                                                    placeholder="What's your best contact phone number?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_32" required="True"

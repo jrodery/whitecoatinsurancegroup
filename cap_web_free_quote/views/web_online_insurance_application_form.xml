@@ -131,19 +131,6 @@
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
                                             <div class="col-md-4 text-md-right">
-                                                <label class="col-form-label label_insurance_app" for="Phone Number">
-                                                    Phone Number
-                                                </label>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <input type="text" placeholder="Phone: 000-000-0000"
-                                                       class="form-control o_website_form_input format-phone"
-                                                       name="question_9" required="True" maxlength="10"
-                                                       onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58 || event.charCode &gt; 95 &amp;&amp; event.charCode &lt; 106)"/>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
-                                            <div class="col-md-4 text-md-right">
                                                 <label class="col-form-label label_insurance_app" for="Email Address">
                                                     Email Address
                                                 </label>
@@ -152,6 +139,19 @@
                                                 <input type="text"
                                                        class="form-control o_website_form_input format-email"
                                                        name="question_10" required="True"/>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
+                                            <div class="col-md-4 text-md-right">
+                                                <label class="col-form-label label_insurance_app" for="Phone Number">
+                                                    Phone Number
+                                                </label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" placeholder="Phone: 000-000-0000"
+                                                       class="form-control o_website_form_input format-phone"
+                                                       name="question_9" required="True" maxlength="10"
+                                                       onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -461,7 +461,7 @@
                                                        for="Have you ever had a professional license suspended or revoked, or is such license currently under review?">
                                                     <span style="font-size: 0.875rem;">Have you ever had a professional
                                                         license suspended or revoked, or is such license currently under
-                                                        review
+                                                        review?
                                                     </span>
                                                     <span style="font-size: 0.875rem;">?</span>&amp;nbsp;
                                                 </label>
@@ -556,6 +556,7 @@
                                             </div>
                                             <div class="col-md-8 o_animate_preview">
                                                 <select class="form-control o_website_form_input" name="question_35">
+                                                    <option value=""></option>
                                                     <option value="LLC">
                                                         LLC
                                                     </option>
@@ -2163,7 +2164,7 @@
                                                     <div class="radio">
                                                         <label class="label_insurance_app">
                                                             <input type="radio" class="o_website_form_input"
-                                                                   name="question_92" value=" Unknown" checked="True"/>
+                                                                   name="question_92" value="Unknown" checked="True"/>
                                                             <span>Unknown &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
@@ -2182,8 +2183,7 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <textarea class="form-control o_website_form_input" name="question_93"
-                                                          required="True"/>
+                                                <textarea class="form-control o_website_form_input" name="question_93"/>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom">
@@ -2217,7 +2217,7 @@
                                                     <div class="radio">
                                                         <label class="label_insurance_app">
                                                             <input type="radio" class="o_website_form_input"
-                                                                   name="question_94" value=" Unknown" checked="True"/>
+                                                                   name="question_94" value="Unknown" checked="True"/>
                                                             <span>Unknown &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
                                                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
@@ -2236,8 +2236,7 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <textarea class="form-control o_website_form_input" name="question_95"
-                                                          required="True"/>
+                                                <textarea class="form-control o_website_form_input" name="question_95"/>
                                             </div>
                                         </div>
                                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -2291,8 +2290,7 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-8">
-                                                <textarea class="form-control o_website_form_input" name="question_97"
-                                                          required="True"/>
+                                                <textarea class="form-control o_website_form_input" name="question_97"/>
                                             </div>
                                         </div>
                                         <input type="button" name="previous" class="previous action-button-previous"

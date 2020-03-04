@@ -23,13 +23,13 @@
                         <field name="question_1"/>
                         <field name="question_2"/>
                         <field name="question_3"/>
-                        <field name="question_4" widget="radio"/>
+                        <field name="question_4" required="True"/>
                         <field name="question_5"/>
                         <field name="question_6"/>
                         <field name="question_7"/>
                         <field name="question_8"/>
-                        <field name="question_9"/>
-                        <field name="question_10"/>
+                        <field name="question_9" widget="phone"/>
+                        <field name="question_10" widget="email"/>
                     </group>
 
                     <separator string="Step-2"/>

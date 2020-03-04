@@ -44,7 +44,7 @@
                                                class="format-phone form-control form-input-text o_website_form_input"
                                                name="question_4" required="True" placeholder="Phone: 000-000-0000"
                                                maxlength="10"
-                                               onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58 || event.charCode &gt; 95 &amp;&amp; event.charCode &lt; 106)"/>
+                                               onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
                                         <p class="col-form-label label_text">Zip Code * :</p>
                                         <input type="text" class="form-control form-input-text o_website_form_input"
                                                name="question_5" required="True" placeholder="Area Code"/>
