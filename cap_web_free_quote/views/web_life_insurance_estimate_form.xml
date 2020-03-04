@@ -72,18 +72,18 @@
                                                    name="remaining_age" readonly="True" style="display: none;"
                                                    placeholder="Years Until Retirement"/>
 
-                                            <input type="hidden" name="question_3" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_3" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Does your spouse work?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_3_yes" name="question_3_bool" value="Yes"/>
+                                                           id="question_3_yes" name="question_3" value="Yes"/>
                                                     <label class="custom-control-label" for="question_3_yes">Yes</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_3_no" value="No" name="question_3_bool"
+                                                           id="question_3_no" value="No" name="question_3"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_3_no">No</label>
                                                 </div>
@@ -93,27 +93,27 @@
                                                    name="question_4" style="display: none;"
                                                    placeholder="How much income does your spouse earn per year?"/>
 
-                                            <input type="hidden" name="question_5" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
-                                            <div class="text-left form-control mb-2" data-next="2">
+<!--                                            <input type="hidden" name="question_5" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
+                                            <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Will your spouse continue to work if
                                                     you passed away?
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_5_yes" name="question_5_bool" value="Yes"/>
+                                                           id="question_5_yes" name="question_5" value="Yes"/>
                                                     <label class="custom-control-label" for="question_5_yes">Yes</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_5_no" name="question_5_bool" value="No"
                                                            checked="True"/>
-                                                    <label class="custom-control-label" for="question_5_no">No</label>
+                                                    <label class="custom-control-label" for="question_5">No</label>
                                                 </div>
                                             </div>
 
-                                            <input type="hidden" name="question_5_1" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_5_1" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div style="display: none;" class="text-left form-control mb-2"
                                                  data-next="1">
                                                 <p class="custom-control-inline">If yes, will you have an added child
@@ -121,13 +121,13 @@
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_5_1_yes" name="question_5_1_bool" value="Yes"/>
+                                                           id="question_5_1_yes" name="question_5_1" value="Yes"/>
                                                     <label class="custom-control-label" for="question_5_1_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_5_1_no" name="question_5_1_bool" value="No"
+                                                           id="question_5_1_no" name="question_5_1" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_5_1_no">No</label>
                                                 </div>
@@ -185,19 +185,19 @@
                                                    data-route="/insurance/estimate-form"/>
                                         </fieldset>
                                         <fieldset>
-                                            <input type="hidden" name="question_11" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_11" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you plan on paying for college?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_11_yes" name="question_11_bool" value="Yes"/>
+                                                           id="question_11_yes" name="question_11" value="Yes"/>
                                                     <label class="custom-control-label" for="question_11_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_11_no" name="question_11_bool" value="No"
+                                                           id="question_11_no" name="question_11" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_11_no">No</label>
                                                 </div>
@@ -207,8 +207,8 @@
                                                    name="question_12" style="display: none;"
                                                    placeholder="If yes, by the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
 
-                                            <input type="hidden" name="question_13" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_13" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you currently have any money saved
                                                     for
@@ -216,13 +216,13 @@
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_13_yes" name="question_13_bool" value="Yes"/>
+                                                           id="question_13_yes" name="question_13" value="Yes"/>
                                                     <label class="custom-control-label" for="question_13_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_13_no" name="question_13_bool" value="No"
+                                                           id="question_13_no" name="question_13" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_13_no">No</label>
                                                 </div>
@@ -241,19 +241,19 @@
                                         </fieldset>
 
                                         <fieldset>
-                                            <input type="hidden" name="question_15" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_15" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have have a mortgage?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_15_yes" name="question_15_bool" value="Yes"/>
+                                                           id="question_15_yes" name="question_15" value="Yes"/>
                                                     <label class="custom-control-label" for="question_15_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_15_no" name="question_15_bool" value="No"
+                                                           id="question_15_no" name="question_15" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_15_no">No</label>
                                                 </div>
@@ -263,19 +263,19 @@
                                                    name="question_16" style="display: none;"
                                                    placeholder="If yes, What is your mortgage balance?"/>
 
-                                            <input type="hidden" name="question_17" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_17" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you own money on credit cards?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_17_yes" name="question_17_bool" value="Yes"/>
+                                                           id="question_17_yes" name="question_17" value="Yes"/>
                                                     <label class="custom-control-label" for="question_17_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_17_no" name="question_17_bool" value="No"
+                                                           id="question_17_no" name="question_17" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_17_no">No</label>
                                                 </div>
@@ -285,19 +285,19 @@
                                                    name="question_18" style="display: none;"
                                                    placeholder="If yes, what is your total Credit Cards Balance?"/>
 
-                                            <input type="hidden" name="question_19" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_19" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have car payments?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_19_yes" name="question_19_bool" value="Yes"/>
+                                                           id="question_19_yes" name="question_19" value="Yes"/>
                                                     <label class="custom-control-label" for="question_19_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_19_no" name="question_19_bool" value="No"
+                                                           id="question_19_no" name="question_19" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_19_no">No</label>
                                                 </div>
@@ -307,21 +307,21 @@
                                                    name="question_20" style="display: none;"
                                                    placeholder="If yes, what is your total car payments balances?"/>
 
-                                            <input type="hidden" name="question_21" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_21" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Do you have any additional Debt
                                                     (student loans, personal loans, etc...)
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_21_yes" name="question_21_bool" value="Yes"/>
+                                                           id="question_21_yes" name="question_21" value="Yes"/>
                                                     <label class="custom-control-label" for="question_21_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_21_no" name="question_21_bool" value="No"
+                                                           id="question_21_no" name="question_21" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_21_no">No</label>
                                                 </div>
@@ -349,21 +349,21 @@
                                                    name="question_24" required="True"
                                                    placeholder="What is the cost of your Homeowners or Renters insurance policy annually?"/>
 
-                                            <input type="hidden" name="question_25" value="No"
-                                                   class="form-control form-input-text o_website_form_input"/>
+<!--                                            <input type="hidden" name="question_25" value="No"-->
+<!--                                                   class="form-control form-input-text o_website_form_input"/>-->
                                             <div class="text-left form-control mb-2" data-next="1">
                                                 <p class="custom-control-inline">Are you responsible for paying HOA
                                                     fees?
                                                 </p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_25_yes" name="question_25_bool" value="Yes"/>
+                                                           id="question_25_yes" name="question_25" value="Yes"/>
                                                     <label class="custom-control-label" for="question_25_yes">Yes
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
-                                                           id="question_25_no" name="question_25_bool" value="No"
+                                                           id="question_25_no" name="question_25" value="No"
                                                            checked="True"/>
                                                     <label class="custom-control-label" for="question_25_no">No</label>
                                                 </div>

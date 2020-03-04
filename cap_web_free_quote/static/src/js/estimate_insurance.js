@@ -60,7 +60,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     current_next = current_next.next();
                 }
             }
-            current_div.closest("input[type='hidden']").val($(this).val());
+//            current_div.closest("input[type='hidden']").val($(this).val());
         });
 
         //Star Rating Thankyou page
