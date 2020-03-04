@@ -36,7 +36,7 @@ class FreeDisabilityQuote(models.Model):
     question_9 = fields.Char(string="State")
 
     # Step - 3
-    question_10 = fields.Char(string="Desired Monthly Benefit")
+    question_10 = fields.Float(string="Desired Monthly Benefit")
     question_11 = fields.Selection([
         ('True Own Occupation', 'True Own Occupation'),
         ('Modified Own Occupation', 'Modified Own Occupation'),

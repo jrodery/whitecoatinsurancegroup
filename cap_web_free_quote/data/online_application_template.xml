@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_customer_online_insurance_application_form" model="mail.template">
+        <field name="name">Customer Online Insurance Application</field>
+        <field name="email_from">${(user.email or '')|safe}</field>
+        <field name="email_to">${(object.question_10 or '')|safe}</field>
+        <field name="subject">Life Insurance Online Application</field>
+        <field name="model_id" ref="cap_web_free_quote.model_online_insurance_application"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+<table class="table">
+    <thead class="thead-dark">
+        <tr></tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>First Name</td><td>${object.question_1}</td></tr>
+        <tr><td>Last Name</td><td>${object.question_2}</td></tr>
+        <tr><td>Date of Birth</td><td>${object.question_3}</td></tr>
+        <tr><td>Sex</td><td>${object.question_4}</td></tr>
+        <tr><td>Home Street Address</td><td>${object.question_5}</td></tr>
+        <tr><td>Home City</td><td>${object.question_6}</td></tr>
+        <tr><td>Home State</td><td>${object.question_7}</td></tr>
+        <tr><td>Home Zip</td><td>${object.question_8}</td></tr>
+        <tr><td>Phone Number</td><td>${object.question_9}</td></tr>
+        <tr><td>Email Address</td><td>${object.question_10}</td></tr>
+        <tr><td>Social Security Number</td><td>${object.question_11}</td></tr>
+        <tr><td>Drivers License Number</td><td>${object.question_12}</td></tr>
+        <tr><td>License Issue State</td><td>${object.question_13}</td></tr>
+        <tr><td>License Expiration Date</td><td>${object.question_14}</td></tr>
+        <tr><td>Years lived at the current address?</td><td>${object.question_15}</td></tr>
+        <tr><td>Country/State of birth</td><td>${object.question_16}</td></tr>
+        <tr><td>Are you a US Citizen?</td><td>${object.question_17}</td></tr>
+        <tr><td>If no, Visa type</td><td>${object.question_18}</td></tr>
+        <tr><td>Visa Number</td><td>${object.question_19}</td></tr>
+        <tr><td>Number of years residing in the US</td><td>${object.question_20}</td></tr>
+        <tr><td>Employer Name</td><td>${object.question_21}</td></tr>
+        <tr><td>Employer Street Address</td><td>${object.question_22}</td></tr>
+        <tr><td>Employer City</td><td>${object.question_23}</td></tr>
+        <tr><td>Employer State</td><td>${object.question_24}</td></tr>
+        <tr><td>Employer Zip Code</td><td>${object.question_25}</td></tr>
+        <tr><td>Occupation/Specialty</td><td>${object.question_26}</td></tr>
+        <tr><td>Occupational duties</td><td>${object.question_27}</td></tr>
+        <tr><td>The total number of years working in this occupation?</td><td>${object.question_28}</td></tr>
+        <tr><td>The total number of years with the same employer?</td><td>${object.question_29}</td></tr>
+        <tr><td>Do you work at least 30 hours per week?</td><td>${object.question_30}</td></tr>
+        <tr><td>Have you ever had a professional license suspended or revoked, or is such license currently under review?</td><td>${object.question_31}</td></tr>
+        <tr><td>If yes, please explain?</td><td>${object.question_32}</td></tr>
+        <tr><td>Do you have any ownership in the business where you work?</td><td>${object.question_33}</td></tr>
+        <tr><td>If yes, what percentage do you own?</td><td>${object.question_34}</td></tr>
+        <tr><td>If Yes, what type of business is it?</td><td>${object.question_35}</td></tr>
+        <tr><td>Are there more than 10 people employed with your current employer?</td><td>${object.question_36}</td></tr>
+        <tr><td>What is your current projected YTD income?</td><td>${object.question_37}</td></tr>
+        <tr><td>What was last year's Adjusted Gross Income Total?</td><td>${object.question_38}</td></tr>
+        <tr><td>What was 2 years ago Adjusted Gross Income Total?</td><td>${object.question_39}</td></tr>
+        <tr><td>Have you ever filed for personal or business bankruptcy?</td><td>${object.question_40}</td></tr>
+        <tr><td>If Yes, please provide details including discharge date</td><td>${object.question_41}</td></tr>
+        <tr><td>Do you have any existing Group or Individual Disability Insurance?</td><td>${object.question_42}</td></tr>
+        <tr><td>If Yes, Carrier 1 name?</td><td>${object.question_43}</td></tr>
+        <tr><td>Carrier 2 name?</td><td>${object.question_44}</td></tr>
+        <tr><td>Carrier 1 total monthly benefit amount?</td><td>${object.question_45}</td></tr>
+        <tr><td>Carrier 2 total monthly benefit amount?</td><td>${object.question_46}</td></tr>
+        <tr><td>Is Carrier 1 employer paid?</td><td>${object.question_47}</td></tr>
+        <tr><td>Is Carrier 2 employer paid?</td><td>${object.question_48}</td></tr>
+        <tr><td>Will you be replacing any of your existing coverage?</td><td>${object.question_49}</td></tr>
+        <tr><td>Do you want to provide any additional details regarding your current coverage?</td><td>${object.question_50}</td></tr>
+        <tr><td>Have you used tobacco or nicotine products in any form within the last 5 years?</td><td>${object.question_51}</td></tr>
+        <tr><td>Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</td><td>${object.question_52}</td></tr>
+        <tr><td>Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</td><td>${object.question_53}</td></tr>
+        <tr><td>Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</td><td>${object.question_54}</td></tr>
+        <tr><td>Have you been convicted of a moving violation, had any traffic accidents, or had a driver's license revoked or suspended within the past 5 years?</td><td>${object.question_55}</td></tr>
+        <tr><td>Have you ever been charged with, or convicted of, or currently awaiting trial on the violation of any criminal law?</td><td>${object.question_56}</td></tr>
+        <tr><td>Do you belong to or intend to join the military in the next two years?</td><td>${object.question_57}</td></tr>
+        <tr><td>Engaged in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</td><td>${object.question_58}</td></tr>
+        <tr><td>Provide details to any of the 8 questions above where you answered: Yes</td><td>${object.question_59}</td></tr>
+        <tr><td>What is your Height?</td><td>${object.question_60}</td></tr>
+        <tr><td>What is your weight?</td><td>${object.question_61}</td></tr>
+        <tr><td>Have you seen a doctor within the past 5 years?</td><td>${object.question_62}</td></tr>
+        <tr><td>If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit.</td><td>${object.question_63}</td></tr>
+        <tr><td>Do you currently take any prescription medications?</td><td>${object.question_64}</td></tr>
+        <tr><td>If Yes, please list all medications names - doses - and the reason you are taking the medication.</td><td>${object.question_65}</td></tr>
+        <tr><td>Has your weight changed by more than 10 lbs in the last twelve months?</td><td>${object.question_66}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?</td><td>${object.question_67}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system?</td><td>${object.question_68}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?</td><td>${object.question_69}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having chest pain, irregular heartbeat, heart murmur, heart valve disease, heart attack, coronary artery disease, heart failure, aneurysm or other heart or blood vessel disorder?</td><td>${object.question_70}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?</td><td>${object.question_71}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues?</td><td>${object.question_72}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having diabetes, elevated blood sugar, thyroid, pituitary, adrenal or any other endocrine (glandular) disorders?</td><td>${object.question_73}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having breast, reproductive organ or prostate disorder?</td><td>${object.question_74}</td></tr>
+        <tr><td>Have you ever had a C-section, miscarriage, or complication of pregnancy?</td><td>${object.question_75}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having a mass, polyp, cyst, tumor or cancer?</td><td>${object.question_76}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder?</td><td>${object.question_77}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other psychiatric or mental health disorders?</td><td>${object.question_78}</td></tr>
+        <tr><td>Have you ever been treated or diagnosed as having chronic fatigue, chronic pain, fibromyalgia, or fever of unknown cause?</td><td>${object.question_79}</td></tr>
+        <tr><td>Are you currently pregnant?</td><td>${object.question_80}</td></tr>
+        <tr><td>In the last 5 years have you received treatment from a licensed Chiropractor?</td><td>${object.question_81}</td></tr>
+        <tr><td>In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?</td><td>${object.question_82}</td></tr>
+        <tr><td>In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</td><td>${object.question_83}</td></tr>
+        <tr><td>In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?</td><td>${object.question_84}</td></tr>
+        <tr><td>In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?</td><td>${object.question_85}</td></tr>
+        <tr><td>Please provide details to any of the above questions where you answered : yes</td><td>${object.question_86}</td></tr>
+        <tr><td>In the past 10 years have you consumed alcoholic beverages?</td><td>${object.question_87}</td></tr>
+        <tr><td>If yes, how often do you drink?</td><td>${object.question_88}</td></tr>
+        <tr><td>Have you ever tested positive for HIV or Aids?</td><td>${object.question_89}</td></tr>
+        <tr><td>To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</td><td>${object.question_90}</td></tr>
+        <tr><td>Please provide details if you answered yes</td><td>${object.question_91}</td></tr>
+        <tr><td>Is your father still living?</td><td>${object.question_92}</td></tr>
+        <tr><td>If Yes, how old is he - If No, At what age did he die and what was his cause of death?</td><td>${object.question_93}</td></tr>
+        <tr><td>Is your mother still living?</td><td>${object.question_94}</td></tr>
+        <tr><td>If Yes, how old is she - If No, At what age did she die and what was her cause of death?</td><td>${object.question_95}</td></tr>
+        <tr><td>Are all your siblings still living?</td><td>${object.question_96}</td></tr>
+        <tr><td>If Yes How old is each one - If No, at what age did they die and what was their cause of death?</td><td>${object.question_97}</td></tr>
+   </tbody>
+</table>
+]]></field>
+    </record>
+</odoo>

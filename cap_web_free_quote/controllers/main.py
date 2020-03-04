@@ -94,6 +94,18 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             vals['res_id'] = form_object.create(kw.get('input_args', {})).id
         return vals
 
+    @http.route('/insurance/insurance-application-done', type='json',
+                auth="public", methods=['POST'])
+    def insurance_application_done(self, **kw):
+        form_object = request.env[kw['store_data_model']]
+        vals = {'write': False, 'res_id': False}
+        if kw.get('rec_id'):
+            form_obj = form_object.browse(int(kw.get('rec_id')))
+            vals['write'] = form_obj.sudo().write({
+                'state': 'done'
+            })
+        return vals
+
     @http.route('/life/insurance-done', type='http', auth="public",
                 methods=['POST', 'GET'], csrf=False, website=True)
     def insurance_done(self, **kw):

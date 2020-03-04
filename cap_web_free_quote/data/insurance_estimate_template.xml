@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="mail_life_insurance_estimate_form" model="mail.template">
-        <field name="name">Life Insurance Estimation Mail</field>
-        <field name="email_from">${(user.email or '')|safe}</field>
-        <field name="subject">Life Insurance Estimation Mail</field>
-        <field name="model_id" ref="cap_web_free_quote.model_life_insurance_estimate"/>
-        <field name="auto_delete" eval="False"/>
-        <field name="body_html"><![CDATA[
-<table class="table">
-    <thead class="thead-dark">
-        <tr></tr>
-            <th>Question</th>
-            <th>Answer</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>What is your First Name?</td><td>${object.question_28}</td></tr>
-        <tr><td>What is your Last Name?</td><td>${object.question_29}</td></tr>
-        <tr><td>Where can we email your report to?</td><td>${object.question_30}</td></tr>
-        <tr><td>What's your best contact phone number?</td><td>${object.question_31}</td></tr>
-        <tr><td>Your Current Age?</td><td>${object.question_1}</td></tr>
-        <tr><td>Your Desired Retirement Age?</td><td>${object.question_2}</td></tr>
-        <tr><td>Years Until Retirement</td><td>${object.remaining_age}</td></tr>
-        <tr><td>Does your spouse work?</td><td>${object.question_3}</td></tr>
-        <tr><td>How much income does your spouse earn per year?</td><td>${'${0:,.2f}'.format(object.question_4)}</td></tr>
-        <tr><td>Will your spouse continue to work if you passed away?</td><td>${object.question_5}</td></tr>
-        <tr><td>If yes, will you have an added child care expense?</td><td>${object.question_5_1}</td></tr>
-        <tr><td>If yes, what do you anticipate the annual child care expense would add to your budget</td><td>${'${0:,.2f}'.format(object.question_5_2)}</td></tr>
-        <tr><td>Spouses income minus Additional child care expense</td><td>${'${0:,.2f}'.format(object.question_5_3)}</td></tr>
-        <tr><td>Spouses potential pre tax career earnings</td><td>${'${0:,.2f}'.format(object.question_5_4)}</td></tr>
-        <tr><td>Do you currently have or plan to have children?</td><td>${object.question_6}</td></tr>
-        <tr><td>If yes, How many do you have or plan to have?</td><td>${object.question_7}</td></tr>
-        <tr><td>Age of your youngest child?</td><td>${object.question_8}</td></tr>
-        <tr><td>Do you plan on paying for college?</td><td>${object.question_11}</td></tr>
-        <tr><td>If yes, by the time your child reaches college - how much do you think it will cost to send each individual child through school?</td><td>${'${0:,.2f}'.format(object.question_12)}</td></tr>
-        <tr><td>Do you currently have any money saved for college?</td><td>${object.question_13}</td></tr>
-        <tr><td>If yes, what is the approx balance of your college savings?</td><td>${'${0:,.2f}'.format(object.question_14)}</td></tr>
-        <tr><td>Total College Expense</td><td>${'${0:,.2f}'.format(object.question_14_1)}</td></tr>
-        <tr><td>Total Remaining College Expense</td><td>${'${0:,.2f}'.format(object.question_14_2)}</td></tr>
-        <tr><td>Do you own your own home?</td><td>${object.question_15}</td></tr>
-        <tr><td>If yes, what is your mortgage balance?</td><td>${'${0:,.2f}'.format(object.question_16)}</td></tr>
-        <tr><td>Do you own money on Credit Cards?</td><td>${object.question_17}</td></tr>
-        <tr><td>If Yes What is your total Credit Card balance?</td><td>${'${0:,.2f}'.format(object.question_18)}</td></tr>
-        <tr><td>Do you have car payments?</td><td>${object.question_19}</td></tr>
-        <tr><td>If yes what is your total car payments balance?</td><td>${'${0:,.2f}'.format(object.question_20)}</td></tr>
-        <tr><td>Do you have any additional Debt (student loans, personal loans, etc...)</td><td>${object.question_21}</td></tr>
-        <tr><td>If yes, what is the total balance you owe?</td><td>${'${0:,.2f}'.format(object.question_22)}</td></tr>
-        <tr><td>Total Debt</td><td>${'${0:,.2f}'.format(object.question_22_1)}</td></tr>
-        <tr><td>What are your annual property taxes? </td><td>${'${0:,.2f}'.format(object.question_23)}</td></tr>
-        <tr><td>What is the cost of your Homeowners or Renters insurance policy annually?</td><td>${'${0:,.2f}'.format(object.question_24)}</td></tr>
-        <tr><td>Total</td><td>${'${0:,.2f}'.format(object.question_24_1)}</td></tr>
-        <tr><td>Are you responsible for paying HOA fees?</td><td>${object.question_25}</td></tr>
-        <tr><td>If yes, what is your monthly HOA amount?</td><td>${'${0:,.2f}'.format(object.question_26)}</td></tr>
-        <tr><td>How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?</td><td>${'${0:,.2f}'.format(object.question_27)}</td></tr>
-        <tr><td>Total annual Recurring expenses minus remaining spousal income</td><td>${'${0:,.2f}'.format(object.question_27_1)}</td></tr>
-        <tr><td>Recurring expenses multiplied by the amount of years until retirement</td><td>${'${0:,.2f}'.format(object.question_27_2)}</td></tr>
-        <tr><td>Calculate how much life insurance I need</td><td>${'${0:,.2f}'.format(object.total_insurance)}</td></tr>
-    </tbody>
-</table>]]></field>
-    </record>
+<!--    <record id="mail_life_insurance_estimate_form" model="mail.template">-->
+<!--        <field name="name">Life Insurance Estimation Mail</field>-->
+<!--        <field name="email_from">${(user.email or '')|safe}</field>-->
+<!--        <field name="subject">Life Insurance Estimation Mail</field>-->
+<!--        <field name="model_id" ref="cap_web_free_quote.model_life_insurance_estimate"/>-->
+<!--        <field name="auto_delete" eval="False"/>-->
+<!--        <field name="body_html"><![CDATA[-->
+<!--<table class="table">-->
+<!--    <thead class="thead-dark">-->
+<!--        <tr></tr>-->
+<!--            <th>Question</th>-->
+<!--            <th>Answer</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--        <tr><td>What is your First Name?</td><td>${object.question_28}</td></tr>-->
+<!--        <tr><td>What is your Last Name?</td><td>${object.question_29}</td></tr>-->
+<!--        <tr><td>Where can we email your report to?</td><td>${object.question_30}</td></tr>-->
+<!--        <tr><td>What's your best contact phone number?</td><td>${object.question_31}</td></tr>-->
+<!--        <tr><td>Your Current Age?</td><td>${object.question_1}</td></tr>-->
+<!--        <tr><td>Your Desired Retirement Age?</td><td>${object.question_2}</td></tr>-->
+<!--        <tr><td>Years Until Retirement</td><td>${object.remaining_age}</td></tr>-->
+<!--        <tr><td>Does your spouse work?</td><td>${object.question_3}</td></tr>-->
+<!--        <tr><td>How much income does your spouse earn per year?</td><td>${'${0:,.2f}'.format(object.question_4)}</td></tr>-->
+<!--        <tr><td>Will your spouse continue to work if you passed away?</td><td>${object.question_5}</td></tr>-->
+<!--        <tr><td>If yes, will you have an added child care expense?</td><td>${object.question_5_1}</td></tr>-->
+<!--        <tr><td>If yes, what do you anticipate the annual child care expense would add to your budget</td><td>${'${0:,.2f}'.format(object.question_5_2)}</td></tr>-->
+<!--        <tr><td>Spouses income minus Additional child care expense</td><td>${'${0:,.2f}'.format(object.question_5_3)}</td></tr>-->
+<!--        <tr><td>Spouses potential pre tax career earnings</td><td>${'${0:,.2f}'.format(object.question_5_4)}</td></tr>-->
+<!--        <tr><td>Do you currently have or plan to have children?</td><td>${object.question_6}</td></tr>-->
+<!--        <tr><td>If yes, How many do you have or plan to have?</td><td>${object.question_7}</td></tr>-->
+<!--        <tr><td>Age of your youngest child?</td><td>${object.question_8}</td></tr>-->
+<!--        <tr><td>Do you plan on paying for college?</td><td>${object.question_11}</td></tr>-->
+<!--        <tr><td>If yes, by the time your child reaches college - how much do you think it will cost to send each individual child through school?</td><td>${'${0:,.2f}'.format(object.question_12)}</td></tr>-->
+<!--        <tr><td>Do you currently have any money saved for college?</td><td>${object.question_13}</td></tr>-->
+<!--        <tr><td>If yes, what is the approx balance of your college savings?</td><td>${'${0:,.2f}'.format(object.question_14)}</td></tr>-->
+<!--        <tr><td>Total College Expense</td><td>${'${0:,.2f}'.format(object.question_14_1)}</td></tr>-->
+<!--        <tr><td>Total Remaining College Expense</td><td>${'${0:,.2f}'.format(object.question_14_2)}</td></tr>-->
+<!--        <tr><td>Do you own your own home?</td><td>${object.question_15}</td></tr>-->
+<!--        <tr><td>If yes, what is your mortgage balance?</td><td>${'${0:,.2f}'.format(object.question_16)}</td></tr>-->
+<!--        <tr><td>Do you own money on Credit Cards?</td><td>${object.question_17}</td></tr>-->
+<!--        <tr><td>If Yes What is your total Credit Card balance?</td><td>${'${0:,.2f}'.format(object.question_18)}</td></tr>-->
+<!--        <tr><td>Do you have car payments?</td><td>${object.question_19}</td></tr>-->
+<!--        <tr><td>If yes what is your total car payments balance?</td><td>${'${0:,.2f}'.format(object.question_20)}</td></tr>-->
+<!--        <tr><td>Do you have any additional Debt (student loans, personal loans, etc...)</td><td>${object.question_21}</td></tr>-->
+<!--        <tr><td>If yes, what is the total balance you owe?</td><td>${'${0:,.2f}'.format(object.question_22)}</td></tr>-->
+<!--        <tr><td>Total Debt</td><td>${'${0:,.2f}'.format(object.question_22_1)}</td></tr>-->
+<!--        <tr><td>What are your annual property taxes? </td><td>${'${0:,.2f}'.format(object.question_23)}</td></tr>-->
+<!--        <tr><td>What is the cost of your Homeowners or Renters insurance policy annually?</td><td>${'${0:,.2f}'.format(object.question_24)}</td></tr>-->
+<!--        <tr><td>Total</td><td>${'${0:,.2f}'.format(object.question_24_1)}</td></tr>-->
+<!--        <tr><td>Are you responsible for paying HOA fees?</td><td>${object.question_25}</td></tr>-->
+<!--        <tr><td>If yes, what is your monthly HOA amount?</td><td>${'${0:,.2f}'.format(object.question_26)}</td></tr>-->
+<!--        <tr><td>How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?</td><td>${'${0:,.2f}'.format(object.question_27)}</td></tr>-->
+<!--        <tr><td>Total annual Recurring expenses minus remaining spousal income</td><td>${'${0:,.2f}'.format(object.question_27_1)}</td></tr>-->
+<!--        <tr><td>Recurring expenses multiplied by the amount of years until retirement</td><td>${'${0:,.2f}'.format(object.question_27_2)}</td></tr>-->
+<!--        <tr><td>Calculate how much life insurance I need</td><td>${'${0:,.2f}'.format(object.total_insurance)}</td></tr>-->
+<!--    </tbody>-->
+<!--</table>]]></field>-->
+<!--    </record>-->
 
     <record id="mail_customer_life_insurance_estimate_form" model="mail.template">
         <field name="name">Customer Life Insurance Estimation Mail</field>

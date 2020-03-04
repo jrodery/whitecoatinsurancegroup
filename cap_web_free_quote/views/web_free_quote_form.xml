@@ -199,7 +199,7 @@
     <data noupdate="1">
         <record id="menu_free_quote_send" model="website.page">
             <field name="name">Free Quote Send</field>
-            <field name="url">/freequote</field>
+            <field name="url">/free-quote</field>
             <field name="website_published">True</field>
             <field name="view_id" ref="cap_web_free_quote.free_quote"/>
         </record>

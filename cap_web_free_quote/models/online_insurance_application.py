@@ -150,7 +150,7 @@ class OnlineInsuranceApplication(models.Model):
                "Martial Arts, Scuba Diving, Mountain Climbing?")
     question_59 = fields.Char(
         string="Provide details to any of the 8 questions "
-               "above where you answered: ""Yes")
+               "above where you answered: Yes")
 
     # Step - 5
     question_60 = fields.Char(string="What is your Height?")
@@ -159,7 +159,7 @@ class OnlineInsuranceApplication(models.Model):
         select_boolean, default="No",
         string="Have you seen a doctor within the past 5 years?")
     question_63 = fields.Char(
-        string="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit.  ")
+        string="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit.")
     question_64 = fields.Selection(
         select_boolean, default="No",
         string="Do you currently take any prescription medications?")
@@ -173,7 +173,7 @@ class OnlineInsuranceApplication(models.Model):
         string="Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?")
     question_68 = fields.Selection(
         select_boolean, default="No",
-        string="Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system? ")
+        string="Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system?")
     question_69 = fields.Selection(
         select_boolean, default="No",
         string="Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?")
@@ -260,14 +260,14 @@ class OnlineInsuranceApplication(models.Model):
                "for the use of alcohol or illegal drugs?")
     question_86 = fields.Char(
         string="Please provide details to any of the above "
-               "questions where you answered ""yes")
+               "questions where you answered : yes")
     question_87 = fields.Selection(
         select_boolean, default="No",
         string="In the past 10 years have you consumed alcoholic beverages?")
     question_88 = fields.Char(string="If yes, how often do you drink?")
     question_89 = fields.Selection(
         select_boolean, default="No",
-        string="Have you ever tested positive for HIV or Aids")
+        string="Have you ever tested positive for HIV or Aids?")
     question_90 = fields.Selection(
         select_boolean, default="No",
         string="To the best of your knowledge, have any of your immediate "
@@ -305,3 +305,21 @@ class OnlineInsuranceApplication(models.Model):
         vals['name'] = self.env['ir.sequence'].next_by_code(
             'online.insurance.application')
         return super(OnlineInsuranceApplication, self).create(vals)
+
+    @api.multi
+    def write(self, vals):
+        res = super(OnlineInsuranceApplication, self).write(vals)
+        if vals.get('state', '') == 'done':
+            self.send_form_mail()
+        return res
+
+    @api.multi
+    def send_form_mail(self):
+        # template = self.env.ref(
+        #     'cap_web_free_quote.mail_life_insurance_estimate_form',
+        #     raise_if_not_found=False)
+        # template.send_mail(self.id)
+        template = self.env.ref(
+            'cap_web_free_quote.mail_customer_online_insurance_application_form',
+            raise_if_not_found=False)
+        template.send_mail(self.id)

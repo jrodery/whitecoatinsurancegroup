@@ -15,6 +15,7 @@
         'data/sequence.xml',
         'data/free_disability_quote_template.xml',
         'data/insurance_estimate_template.xml',
+        'data/online_application_template.xml',
         'views/assets.xml',
         'views/life_insurance_estimate_form_views.xml',
         'views/web_life_insurance_estimate_form.xml',
