@@ -126,8 +126,9 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 methods=['POST', 'GET'], csrf=False, website=True)
     def request_quote(self, **kw):
         res = request.env['life.insurance.estimate'].search([
-            ('ref_code', '=', kw.get('reference'))
+            ('ref_code', '=', kw.get('reference')),
         ], limit=1)
+        kw.update({'state': 'requested_quote'})
         return {
             'thank_you_request_quote': res.sudo().write(kw)
         }
