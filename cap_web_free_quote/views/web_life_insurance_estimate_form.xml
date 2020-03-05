@@ -8,6 +8,43 @@
             <field name="arch" type="xml">
                 <t name="Life Insurance Estimate Form" t-name="website.life_insurance_estimate_form">
                     <t t-call="website.layout">
+
+                      <div id="wrap" class="oe_structure oe_empty">
+                        <section class="pt0 bg-alpha oe_custom_bg pb0">
+                          <div class="container">
+                            <div class="row s_nb_column_fixed">
+                              <div class="col-lg-12 s_title pt16 pb0" style="text-align: center;">
+                                <h1 class="s_title_default">
+                                  <font style="font-size: 62px;">LIFE INSURANCE CALCULATOR</font>
+                                </h1>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section class="s_banner parallax s_parallax_is_fixed pt96 pb112 s_parallax_no_overflow_hidden" data-scroll-background-ratio="1" style="background-image: none;">
+                          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/2391/shutterstock_723509545.jpg&quot;); background-position: 1.56% 5.21%;"/>
+                          <div class="container">
+                            <div class="row s_nb_column_fixed">
+                              <div class="col-lg-7 bg-white jumbotron rounded pb0 pt0" data-name="Box">
+                                <div class="row">
+                                  <div class="col-lg-12 s_title s_col_no_bgcolor" data-name="Title">
+                                    <h1 class="s_title_thin">
+                                      <span style="font-size: 24px;">How much Life Insurance do you actually need?</span>
+                                    </h1>
+                                  </div>
+                                  <div class="col-lg-12 pt8 pb32 s_col_no_bgcolor" data-name="Text">
+                                    <p class="lead">When buying life insurance people all too often just pick a number that sounds good.&amp;nbsp; 1 million, 2 million.&amp;nbsp; But how will our beneficiaries use the money we leave behind and what are going to be their true needs for the next 10, 15, or 20 years.</p>
+                                    <p class="lead">Complete the form below and our Agents will provide you with the Death Benefit amount you need to cover your family's needs now and into the future.&amp;nbsp;&amp;nbsp;</p>
+                                    <p class="lead">A death benefit should be more than just a number that sounds good. Take 5 minutes and allow us to help you figure it out.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+
+
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="offset-md-3 col-md-6">
@@ -402,6 +439,10 @@
                                 <div class="offset-md-1"/>
                             </div>
                         </div>
+
+
+
+                      </div>
                     </t>
                 </t>
             </field>
