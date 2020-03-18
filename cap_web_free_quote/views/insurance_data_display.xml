@@ -12,9 +12,9 @@
                             <div class="thankyou_customer_details_wrapper">
                                 <h3>
                                     <strong>
-                                        <span><t t-esc="life.question_28"/>&#160;&#160;<t t-esc="life.question_29"/>
+                                        <span><t t-esc="life.question_28"/><t t-esc="life.question_29"/>
                                         </span>
-                                        <span>- Age&#160;&#160;<t t-esc="life.question_1"/>
+                                        <span>- Age <t t-esc="life.question_1"/>
                                         </span>
                                     </strong>
                                 </h3>

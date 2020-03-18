@@ -241,6 +241,9 @@
     width: auto!important;
 }
 
+.custom-control.custom-radio.custom-control-inline {
+    margin-bottom: 1rem;
+}
 
 .label_text{
     text-align : left;
@@ -301,10 +304,10 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-#msform .form-control{
-    min-height: calc(2.0625rem + 2px);
-    height: auto;
-}
+// #msform .form-control{
+//     min-height: calc(2.0625rem + 2px);
+//     height: auto;
+// }
 .thankyou_content_wrapper{
     max-width: 600px;
     margin: auto;

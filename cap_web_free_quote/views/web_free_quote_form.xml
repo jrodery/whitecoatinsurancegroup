@@ -63,198 +63,155 @@
                             font-weight: normal;
                           }
                         </style>
-                        <section class="bg-alpha oe_custom_bg pb0 pt0" style="">
-                          <div class="container">
-                            <div class="row s_nb_column_fixed">
-                              <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
-                                <h1 class="s_title_default">
-                                  <font style="font-size: 48px;">&amp;nbsp;</font>
-                                </h1>
-                              </div>
-                            </div>
+                        <div class="row" style="height:650px;">
+                          <div class="col-md-6 pb16" style="margin:0 auto;">
+                            <form id="msform" style="height:auto;"
+                                  method="post"
+                                  class="s_website_form container mt32"
+                                  enctype="multipart/form-data"
+                                  _lpchecked="1">
+
+                              <input type="hidden" class="form-control" id="res_id" name="res_id" value=""/>
+                                  <!-- progressbar -->
+                              <ul id="progressbar">
+                                  <li style="width: 25%;" class="active">Personal Details</li>
+                                  <li style="width: 25%;">Step - 2</li>
+                                  <li style="width: 25%;">Step - 3</li>
+                                  <li style="width: 25%;">Final</li>
+                              </ul>
+
+                              <fieldset>
+                                <h2 class="fs-title">request a quote</h2>
+                                <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_1" required="True" placeholder="First Name"
+                                                   onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                 <input type="text" class="form-control form-input-text o_website_form_input"
+                                        name="question_2" required="True" placeholder="Last Name"
+                                        onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                  <input type="email"
+                                         class="form-control form-input-text o_website_form_input format-email"
+                                         name="question_3" required="True" placeholder="Email"/>
+                                  <input type="text" step="1"
+                                         class="format-phone form-control form-input-text o_website_form_input"
+                                         name="question_4" required="True" placeholder="Phone: 000-000-0000"
+                                         maxlength="10"
+                                         onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
+                                  <input type="text" class="form-control form-input-text o_website_form_input"
+                                         name="question_5" required="True" placeholder="Area Code"/>
+                                  <input type="button" name="next" class="next estimate_next action-button"
+                                         value="Next"
+                                         data-route="/insurance/freequote-form"
+                                         data-store-model="free.disability.quote"/>
+                              </fieldset>
+                              <fieldset>
+                                <h2 class="fs-title">Personal Details</h2>
+                                <input type="text" class="form-control form-input-text o_website_form_input "
+                                       name="question_6" required="True" placeholder="Medical Speciality"/>
+                                <input id="date_of_birth" type="text"
+                                       class="form-control form-input-text o_website_form_input format-date input-date-save"
+                                       name="question_7" required="True"
+                                       placeholder="Date of birth: MM/DD/YYYY"/>
+                                <input type="text" class="form-control form-input-text o_website_form_input"
+                                       name="question_9" required="True" placeholder="State"
+                                       onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                <select class="form-control o_website_form_input" name="question_8"
+                                        required="True">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="next" class="next estimate_next action-button"
+                                       value="Next"
+                                       data-route="/insurance/freequote-form"
+                                       data-store-model="free.disability.quote"/>
+                              </fieldset>
+                              <fieldset>
+                                <p class="col-form-label" title="">Desired Monthly Benefit: </p>
+                                <input type="number" class="form-control  o_website_form_input"
+                                       placeholder="Desired Monthly Benefit" name="question_10"
+                                       required="True"/>
+                                <p class="col-form-label" title="Most Physicians choose True Own Occupation. True Own Occupation allows you to work in another occupation and collect your full disability benefit. Modified Own Occupation pays your full benefit so long as you are not working in any other occupation">Choose your Definition of Total Disability: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_11"
+                                        required="True">
+                                    <option value=""/>
+                                    <option value="True Own Occupation">True Own Occupation</option>
+                                    <option value="Modified Own Occupation">Modified Own Occupation</option>
+                                </select>
+                                <p class="col-form-label" title="">Choose your Waiting/Elimination Period: <br/><span class="col-form-label-span">This is the period of time you must be disabled before a carrier starts to pay your benefits to you.</span></p>
+                                <select class="form-control o_website_form_input" name="question_12"
+                                        required="false">
+                                    <option value=""/>
+                                    <option value="90 Days">90 Days</option>
+                                    <option value="180 Days">180 Days</option>
+                                    <option value="365 Days">365 Days</option>
+                                </select>
+                                <p class="col-form-label" title="">Choose your Benefit Period: <br/><span class="col-form-label-span">This is your age the insurance carrier is obligated to pay your claim.</span></p>
+                                <select class="form-control o_website_form_input" name="question_13"
+                                        required="false" style="margin-bottom:10px">
+                                    <option value=""/>
+                                    <option value="Age 65">Age 65</option>
+                                    <option value="Age 67">Age 67</option>
+                                    <option value="Age 70">Age 70</option>
+                                </select>
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="next" class="next estimate_next action-button"
+                                       value="Next"
+                                       data-route="/insurance/freequote-form"
+                                       data-store-model="free.disability.quote"/>
+                              </fieldset>
+
+                              <fieldset>
+                                <p class="col-form-label" title="Residual coverage pays you if you suffer a disability where you are still working in your Regular Occupation but you've suffered a loss of income of at least 20%.">Choose if you want Residual/Partial Coverage: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_14"
+                                        required="True">
+                                    <option value=""/>
+                                    <option value="Residual Disability Benefits">Residual Disability Benefits
+                                    </option>
+                                    <option value="None">None</option>
+                                </select>
+                                <p class="col-form-label" title="COLA provides a cost of living increase to your monthly benefit after 12 months of consecutive disability. Each carrier offers capped increase amounts with options for both simple and compounded interest.">Choose if you want Cost of Living rider (COLA): <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_15"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="3% COLA">3% COLA</option>
+                                    <option value="6% COLA">6% COLA</option>
+                                    <option value="None">None</option>
+                                </select>
+                                <p class="col-form-label" title="Most physicians choose Non-Cancellable however, Guaranteed Renewable premiums are less expensive and the likelihood of increased premiums is small. Non-Cancellable means your premiums and contract provisions are fully guaranteed until your age of 65. Guaranteed Renewable means that your contract is guaranteed until your age of 65, but your premium is not">Choose your Guarantee: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_16"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="Non-Cancellable">Non-Cancellable</option>
+                                    <option value="Guaranteed Renewable">Guaranteed Renewable</option>
+                                </select>
+                                <p class="col-form-label" title="Most carriers limit payment for Mental/Nervous disabilities such as Anxiety - Depression - and Substance Abuse to 2 years. Three of the Six carriers have an option to provide unlimited coverage for Mental/Nervous disabilities">Choose Mental/Nervous Limitation: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_17"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="24 Month Limitation">24 Month Limitation</option>
+                                    <option value="Unlimited">Unlimited</option>
+                                </select>
+                                <p class="col-form-label" title="If you are affiliated with a Hospital a discount may be available.  Please add the name of your hospital affiliation.">Hospital Affiliation: <i class="fa fa-info-circle"/></p>
+                                <input type="number" class="form-control o_website_form_input"
+                                       name="question_18"
+                                       required="" placeholder="Hospital Affiliation"/>        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <!-- <input class="form-field" type="hidden" name="subject" value="Quote Submission"/> -->
+
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="done"
+                                        data-store-model="free.disability.quote"
+                                        data-route="/insurance/freequote-form"
+                                        data-route-done="/insurance/freequote-form-done"
+                                        class="next estimate_next submit_estimate action-button" value="Get Quote"/>
+                                <!-- <button class="btn action-button o_website_form_send" data-original-title="" title="" aria-describedby="tooltip496317" style="">Get Quote</button> -->
+                                <span id="o_website_form_result" class="text-danger ml8"/>
+                              </fieldset>
+                              <!-- <input class="form-field" type="hidden" name="email_to" value="info@whitecoatinsurancegroup.com"/> -->
+                            </form>
                           </div>
-                        </section>
-                        <div class="container">
-                            <div class="col-md-12">
-                                <form id="msform" style="height:830px;"
-                                      method="post"
-                                      class="s_website_form container mt32"
-                                      enctype="multipart/form-data"
-                                      _lpchecked="1">
-                                    <input type="hidden" class="form-control" id="res_id" name="res_id" value=""/>
-
-                                    <!-- progressbar -->
-                                    <ul id="progressbar">
-                                        <li style="width: 25%;" class="active">Personal Details</li>
-                                        <li style="width: 25%;">Step - 2</li>
-                                        <li style="width: 25%;">Step - 3</li>
-                                        <li style="width: 25%;">Final</li>
-                                    </ul>
-
-                                    <!-- # Step - 1 -->
-                                    <fieldset>
-                                        <p class="col-form-label label_text">First Name * :</p>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_1" required="True" placeholder="First Name"
-                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
-                                        <p class="col-form-label label_text">Last Name*:</p>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_2" required="True" placeholder="Last Name"
-                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
-                                        <p class="col-form-label label_text">Email * :</p>
-                                        <input type="email"
-                                               class="form-control form-input-text o_website_form_input format-email"
-                                               name="question_3" required="True" placeholder="Email"/>
-                                        <p class="col-form-label label_text">Phone Number * :</p>
-                                        <input type="text" step="1"
-                                               class="format-phone form-control form-input-text o_website_form_input"
-                                               name="question_4" required="True" placeholder="Phone: 000-000-0000"
-                                               maxlength="10"
-                                               onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
-                                        <p class="col-form-label label_text">Zip Code * :</p>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_5" required="True" placeholder="Area Code"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-route="/insurance/freequote-form"
-                                               data-store-model="free.disability.quote"/>
-                                    </fieldset>
-
-                                    <!-- # Step - 2 -->
-                                    <fieldset>
-                                        <p class="col-form-label label_text">Medical Speciality * :</p>
-                                        <input type="text" class="form-control form-input-text o_website_form_input "
-                                               name="question_6" required="True" placeholder="Medical Speciality"/>
-                                        <p class="col-form-label label_text">Date of Birth * :</p>
-                                        <input id="date_of_birth" type="text"
-                                               class="form-control form-input-text o_website_form_input format-date input-date-save"
-                                               name="question_7" required="True"
-                                               placeholder="Date of birth: MM/DD/YYYY"/>
-                                        <p class="col-form-label label_text">State * :</p>
-                                        <input type="text" class="form-control form-input-text o_website_form_input"
-                                               name="question_9" required="True" placeholder="State"
-                                               onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
-                                        <p class="col-form-label label_text">Sex * :</p>
-                                        <select class="form-control o_website_form_input" name="question_8"
-                                                required="True">
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-route="/insurance/freequote-form"
-                                               data-store-model="free.disability.quote"/>
-                                    </fieldset>
-
-                                    <!-- # Step - 3 -->
-                                    <fieldset>
-                                        <p class="col-form-label label_text" title="">Desired Monthly Benefit * :</p>
-                                        <input type="number" class="form-control  o_website_form_input"
-                                               placeholder="Desired Monthly Benefit" name="question_10"
-                                               required="True"/>
-                                        <p class="col-form-label label_text"
-                                           title="Most Physicians choose True Own Occupation. True Own Occupation allows you to work in another occupation and collect your full disability benefit. Modified Own Occupation pays your full benefit so long as you are not working in any other occupation">
-                                            Definition of Total Disability * :
-                                            <i class="fa fa-info-circle"/>
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_11"
-                                                required="True">
-                                            <option value="True Own Occupation">True Own Occupation</option>
-                                            <option value="Modified Own Occupation">Modified Own Occupation</option>
-                                        </select>
-                                        <p class="col-form-label label_text" title="">Waiting/Elimination Period
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_12"
-                                                required="false">
-                                            <option value="90 Days">90 Days</option>
-                                            <option value="180 Days">180 Days</option>
-                                            <option value="365 Days">365 Days</option>
-                                        </select>
-                                        <p class="col-form-label label_text" title="">Benefit Period
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_13"
-                                                required="false" style="margin-bottom:10px">
-                                            <option value="Age 65">Age 65</option>
-                                            <option value="Age 67">Age 67</option>
-                                            <option value="Age 70">Age 70</option>
-                                        </select>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="next" class="next estimate_next action-button"
-                                               value="Next"
-                                               data-route="/insurance/freequote-form"
-                                               data-store-model="free.disability.quote"/>
-                                    </fieldset>
-
-                                    <!-- # Step - 4 -->
-                                    <fieldset>
-                                        <p class="col-form-label label_text"
-                                           title="Residual coverage pays you if you suffer a disability where you are still working in your Regular Occupation but you've suffered a loss of income of at least 20%.">
-                                            Choose if you want Residual/Partial Coverage * :
-                                            <i class="fa fa-info-circle"/>
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_14"
-                                                required="True">
-                                            <option value=""/>
-                                            <option value="Residual Disability Benefits">Residual Disability Benefits
-                                            </option>
-                                            <option value="None">None</option>
-                                        </select>
-                                        <p class="col-form-label label_text"
-                                           title="COLA provides a cost of living increase to your monthly benefit after 12 months of consecutive disability. Each carrier offers capped increase amounts with options for both simple and compounded interest.">
-                                            Choose if you want Cost of Living rider (COLA) * :
-                                            <i class="fa fa-info-circle"/>
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_15"
-                                                required="True">
-                                            <option value=""></option>
-                                            <option value="3% COLA">3% COLA</option>
-                                            <option value="6% COLA">6% COLA</option>
-                                            <option value="None">None</option>
-                                        </select>
-                                        <p class="col-form-label label_text"
-                                           title="Most physicians choose Non-Cancellable however, Guaranteed Renewable premiums are less expensive and the likelihood of increased premiums is small. Non-Cancellable means your premiums and contract provisions are fully guaranteed until your age of 65. Guaranteed Renewable means that your contract is guaranteed until your age of 65, but your premium is not">
-                                            Choose your Guarantee * :
-                                            <i class="fa fa-info-circle"/>
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_16"
-                                                required="True">
-                                            <option value=""></option>
-                                            <option value="Non-Cancellable">Non-Cancellable</option>
-                                            <option value="Guaranteed Renewable">Guaranteed Renewable</option>
-                                        </select>
-                                        <p class="col-form-label label_text"
-                                           title="Most carriers limit payment for Mental/Nervous disabilities such as Anxiety - Depression - and Substance Abuse to 2 years. Three of the Six carriers have an option to provide unlimited coverage for Mental/Nervous disabilities">
-                                            Choose Mental/Nervous Limitation * :
-                                            <i class="fa fa-info-circle"/>
-                                        </p>
-                                        <select class="form-control o_website_form_input" name="question_17"
-                                                required="True">
-                                            <option value=""></option>
-                                            <option value="24 Month Limitation">24 Month Limitation</option>
-                                            <option value="Unlimited">Unlimited</option>
-                                        </select>
-                                        <p class="col-form-label label_text" title="">Hospital Affiliation:</p>
-                                        <input type="number" class="form-control o_website_form_input"
-                                               name="question_18"
-                                               required="" placeholder="Hospital Affiliation"/>
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                               value="Previous"/>
-                                        <input type="button" name="done"
-                                               data-store-model="free.disability.quote"
-                                               data-route="/insurance/freequote-form"
-                                               data-route-done="/insurance/freequote-form-done"
-                                               class="next estimate_next submit_estimate action-button" value="Done"/>
-                                    </fieldset>
-
-                                    <!-- Thank You -->
-                                    <fieldset>
-                                        Thank You
-                                    </fieldset>
-                                </form>
-                            </div>
                         </div>
                         <section class="s_text_image pb32 pt0 bg-alpha oe_custom_bg">
                           <div class="container">

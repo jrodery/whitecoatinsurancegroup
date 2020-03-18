@@ -13,7 +13,7 @@ class LifeInsuranceEstimate(models.Model):
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
-    ref_code = fields.Char(string="Reference", default=uuid.uuid1())
+    ref_code = fields.Char(string="Reference", default=uuid.uuid4())
     name = fields.Char(string="Log")
     state = fields.Selection([
         ('draft', 'Draft'),
