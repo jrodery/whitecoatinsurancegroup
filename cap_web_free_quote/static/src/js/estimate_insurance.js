@@ -64,21 +64,21 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
         });
 
         $('.question_radio_no').on('change', function() {
-            var display_block = $(this).val() == 'No';
-            var current_div = $(this).parent().parent();
-            var next_visible = current_div.attr('data-next');
-            if(next_visible > 0) {
-                var current_next = current_div.next();
-                for(var index = 0; index < next_visible; index++) {
-                    if(display_block) {
-                        current_next.prop('required', true);
-                        current_next.css('display', 'block');
+            var display_block_no = $(this).val() == 'No';
+            var current_div_no = $(this).parent().parent();
+            var next_visible_no = current_div_no.attr('data-next');
+            if(next_visible_no > 0) {
+                var current_next_no = current_div_no.next();
+                for(var index = 0; index < next_visible_no; index++) {
+                    if(display_block_no) {
+                        current_next_no.prop('required', true);
+                        current_next_no.css('display', 'block');
                     } else {
-                        current_next.removeProp('required');
-                        current_next.css('display', 'none');
-                        current_next.val(current_next.defaultValue);
+                        current_next_no.removeProp('required');
+                        current_next_no.css('display', 'none');
+                        current_next_no.val(current_next_no.defaultValue);
                     }
-                    current_next = current_next.next();
+                    current_next_no = current_next_no.next();
                 }
             }
 //            current_div.closest("input[type='hidden']").val($(this).val());

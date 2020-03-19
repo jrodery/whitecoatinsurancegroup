@@ -165,7 +165,7 @@
                                               <label class="custom-control-label" for="question_17_yes">Yes</label>
                                           </div>
                                           <div class="custom-control custom-radio custom-control-inline">
-                                              <input type="radio" class="custom-control-input question_radio"
+                                              <input type="radio" class="custom-control-input question_radio_no"
                                                      id="question_17_no" name="question_17" value="No"/>
                                               <label class="custom-control-label" for="question_17_no">No</label>
                                           </div>
