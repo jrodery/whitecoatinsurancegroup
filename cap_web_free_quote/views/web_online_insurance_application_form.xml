@@ -157,10 +157,10 @@
                                               <input type="text" class="form-control o_website_form_input"
                                                      name="question_16" required="True" placeholder="Country/State of birth"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="3">
                                           <p class="custom-control-inline">Are you a US Citizen?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
-                                              <input type="radio" class="custom-control-input question_radio"
+                                              <input type="radio" class="custom-control-input question_radio_no"
                                                      id="question_17_yes" name="question_17" value="Yes"/>
                                               <label class="custom-control-label" for="question_17_yes">Yes</label>
                                           </div>
@@ -170,15 +170,15 @@
                                               <label class="custom-control-label" for="question_17_no">No</label>
                                           </div>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                               <input type="text" class="form-control o_website_form_input"
                                                      name="question_18" placeholder="If no, Visa type"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                               <input type="text" class="form-control o_website_form_input"
                                                      name="question_19" placeholder="Visa Number"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                               <input type="text" class="form-control o_website_form_input"
                                                      name="question_20" placeholder="Number of years residing in the US"/>
                                       </div>
@@ -241,7 +241,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever had a professional
                                               license suspended or revoked, or is such license currently under
                                               review?</p>
@@ -257,12 +257,12 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                           <textarea class="form-control o_website_form_input" name="question_32"
                                                     spellcheck="false" placeholder="If yes, please explain"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="2">
                                           <p class="custom-control-inline">Do you have any ownership in the business where you work?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -276,11 +276,11 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <input type="number" class="form-control o_website_form_input"
                                                name="question_34" placeholder="If yes, what percentage do you own?"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom" style="margin-bottom:10px;">
+                                      <div class="row form-field o_website_form_custom" style="margin-bottom:10px;" style="display: none;">
                                         <p class="col-form-label" title="">If Yes, what type of business is it?</p>
                                         <select class="form-control o_website_form_input" name="question_35">
                                             <option value=""></option>
@@ -323,7 +323,7 @@
                                                name="question_39" required="True" placeholder="What was 2 years ago Adjusted Gross Income Total?"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever filed for personal or business bankruptcy?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -336,7 +336,7 @@
                                               <label class="custom-control-label" for="question_40_no">No</label>
                                           </div>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <textarea class="form-control o_website_form_input" name="question_41" placeholder="If Yes, please provide details including discharge date."/>
                                       </div>
 
@@ -349,7 +349,7 @@
 
                                   <!-- # Step - 4 -->
                                   <fieldset>
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="8">
                                           <p class="custom-control-inline">Do you have any existing Group or Individual Disability Insurance?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -363,24 +363,24 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <input type="text" class="form-control o_website_form_input"
                                                name="question_43" placeholder="If Yes, Carrier 1 name?"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <input type="text" class="form-control o_website_form_input"
                                                name="question_44" placeholder="Carrier 2 name?"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <input type="text" class="form-control o_website_form_input"
                                                name="question_45" placeholder="Carrier 1 total monthly benefit amount?"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <input type="text" class="form-control o_website_form_input"
                                                name="question_46" placeholder="Carrier 2 total monthly benefit amount?"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                           <p class="custom-control-inline">Is Carrier 1 employer paid?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -394,7 +394,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                           <p class="custom-control-inline">Is Carrier 2 employer paid?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -408,7 +408,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                           <p class="custom-control-inline">Will you be replacing any of your existing coverage?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -422,7 +422,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <textarea class="form-control o_website_form_input" name="question_50" placeholder="Do you want to provide any additional details regarding your current coverage?"/>
                                       </div>
 
@@ -552,14 +552,14 @@
                                   <!-- # Step - 5 -->
                                   <fieldset>
                                       <div class="row form-field o_website_form_custom o_website_form_required_custom">
-                                        <input type="number" class="form-control o_website_form_input"
-                                               name="question_60" required="True" step="0.05" placeholder="What is your Height?"/>
+                                        <input type="text" class="form-control o_website_form_input"
+                                               name="question_60" required="True" placeholder="What is your Height?"/>
                                       </div>
                                       <div class="row form-field o_website_form_custom o_website_form_required_custom">
                                               <input type="number" class="form-control o_website_form_input"
                                                      name="question_61" step="1" required="True" placeholder="What is your Weight?"/>
                                       </div>
-                                     <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                     <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                          <p class="custom-control-inline">Have you seen a doctor within the past 5 years?</p>
                                          <div class="custom-control custom-radio custom-control-inline">
                                              <input type="radio" class="custom-control-input question_radio"
@@ -572,13 +572,13 @@
                                              <label class="custom-control-label" for="question_62_no">No</label>
                                          </div>
                                      </div>
-                                      <div class="row form-field o_website_form_custom">
-                                              <textarea class="form-control o_website_form_input" name="question_63"
-                                                        spellcheck="false" placeholder="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit?"
-                                                        title="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit."/>
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
+                                        <textarea class="form-control o_website_form_input" name="question_63"
+                                                  spellcheck="false" placeholder="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit?"
+                                                  title="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit."/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Do you currently take any prescription medications?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -592,7 +592,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                               <textarea class="form-control o_website_form_input" name="question_65"
                                                 placeholder="If Yes, please list all medications names - doses - and the reason you are taking the medication."/>
                                       </div>
@@ -893,7 +893,7 @@
                                         <textarea class="form-control o_website_form_input" name="question_86" placeholder="Please provide details to any of the above questions where you answered 'yes'"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">In the past 10 years have you consumed alcoholic beverages?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -907,7 +907,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                               <textarea class="form-control o_website_form_input" name="question_88" placeholder="If yes, how often do you drink?"/>
                                       </div>
 
@@ -925,7 +925,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -939,11 +939,11 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom">
+                                      <div class="row form-field o_website_form_custom" style="display: none;">
                                         <textarea class="form-control o_website_form_input" name="question_91" placeholder="Please provide details if you answered yes"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Is your father still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -957,11 +957,11 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                         <textarea class="form-control o_website_form_input" name="question_93" placeholder="If Yes, how old is he - If No, At what age did he die and what was his cause of death?"/>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Is your mother still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -975,12 +975,12 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                         <textarea class="form-control o_website_form_input" name="question_95" placeholder="If Yes, how old is she - If No, At what age did she die and what was her cause of death?"/>
                                       </div>
 
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Are all your siblings still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -999,7 +999,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="row form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="row form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
                                               <textarea class="form-control o_website_form_input" name="question_97" placeholder="If Yes How old is each one - If No, at what age did they die and what was their cause of death?"/>
                                       </div>
                                       <input type="button" name="previous" class="previous action-button-previous"
