@@ -280,7 +280,7 @@
                                         <input type="number" class="form-control o_website_form_input"
                                                name="question_34" placeholder="If yes, what percentage do you own?"/>
                                       </div>
-                                      <div class="row form-field o_website_form_custom" style="margin-bottom:10px;" style="display: none;">
+                                      <div class="row form-field o_website_form_custom" style="margin-bottom:10px;display: none;">
                                         <p class="col-form-label" title="">If Yes, what type of business is it?</p>
                                         <select class="form-control o_website_form_input" name="question_35">
                                             <option value=""></option>

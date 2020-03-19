@@ -388,7 +388,7 @@
                                     </div>
                                 </div>
                                 <div id="msform" style="margin-top:0;">
-                                  <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit">
+                                  <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit"/>
                                 </div>
                             </div>
                         </div>
