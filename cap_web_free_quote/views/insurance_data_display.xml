@@ -12,7 +12,7 @@
                             <div class="thankyou_customer_details_wrapper">
                                 <h3>
                                     <strong>
-                                        <span><t t-esc="life.question_28"/> <t t-esc="life.question_29"/>
+                                        <span><t t-esc="life.question_28"/>&#160;&#160;<t t-esc="life.question_29"/>
                                         </span>
                                         <span>- Age <t t-esc="life.question_1"/>
                                         </span>
@@ -126,7 +126,7 @@
 
                             <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
                                 <div class="thankyou_content_inner_title">
-                                    <span>Pay Off Debt abd Set Aside Funds for your Children's Education</span>
+                                    <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
                                 </div>
 
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block">
@@ -184,8 +184,7 @@
                             <!--Panel 3 Start-->
                             <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
                                 <div class="thankyou_content_inner_title">
-                                    <span>Invest the Balance Annual Interest Earned Used to Pay Recurring Annual
-                                        Expenses.
+                                    <span>Invest the balance - The annual earned interest should cover your recurring annual expenses.
                                     </span>
                                 </div>
 
@@ -291,11 +290,7 @@
 
                             <!--Panel 5 Start-->
                             <div class="thankyou_content_wrapper_panel_title">
-                                <span>Request Quotes
-                                    <i class="fa fa-sign-in pull-right mt-1 pr-2 thankyou_req_quote"
-                                       style="font-size: larger;"
-                                       title="Click to save below details"/>
-                                </span>
+                                <span>Request Quotes</span>
                             </div>
                             <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
                             <div class="thankyou_request_content_wrapper_panel">
@@ -391,6 +386,9 @@
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
+                                </div>
+                                <div id="msform" style="margin-top:0;">
+                                  <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit">
                                 </div>
                             </div>
                         </div>

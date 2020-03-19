@@ -50,7 +50,7 @@ class LifeInsuranceEstimate(models.Model):
         select_boolean, default='No',
         string="If yes, will you have an added child care expense?")
     question_5_2 = fields.Float(
-        string="If Yes what do you anticipate the annual child care expense "
+        string="If you die, how much do you anticipate the annual child expense to be? "
                "would add to your budget")
     question_5_3 = fields.Float(
         store="True", compute="_compute_spouse_income",
@@ -175,7 +175,7 @@ class LifeInsuranceEstimate(models.Model):
 
     total_insurance = fields.Float(
         store="True", compute='_compute_total_calculation',
-        string="Calculate how much life insurance I need")
+        string="Calculating how much life insurance you need")
 
     @api.depends('question_14_2', 'question_22_1', 'question_27_2')
     def _compute_total_calculation(self):

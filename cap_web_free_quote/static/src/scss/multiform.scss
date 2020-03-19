@@ -181,7 +181,7 @@
 }
 
 .insurance_data_css{
-    background-color : #00aff0;
+    background-color : #2294cf;
 }
 
 .fonts{
@@ -189,10 +189,6 @@
     padding:50px;
     color : #ffffff;
     font: 10px arial, sans-serif;
-}
-
-.flex-item{
-     justify-content: center;
 }
 
 .insurance_data_row{
@@ -253,10 +249,6 @@
 
 .next{
     margin-bottom:25px;
-}
-
-.insurance_data_css{
-    background-color : #00aff0;
 }
 
 .flex-item{
@@ -505,7 +497,7 @@
     font-size: xx-large;
     font-weight: bold;
     margin: 5px auto 10px auto;
-    color: #07aff0;
+    color: #19557a;
 }
 
 .thankyou_input_data {
@@ -522,7 +514,7 @@
 
 .thankyou_rate_health {
     font-size: x-large;
-    color: #07aff0;
+    color: #19557a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -710,10 +702,11 @@
 .star-rating {
   line-height:32px;
   font-size:1.25em;
+  margin-left: 10px;
 }
 
 .star-rating .fa-star {
-color: #00aff0;
+  color: #19557a;
 }
 
 .star_label {
@@ -725,7 +718,7 @@ color: #00aff0;
     bottom: -15px;
     left: 50%;
     transform: translate(-50%, 0px);
-    color: #07aff0;
+    color: #19557a;
     font-size: 16px;
 }
 
