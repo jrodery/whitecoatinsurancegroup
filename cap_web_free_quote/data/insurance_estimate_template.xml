@@ -2,8 +2,8 @@
 <odoo>
     <record id="mail_customer_life_insurance_estimate_form" model="mail.template">
         <field name="name">Customer Life Insurance Estimation Mail</field>
-        <field name="email_from">${(user.email or '')|safe}</field>
-        <field name="email_to">${(object.question_30 or '')|safe}</field>
+        <field name="email_from">info@whitecoatinsurancegroup.com</field>
+        <field name="email_to">${(object.question_30 or '')|safe}, info@whitecoatinsurancegroup.com</field>
         <field name="subject">${object.get_subject()}</field>
         <field name="model_id" ref="cap_web_free_quote.model_life_insurance_estimate"/>
         <field name="auto_delete" eval="False"/>
@@ -67,7 +67,7 @@
         % endif
     </tbody>
 </table>
-<span>You can see your quotation <a target="_blank" href=${object.get_quote_link()}>at here</a></span>
+<span>You can see your <a target="_blank" href=${object.get_quote_link()}>Estimation here</a></span>
 ]]></field>
     </record>
 </odoo>

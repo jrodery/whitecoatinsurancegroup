@@ -2,8 +2,9 @@
 <odoo>
     <record id="mail_customer_online_insurance_application_form" model="mail.template">
         <field name="name">Customer Online Insurance Application</field>
-        <field name="email_from">${(user.email or '')|safe}</field>
-        <field name="email_to">${(object.question_10 or '')|safe}</field>
+        <field name="email_from">${(user.email or 'info@whitecoatinsurancegroup.com')|safe}</field>
+        <!-- <field name="email_to">${(object.question_10 or '')|safe}</field> -->
+        <field name="email_to">info@whitecoatinsurancegroup.com</field>
         <field name="subject">Life Insurance Online Application</field>
         <field name="model_id" ref="cap_web_free_quote.model_online_insurance_application"/>
         <field name="auto_delete" eval="False"/>
@@ -122,7 +123,7 @@
         <tr><td>In the past 10 years have you consumed alcoholic beverages?</td><td>${object.question_87}</td></tr>
         <tr><td>If yes, how often do you drink?</td><td>${object.question_88}</td></tr>
         <tr><td>Have you ever tested positive for HIV or Aids?</td><td>${object.question_89}</td></tr>
-        <tr><td>If yes, please provide details : yes</td><td>${object.question_89_details}</td></tr>        
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_89_details}</td></tr>
         <tr><td>To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</td><td>${object.question_90}</td></tr>
         <tr><td>Please provide details if you answered yes</td><td>${object.question_91}</td></tr>
         <tr><td>Is your father still living?</td><td>${object.question_92}</td></tr>

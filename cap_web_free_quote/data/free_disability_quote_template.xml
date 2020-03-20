@@ -2,7 +2,8 @@
 <odoo>
     <record id="mail_free_disability_form" model="mail.template">
         <field name="name">Free Disability Quote Mail</field>
-        <field name="email_from">${(user.email or '')|safe}</field>
+        <field name="email_from">info@whitecoatinsurancegroup.com</field>
+        <field name="email_to">info@whitecoatinsurancegroup.com</field>
         <field name="subject">Free Disability Quote Mail</field>
         <field name="model_id" ref="cap_web_free_quote.model_free_disability_quote"/>
         <field name="auto_delete" eval="False"/>
