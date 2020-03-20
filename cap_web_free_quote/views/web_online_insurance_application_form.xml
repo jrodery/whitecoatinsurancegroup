@@ -406,7 +406,7 @@
                                         <textarea class="form-control o_website_form_input" style="display: none;"
                                           name="question_50" placeholder="Do you want to provide any additional details regarding your current coverage?"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you used tobacco or nicotine products in any form within the last 5 years?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -419,8 +419,10 @@
                                               <label class="custom-control-label" for="question_51_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_51_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -433,9 +435,11 @@
                                               <label class="custom-control-label" for="question_52_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_52_details" placeholder="If yes, please provide details"/>
 
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -448,8 +452,10 @@
                                               <label class="custom-control-label" for="question_53_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_53_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -462,8 +468,10 @@
                                               <label class="custom-control-label" for="question_54_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_54_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you been convicted of a moving violation, had any traffic accidents, or had a driver's license revoked or suspended within the past 5 years?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -476,8 +484,10 @@
                                               <label class="custom-control-label" for="question_55_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_55_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Have you ever been charged with, or convicted of, or currently awaiting trial on the violation of any criminal law?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -490,8 +500,10 @@
                                               <label class="custom-control-label" for="question_56_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_56_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Do you belong to or intend to join the military in the next two years?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -504,8 +516,10 @@
                                               <label class="custom-control-label" for="question_57_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_57_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">Engaged in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -518,10 +532,12 @@
                                               <label class="custom-control-label" for="question_58_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_58_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom">
+                                      <!-- <div class="form-field o_website_form_custom">
                                         <textarea class="form-control o_website_form_input" name="question_59" placeholder="Provide details to any of the 8 questions above where you answered 'Yes'"/>
-                                      </div>
+                                      </div> -->
                                       <input type="button" name="previous" class="previous action-button-previous"
                                              value="Previous"/>
                                       <input type="button" name="next" class="next estimate_next action-button"
@@ -825,7 +841,7 @@
                                           </div>
                                       </div>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -838,8 +854,10 @@
                                               <label class="custom-control-label" for="question_83_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_83_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -852,8 +870,10 @@
                                               <label class="custom-control-label" for="question_84_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_84_details" placeholder="If yes, please provide details"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -866,9 +886,11 @@
                                               <label class="custom-control-label" for="question_85_no">No</label>
                                           </div>
                                       </div>
-                                      <div class="form-field o_website_form_custom">
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_85_details" placeholder="If yes, please provide details"/>
+                                      <!-- <div class="form-field o_website_form_custom">
                                         <textarea class="form-control o_website_form_input" name="question_86" placeholder="Please provide details to any of the above questions where you answered 'yes'"/>
-                                      </div>
+                                      </div> -->
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">In the past 10 years have you consumed alcoholic beverages?</p>
@@ -883,9 +905,8 @@
                                               <label class="custom-control-label" for="question_87_no">No</label>
                                           </div>
                                       </div>
-
-                                              <textarea class="form-control o_website_form_input" style="display: none;"
-                                                name="question_88" placeholder="If yes, how often do you drink?"/>
+                                      <textarea class="form-control o_website_form_input" style="display: none;"
+                                        name="question_88" placeholder="If yes, how often do you drink?"/>
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                           <p class="custom-control-inline">Have you ever tested positive for HIV or Aids?</p>
@@ -900,6 +921,8 @@
                                               <label class="custom-control-label" for="question_89_no">No</label>
                                           </div>
                                       </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_89_details" placeholder="If yes, please provide details"/>
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
                                           <p class="custom-control-inline">To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</p>

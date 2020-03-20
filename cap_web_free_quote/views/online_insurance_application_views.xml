@@ -83,14 +83,22 @@
                         <field name="question_49"/>
                         <field name="question_50"/>
                         <field name="question_51"/>
+                        <field name="question_51_details"/>
                         <field name="question_52"/>
+                        <field name="question_52_details"/>
                         <field name="question_53"/>
+                        <field name="question_53_details"/>
                         <field name="question_54"/>
+                        <field name="question_54_details"/>
                         <field name="question_55"/>
+                        <field name="question_55_details"/>
                         <field name="question_56"/>
+                        <field name="question_56_details"/>
                         <field name="question_57"/>
+                        <field name="question_57_details"/>
                         <field name="question_58"/>
-                        <field name="question_59"/>
+                        <field name="question_58_details"/>
+                        <!-- <field name="question_59"/> -->
                     </group>
 
                     <separator string="Step-5"/>
@@ -119,12 +127,16 @@
                         <field name="question_81"/>
                         <field name="question_82"/>
                         <field name="question_83"/>
+                        <field name="question_83_details"/>
                         <field name="question_84"/>
+                        <field name="question_84_details"/>
                         <field name="question_85"/>
-                        <field name="question_86"/>
+                        <field name="question_85_details"/>
+                        <!-- <field name="question_86"/> -->
                         <field name="question_87"/>
                         <field name="question_88"/>
                         <field name="question_89"/>
+                        <field name="question_89_details"/>
                         <field name="question_90"/>
                         <field name="question_91"/>
                         <field name="question_92"/>

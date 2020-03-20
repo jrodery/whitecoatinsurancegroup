@@ -67,14 +67,29 @@
         <tr><td>Will you be replacing any of your existing coverage?</td><td>${object.question_49}</td></tr>
         <tr><td>Do you want to provide any additional details regarding your current coverage?</td><td>${object.question_50}</td></tr>
         <tr><td>Have you used tobacco or nicotine products in any form within the last 5 years?</td><td>${object.question_51}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_51_details}</td></tr>
+
         <tr><td>Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</td><td>${object.question_52}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_52_details}</td></tr>
+
         <tr><td>Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</td><td>${object.question_53}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_53_details}</td></tr>
+
         <tr><td>Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</td><td>${object.question_54}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_54_details}</td></tr>
+
         <tr><td>Have you been convicted of a moving violation, had any traffic accidents, or had a driver's license revoked or suspended within the past 5 years?</td><td>${object.question_55}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_55_details}</td></tr>
+
         <tr><td>Have you ever been charged with, or convicted of, or currently awaiting trial on the violation of any criminal law?</td><td>${object.question_56}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_56_details}</td></tr>
+
         <tr><td>Do you belong to or intend to join the military in the next two years?</td><td>${object.question_57}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_57_details}</td></tr>
+
         <tr><td>Engaged in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</td><td>${object.question_58}</td></tr>
-        <tr><td>Provide details to any of the 8 questions above where you answered: Yes</td><td>${object.question_59}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_58_details}</td></tr>
+
         <tr><td>What is your Height?</td><td>${object.question_60}</td></tr>
         <tr><td>What is your weight?</td><td>${object.question_61}</td></tr>
         <tr><td>Have you seen a doctor within the past 5 years?</td><td>${object.question_62}</td></tr>
@@ -99,12 +114,15 @@
         <tr><td>In the last 5 years have you received treatment from a licensed Chiropractor?</td><td>${object.question_81}</td></tr>
         <tr><td>In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?</td><td>${object.question_82}</td></tr>
         <tr><td>In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</td><td>${object.question_83}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_83_details}</td></tr>
         <tr><td>In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?</td><td>${object.question_84}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_84_details}</td></tr>
         <tr><td>In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?</td><td>${object.question_85}</td></tr>
-        <tr><td>Please provide details to any of the above questions where you answered : yes</td><td>${object.question_86}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_85_details}</td></tr>
         <tr><td>In the past 10 years have you consumed alcoholic beverages?</td><td>${object.question_87}</td></tr>
         <tr><td>If yes, how often do you drink?</td><td>${object.question_88}</td></tr>
         <tr><td>Have you ever tested positive for HIV or Aids?</td><td>${object.question_89}</td></tr>
+        <tr><td>If yes, please provide details : yes</td><td>${object.question_89_details}</td></tr>        
         <tr><td>To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</td><td>${object.question_90}</td></tr>
         <tr><td>Please provide details if you answered yes</td><td>${object.question_91}</td></tr>
         <tr><td>Is your father still living?</td><td>${object.question_92}</td></tr>

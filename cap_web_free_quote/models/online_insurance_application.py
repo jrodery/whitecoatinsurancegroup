@@ -148,10 +148,25 @@ class OnlineInsuranceApplication(models.Model):
         string="Engaged in or plan to engage in the next two years in any form"
                " of the following: Motorized Racing, Parachuting/Skydiving, "
                "Martial Arts, Scuba Diving, Mountain Climbing?")
-    question_59 = fields.Char(
-        string="Provide details to any of the 8 questions "
-               "above where you answered: Yes")
-
+    # question_59 = fields.Char(
+    #     string="Provide details to any of the 8 questions "
+    #            "above where you answered: Yes")
+    question_51_details = fields.Char(
+        string="If yes, please provide details")
+    question_52_details = fields.Char(
+        string="If yes, please provide details")
+    question_53_details = fields.Char(
+        string="If yes, please provide details")
+    question_54_details = fields.Char(
+        string="If yes, please provide details")
+    question_55_details = fields.Char(
+        string="If yes, please provide details")
+    question_56_details = fields.Char(
+        string="If yes, please provide details")
+    question_57_details = fields.Char(
+        string="If yes, please provide details")
+    question_58_details = fields.Char(
+        string="If yes, please provide details")
     # Step - 5
     question_60 = fields.Char(string="What is your Height?")
     question_61 = fields.Char(string="What is your weight?")
@@ -258,9 +273,17 @@ class OnlineInsuranceApplication(models.Model):
                "advised to seek medical treatment from a licensed medical "
                "profession, counseling or participation in a support group "
                "for the use of alcohol or illegal drugs?")
-    question_86 = fields.Char(
-        string="Please provide details to any of the above "
-               "questions where you answered : yes")
+
+    question_83_details = fields.Char(
+        string="If yes, please provide details")
+    question_84_details = fields.Char(
+        string="If yes, please provide details")
+    question_85_details = fields.Char(
+        string="If yes, please provide details")
+
+    # question_86 = fields.Char(
+    #     string="Please provide details to any of the above "
+    #            "questions where you answered : yes")
     question_87 = fields.Selection(
         select_boolean, default="No",
         string="In the past 10 years have you consumed alcoholic beverages?")
@@ -268,6 +291,8 @@ class OnlineInsuranceApplication(models.Model):
     question_89 = fields.Selection(
         select_boolean, default="No",
         string="Have you ever tested positive for HIV or Aids?")
+    question_89_details = fields.Char(
+        string="If yes, please provide details")
     question_90 = fields.Selection(
         select_boolean, default="No",
         string="To the best of your knowledge, have any of your immediate "
