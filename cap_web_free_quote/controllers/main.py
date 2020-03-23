@@ -129,6 +129,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             ('ref_code', '=', kw.get('reference')),
         ], limit=1)
         kw.update({'state': 'requested_quote'})
-        return {
-            'thank_you_request_quote': res.sudo().write(kw)
-        }
+        # return {
+        #     'thank_you_request_quote': res.sudo().write(kw)
+        # }
+        return request.render("website.thank-you-page-life-calculator")
