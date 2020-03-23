@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="insurance_application" model="ir.ui.view">
+            <field name="name">Online Insurance Application Form</field>
+            <field name="type">qweb</field>
+            <field name="key">website.insurance_application</field>
+            <field name="arch" type="xml">
+                <t name="Insurance Application" t-name="website.insurance_application">
+                  <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                      <section class="pt0 pb0 bg-alpha oe_custom_bg">
+                        <div class="container">
+                          <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12 s_title pt16 pb0" style="text-align: center;">
+                              <h1 class="s_title_default">
+                                <font style="font-size: 62px;">INSURANCE APPLICATION</font>
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="s_text_image pt32 pb32">
+                        <div class="container">
+                          <div class="row align-items-center">
+                            <div class="col-lg-6 pt16 pb16">
+                              <img src="/web/image/website.s_image_text_default_image" class="img img-fluid mx-auto" alt="Odoo • Image and Text"/>
+                            </div>
+                            <div class="col-lg-6 pt16 pb16">
+                              <h2>Online Insurance Application</h2>
+                              <p>This application should take you between 10 - 15 minutes to complete.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <div class="container">
+                          <div class="col-md-12">
+                              <form id="msform" style="height:auto;"
+                                    method="post"
+                                    class="s_website_form container mt32"
+                                    enctype="multipart/form-data"
+                                    _lpchecked="1">
+                                  <input type="hidden" class="form-control" id="res_id" name="res_id" value=""/>
+
+                                  <!-- progressbar -->
+                                  <ul id="progressbar">
+                                      <li style="width: 20%;" class="active">Personal Details</li>
+                                      <li style="width: 20%;">Step - 2</li>
+                                      <li style="width: 20%;">Step - 3</li>
+                                      <li style="width: 20%;">Step - 4</li>
+                                      <li style="width: 20%;">Final</li>
+                                  </ul>
+
+                                  <!-- # Step - 1 -->
+                                  <fieldset>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_1" required="True" placeholder="First Name"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_2" required="True" placeholder="Last Name"/>
+
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <div class="o_website_form_date input-group date" id="datepicker6"
+                                               data-target-input="nearest">
+                                              <input type="text" data-target="#datepicker6" name="question_3"
+                                                     class="form-control datetimepicker-input o_website_form_input format-date input-date-save"
+                                                     required="True" placeholder="Date of birth: MM/DD/YYYY"/>
+                                              <div class="input-group-append" data-target="#datepicker6"
+                                                   data-toggle="datetimepicker">
+                                                  <div class="input-group-text label_insurance_app"
+                                                       style="height: 79% !important">
+                                                      <i class="fa fa-calendar"/>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" style="margin-bottom:10px">
+                                              <select class="form-control o_website_form_input label_insurance_app"
+                                                      name="question_4"
+                                                      required="True">
+                                                  <option value="Male">Male</option>
+                                                  <option value="Female">Female</option>
+                                              </select>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_5" required="True" placeholder="Home Street Address"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_6" required="True" placeholder="Home City"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_7" required="True" placeholder="Home State"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_8" required="True" placeholder="Home Zip"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text"
+                                                     class="form-control o_website_form_input format-email"
+                                                     name="question_10" required="True" placeholder="Email Address"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" placeholder="Phone Number: 000-000-0000"
+                                                     class="form-control o_website_form_input format-phone"
+                                                     name="question_9" required="True" maxlength="10"
+                                                     onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
+                                      </div>
+                                              <input type="button" name="next"
+                                                     class="next estimate_next action-button"
+                                                     value="Next" data-route="/insurance/insurance-application"
+                                                     data-store-model="online.insurance.application"/>
+                                  </fieldset>
+
+                                  <!-- # Step - 2 -->
+                                  <fieldset>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input format-ssn"
+                                                     name="question_11" required="True" placeholder="Social Security Number"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_12" required="True" placeholder="Drivers License Number"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_13" required="True" placeholder="License Issue State"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <div class="o_website_form_date input-group date" id="datepicker16"
+                                                   data-target-input="nearest">
+                                                  <input type="text"
+                                                         class="form-control datetimepicker-input o_website_form_input input-date-save"
+                                                         data-target="#datepicker16" name="question_14"
+                                                         required="True" placeholder="License Expiration Date"/>
+                                                  <div class="input-group-append" data-target="#datepicker16"
+                                                       data-toggle="datetimepicker">
+                                                      <div class="input-group-text" style="height: 79% !important">
+                                                          <i class="fa fa-calendar"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_15" required="True" placeholder="Years lived at the current address?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_16" required="True" placeholder="Country/State of birth"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="3">
+                                          <p class="custom-control-inline">Are you a US Citizen?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio_no"
+                                                     id="question_17_yes" name="question_17" value="Yes"/>
+                                              <label class="custom-control-label" for="question_17_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio_no"
+                                                     id="question_17_no" name="question_17" value="No"/>
+                                              <label class="custom-control-label" for="question_17_no">No</label>
+                                          </div>
+                                      </div>
+                                              <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                                     name="question_18" placeholder="If no, Visa type"/>
+                                              <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                                     name="question_19" placeholder="Visa Number"/>
+                                              <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                                     name="question_20" placeholder="Number of years residing in the US"/>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_21" required="True" placeholder="Employer Name"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_22" required="True" placeholder="Employer Street Address"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_23" required="True" placeholder="Employer City"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_24" required="True" placeholder="Employer State"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_25" required="True" placeholder="Employer Zip Code"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="text" class="form-control o_website_form_input"
+                                                     name="question_26" required="True" placeholder="Occupation/Specialty"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <textarea class="form-control o_website_form_input" name="question_27"
+                                                        required="True" placeholder="Occupational duties"/>
+                                      </div>
+                                      <input type="button" name="previous" class="previous action-button-previous"
+                                             value="Previous"/>
+                                      <input type="button" name="next" class="next estimate_next action-button"
+                                             value="Next" data-route="/insurance/insurance-application"
+                                             data-store-model="online.insurance.application"/>
+                                  </fieldset>
+
+                                  <!-- # Step - 3 -->
+                                  <fieldset>
+                                      <div class="form-field o_website_form_custom">
+                                        <input type="number" class="form-control o_website_form_input" required="True"
+                                               name="question_28" placeholder="The total number of years working in this occupation?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                        <input type="number" class="form-control o_website_form_input" required="True"
+                                               name="question_29" placeholder="The total number of years with the same employer?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Do you work at least 30 hours per week?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_30_yes" name="question_30" value="Yes"/>
+                                              <label class="custom-control-label" for="question_30_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_30_no" name="question_30" value="No"/>
+                                              <label class="custom-control-label" for="question_30_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever had a professional
+                                              license suspended or revoked, or is such license currently under
+                                              review?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_31_yes" name="question_31" value="Yes"/>
+                                              <label class="custom-control-label" for="question_31_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_31_no" name="question_31" value="No"/>
+                                              <label class="custom-control-label" for="question_31_no">No</label>
+                                          </div>
+                                      </div>
+
+                                          <textarea class="form-control o_website_form_input" name="question_32" style="display: none;"
+                                                    spellcheck="false" placeholder="If yes, please explain"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="2">
+                                          <p class="custom-control-inline">Do you have any ownership in the business where you work?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_33_yes" name="question_33" value="Yes"/>
+                                              <label class="custom-control-label" for="question_33_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_33_no" name="question_33" value="No"/>
+                                              <label class="custom-control-label" for="question_33_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <input type="number" class="form-control o_website_form_input" style="display: none;"
+                                               name="question_34" placeholder="If yes, what percentage do you own?"/>
+                                      <div class="form-field o_website_form_custom" style="margin-bottom:10px;display: none;">
+                                        <p class="col-form-label" title="">If Yes, what type of business is it?</p>
+                                        <select class="form-control o_website_form_input" name="question_35">
+                                            <option value=""></option>
+                                            <option value="LLC">
+                                                LLC
+                                            </option>
+                                            <option value="S-Corp">
+                                                S-Corp
+                                            </option>
+                                            <option value="Other">
+                                                Other
+                                            </option>
+                                        </select>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Are there more than 10 people employed with your current employer?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_36_yes" name="question_36" value="Yes"/>
+                                              <label class="custom-control-label" for="question_36_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_36_no" name="question_36" value="No"/>
+                                              <label class="custom-control-label" for="question_36_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                        <input type="text" class="form-control o_website_form_input"
+                                               name="question_37" required="True" placeholder="What is your current projected YTD income?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                        <input type="number" class="form-control o_website_form_input"
+                                               name="question_38" required="True" placeholder="What was last year's Adjusted Gross Income Total?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                        <input type="number" class="form-control o_website_form_input"
+                                               name="question_39" required="True" placeholder="What was 2 years ago Adjusted Gross Income Total?"/>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever filed for personal or business bankruptcy?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_40_yes" name="question_40" value="Yes"/>
+                                              <label class="custom-control-label" for="question_40_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_40_no" name="question_40" value="No"/>
+                                              <label class="custom-control-label" for="question_40_no">No</label>
+                                          </div>
+                                      </div>
+                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                          name="question_41" placeholder="If Yes, please provide details including discharge date."/>
+
+                                      <input type="button" name="previous" class="previous action-button-previous"
+                                             value="Previous"/>
+                                      <input type="button" name="next" class="next estimate_next action-button"
+                                             value="Next" data-route="/insurance/insurance-application"
+                                             data-store-model="online.insurance.application"/>
+                                  </fieldset>
+
+                                  <!-- # Step - 4 -->
+                                  <fieldset>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="8">
+                                          <p class="custom-control-inline">Do you have any existing Group or Individual Disability Insurance?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_42_yes" name="question_42" value="Yes"/>
+                                              <label class="custom-control-label" for="question_42_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_42_no" name="question_42" value="No"/>
+                                              <label class="custom-control-label" for="question_42_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                               name="question_43" placeholder="If Yes, Carrier 1 name?"/>
+                                        <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                               name="question_44" placeholder="Carrier 2 name?"/>
+                                        <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                               name="question_45" placeholder="Carrier 1 total monthly benefit amount?"/>
+                                        <input type="text" class="form-control o_website_form_input" style="display: none;"
+                                               name="question_46" placeholder="Carrier 2 total monthly benefit amount?"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
+                                          <p class="custom-control-inline">Is Carrier 1 employer paid?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_47_yes" name="question_47" value="Yes"/>
+                                              <label class="custom-control-label" for="question_47_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_47_no" name="question_47" value="No"/>
+                                              <label class="custom-control-label" for="question_47_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
+                                          <p class="custom-control-inline">Is Carrier 2 employer paid?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_48_yes" name="question_48" value="Yes"/>
+                                              <label class="custom-control-label" for="question_48_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_48_no" name="question_48" value="No"/>
+                                              <label class="custom-control-label" for="question_48_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" style="display: none;">
+                                          <p class="custom-control-inline">Will you be replacing any of your existing coverage?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_49_yes" name="question_49" value="Yes"/>
+                                              <label class="custom-control-label" for="question_49_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_49_no" name="question_49" value="No"/>
+                                              <label class="custom-control-label" for="question_49_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                          name="question_50" placeholder="Do you want to provide any additional details regarding your current coverage?"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you used tobacco or nicotine products in any form within the last 5 years?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_51_yes" name="question_51" value="Yes"/>
+                                              <label class="custom-control-label" for="question_51_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_51_no" name="question_51" value="No"/>
+                                              <label class="custom-control-label" for="question_51_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_51_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_52_yes" name="question_52" value="Yes"/>
+                                              <label class="custom-control-label" for="question_52_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_52_no" name="question_52" value="No"/>
+                                              <label class="custom-control-label" for="question_52_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_52_details" placeholder="If yes, please provide details"/>
+
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_53_yes" name="question_53" value="Yes"/>
+                                              <label class="custom-control-label" for="question_53_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_53_no" name="question_53" value="No"/>
+                                              <label class="custom-control-label" for="question_53_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_53_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_54_yes" name="question_54" value="Yes"/>
+                                              <label class="custom-control-label" for="question_54_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_54_no" name="question_54" value="No"/>
+                                              <label class="custom-control-label" for="question_54_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_54_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you been convicted of a moving violation, had any traffic accidents, or had a driver's license revoked or suspended within the past 5 years?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_55_yes" name="question_55" value="Yes"/>
+                                              <label class="custom-control-label" for="question_55_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_55_no" name="question_55" value="No"/>
+                                              <label class="custom-control-label" for="question_55_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_55_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Have you ever been charged with, or convicted of, or currently awaiting trial on the violation of any criminal law?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_56_yes" name="question_56" value="Yes"/>
+                                              <label class="custom-control-label" for="question_56_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_56_no" name="question_56" value="No"/>
+                                              <label class="custom-control-label" for="question_56_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_56_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Do you belong to or intend to join the military in the next two years?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_57_yes" name="question_57" value="Yes"/>
+                                              <label class="custom-control-label" for="question_57_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_57_no" name="question_57" value="No"/>
+                                              <label class="custom-control-label" for="question_57_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_57_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Engaged in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_58_yes" name="question_58" value="Yes"/>
+                                              <label class="custom-control-label" for="question_58_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_58_no" name="question_58" value="No"/>
+                                              <label class="custom-control-label" for="question_58_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_58_details" placeholder="If yes, please provide details"/>
+
+                                      <!-- <div class="form-field o_website_form_custom">
+                                        <textarea class="form-control o_website_form_input" name="question_59" placeholder="Provide details to any of the 8 questions above where you answered 'Yes'"/>
+                                      </div> -->
+                                      <input type="button" name="previous" class="previous action-button-previous"
+                                             value="Previous"/>
+                                      <input type="button" name="next" class="next estimate_next action-button"
+                                             value="Next" data-route="/insurance/insurance-application"
+                                             data-store-model="online.insurance.application"/>
+                                  </fieldset>
+
+                                  <!-- # Step - 5 -->
+                                  <fieldset>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                        <input type="text" class="form-control o_website_form_input"
+                                               name="question_60" required="True" placeholder="What is your Height?"/>
+                                      </div>
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                              <input type="number" class="form-control o_website_form_input"
+                                                     name="question_61" step="1" required="True" placeholder="What is your Weight?"/>
+                                      </div>
+                                     <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                         <p class="custom-control-inline">Have you seen a doctor within the past 5 years?</p>
+                                         <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input question_radio"
+                                                    id="question_62_yes" name="question_62" value="Yes"/>
+                                             <label class="custom-control-label" for="question_62_yes">Yes</label>
+                                         </div>
+                                         <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input question_radio"
+                                                    id="question_62_no" name="question_62" value="No"/>
+                                             <label class="custom-control-label" for="question_62_no">No</label>
+                                         </div>
+                                     </div>
+                                        <textarea class="form-control o_website_form_input" name="question_63"
+                                                  spellcheck="false" style="display: none;"
+                                                  placeholder="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit?"
+                                                  title="If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit."/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Do you currently take any prescription medications?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_64_yes" name="question_64" value="Yes"/>
+                                              <label class="custom-control-label" for="question_64_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_64_no" name="question_64" value="No"/>
+                                              <label class="custom-control-label" for="question_64_no">No</label>
+                                          </div>
+                                      </div>
+
+                                              <textarea class="form-control o_website_form_input" name="question_65" style="display: none;"
+                                                placeholder="If Yes, please list all medications names - doses - and the reason you are taking the medication."/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Has your weight changed by more than 10 lbs in the last twelve months?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_66_yes" name="question_66" value="Yes"/>
+                                              <label class="custom-control-label" for="question_66_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_66_no" name="question_66" value="No"/>
+                                              <label class="custom-control-label" for="question_66_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_67_yes" name="question_67" value="Yes"/>
+                                              <label class="custom-control-label" for="question_67_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_67_no" name="question_67" value="No"/>
+                                              <label class="custom-control-label" for="question_67_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed with dizziness, vertigo,
+                                          fainting, seizures, recurrent headache, speech defect, tremor,
+                                          neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss,
+                                          dementia or any other disorder of the brain or nervous system?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_68_yes" name="question_68" value="Yes"/>
+                                              <label class="custom-control-label" for="question_68_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_68_no" name="question_68" value="No"/>
+                                              <label class="custom-control-label" for="question_68_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_69_yes" name="question_69" value="Yes"/>
+                                              <label class="custom-control-label" for="question_69_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_69_no" name="question_69" value="No"/>
+                                              <label class="custom-control-label" for="question_69_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having chest pain,
+                                          irregular heartbeat, heart murmur, heart valve disease, heart
+                                          attack, coronary artery disease, heart failure, aneurysm or other
+                                          heart or blood vessel disorder?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_70_yes" name="question_70" value="Yes"/>
+                                              <label class="custom-control-label" for="question_70_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_70_no" name="question_70" value="No"/>
+                                              <label class="custom-control-label" for="question_70_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_71_yes" name="question_71" value="Yes"/>
+                                              <label class="custom-control-label" for="question_71_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_71_no" name="question_71" value="No"/>
+                                              <label class="custom-control-label" for="question_71_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_72_yes" name="question_72" value="Yes"/>
+                                              <label class="custom-control-label" for="question_72_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_72_no" name="question_72" value="No"/>
+                                              <label class="custom-control-label" for="question_72_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having diabetes, elevated blood sugar, thyroid, pituitary, adrenal or any other endocrine (glandular) disorders?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_73_yes" name="question_73" value="Yes"/>
+                                              <label class="custom-control-label" for="question_73_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_73_no" name="question_73" value="No"/>
+                                              <label class="custom-control-label" for="question_73_no">No</label>
+                                          </div>
+                                      </div>
+
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having breast, reproductive organ or prostate disorder?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_74_yes" name="question_74" value="Yes"/>
+                                              <label class="custom-control-label" for="question_74_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_74_no" name="question_74" value="No"/>
+                                              <label class="custom-control-label" for="question_74_no">No</label>
+                                          </div>
+                                      </div>
+
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever had a C-section, miscarriage, or complication of pregnancy?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_75_yes" name="question_75" value="Yes"/>
+                                              <label class="custom-control-label" for="question_75_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_75_no" name="question_75" value="No"/>
+                                              <label class="custom-control-label" for="question_75_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having a mass, polyp, cyst, tumor or cancer?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_76_yes" name="question_76" value="Yes"/>
+                                              <label class="custom-control-label" for="question_76_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_76_no" name="question_76" value="No"/>
+                                              <label class="custom-control-label" for="question_76_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_77_yes" name="question_77" value="Yes"/>
+                                              <label class="custom-control-label" for="question_77_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_77_no" name="question_77" value="No"/>
+                                              <label class="custom-control-label" for="question_77_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other sychiatric or mental health disorders?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_78_yes" name="question_78" value="Yes"/>
+                                              <label class="custom-control-label" for="question_78_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_78_no" name="question_78" value="No"/>
+                                              <label class="custom-control-label" for="question_78_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever been treated or diagnosed as having chronic fatigue, chronic pain, fibromyalgia, or fever of unknown cause?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_79_yes" name="question_79" value="Yes"/>
+                                              <label class="custom-control-label" for="question_79_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_79_no" name="question_79" value="No"/>
+                                              <label class="custom-control-label" for="question_79_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Are you currently pregnant?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_80_yes" name="question_80" value="Yes"/>
+                                              <label class="custom-control-label" for="question_80_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_80_no" name="question_80" value="No"/>
+                                              <label class="custom-control-label" for="question_80_no">No</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_80_na" name="question_80" value="No"/>
+                                              <label class="custom-control-label" for="question_80_na">N/A</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">In the last 5 years have you received treatment from a licensed Chiropractor?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_81_yes" name="question_81" value="Yes"/>
+                                              <label class="custom-control-label" for="question_81_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_81_no" name="question_81" value="No"/>
+                                              <label class="custom-control-label" for="question_81_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_82_yes" name="question_82" value="Yes"/>
+                                              <label class="custom-control-label" for="question_82_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_82_no" name="question_82" value="No"/>
+                                              <label class="custom-control-label" for="question_82_no">No</label>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_83_yes" name="question_83" value="Yes"/>
+                                              <label class="custom-control-label" for="question_83_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_83_no" name="question_83" value="No"/>
+                                              <label class="custom-control-label" for="question_83_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_83_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_84_yes" name="question_84" value="Yes"/>
+                                              <label class="custom-control-label" for="question_84_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_84_no" name="question_84" value="No"/>
+                                              <label class="custom-control-label" for="question_84_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_84_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_85_yes" name="question_85" value="Yes"/>
+                                              <label class="custom-control-label" for="question_85_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_85_no" name="question_85" value="No"/>
+                                              <label class="custom-control-label" for="question_85_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_85_details" placeholder="If yes, please provide details"/>
+                                      <!-- <div class="form-field o_website_form_custom">
+                                        <textarea class="form-control o_website_form_input" name="question_86" placeholder="Please provide details to any of the above questions where you answered 'yes'"/>
+                                      </div> -->
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">In the past 10 years have you consumed alcoholic beverages?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_87_yes" name="question_87" value="Yes"/>
+                                              <label class="custom-control-label" for="question_87_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_87_no" name="question_87" value="No"/>
+                                              <label class="custom-control-label" for="question_87_no">No</label>
+                                          </div>
+                                      </div>
+                                      <textarea class="form-control o_website_form_input" style="display: none;"
+                                        name="question_88" placeholder="If yes, how often do you drink?"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
+                                          <p class="custom-control-inline">Have you ever tested positive for HIV or Aids?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_89_yes" name="question_89" value="Yes"/>
+                                              <label class="custom-control-label" for="question_89_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_89_no" name="question_89" value="No"/>
+                                              <label class="custom-control-label" for="question_89_no">No</label>
+                                          </div>
+                                      </div>
+                                      <input type="textarea" class="form-control o_website_form_input" style="display: none;"
+                                        name="question_89_details" placeholder="If yes, please provide details"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_90_yes" name="question_90" value="Yes"/>
+                                              <label class="custom-control-label" for="question_90_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_90_no" name="question_90" value="No"/>
+                                              <label class="custom-control-label" for="question_90_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                          name="question_91" placeholder="Please provide details if you answered yes"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Is your father still living?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_92_yes" name="question_92" value="Yes"/>
+                                              <label class="custom-control-label" for="question_92_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_92_no" name="question_92" value="No"/>
+                                              <label class="custom-control-label" for="question_92_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                          name="question_93" placeholder="If Yes, how old is he - If No, At what age did he die and what was his cause of death?"/>
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Is your mother still living?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_94_yes" name="question_94" value="Yes"/>
+                                              <label class="custom-control-label" for="question_94_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_94_no" name="question_94" value="No"/>
+                                              <label class="custom-control-label" for="question_94_no">No</label>
+                                          </div>
+                                      </div>
+
+                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                          name="question_95" placeholder="If Yes, how old is she - If No, At what age did she die and what was her cause of death?"/>
+
+
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                          <p class="custom-control-inline">Are all your siblings still living?</p>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_96_yes" name="question_96" value="Yes"/>
+                                              <label class="custom-control-label" for="question_96_yes">Yes</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_96_no" name="question_96" value="No"/>
+                                              <label class="custom-control-label" for="question_96_no">No</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                              <input type="radio" class="custom-control-input question_radio"
+                                                     id="question_96_na" name="question_96" value="No"/>
+                                              <label class="custom-control-label" for="question_94_na">N/A</label>
+                                          </div>
+                                      </div>
+
+                                              <textarea class="form-control o_website_form_input" style="display: none;"
+                                                name="question_97" placeholder="If Yes How old is each one - If No, at what age did they die and what was their cause of death?"/>
+                                      <input type="button" name="previous" class="previous action-button-previous"
+                                             value="Previous"/>
+                                      <input type="button" name="next" class="next estimate_next action-button"
+                                             value="Submit"
+                                             data-route="/insurance/insurance-application"
+                                             data-route-done="/insurance/insurance-application-done"
+                                             data-store-model="online.insurance.application"/>
+                                  </fieldset>
+
+                                  <!-- Thank You -->
+                                  <fieldset>
+                                      <h2>Thank you for completing the Online Insurance Application!<br/>We will contact you shortly.</h2>
+                                  </fieldset>
+                              </form>
+                          </div>
+                      </div>
+                    </div>
+                  </t>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <record id="menu_insurance_application" model="website.page">
+            <field name="name">Online Insurance Application</field>
+            <field name="url">/onlineinsuranceapplication</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="cap_web_free_quote.insurance_application"/>
+        </record>
+    </data>
+</odoo>

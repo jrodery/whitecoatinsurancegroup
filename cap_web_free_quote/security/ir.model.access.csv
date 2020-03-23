@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_life_insurance_estimate_form,maillife_insurance_estimate_form,model_life_insurance_estimate,,1,1,1,1
+access_free_disability_quote_form,mailfree_disability_quote_form,model_free_disability_quote,,1,1,1,1
+access_online_insurance_application,access_online_insurance_application,model_online_insurance_application,,1,1,1,1

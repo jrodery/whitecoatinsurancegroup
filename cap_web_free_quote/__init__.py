@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE.
 
-# from . import controllers
+from . import controllers
+from . import models

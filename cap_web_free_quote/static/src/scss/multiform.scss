@@ -111,10 +111,9 @@
 
 #progressbar li {
     list-style-type: none;
-    color: white;
+    color: #1b557a;
     text-transform: uppercase;
     font-size: 9px;
-    width: 25%;
     float: left;
     position: relative;
     letter-spacing: 1px;
@@ -128,7 +127,7 @@
     line-height: 26px;
     display: block;
     font-size: 12px;
-    color: #333;
+    color: #1b557a;
     background: white;
     border-radius: 25px;
     margin: 0 auto 10px auto;
@@ -139,7 +138,7 @@
     content: '';
     width: 100%;
     height: 2px;
-    background: white;
+    background: #07aff0;
     position: absolute;
     left: -50%;
     top: 9px;
@@ -161,4 +160,582 @@
 .fill-required {
     border-color: #FF0000 !important;
     color: #FF0000 !important;
+}
+
+.insurance_block {
+    height: 200px !important;
+    border: 2px solid #1b557a;
+    font-size: 18px;
+    background-color: #1b557a;
+    color: white;
+}
+
+.insurance_amount {
+    font-size: 50px;
+}
+
+.label_text{
+    text-align : left;
+    color: #1b557a;
+    font-weight : bold;
+}
+
+.insurance_data_css{
+    background-color : #2294cf;
+}
+
+.fonts{
+    margin: auto;
+    padding:50px;
+    color : #ffffff;
+    font: 10px arial, sans-serif;
+}
+
+.insurance_data_row{
+    flex-wrap : wrap;
+    align: center;
+    flex-direction: column;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+.total_background{
+    background-color:#00aff0;
+}
+
+.total_button {
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: #00aff0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.flex-container {
+    justify-content: center;
+    display:inline;
+}
+
+.label_insurance_app {
+    margin:0;
+    font-family: "Open Sans", sans-serif;
+    color: #1b557a;
+}
+
+#msform input[type='radio'] {
+    width: auto!important;
+}
+
+.custom-control.custom-radio.custom-control-inline {
+    margin-bottom: 1rem;
+}
+
+.form-field .o_website_form_custom .o_website_form_required_custom{
+  text-align: left;
+}
+
+.label_text{
+    text-align : left;
+    color: #1b557a;
+    font-weight : bold;
+}
+
+.next{
+    margin-bottom:25px;
+}
+
+.flex-item{
+     justify-content: center;
+}
+.insurance_data_row{
+    width: 100%;
+    margin-right: 330px;
+    margin-left: 330px;
+    margin-top: 35px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.text_css{
+
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #1b557a;
+    text-align: center;
+    font-weight: bold;
+}
+
+.img {
+    margin-right: 50px;
+    margin-left: 35%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.total_background{
+    background-color:#00aff0;
+}
+.total_button {
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    background-color: #00aff0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+// #msform .form-control{
+//     min-height: calc(2.0625rem + 2px);
+//     height: auto;
+// }
+.thankyou_content_wrapper{
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.thankyou_customer_details_wrapper{
+    color:#fff;
+    padding: 15px 0px;
+}
+.thankyou_content_wrapper_panel{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.thankyou_request_content_wrapper_panel{
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.thankyou_pannel_1{
+    padding: 15px 20px;
+}
+
+.thankyou_panel_content_gray_block{
+    margin:0px auto 15px auto;
+    background-color:#efefef;
+    padding: 10px;
+    width:70%;
+}
+
+.panel_1_gray_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.panel_1_gray_block_content_img{
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+}
+
+.panel_1_gray_block_content_wrapper {
+    flex-grow: 2;
+    padding: 10px;
+}
+
+.panel_1_gray_block_content_title {
+    font-weight: bold;
+    color: #07aff0;
+}
+
+.panel_2_gray_block_content_wrapper {
+    flex-grow: 2;
+    padding: 10px;
+    flex-basis: 100px;
+}
+
+.panel_2_white_block_content_wrapper {
+    flex-grow: 2;
+    flex-basis: 100px;
+}
+
+.panel_2_gray_block_content_details {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.panel_2_white_block_content_details {
+    font-size: large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.panel_2_gray_block_content_title {
+    font-weight: bold;
+    color: #07aff0;
+}
+
+.panel_2_white_block_image_title {
+    font-weight: bold;
+    color: #07aff0;
+    font-size: x-large;
+}
+
+.panel_2_white_block_content_title {
+    font-weight: bold;
+    color: #19557a;
+}
+
+.panel_2_gray_block_content_img {
+    width: 100px;
+    height: 100px;
+}
+
+.thankyou_panel_content_white_block {
+    margin:0px auto 15px auto;
+    padding: 10px;
+    width:80%;
+}
+
+.panel_white_block_content_details {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #07aff0;
+}
+
+
+.panel_1_gray_block_content_details {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.thankyou_pannel_overall_info_text {
+    text-align: center;
+    word-break: break-word;
+    color: #19557a;
+    font-size: x-large;
+    font-weight: bold;
+}
+.thankyou_panel_1_total_btn{
+    border-radius: 0px 0px 5px 5px;
+    background-color: #049dd8;
+    padding: 10px;
+    text-align: center;
+    margin: 15px 0px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #fff;
+}
+
+.thankyou_panel_1_total_amount{
+    padding: 10px;
+    text-align: center;
+    margin: 15px 0px;
+    font-size: xxx-large;
+    font-weight: bold;
+    color: #19557a;
+}
+
+.thankyou_content_wrapper_panel_title{
+    text-align: center;
+    word-break: break-word;
+    border-radius: 5px;
+    background-color: #19557a;
+    color: #fff;
+    font-size: xx-large;
+    padding: 2px;
+}
+
+.thankyou_content_inner_title {
+    word-break: break-word;
+    margin:0px auto 0px auto;
+    padding: 5px;
+    color: #19557a;
+    font-weight: bold;
+    font-size: large;
+}
+
+.thankyou_total_insurance {
+    word-break: break-word;
+    margin:0px auto 0px auto;
+    color: #19557a;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.panel_2_white_block_legacy_worth_title {
+    word-break: break-word;
+    color: #19557a;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.panel_2_white_block_legacy_worth_amount {
+    word-break: break-word;
+    color: #19597a;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.thankyou_panel_legacy_white_block {
+    margin:0px auto 15px auto;
+    padding: 10px;
+    width:90%;
+}
+
+.thankyou_panel_request_death_benefit_content {
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 5px auto 10px auto;
+    color: #19557a;
+}
+
+.thankyou_input_data {
+    border-radius: 25px;
+    border: 5px solid #a79f9f;
+    padding: 5px;
+    width: 220px;
+    margin: 5px;
+    text-align: center;
+    font-size: large;
+    color: #07aff0;
+    background-color: #fff;
+}
+
+.thankyou_rate_health {
+    font-size: x-large;
+    color: #19557a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px 25px 10px;
+}
+
+.thankyou_input_data:focus {
+    outline: none;
+}
+
+.four_round{
+    color: #1b557a;
+    margin-top: 7px;
+    font-size: 10px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 5px;
+    margin-right: 185px;
+    margin-left: 170px;
+    border-color: #C8C8C8;
+}
+
+
+.thankyou_policy_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: large;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.thankyou_policy_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0px, -50%);
+    height: 21px;
+    width: 21px;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 2px solid #2196F3;
+}
+
+/* On mouse-over, add a grey background color */
+.thankyou_policy_radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.thankyou_policy_radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.thankyou_policy_radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.thankyou_policy_radio .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: white;
+}
+.thankyou_policy_radio_label{
+    margin: 0px;
+}
+
+.thankyou_policy_content{
+    text-align:left;
+    width: fit-content;
+    margin: auto;
+}
+
+.flex-container{
+    margin-left:35%
+}
+
+.big_integer{
+    font-weight: bold;
+    color: #1b557a;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.two_tabs{
+
+    padding: 4px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 50px;
+    margin-left: 328px;
+    background-color: #1b557a;
+    height: 45px;
+    width: 480px;
+    margin-bottom: -35px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.square_box{
+
+    font-weight: bold;
+    color: #1b557a;
+    text-align: center;
+    height: 30px;
+    border: 3px solid;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 30px;
+    margin-top: 8px;
+}
+
+.big_fonts{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00aff0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.rating_star {
+    color: #1b557a;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.five_radio {
+    margin-bottom: 15px;
+    color: #1b557a;
+    text-align: center;
+}
+
+.border_line {
+
+    color: #00aff0;
+    border: 2px solid;
+}
+
+.request_name {
+    text-align: center;
+    margin-left: -19px;
+}
+
+.main_content {
+    margin-right: 190px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checked {
+    color: orange;
+}
+
+// Star Ratings css
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+  margin-left: 10px;
+}
+
+.star-rating .fa-star {
+  color: #19557a;
+}
+
+.star_label {
+    position:relative;
+}
+
+.star_label::after {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    color: #19557a;
+    font-size: 16px;
+}
+
+.star1::after {
+    content: "Poor";
+}
+
+.star3::after {
+    content: "Good";
+}
+
+.star5::after {
+    content: "Excellent";
+    transform:none;
+    left:0px;
 }

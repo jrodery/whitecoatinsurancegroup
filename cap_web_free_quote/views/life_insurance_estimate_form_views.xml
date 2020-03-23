@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="life_insurance_estimate_form_view_tree" model="ir.ui.view">
+        <field name="name">life.insurance.estimate.tree.view</field>
+        <field name="model">life.insurance.estimate</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="question_28" string="First Name"/>
+                <field name="question_29" string="Last Name"/>
+                <field name="question_30" string="Email"/>
+                <field name="question_31" string="Phone"/>
+                <field name="question_32" string="Zip Code"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="life_insurance_estimate_form_view_form" model="ir.ui.view">
+        <field name="name">life.insurance.estimate.form.view</field>
+        <field name="model">life.insurance.estimate</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           options="{'clickable': '1'}"
+                           statusbar_visible="draft,submitted,done,requested_quote"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                            <field name="ref_code" readonly="1" class="pull-right"
+                                   attrs="{'invisible': [('name', '=', False)]}"/>
+                        </h1>
+                    </div>
+                    <separator string="Step-1"/>
+                    <group col="4">
+                        <field name="question_28" string="First Name"/>
+                        <field name="question_29" string="Last Name"/>
+                        <field name="question_30" string="Email"/>
+                        <field name="question_31" string="Phone"/>
+                        <field name="question_32" string="Zip Code"/>
+                    </group>
+                    <separator string="Step-2"/>
+                    <group col="3">
+                        <field name="question_1"/>
+                        <field name="question_2"/>
+                        <field name="remaining_age" readonly="1" force_save="1"/>
+                        <field name="question_3"/>
+                        <field name="question_4" attrs="{'readonly': [('question_3', '!=', 'Yes')]}"/>
+                        <field name="question_5" attrs="{'readonly': [('question_4', '&lt;', 1)]}"/>
+                        <field name="question_5_1" attrs="{'readonly': [('question_5', '!=', 'Yes')]}"/>
+                        <field name="question_5_2" attrs="{'readonly': [('question_5_1', '!=', 'Yes')]}"/>
+                        <field name="question_5_3" readonly="1" force_save="1"/>
+                        <field name="question_5_4" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Step-3"/>
+                    <group col="3">
+                        <field name="question_6"/>
+                        <field name="question_7" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
+                        <field name="question_8" attrs="{'readonly': [('question_6', '!=', 'Yes')]}"/>
+                    </group>
+                    <separator string="Step-4"/>
+                    <group col="3">
+                        <field name="question_11"/>
+                        <field name="question_12" attrs="{'readonly': [('question_11', '!=', 'Yes')]}"/>
+                        <field name="question_13" attrs="{'readonly': [('question_11', '!=', 'Yes')]}"/>
+                        <field name="question_14" attrs="{'readonly': [('question_13', '!=', 'Yes')]}"/>
+                        <field name="question_14_1" readonly="1" force_save="1"/>
+                        <field name="question_14_2" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Step-5"/>
+                    <group col="3">
+                        <field name="question_15"/>
+                        <field name="question_16" attrs="{'readonly': [('question_15', '!=', 'Yes')]}"/>
+                        <field name="question_17"/>
+                        <field name="question_18" attrs="{'readonly': [('question_17', '!=', 'Yes')]}"/>
+                        <field name="question_19"/>
+                        <field name="question_20" attrs="{'readonly': [('question_19', '!=', 'Yes')]}"/>
+                        <field name="question_21"/>
+                        <field name="question_22" attrs="{'readonly': [('question_21', '!=', 'Yes')]}"/>
+                        <field name="question_22_1" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Step-6"/>
+                    <group col="3">
+                        <field name="question_23"/>
+                        <field name="question_24"/>
+                        <field name="question_24_1" readonly="1" force_save="1"/>
+                        <field name="question_25"/>
+                        <field name="question_26" attrs="{'readonly': [('question_25', '!=', 'Yes')]}"/>
+                        <field name="question_27"/>
+                        <field name="question_27_1" readonly="1" force_save="1"/>
+                        <field name="question_27_2" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Total Insurance"/>
+                    <group col="3">
+                        <field name="total_insurance" readonly="1" force_save="1"/>
+                    </group>
+                    <separator string="Thank You Page Request Quote"/>
+                    <group col="4">
+                        <field name="date_of_birth"/>
+                        <field name="gender"/>
+                        <field name="quote_state"/>
+                        <field name="smoke"/>
+                        <field name="policy_type"/>
+                        <field name="rate_your_health" widget="priority" readonly="True"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_life_insurance_estimate_form" model="ir.actions.act_window">
+        <field name="name">Life Insurance</field>
+        <field name="res_model">life.insurance.estimate</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_whitecoat_web_form"
+              name="Insurance"
+              sequence="50"/>
+
+    <menuitem id="menu_menu_life_insurance_estimate_form"
+              name="Life Insurance"
+              sequence="10"
+              parent="menu_whitecoat_web_form"
+              action="action_life_insurance_estimate_form"/>
+</odoo>

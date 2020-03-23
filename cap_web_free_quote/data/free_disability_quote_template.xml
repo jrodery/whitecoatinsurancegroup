@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_free_disability_form" model="mail.template">
+        <field name="name">Free Disability Quote Mail</field>
+        <field name="email_from">info@whitecoatinsurancegroup.com</field>
+        <field name="email_to">info@whitecoatinsurancegroup.com</field>
+        <field name="subject">Free Disability Quote Mail</field>
+        <field name="model_id" ref="cap_web_free_quote.model_free_disability_quote"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+<table class="table">
+    <thead class="thead-dark">
+        <tr></tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>First Name</td><td>${object.question_1}</td></tr>
+        <tr><td>Last Name</td><td>${object.question_2}</td></tr>
+        <tr><td>Email</td><td>${object.question_3}</td></tr>
+        <tr><td>Phone</td><td>${object.question_4}</td></tr>
+        <tr><td>Area Code</td><td>${object.question_5}</td></tr>
+        <tr><td>Medical speciality</td><td>${object.question_6}</td></tr>
+        <tr><td>Date of Birth</td><td>${object.question_7}</td></tr>
+        <tr><td>Sex</td><td>${object.question_8}</td></tr>
+        <tr><td>State</td><td>${object.question_9}</td></tr>
+        <tr><td>Desired Monthly Benefit</td><td>${object.question_10}</td></tr>
+        <tr><td>Definition of Total Disability</td><td>${object.question_11}</td></tr>
+        <tr><td>Waiting/Elimination Period</td><td>${object.question_12}</td></tr>
+        <tr><td>Benefit Period</td><td>${object.question_13}</td></tr>
+        <tr><td>Residual/Partial Coverage</td><td>${object.question_14}</td></tr>
+        <tr><td>COLA Benefit Period</td><td>${object.question_15}</td></tr>
+        <tr><td>Guarantee</td><td>${object.question_16}</td></tr>
+        <tr><td>Mental/Nervous Limitation</td><td>${object.question_17}</td></tr>
+        <tr><td>Hospital Affiliation</td><td>${'${0:,.2f}'.format(object.question_18)}</td></tr>
+    </tbody>
+</table>]]></field>
+    </record>
+</odoo>

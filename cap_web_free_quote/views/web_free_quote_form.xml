@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="free_quote" model="ir.ui.view">
+            <field name="name">Free Disability Quote Form</field>
+            <field name="type">qweb</field>
+            <field name="key">website.contactus</field>
+            <field name="arch" type="xml">
+                <t name="Free Quote" t-name="website.free_quote">
+                  <t t-name="website.freequote">
+                    <t t-call="website.layout">
+                      <div id="wrap" class="oe_structure oe_empty" spellcheck="false">
+                        <section class="s_cover parallax pt120 pb136 bg-black-50 o_anim_dur500 s_parallax_no_overflow_hidden" data-scroll-background-ratio="0" style="background-image: none;">
+                          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/11373/Male_Doctor_Disability_Quotes.jpg&quot;); background-position: 74.61% 71.69%;"/>
+                          <div class="container">
+                            <div class="row s_nb_column_fixed">
+                              <div class="s_title col-lg-9" data-name="Title">
+                                <h1 class="s_title_thin" style="text-align: left; font-size: 62px;">
+                                  <font class="text-beta" style="">Own Specialty</font>
+                                </h1>
+                                <h1 class="s_title_thin" style="text-align: left; font-size: 62px;">
+                                  <font class="text-beta" style="">Disability Insurance </font>
+                                </h1>
+                                <h1 class="s_title_thin" style="text-align: left; font-size: 62px;">
+                                  <font class="text-beta" style="font-size: 36px;">For Physicians &amp;amp; Dentists</font>
+                                </h1>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section class="s_references bg-beta oe_custom_bg pb0 pt0" style="">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-lg-2 offset-lg-1">
+                                <img src="/web/image/9686/Ameritas_Own_%20Occupation_%20Disability%20Insurance.png" class="img img-fluid" alt="Demo Logo" data-original-title="" title="" aria-describedby="tooltip354666"/>
+                              </div>
+                              <div class="col-lg-2">
+                                <img src="/web/image/9688/GUARDIAN_LOGO_Own_Occupation_Disability_Insurance.jpg" class="img img-fluid" alt="Demo Logo" data-original-title="" title="" aria-describedby="tooltip354666"/>
+                              </div>
+                              <div class="col-lg-2">
+                                <img src="/web/image/9690/Mass_Mutual_Own_Occupation_Logo.png" class="img img-fluid" alt="Demo Logo" data-original-title="" title="" aria-describedby="tooltip354666"/>
+                              </div>
+                              <div class="col-lg-2">
+                                <img src="/web/image/9692/Ohio_National_Own_Occupation_logo.png" class="img img-fluid" alt="Demo Logo" data-original-title="" title="" aria-describedby="tooltip354666"/>
+                              </div>
+                              <div class="col-lg-2">
+                                <img src="/web/image/9842/AND%20MORE.png" class="img img-fluid" alt="Demo Logo" data-original-title="" title="" aria-describedby="tooltip354666"/>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <style>
+                          span.title {
+                              font-weight: 200;
+                          }
+                          p.col-form-label{
+                            font-weight:bold;
+                            text-align:left;
+                            margin-top:8px
+                          }
+                          span.col-form-label-span{
+                            text-align:left;
+                            font-weight: normal;
+                          }
+                        </style>
+                        <div class="row" style="height:650px;">
+                          <div class="col-md-6 pb16" style="margin:0 auto;">
+                            <form id="msform" style="height:auto;"
+                                  method="post"
+                                  class="s_website_form container mt32"
+                                  enctype="multipart/form-data"
+                                  _lpchecked="1">
+
+                              <input type="hidden" class="form-control" id="res_id" name="res_id" value=""/>
+                                  <!-- progressbar -->
+                              <ul id="progressbar">
+                                  <li style="width: 25%;" class="active">Personal Details</li>
+                                  <li style="width: 25%;">Step - 2</li>
+                                  <li style="width: 25%;">Step - 3</li>
+                                  <li style="width: 25%;">Final</li>
+                              </ul>
+
+                              <fieldset>
+                                <h2 class="fs-title">request a quote</h2>
+                                <input type="text" class="form-control form-input-text o_website_form_input"
+                                                   name="question_1" required="True" placeholder="First Name"
+                                                   onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                 <input type="text" class="form-control form-input-text o_website_form_input"
+                                        name="question_2" required="True" placeholder="Last Name"
+                                        onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                  <input type="email"
+                                         class="form-control form-input-text o_website_form_input format-email"
+                                         name="question_3" required="True" placeholder="Email"/>
+                                  <input type="text" step="1"
+                                         class="format-phone form-control form-input-text o_website_form_input"
+                                         name="question_4" required="True" placeholder="Phone: 000-000-0000"
+                                         maxlength="10"
+                                         onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
+                                  <input type="text" class="form-control form-input-text o_website_form_input"
+                                         name="question_5" required="True" placeholder="Area Code"/>
+                                  <input type="button" name="next" class="next estimate_next action-button"
+                                         value="Next"
+                                         data-route="/insurance/freequote-form"
+                                         data-store-model="free.disability.quote"/>
+                              </fieldset>
+                              <fieldset>
+                                <h2 class="fs-title">Personal Details</h2>
+                                <input type="text" class="form-control form-input-text o_website_form_input "
+                                       name="question_6" required="True" placeholder="Medical Speciality"/>
+                                <input id="date_of_birth" type="text"
+                                       class="form-control form-input-text o_website_form_input format-date input-date-save"
+                                       name="question_7" required="True"
+                                       placeholder="Date of birth: MM/DD/YYYY"/>
+                                <input type="text" class="form-control form-input-text o_website_form_input"
+                                       name="question_9" required="True" placeholder="State"
+                                       onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                <select class="form-control o_website_form_input" name="question_8"
+                                        required="True">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="next" class="next estimate_next action-button"
+                                       value="Next"
+                                       data-route="/insurance/freequote-form"
+                                       data-store-model="free.disability.quote"/>
+                              </fieldset>
+                              <fieldset>
+                                <p class="col-form-label" title="">Desired Monthly Benefit: </p>
+                                <input type="number" class="form-control  o_website_form_input"
+                                       placeholder="Desired Monthly Benefit" name="question_10"
+                                       required="True"/>
+                                <p class="col-form-label" title="Most Physicians choose True Own Occupation. True Own Occupation allows you to work in another occupation and collect your full disability benefit. Modified Own Occupation pays your full benefit so long as you are not working in any other occupation">Choose your Definition of Total Disability: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_11"
+                                        required="True">
+                                    <option value=""/>
+                                    <option value="True Own Occupation">True Own Occupation</option>
+                                    <option value="Modified Own Occupation">Modified Own Occupation</option>
+                                </select>
+                                <p class="col-form-label" title="">Choose your Waiting/Elimination Period: <br/><span class="col-form-label-span">This is the period of time you must be disabled before a carrier starts to pay your benefits to you.</span></p>
+                                <select class="form-control o_website_form_input" name="question_12"
+                                        required="false">
+                                    <option value=""/>
+                                    <option value="90 Days">90 Days</option>
+                                    <option value="180 Days">180 Days</option>
+                                    <option value="365 Days">365 Days</option>
+                                </select>
+                                <p class="col-form-label" title="">Choose your Benefit Period: <br/><span class="col-form-label-span">This is your age the insurance carrier is obligated to pay your claim.</span></p>
+                                <select class="form-control o_website_form_input" name="question_13"
+                                        required="false" style="margin-bottom:10px">
+                                    <option value=""/>
+                                    <option value="Age 65">Age 65</option>
+                                    <option value="Age 67">Age 67</option>
+                                    <option value="Age 70">Age 70</option>
+                                </select>
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="next" class="next estimate_next action-button"
+                                       value="Next"
+                                       data-route="/insurance/freequote-form"
+                                       data-store-model="free.disability.quote"/>
+                              </fieldset>
+
+                              <fieldset>
+                                <p class="col-form-label" title="Residual coverage pays you if you suffer a disability where you are still working in your Regular Occupation but you've suffered a loss of income of at least 20%.">Choose if you want Residual/Partial Coverage: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_14"
+                                        required="True">
+                                    <option value=""/>
+                                    <option value="Residual Disability Benefits">Residual Disability Benefits
+                                    </option>
+                                    <option value="None">None</option>
+                                </select>
+                                <p class="col-form-label" title="COLA provides a cost of living increase to your monthly benefit after 12 months of consecutive disability. Each carrier offers capped increase amounts with options for both simple and compounded interest.">Choose if you want Cost of Living rider (COLA): <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_15"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="3% COLA">3% COLA</option>
+                                    <option value="6% COLA">6% COLA</option>
+                                    <option value="None">None</option>
+                                </select>
+                                <p class="col-form-label" title="Most physicians choose Non-Cancellable however, Guaranteed Renewable premiums are less expensive and the likelihood of increased premiums is small. Non-Cancellable means your premiums and contract provisions are fully guaranteed until your age of 65. Guaranteed Renewable means that your contract is guaranteed until your age of 65, but your premium is not">Choose your Guarantee: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_16"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="Non-Cancellable">Non-Cancellable</option>
+                                    <option value="Guaranteed Renewable">Guaranteed Renewable</option>
+                                </select>
+                                <p class="col-form-label" title="Most carriers limit payment for Mental/Nervous disabilities such as Anxiety - Depression - and Substance Abuse to 2 years. Three of the Six carriers have an option to provide unlimited coverage for Mental/Nervous disabilities">Choose Mental/Nervous Limitation: <i class="fa fa-info-circle"/></p>
+                                <select class="form-control o_website_form_input" name="question_17"
+                                        required="True">
+                                    <option value=""></option>
+                                    <option value="24 Month Limitation">24 Month Limitation</option>
+                                    <option value="Unlimited">Unlimited</option>
+                                </select>
+                                <p class="col-form-label" title="If you are affiliated with a Hospital a discount may be available.  Please add the name of your hospital affiliation.">Hospital Affiliation: <i class="fa fa-info-circle"/></p>
+                                <input type="number" class="form-control o_website_form_input"
+                                       name="question_18"
+                                       required="" placeholder="Hospital Affiliation"/>        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <!-- <input class="form-field" type="hidden" name="subject" value="Quote Submission"/> -->
+
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                       value="Previous"/>
+                                <input type="button" name="done"
+                                        data-store-model="free.disability.quote"
+                                        data-route="/insurance/freequote-form"
+                                        data-route-done="/insurance/freequote-form-done"
+                                        class="next estimate_next submit_estimate action-button" value="Get Quote"/>
+                                <!-- <button class="btn action-button o_website_form_send" data-original-title="" title="" aria-describedby="tooltip496317" style="">Get Quote</button> -->
+                                <span id="o_website_form_result" class="text-danger ml8"/>
+                              </fieldset>
+                              <!-- <input class="form-field" type="hidden" name="email_to" value="info@whitecoatinsurancegroup.com"/> -->
+                            </form>
+                          </div>
+                        </div>
+                        <section class="s_text_image pb32 pt0 bg-alpha oe_custom_bg">
+                          <div class="container">
+                            <div class="row align-items-center">
+                              <div class="col-lg-6 pt16 pb16">
+                                <img src="/web/image/11378/Female_doctor_Disability%20Quotes.jpg" class="img img-fluid mx-auto" alt="Odoo • Image and Text"/>
+                              </div>
+                              <div class="col-lg-6 pt16 pb16">
+                                <h2>What Is Own Specialty Disability Insurance?</h2>
+                                <p>Own Specialty Disability Insurance protects you from the inability to perform the duties of your medical specialty caused by a sickness or injury.&amp;nbsp; A True Own Specialty Disability Policy will pay your full benefit if your disability limits your ability to work in your medical specialty even if you elect to work in another occupation.&amp;nbsp;&amp;nbsp;</p>
+                                <div class="s_btn text-left pt16 pb16">
+                                  <a href="https://www.whitecoatinsurancegroup.com/blog/white-coat-insurance-group-blog-1/post/what-is-own-occupation-disability-insurance-30" class="btn btn-outline-beta" data-original-title="" title="" aria-describedby="tooltip662432" target="_blank">Discover more</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </t>
+                  </t>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <record id="menu_free_quote_send" model="website.page">
+            <field name="name">Free Quote Send</field>
+            <field name="url">/free-quote</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="cap_web_free_quote.free_quote"/>
+        </record>
+    </data>
+</odoo>
