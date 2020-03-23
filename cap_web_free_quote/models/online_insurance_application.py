@@ -330,7 +330,7 @@ class OnlineInsuranceApplication(models.Model):
         vals['name'] = self.env['ir.sequence'].next_by_code(
             'online.insurance.application')
         # self.send_form_mail()
-        return super(OnlineInsuranceApplication, self).create(vals), self.sudo().send_form_mail()
+        return super(OnlineInsuranceApplication, self).create(vals)
 
     @api.multi
     def write(self, vals):
@@ -340,10 +340,6 @@ class OnlineInsuranceApplication(models.Model):
 
     @api.multi
     def send_form_mail(self):
-        # template = self.env.ref(
-        #     'cap_web_free_quote.mail_life_insurance_estimate_form',
-        #     raise_if_not_found=False)
-        # template.send_mail(self.id)
         template = self.env.ref(
             'cap_web_free_quote.mail_customer_online_insurance_application_form',
             raise_if_not_found=False)
