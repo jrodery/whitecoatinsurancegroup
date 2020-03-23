@@ -132,6 +132,4 @@ class FreeQuoteWebsiteForm(WebsiteForm):
         # return {
         #     'thank_you_request_quote': res.sudo().write(kw)
         # }
-        return request.render("cap_crmlead_portal.offers_comparison",{
-            'opportunity': opportunity,
-        })
+        return request.redirect("/thank-you-page-life-calculator")
