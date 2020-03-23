@@ -178,7 +178,9 @@
                                             <input type="hidden" name="question_6" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left mt-4" data-next="2">
+
                                                 <p class="custom-control-inline">Do you currently have or plan to have children?</p>
+
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_6_yes" name="question_6_bool" value="Yes"/>
@@ -230,6 +232,7 @@
 
                                             <div class="text-left mt-4" data-next="1">
                                                 <p class="custom-control-inline">Do you currently have any money saved for college?</p>
+
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_13_yes" name="question_13" value="Yes"/>
