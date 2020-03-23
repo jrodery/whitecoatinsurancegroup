@@ -230,7 +230,7 @@ class LifeInsuranceEstimate(models.Model):
     def write(self, vals):
         res = super(LifeInsuranceEstimate, self).write(vals)
         # if vals.get('state', '') in ['done', 'requested_quote']:
-        return res, sudo.self.send_form_mail()
+        return res, self.sudo().send_form_mail()
 
     @api.multi
     def send_form_mail(self):
