@@ -231,11 +231,19 @@ class LifeInsuranceEstimate(models.Model):
     @api.multi
     def write(self, vals):
         res = super(LifeInsuranceEstimate, self).write(vals)
-        # if vals.get('state', '') in ['done', 'requested_quote']:
-        return res, self.sudo().send_form_mail()
+        if vals.get('state', '') in ['done', 'requested_quote']:
+            self.sudo().send_form_mail()
+        return res, self.sudo().send_form_mail_admin()
 
     @api.multi
     def send_form_mail(self):
+        template = self.env.ref(
+            'cap_web_free_quote.mail_customer_life_insurance_estimate_form',
+            raise_if_not_found=False)
+        template.send_mail(self.id)
+
+    @api.multi
+    def send_form_mail_admin(self):
         template = self.env.ref(
             'cap_web_free_quote.mail_customer_life_insurance_estimate_form',
             raise_if_not_found=False)
