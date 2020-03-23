@@ -330,7 +330,9 @@ class OnlineInsuranceApplication(models.Model):
         vals['name'] = self.env['ir.sequence'].next_by_code(
             'online.insurance.application')
         # self.send_form_mail()
-        return super(OnlineInsuranceApplication, self).create(vals)
+        super(OnlineInsuranceApplication, self).create(vals)
+        self.env.cr.commit()
+        self.sudo().send_form_mail()
 
     @api.multi
     def write(self, vals):
