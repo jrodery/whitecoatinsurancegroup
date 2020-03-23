@@ -122,7 +122,7 @@ class FreeQuoteWebsiteForm(WebsiteForm):
             }
         )
 
-    @http.route('/thankyou/request_quote', type='json', auth="public",
+    @http.route('/thankyou/request_quote', type='http', auth="public",
                 methods=['POST', 'GET'], csrf=False, website=True)
     def request_quote(self, **kw):
         res = request.env['life.insurance.estimate'].search([
@@ -132,4 +132,6 @@ class FreeQuoteWebsiteForm(WebsiteForm):
         # return {
         #     'thank_you_request_quote': res.sudo().write(kw)
         # }
-        return request.render("website.thank-you-page-life-calculator")
+        return request.render("cap_crmlead_portal.offers_comparison",{
+            'opportunity': opportunity,
+        })
