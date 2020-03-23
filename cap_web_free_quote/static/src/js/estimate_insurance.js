@@ -40,7 +40,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     $('#thankyou_quote_receive_error_msg').show();
                 }
             });
-            redirect_ty_page();
+            window.location.href = "/thank-you-page-life-calculator";
         });
 
         $('.question_radio').on('change', function() {

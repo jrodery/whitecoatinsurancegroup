@@ -121,8 +121,6 @@ class FreeQuoteWebsiteForm(WebsiteForm):
                 "currency_id": currency_id
             }
         )
-    def redirect_ty_page(self, **kw):
-        return request.redirect("/thank-you-page-life-calculator")
 
     @http.route('/thankyou/request_quote', type='json', auth="public",
                 methods=['POST', 'GET'], csrf=False, website=True)
