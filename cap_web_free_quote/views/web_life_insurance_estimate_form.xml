@@ -161,8 +161,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_5_2" style="display: none;"
-                                                   placeholder="If you die, how much do you anticipate
-                                                     the annual child expense to be?"/>
+                                                   placeholder="If you die, how much do you anticipate the annual child expense to be?"/>
 
                                             <input type="button" name="previous"
                                                    class="previous action-button-previous hide_total"
@@ -179,9 +178,7 @@
                                             <input type="hidden" name="question_6" value="No"
                                                    class="form-control form-input-text o_website_form_input"/>
                                             <div class="text-left mt-4" data-next="2">
-                                                <p class="custom-control-inline">Do you currently have or plan to have
-                                                    children?
-                                                </p>
+                                                <p class="custom-control-inline">Do you currently have or plan to have children?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_6_yes" name="question_6_bool" value="Yes"/>
@@ -201,7 +198,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_8" style="display: none;"
-                                                   placeholder="Age of your youngest child? If Unborn or infane, choose (0)"/>
+                                                   placeholder="Age of your youngest child? If Unborn or infant, choose (0)"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
@@ -232,10 +229,7 @@
                                                    title="By the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
 
                                             <div class="text-left mt-4" data-next="1">
-                                                <p class="custom-control-inline">Do you currently have any money saved
-                                                    for
-                                                    college?
-                                                </p>
+                                                <p class="custom-control-inline">Do you currently have any money saved for college?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_13_yes" name="question_13" value="Yes"/>
@@ -320,9 +314,7 @@
                                                    placeholder="What is the total remaining balance of what you owe?"/>
 
                                             <div class="text-left mt-4" data-next="1">
-                                                <p class="custom-control-inline">Do you have any additional Debt
-                                                    (student loans, personal loans, etc...)
-                                                </p>
+                                                <p class="custom-control-inline">Do you have any additional Debt (student loans, personal loans, etc...)</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_21_yes" name="question_21" value="Yes"/>
@@ -359,9 +351,7 @@
                                                    placeholder="What is the cost of your Homeowners or Renters insurance policy annually?"/>
 
                                             <div class="text-left mt-4" data-next="1">
-                                                <p class="custom-control-inline">Are you responsible for paying HOA
-                                                    fees?
-                                                </p>
+                                                <p class="custom-control-inline">Are you responsible for paying HOA fees?</p>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" class="custom-control-input question_radio"
                                                            id="question_25_yes" name="question_25" value="Yes"/>
