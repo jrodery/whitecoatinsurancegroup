@@ -39,15 +39,15 @@ class LifeInsuranceEstimate(models.Model):
     question_2 = fields.Integer(string="Your Desired Retirement Age?")
     remaining_age = fields.Integer(store="True", compute="_compute_age",
                                    string="Years Until Retirement")
-    question_3 = fields.Selection(select_boolean, default='No',
+    question_3 = fields.Selection(select_boolean,
                                   string="Does your spouse work?")
     question_4 = fields.Float(
         string="How much income does your spouse earn per year?")
     question_5 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Will your spouse continue to work if you passed away?")
     question_5_1 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="If yes, will you have an added child care expense?")
     question_5_2 = fields.Float(
         string="If you die, how much do you anticipate the annual child expense to be? "
@@ -72,7 +72,7 @@ class LifeInsuranceEstimate(models.Model):
 
     # Step - 3
     question_6 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Do you currently have or plan to have children?")
     question_7 = fields.Integer(
         string="If yes, How many do you have or plan to have?")
@@ -80,14 +80,14 @@ class LifeInsuranceEstimate(models.Model):
 
     # Step - 4
     question_11 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Do you plan on paying for college?")
     question_12 = fields.Float(
         string="If Yes, by the time your child reaches college - how much do "
                "you think it will cost to send each individual child through "
                "school?")
     question_13 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Do you currently have any money saved for college?")
     question_14 = fields.Float(string="If yes, what is the approx balance of "
                                       "your college savings?")
@@ -102,25 +102,25 @@ class LifeInsuranceEstimate(models.Model):
     def _compute_college_saving(self):
         if self.question_7 and self.question_12:
             self.question_14_1 = self.question_7 * self.question_12
-        if self.question_14 and self.question_14_1:
+        if self.question_14:
             self.question_14_2 = self.question_14_1 - self.question_14
 
     # Step - 5
-    question_15 = fields.Selection(select_boolean, default='No',
+    question_15 = fields.Selection(select_boolean,
                                    string="Do you have have a mortgage?")
     question_16 = fields.Float(
         string="If Yes, What is your mortgage balance?")
     question_17 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Do you own money on credit cards?")
     question_18 = fields.Float(
         string="If Yes What is your credit Card Balance?")
-    question_19 = fields.Selection(select_boolean, default='No',
+    question_19 = fields.Selection(select_boolean,
                                    string="Do you have car payments?")
     question_20 = fields.Float(
         string="If yes what are your car payments balances?")
     question_21 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Do you have any additional Debt (student loans, "
                "personal loans, etc.)")
     question_22 = fields.Float(
@@ -149,7 +149,7 @@ class LifeInsuranceEstimate(models.Model):
         self.question_24_1 = self.question_23 + self.question_24
 
     question_25 = fields.Selection(
-        select_boolean, default='No',
+        select_boolean,
         string="Are you responsible for paying HOA fees?")
     question_26 = fields.Float(
         string="If yes, what is your monthly HOA amount?")
@@ -229,9 +229,8 @@ class LifeInsuranceEstimate(models.Model):
     @api.multi
     def write(self, vals):
         res = super(LifeInsuranceEstimate, self).write(vals)
-        if vals.get('state', '') in ['done', 'requested_quote']:
-            self.send_form_mail()
-        return res
+        # if vals.get('state', '') in ['done', 'requested_quote']:
+        return res, sudo.self.send_form_mail()
 
     @api.multi
     def send_form_mail(self):
