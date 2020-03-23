@@ -102,8 +102,10 @@ class LifeInsuranceEstimate(models.Model):
     def _compute_college_saving(self):
         if self.question_7 and self.question_12:
             self.question_14_1 = self.question_7 * self.question_12
-        if self.question_14:
-            self.question_14_2 = (self.question_14_1, 0) - self.question_14
+        if self.question_14 and self.question_14_1:
+            self.question_14_2 = self.question_14_1 - self.question_14
+        elif self.question_14 and self.question_14_1 == 0:
+            self.question_14_2 = 0 - self.question_14
 
     # Step - 5
     question_15 = fields.Selection(select_boolean,
