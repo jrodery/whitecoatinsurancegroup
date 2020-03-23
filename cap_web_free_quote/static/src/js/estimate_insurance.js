@@ -39,6 +39,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                     $('#thankyou_quote_receive_msg').hide();
                     $('#thankyou_quote_receive_error_msg').show();
                 }
+                redirect_ty_page();
             });
         });
 
