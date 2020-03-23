@@ -132,3 +132,6 @@ class FreeQuoteWebsiteForm(WebsiteForm):
         return {
             'thank_you_request_quote': res.sudo().write(kw)
         }
+
+    # @http.route('/thankyou/request_quote', type='http', auth="public",
+    #             methods=['POST', 'GET'], csrf=False, website=True)
