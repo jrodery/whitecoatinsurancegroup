@@ -186,12 +186,13 @@ class LifeInsuranceEstimate(models.Model):
 
     @api.depends('question_14_2', 'question_22_1', 'question_27_3')
     def _compute_total_calculation(self):
-        self.total_insurance = sum([
-            self.question_14_2,
-            self.question_22_1,
-            # self.question_27_2
-            self.question_27_3
-        ])
+        for rec in self:
+            rec.total_insurance = sum([
+                rec.question_14_2,
+                rec.question_22_1,
+                # rec.question_27_2
+                rec.question_27_3
+            ])
 
     date_of_birth = fields.Date(string="Date of Birth")
     gender = fields.Selection([
