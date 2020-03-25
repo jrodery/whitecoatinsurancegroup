@@ -177,9 +177,9 @@ class LifeInsuranceEstimate(models.Model):
         for rec in self:
             amount = rec.question_24_1 + rec.question_26 * 12 + rec.question_27 * 12 - rec.question_5_3
             if rec.question_4:
-                rec.question_27_1 = amount - question_4
+                rec.question_27_1 = amount - rec.question_4
             else:
-                rec.question_27_1 = amount 
+                rec.question_27_1 = amount
             # rec.question_27_2 = amount * rec.remaining_age
             rec.question_27_3 = amount / 0.05
 
