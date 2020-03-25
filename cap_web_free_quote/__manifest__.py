@@ -6,7 +6,7 @@
     'summary': 'JS and CSS assets for multi-forms on website.',
     'author': 'Captivea LLC.',
     'category': 'CRM',
-    'version': '1.0',
+    'version': '1.2',
     'depends': [
         'website_form'
     ],
