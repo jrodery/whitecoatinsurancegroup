@@ -55,7 +55,7 @@
         <tr><td>If yes, what is your monthly HOA amount?</td><td>${'${0:,.2f}'.format(object.question_26)}</td></tr>
         <tr><td>How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?</td><td>${'${0:,.2f}'.format(object.question_27)}</td></tr>
         <tr><td>Total annual Recurring expenses minus remaining spousal income</td><td>${'${0:,.2f}'.format(object.question_27_1)}</td></tr>
-        <tr><td>Recurring expenses multiplied by the amount of years until retirement</td><td>${'${0:,.2f}'.format(object.question_27_2)}</td></tr>
+        <tr><td>Total Benefit needed to cover recurring annual expenses minus spousal income</td><td>${'${0:,.2f}'.format(object.question_27_3)}</td></tr>
         <tr><td>Estimated Life Insurance needed:</td><td>${'${0:,.2f}'.format(object.total_insurance)}</td></tr>
         % if object.state == 'requested_quote'
             <tr><td>Date of Birth</td><td>${object.date_of_birth}</td></tr>
@@ -126,7 +126,7 @@
         <tr><td>If yes, what is your monthly HOA amount?</td><td>${'${0:,.2f}'.format(object.question_26)}</td></tr>
         <tr><td>How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?</td><td>${'${0:,.2f}'.format(object.question_27)}</td></tr>
         <tr><td>Total annual Recurring expenses minus remaining spousal income</td><td>${'${0:,.2f}'.format(object.question_27_1)}</td></tr>
-        <tr><td>Recurring expenses multiplied by the amount of years until retirement</td><td>${'${0:,.2f}'.format(object.question_27_2)}</td></tr>
+        <tr><td>Total Benefit needed to cover recurring annual expenses minus spousal income</td><td>${'${0:,.2f}'.format(object.question_27_3)}</td></tr>
         <tr><td>Estimated Life Insurance needed:</td><td>${'${0:,.2f}'.format(object.total_insurance)}</td></tr>
         % if object.state == 'requested_quote'
             <tr><td>Date of Birth</td><td>${object.date_of_birth}</td></tr>

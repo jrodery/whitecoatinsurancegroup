@@ -146,9 +146,9 @@ class LifeInsuranceEstimate(models.Model):
     question_24_1 = fields.Float(store="True", compute="_compute_property_tax",
                                  string="Total")
 
-    @api.depends('question_23', 'question_24')
+    @api.depends('question_5_2', 'question_23', 'question_24')
     def _compute_property_tax(self):
-        self.question_24_1 = self.question_23 + self.question_24
+        self.question_24_1 = self.question_23 + self.question_24 + self.question_5_2
 
     question_25 = fields.Selection(
         select_boolean,
@@ -164,27 +164,32 @@ class LifeInsuranceEstimate(models.Model):
     question_27_1 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
                                  string="Total annual Recurring expenses "
                                         "minus remaining spousal income")
-    question_27_2 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
-                                 string="Recurring expenses multiplied by the "
-                                        "amount of years until retirement")
+    # question_27_2 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
+    #                              string="Recurring expenses multiplied by the "
+    #                                     "amount of years until retirement")
+    question_27_3 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
+                                 string="Total Benefit needed to cover recurring annual expenses minus spousal income")
+
 
     @api.depends('question_5_3', 'question_24_1',
                  'question_26', 'question_27', 'remaining_age')
     def _compute_annual_recurring_expenses(self):
         amount = self.question_24_1 + self.question_26 * 12 + self.question_27 * 12 - self.question_5_3
         self.question_27_1 = amount
-        self.question_27_2 = amount * self.remaining_age
+        # self.question_27_2 = amount * self.remaining_age
+        self.question_27_3 = amount * 0.05
 
     total_insurance = fields.Float(
         store="True", compute='_compute_total_calculation',
         string="Calculating how much life insurance you need")
 
-    @api.depends('question_14_2', 'question_22_1', 'question_27_2')
+    @api.depends('question_14_2', 'question_22_1', 'question_27_3')
     def _compute_total_calculation(self):
         self.total_insurance = sum([
             self.question_14_2,
             self.question_22_1,
-            self.question_27_2
+            # self.question_27_2
+            self.question_27_3
         ])
 
     date_of_birth = fields.Date(string="Date of Birth")

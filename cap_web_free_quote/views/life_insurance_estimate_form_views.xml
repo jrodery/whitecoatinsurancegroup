@@ -92,7 +92,8 @@
                         <field name="question_26" attrs="{'readonly': [('question_25', '!=', 'Yes')]}"/>
                         <field name="question_27"/>
                         <field name="question_27_1" readonly="1" force_save="1"/>
-                        <field name="question_27_2" readonly="1" force_save="1"/>
+                        <!-- <field name="question_27_2" readonly="1" force_save="1"/> -->
+                        <field name="question_27_3" readonly="1" force_save="1"/>
                     </group>
                     <separator string="Total Insurance"/>
                     <group col="3">
