@@ -171,11 +171,11 @@ class LifeInsuranceEstimate(models.Model):
                                  string="Total Benefit needed to cover recurring annual expenses minus spousal income")
 
 
-    @api.depends('question_4', 'question_5_3', 'question_24_1',
+    @api.depends('question_4', 'question_5_3', 'question_23', 'question_24',
                  'question_26', 'question_27', 'remaining_age')
     def _compute_annual_recurring_expenses(self):
         for rec in self:
-            amount = rec.question_24_1 + rec.question_26 * 12 + rec.question_27 * 12 - rec.question_5_3
+            amount = rec.question_23 + rec.question_24 + rec.question_26 * 12 + rec.question_27 * 12 - rec.question_5_3
             rec.question_27_1 = amount
             # rec.question_27_2 = amount * rec.remaining_age
             rec.question_27_3 = amount / 0.05
