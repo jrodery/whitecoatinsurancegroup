@@ -245,7 +245,7 @@ class LifeInsuranceEstimate(models.Model):
     @api.multi
     def send_form_mail(self):
         template = self.env.ref(
-            'cap_web_free_quote.mail_customer_life_insurance_estimate_form',
+            'cap_web_free_quote.mail_customer_online_insurance_application_form',
             raise_if_not_found=False)
         template.send_mail(self.id)
 
