@@ -13,7 +13,24 @@ class LifeInsuranceEstimate(models.Model):
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
-    ref_code = fields.Char(string="Reference", default=uuid.uuid4())
+    ref_code = fields.Char(string="Reference", default=uuid.uuid4(),
+                            compute='_compute_unique_id')
+
+        @api.multi
+        def _compute_unique_id(self):
+            for res in self:
+                ref_code = uuid.uuid4()
+                existing_estimates = self.env['life.insurance.estimate'].search_count([
+                    ('ref_code', '=', ref_code)
+                ])
+                while existing_estimates > 0:
+                    ref_code = uuid.uuid4()
+                    existing_estimates = self.env['life.insurance.estimate'].search_count([
+                        ('ref_code', '=', ref_code)
+                    ])
+                res.ref_code = ref_code
+
+
     name = fields.Char(string="Log")
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -238,9 +255,11 @@ class LifeInsuranceEstimate(models.Model):
     @api.multi
     def write(self, vals):
         res = super(LifeInsuranceEstimate, self).write(vals)
-        if vals.get('state', '') in ['done', 'requested_quote']:
+        if vals.get('state', '') in ['done']:
             self.sudo().send_form_mail()
-        return res, self.sudo().send_form_mail_admin()
+        if vals.get('state', '') in ['draft', 'submitted', 'requested_quote']:
+            self.sudo().send_form_mail_admin()
+        return res
 
     @api.multi
     def send_form_mail(self):
@@ -272,6 +291,8 @@ class LifeInsuranceEstimate(models.Model):
 
     def get_subject(self):
         if self.state == 'done':
-            return 'Life Insurance Estimation'
+            return 'Life Insurance Calculator Results'
+        elif self.state == 'requested_quote':
+            return 'Requested Quote for Life Insurance Estimation'
         else:
             return 'Requested Quote for Life Insurance Estimation'
