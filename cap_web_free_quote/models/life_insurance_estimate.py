@@ -13,23 +13,14 @@ class LifeInsuranceEstimate(models.Model):
 
     select_boolean = [('Yes', 'Yes'), ('No', 'No')]
 
-    ref_code = fields.Char(string="Reference", default=uuid.uuid4(),
-                            compute='_compute_unique_id')
+    @api.multi
+    def compute_unique_id(self):
+        ref_code = uuid.uuid4()
+        while self.env['life.insurance.estimate'].search([('ref_code', '=', ref_code)], limit=1):
+            ref_code = uuid.uuid4()
+        return ref_code
 
-        @api.multi
-        def _compute_unique_id(self):
-            for res in self:
-                ref_code = uuid.uuid4()
-                existing_estimates = self.env['life.insurance.estimate'].search_count([
-                    ('ref_code', '=', ref_code)
-                ])
-                while existing_estimates > 0:
-                    ref_code = uuid.uuid4()
-                    existing_estimates = self.env['life.insurance.estimate'].search_count([
-                        ('ref_code', '=', ref_code)
-                    ])
-                res.ref_code = ref_code
-
+    ref_code = fields.Char(store="True", string="Reference", default=compute_unique_id)
 
     name = fields.Char(string="Log")
     state = fields.Selection([
@@ -95,7 +86,6 @@ class LifeInsuranceEstimate(models.Model):
         string="If yes, How many do you have or plan to have?")
     question_8 = fields.Integer(string="Age of your youngest child?")
 
-    # Step - 4
     question_11 = fields.Selection(
         select_boolean,
         string="Do you plan on paying for college?")
@@ -124,7 +114,7 @@ class LifeInsuranceEstimate(models.Model):
         elif self.question_14 == False and self.question_14_1:
             self.question_14_2 = self.question_14_1
 
-    # Step - 5
+    # Step - 4
     question_15 = fields.Selection(select_boolean,
                                    string="Do you have have a mortgage?")
     question_16 = fields.Float(
@@ -154,7 +144,7 @@ class LifeInsuranceEstimate(models.Model):
             self.question_20, self.question_22
         ])
 
-    # Step - 6
+    # Step - 5
     question_23 = fields.Float(
         string="If you own your own home what are your annual property taxes? "
                "If you rent, what is your monthly rent?")
