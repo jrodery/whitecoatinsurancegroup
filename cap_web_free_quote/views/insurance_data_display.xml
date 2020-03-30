@@ -94,7 +94,7 @@
                                             Annual Recurring Expenses
                                         </div>
                                         <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_24_1 + life.question_27_1"
+                                            <t t-esc="life.question_27_2"
                                                t-options="{
                                                'widget': 'monetary',
                                                'display_currency': currency_id
