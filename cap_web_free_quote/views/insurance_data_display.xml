@@ -21,7 +21,7 @@
                             </div>
 
                             <t t-set="thk_invest_balance"
-                               t-value="life.total_insurance - (life.question_14_1 + life.question_22_1)"/>
+                               t-value="life.total_insurance - (life.question_14_2 + life.question_22_1)"/>
 
                             <!--Panel 1 Start-->
                             <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
