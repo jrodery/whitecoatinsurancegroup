@@ -5,9 +5,10 @@
                 <section class="features">
                     <script>
                     </script>
-                    <div class="container">
+                    <div class="row">
                         <t t-set="life" t-value="insurance_data"/>
-                        <div class="thankyou_content_wrapper text-center">
+                        <div class="offset-lg-2 col-lg-5 col-xs-6">
+                          <div class="thankyou_content_wrapper text-center">
                             <!--Title That shows First/Last name and age-->
                             <div class="thankyou_customer_details_wrapper">
                                 <h3>
@@ -311,113 +312,111 @@
                                 </div>
                             </div>
                             <!--Panel 4 End-->
-
-                            <!--Panel 5 Start-->
-                            <div>
-                              <div class="thankyou_content_wrapper_panel_title">
-                                <span>Request Quotes</span>
+                        </div>
+                        </div>
+                        <!--Request Quote form-->
+                        <div class="col-lg-3 col-xs-6 thankyou_content_wrapper text-center request_quotes_form">
+                          <div class="thankyou_content_wrapper_panel_title">
+                            <span>Request Quotes</span>
+                          </div>
+                          <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
+                          <div class="thankyou_request_content_wrapper_panel">
+                            <div class="thankyou_content_inner_title pt-2">
+                              <span t-esc="life.question_28 + ' ' + life.question_29"/>
+                              <span id="thankyou_quote_receive_msg" style="color: #056705; display: none;"> - Quote Request received! We will get back to you shortly.</span>
+                              <span id="thankyou_quote_receive_error_msg" style="color: #ff0000; display: none;"> - There is some problem to save.</span>
+                            </div>
+                            <div class="thankyou_panel_request_death_benefit_content">
+                              <span>Death Benefit:
+                                <t t-esc="life.total_insurance"
+                                  t-options="{
+                                  'widget': 'monetary',
+                                  'display_currency': currency_id
+                                  }"
+                                  />
+                                </span>
                               </div>
-                              <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
-                              <div class="thankyou_request_content_wrapper_panel">
-                                <div class="thankyou_content_inner_title">
-                                  <span t-esc="life.question_28 + ' ' + life.question_29"/>
-                                  <span id="thankyou_quote_receive_msg" style="color: #056705; display: none;"> - Quote Request received! We will get back to you shortly.</span>
-                                  <span id="thankyou_quote_receive_error_msg" style="color: #ff0000; display: none;"> - There is some problem to save.</span>
+                              <div>
+                                <input id="date_of_birth" type="text" class="thankyou_input_data"
+                                  name="date_of_birth" required="True"
+                                  placeholder="Date of birth: MM/DD/YYYY"/>
                                 </div>
-                                <div class="thankyou_panel_request_death_benefit_content">
-                                  <span>Death Benefit:
-                                    <t t-esc="life.total_insurance"
-                                      t-options="{
-                                      'widget': 'monetary',
-                                      'display_currency': currency_id
-                                      }"
-                                      />
-                                    </span>
+                                <div>
+                                  <select type="text" class="thankyou_input_data"
+                                    id="gender" name="gender" required="True" style="text-align-last:center;">
+                                    <option value="">Sex</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                  </select>
+                                </div>
+                                <div>
+                                  <input type="text" class="thankyou_input_data"
+                                    id="state" name="state" required="True"
+                                    placeholder="State"/>
                                   </div>
                                   <div>
-                                    <input id="date_of_birth" type="text" class="thankyou_input_data"
-                                      name="date_of_birth" required="True"
-                                      placeholder="Date of birth: MM/DD/YYYY"/>
-                                    </div>
-                                    <div>
-                                      <select type="text" class="thankyou_input_data"
-                                        id="gender" name="gender" required="True" style="text-align-last:center;">
-                                        <option value="">Sex</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                      </select>
-                                    </div>
-                                    <div>
-                                      <input type="text" class="thankyou_input_data"
-                                        id="state" name="state" required="True"
-                                        placeholder="State"/>
-                                      </div>
-                                      <div>
-                                        <select type="text" class="thankyou_input_data"
-                                          id="do_you_smoke" name="do_you_smoke" required="True" style="text-align-last:center;">
-                                          <option value="">Do You Smoke?</option>
-                                          <option value="Yes">Yes</option>
-                                          <option value="No">No</option>
-                                        </select>
-                                      </div>
+                                    <select type="text" class="thankyou_input_data"
+                                      id="do_you_smoke" name="do_you_smoke" required="True" style="text-align-last:center;">
+                                      <option value="">Do You Smoke?</option>
+                                      <option value="Yes">Yes</option>
+                                      <option value="No">No</option>
+                                    </select>
+                                  </div>
 
-                                      <div class="thankyou_rate_health">
-                                        <div>
-                                          <span>Rate Your Health</span>
-                                        </div>
-                                        <div class="star-rating">
-                                          <span class="fa fa-star-o star1 star_label"  data-rating="1"></span>
-                                          <span class="fa fa-star-o" data-rating="2"></span>
-                                          <span class="fa fa-star-o star3 star_label" data-rating="3"></span>
-                                          <span class="fa fa-star-o" data-rating="4"></span>
-                                          <span class="fa fa-star-o star5 star_label" data-rating="5"></span>
-                                          <input type="hidden" id="rating" value="0"/>
-                                        </div>
-                                      </div>
+                                  <div class="thankyou_rate_health">
+                                    <span>Rate Your Health</span>
+                                    <div class="star-rating">
+                                      <span class="fa fa-star-o star1 star_label"  data-rating="1"></span>
+                                      <span class="fa fa-star-o" data-rating="2"></span>
+                                      <span class="fa fa-star-o star3 star_label" data-rating="3"></span>
+                                      <span class="fa fa-star-o" data-rating="4"></span>
+                                      <span class="fa fa-star-o star5 star_label" data-rating="5"></span>
+                                      <input type="hidden" id="rating" value="0"/>
                                     </div>
-                                    <!--Panel 5 End-->
-                                    <div class="thankyou_content_wrapper_panel">
-                                      <div class="thankyou_panel_request_death_benefit_content">
-                                        Choose Policy Type(s)
-                                      </div>
-                                      <div class="thankyou_policy_content pb-2">
-                                        <div class="thankyou_policy_radio">
-                                          <label class="thankyou_policy_radio_label">10 Year Level Term
-                                            <input type="radio" value="10 Year Level Term" name="policy_type" id="policy_type"/>
-                                            <span class="checkmark"></span>
-                                          </label>
-                                        </div>
-                                        <div class="thankyou_policy_radio">
-                                          <label class="thankyou_policy_radio_label">15 Year Level Term
-                                            <input type="radio" name="policy_type" value="15 Year Level Term" id="policy_type"/>
-                                            <span class="checkmark"></span>
-                                          </label>
-                                        </div>
-                                        <div class="thankyou_policy_radio">
-                                          <label class="thankyou_policy_radio_label">20 Year Level Term
-                                            <input type="radio" name="policy_type" value="20 Year Level Term" id="policy_type"/>
-                                            <span class="checkmark"></span>
-                                          </label>
-                                        </div>
-                                        <div class="thankyou_policy_radio">
-                                          <label class="thankyou_policy_radio_label">30 Year Level Term
-                                            <input type="radio" name="policy_type" value="30 Year Level Term" id="policy_type"/>
-                                            <span class="checkmark"></span>
-                                          </label>
-                                        </div>
-                                        <div class="thankyou_policy_radio">
-                                          <label class="thankyou_policy_radio_label">LifeTime Coverage
-                                            <input type="radio" name="policy_type" value="LifeTime Coverage" id="policy_type"/>
-                                            <span class="checkmark"></span>
-                                          </label>
-                                        </div>
-                                      </div>
-                                      <div id="msform" style="margin-top:0;">
-                                        <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit"/>
-                                      </div>
+                                  </div>
+                                </div>
+                                <!--Panel 5 End-->
+                                <div class="thankyou_content_wrapper_panel">
+                                  <div class="thankyou_panel_request_death_benefit_content">
+                                    Choose Policy Type(s)
+                                  </div>
+                                  <div class="thankyou_policy_content pb-2">
+                                    <div class="thankyou_policy_radio">
+                                      <label class="thankyou_policy_radio_label">10 Year Level Term
+                                        <input type="radio" value="10 Year Level Term" name="policy_type" id="policy_type"/>
+                                        <span class="checkmark"></span>
+                                      </label>
                                     </div>
-                            </div>
-                        </div>
+                                    <div class="thankyou_policy_radio">
+                                      <label class="thankyou_policy_radio_label">15 Year Level Term
+                                        <input type="radio" name="policy_type" value="15 Year Level Term" id="policy_type"/>
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                      <label class="thankyou_policy_radio_label">20 Year Level Term
+                                        <input type="radio" name="policy_type" value="20 Year Level Term" id="policy_type"/>
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                      <label class="thankyou_policy_radio_label">30 Year Level Term
+                                        <input type="radio" name="policy_type" value="30 Year Level Term" id="policy_type"/>
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                    <div class="thankyou_policy_radio">
+                                      <label class="thankyou_policy_radio_label">LifeTime Coverage
+                                        <input type="radio" name="policy_type" value="LifeTime Coverage" id="policy_type"/>
+                                        <span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div id="msform" style="margin-top:0;">
+                                    <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit"/>
+                                  </div>
+                                </div>
+                              </div>
                     </div>
                 </section>
             </div>
