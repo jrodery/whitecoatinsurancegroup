@@ -171,9 +171,8 @@ class LifeInsuranceEstimate(models.Model):
     question_27_1 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
                                  string="Total annual Recurring expenses "
                                         "minus remaining spousal income")
-    # question_27_2 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
-    #                              string="Recurring expenses multiplied by the "
-    #                                     "amount of years until retirement")
+    question_27_2 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
+                                 string="Annual Recurring Expenses")
     question_27_3 = fields.Float(store="True", compute="_compute_annual_recurring_expenses",
                                  string="Total Benefit needed to cover recurring annual expenses minus spousal income")
 
@@ -189,8 +188,8 @@ class LifeInsuranceEstimate(models.Model):
                 rec.question_27_1 = 0
             else:
                 rec.question_27_1 = recurring_minus_spouse
-            # rec.question_27_2 = amount * rec.remaining_age
-            rec.question_27_3 = amount / 0.05
+            rec.question_27_2 = amount
+            rec.question_27_3 = rec.question_27_1 / 0.05
 
     total_insurance = fields.Float(
         store="True", compute='_compute_total_calculation',

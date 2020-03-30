@@ -655,7 +655,7 @@
                                                               <li style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span style="font-size:14px">Kids: <span style="color:#2093ce">${object.question_7}</span></span></li>
                                                               <li style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Tuition Liability: <span style="color:#2093ce">${'${0:,.2f}'.format(object.question_14_2)}</span></li>
                                                               <li style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Total Debt: <span style="color:#2093ce">${'${0:,.2f}'.format(object.question_22_1)}</span></li>
-                                                              <li style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Annual Recurring Expenses: <span style="color:#2093ce">${'${0:,.2f}'.format(object.question_27_1)}</span></li>
+                                                              <li style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Annual Recurring Expenses: <span style="color:#2093ce">${'${0:,.2f}'.format(object.question_27_2)}</span></li>
                                                             </ul>
                                                             <div style="text-align: center;"><span style="font-size:18px"><span style="color:#175677"><strong>Total Life Insurance Death Benefit required to cover your lifestyle:</strong></span></span><br/>
                                                               <br/>
