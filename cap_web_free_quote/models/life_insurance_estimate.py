@@ -183,7 +183,7 @@ class LifeInsuranceEstimate(models.Model):
     def _compute_annual_recurring_expenses(self):
         for rec in self:
             amount = rec.question_23 + rec.question_24 + rec.question_26 * 12 + rec.question_27 * 12
-            spouse_income - rec.question_5_3
+            spouse_income = rec.question_5_3
             recurring_minus_spouse = amount - spouse_income
             if recurring_minus_spouse < 0:
                 rec.question_27_1 = 0
