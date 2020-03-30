@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_7 > 0">
                                     <img class="panel_1_gray_block_content_img"
                                          src="/cap_web_free_quote/static/src/img/children.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 > 0">
                                     <img class="panel_1_gray_block_content_img"
                                          src="/cap_web_free_quote/static/src/img/tuition.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 > 0">
                                     <img class="panel_1_gray_block_content_img"
                                          src="/cap_web_free_quote/static/src/img/debt.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_27_2 > 0">
                                     <img class="panel_1_gray_block_content_img"
                                          src="/cap_web_free_quote/static/src/img/expenses.PNG"/>
                                     <div class="panel_1_gray_block_content_wrapper">
@@ -120,69 +120,89 @@
                             <!--Panel 1 End-->
 
                             <!--Panel 2 Start-->
-                            <div class="thankyou_content_wrapper_panel_title">
-                                <span>What's The Plan If you Die?</span>
+                            <div class="thankyou_content_wrapper_panel_title" t-if="life.question_14_2 > 0 or life.question_22_1 > 0 and thk_invest_balance > 0">
+                              <span>What's The Plan If you Die?</span>
                             </div>
 
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="(life.question_14_2 > 0 or life.question_22_1 > 0) and thk_invest_balance > 0">
+                              <t t-if="life.question_14_2 > 0 and life.question_22_1 > 0">
                                 <div class="thankyou_content_inner_title">
-                                    <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
+                                  <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
                                 </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_details">
-                                            <span t-esc="0 - life.question_14_2"
-                                                  t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"
-                                            />
-                                        </div>
-                                        <div class="panel_1_gray_block_content_title">
-                                            Tuition Savings
-                                        </div>
-                                    </div>
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/savings_tuition.PNG"/>
+                              <t t-elif="life.question_14_2 > 0">
+                                <div class="thankyou_content_inner_title">
+                                  <span>Set Aside Funds for your Children's Education</span>
                                 </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_details">
-                                            <span t-esc="0 - life.question_22_1"
-                                                  t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"
-                                            />
-                                        </div>
-                                        <div class="panel_1_gray_block_content_title">
-                                            Pay Off Debt
-                                        </div>
-                                    </div>
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG"/>
+                              <t t-elif="life.question_22_1 > 0">
+                                <div class="thankyou_content_inner_title">
+                                  <span>Pay Off Debts</span>
                                 </div>
+                              </t>
 
+                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="0 - life.question_14_2 > 0">
+                                <div class="panel_1_gray_block_content_wrapper">
+                                  <div class="panel_1_gray_block_content_details">
+                                    <span t-esc="0 - life.question_14_2"
+                                      t-options="{
+                                      'widget': 'monetary',
+                                      'display_currency': currency_id
+                                      }"
+                                      />
+                                  </div>
+                                  <div class="panel_1_gray_block_content_title">
+                                    Tuition Savings
+                                  </div>
+                                </div>
+                                <img class="panel_1_gray_block_content_img"
+                                  src="/cap_web_free_quote/static/src/img/savings_tuition.PNG"/>
+                              </div>
+
+                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="0 - life.question_22_1 > 0">
+                                  <div class="panel_1_gray_block_content_wrapper">
+                                      <div class="panel_1_gray_block_content_details">
+                                          <span t-esc="0 - life.question_22_1"
+                                                t-options="{
+                                             'widget': 'monetary',
+                                             'display_currency': currency_id
+                                             }"
+                                          />
+                                      </div>
+                                      <div class="panel_1_gray_block_content_title">
+                                          Pay Off Debts
+                                      </div>
+                                  </div>
+                                  <img class="panel_1_gray_block_content_img"
+                                       src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG"/>
+                              </div>
+
+                              <t t-if="life.question_14_2 > 0 and life.question_22_1 > 0">
                                 <div class="thankyou_pannel_overall_info_text">
                                     Total Remaining Balance After Debts/Education are Paid
                                 </div>
-
-                                <div class="thankyou_panel_1_total_amount">
-                                    <t t-esc="thk_invest_balance"
-                                       t-options="{
-                                       'widget': 'monetary',
-                                       'display_currency': currency_id
-                                       }"
-                                    />
+                              <t t-elif="life.question_14_2 > 0">
+                                <div class="thankyou_pannel_overall_info_text">
+                                    Total Remaining Balance After Education Paid
                                 </div>
+                              <t t-elif="life.question_22_1 > 0">
+                                <div class="thankyou_pannel_overall_info_text">
+                                    Total Remaining Balance After Debts are Paid
+                                </div>
+                              </t>
+
+                              <div class="thankyou_panel_1_total_amount">
+                                  <t t-esc="thk_invest_balance"
+                                     t-options="{
+                                     'widget': 'monetary',
+                                     'display_currency': currency_id
+                                     }"
+                                  />
+                              </div>
                             </div>
 
                             <!--Panel 2 End-->
 
                             <!--Panel 3 Start-->
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance > 0">
                                 <div class="thankyou_content_inner_title">
                                     <span>Invest the balance - The annual earned interest should cover your recurring annual expenses.
                                     </span>
@@ -227,7 +247,7 @@
                             <!--Panel 3 End-->
 
                             <!--Panel 4 Start-->
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance > 0">
                                 <div class="thankyou_content_death_benefit">
                                     <div class="thankyou_total_insurance">
                                         <span t-esc="life.total_insurance"
@@ -242,7 +262,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_22_1 > 0">
                                     <div class="panel_2_white_block_content_wrapper">
                                         <div class="panel_2_white_block_image_title">
                                             Pays Off Your Debt
@@ -252,7 +272,7 @@
                                          src="/cap_web_free_quote/static/src/img/debt_white.PNG"/>
                                 </div>
 
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_14_2 > 0">
                                     <div class="panel_2_white_block_content_wrapper">
                                         <div class="panel_2_white_block_image_title">
                                             Funds Your Kids Education
@@ -262,7 +282,7 @@
                                          src="/cap_web_free_quote/static/src/img/tuition_white.PNG"/>
                                 </div>
 
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block">
+                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_27_2 > 0">
                                     <div class="panel_2_white_block_content_wrapper">
                                         <div class="panel_2_white_block_image_title">
                                             Covers All Your Annual Recurring Expenses
@@ -272,7 +292,7 @@
                                          src="/cap_web_free_quote/static/src/img/expenses_white.PNG"/>
                                 </div>
 
-                                <div class="thankyou_panel_legacy_white_block">
+                                <div class="thankyou_panel_legacy_white_block" t-if="thk_invest_balance > 0">
                                     <div class="panel_2_white_block_legacy_worth_title pb-4">
                                         And Still Leaves Behind A Financial Legacy Worth:
                                     </div>
