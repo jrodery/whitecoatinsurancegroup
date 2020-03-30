@@ -129,10 +129,12 @@
                                 <div class="thankyou_content_inner_title">
                                   <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
                                 </div>
+                              </t>
                               <t t-elif="life.question_14_2 > 0">
                                 <div class="thankyou_content_inner_title">
                                   <span>Set Aside Funds for your Children's Education</span>
                                 </div>
+                              </t>
                               <t t-elif="life.question_22_1 > 0">
                                 <div class="thankyou_content_inner_title">
                                   <span>Pay Off Debts</span>
@@ -179,10 +181,12 @@
                                 <div class="thankyou_pannel_overall_info_text">
                                     Total Remaining Balance After Debts/Education are Paid
                                 </div>
+                              </t>
                               <t t-elif="life.question_14_2 > 0">
                                 <div class="thankyou_pannel_overall_info_text">
                                     Total Remaining Balance After Education Paid
                                 </div>
+                              </t>
                               <t t-elif="life.question_22_1 > 0">
                                 <div class="thankyou_pannel_overall_info_text">
                                     Total Remaining Balance After Debts are Paid
