@@ -124,7 +124,7 @@
                               <span>What's The Plan If you Die?</span>
                             </div>
 
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="(life.question_14_2 > 0 or life.question_22_1 > 0) and thk_invest_balance > 0">
+                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="life.question_14_2 > 0 or life.question_22_1 > 0 and thk_invest_balance > 0">
                               <t t-if="life.question_14_2 > 0 and life.question_22_1 > 0">
                                 <div class="thankyou_content_inner_title">
                                   <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
