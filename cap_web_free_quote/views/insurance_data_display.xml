@@ -141,7 +141,7 @@
                                 </div>
                               </t>
 
-                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="0 - life.question_14_2 > 0">
+                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 > 0">
                                 <div class="panel_1_gray_block_content_wrapper">
                                   <div class="panel_1_gray_block_content_details">
                                     <span t-esc="0 - life.question_14_2"
@@ -159,7 +159,7 @@
                                   src="/cap_web_free_quote/static/src/img/savings_tuition.PNG"/>
                               </div>
 
-                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="0 - life.question_22_1 > 0">
+                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 > 0">
                                   <div class="panel_1_gray_block_content_wrapper">
                                       <div class="panel_1_gray_block_content_details">
                                           <span t-esc="0 - life.question_22_1"
