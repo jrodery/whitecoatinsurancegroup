@@ -3,6 +3,26 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
     var ajax = require('web.ajax');
 
     $(document).ready(function () {
+
+        currencyInput = function() {
+          this.each(function() {
+            var wrapper = $("<div class='currency-input' />");
+            $(this).wrap(wrapper);
+            $(this).change(function() {
+              var min = parseFloat($(this).attr("min"));
+              var max = parseFloat($(this).attr("max"));
+              var value = this.valueAsNumber;
+              if(value < min)
+                value = min;
+              else if(value > max)
+                value = max;
+              $(this).val(value.toFixed(2));
+            });
+          });
+        };
+
+        $('input.currency').currencyInput();
+
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
             var gender = $('#gender').val();
@@ -13,8 +33,8 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var birth_date = $('#date_of_birth').val();
             var rate_your_health = $('#rating').val();
 
-            if(!birth_date || !birth_date || !gender || !state || !smoke || !policy_type) {
-                alert("Please fill below details");
+            if(!requested_benefit || !birth_date || !gender || !state || !smoke || !policy_type) {
+                alert("Please fill the form");
                 $('#requested_benefit').focus();
                 return;
             }
