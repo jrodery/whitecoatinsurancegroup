@@ -23,8 +23,8 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
           // Get the value.
           var input = $this.val();
 
-          var input = input.replace(/[\D\s\._\-]+/g, "");
-                  input = input ? parseInt(input, 10) : 0;
+          // var input = input.replace(/[\D\s\._\-]+/g, "");
+          //         input = input ? parseInt(input, 10) : 0;
 
           $this.val(function() {
               return (input === 0) ? "" : input.toLocaleString('en-EN');
