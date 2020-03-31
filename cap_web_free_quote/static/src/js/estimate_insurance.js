@@ -4,15 +4,51 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
 
-        var req_benefit = parseFloat($("#requested_benefit").val());
-        req_benefit = req_benefit.toFixed(2);
-        $("input[name='requested_benefit']").val(req_benefit)
+        $(function() {
 
-        $('#requested_benefit').focusout(function() {
-           var new_req_benefit = parseFloat($("#requested_benefit").val());
-           new_req_benefit = new_req_benefit.toFixed(2);
-           $("input[name='requested_benefit']").val(new_req_benefit)
-        });
+           var $form = $( "#form" );
+           var $input = $form.find( "input" );
+
+           $input.on( "keyup", function( event ) {
+
+
+               // When user select text in the document, also abort.
+               var selection = window.getSelection().toString();
+               if ( selection !== '' ) {
+                   return;
+               }
+               var $this = $( this );
+               // Get the value.
+               var input = $this.val();
+
+               var input = input.replace(/[\D\s\._\-]+/g, "");
+                       input = input ? parseInt( input, 10 ) : 0;
+
+                       $this.val( function() {
+                           return ( input === 0 ) ? "" : input.toLocaleString( "en-US" );
+                       } );
+           } );
+
+           /**
+            * ==================================
+            * When Form Submitted
+            * ==================================
+            */
+           $form.on( "submit", function( event ) {
+
+               var $this = $( this );
+               var arr = $this.serializeArray();
+
+               for (var i = 0; i < arr.length; i++) {
+                       arr[i].value = arr[i].value.replace(/[($)\s\._\-]+/g, ''); // Sanitize the values.
+               };
+
+               console.log( arr );
+
+               event.preventDefault();
+           });
+
+         });
 
 
         $('.thankyou_req_quote').on('click', function(){
