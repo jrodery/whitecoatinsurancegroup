@@ -27,12 +27,13 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                   input = input ? parseInt(input, 10) : 0;
 
           $this.val(function() {
-              return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
+              return (input === 0) ? "" : input.toLocaleString('en-EN');
           });
         };
         $('#requested_benefit').on("keyup", function(event) {
           FormatBenefit($('#requested_benefit'));
         });
+        FormatBenefit($('#requested_benefit'));
 
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
