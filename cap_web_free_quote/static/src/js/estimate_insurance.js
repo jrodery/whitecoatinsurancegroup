@@ -7,34 +7,32 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
         var FormatBenefit = function() {
           var $input = $('#requested_benefit');
-           // When user select text in the document, also abort.
-           var selection = window.getSelection().toString();
-           if (selection !== '') {
-               return;
-           }
 
-           // When the arrow keys are pressed, abort.
-           if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
-               return;
-           }
+           $input.on("keyup", function(event) {
+              // When user select text in the document, also abort.
+              var selection = window.getSelection().toString();
+              if (selection !== '') {
+                  return;
+              }
 
-           var $this = $(this);
+              // When the arrow keys are pressed, abort.
+              if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
+                  return;
+              }
 
-           // Get the value.
-           var input = $this.val();
+              var $this = $(this);
 
-           var input = input.replace(/[\D\s\._\-]+/g, "");
-                   input = input ? parseInt(input, 10) : 0;
+              // Get the value.
+              var input = $this.val();
 
-           $this.val(function() {
-               return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
-           });
-         };
-         FormatBenefit();
+              var input = input.replace(/[\D\s\._\-]+/g, "");
+                      input = input ? parseInt(input, 10) : 0;
 
-         $('#requested_benefit').on("keyup", function(event) {
-           FormatBenefit();
-         });
+              $this.val(function() {
+                  return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
+              });
+            });
+          };
 
 
         $('.thankyou_req_quote').on('click', function(){
