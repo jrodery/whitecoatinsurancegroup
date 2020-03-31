@@ -328,22 +328,14 @@
                             </div>
                             <div class="thankyou_panel_request_death_benefit_content">
                               <span>Death Benefit:
-                                <div class="currency-input" >
-                                  <span class="currency-symbol"
-                                    style="position: absolute;padding: 2px 5px;">$</span>
-                                  <input id="requested_benefit" name="requested_benefit"
-                                    type="number" min="0.01"
-                                    class="currency" style="text-align: center;border:none;"
-                                    required="True" t-att-value="life.total_insurance"
-                                    t-att-placeholder="life.total_insurance"/>
-                                </div>
 
                                 <div class="flex">
-                                    <span class="currency">$</span>
-                                    <input id="requested_benefit" name="requested_benefit"
-                                      type="text" style="text-align: center;border:none;"
-                                      required="True" t-att-value="life.total_insurance"
-                                      t-att-placeholder="life.total_insurance"/>                                </div>
+                                  <span class="currency">$</span>
+                                  <input id="requested_benefit" name="requested_benefit"
+                                    type="text" style="text-align: center;border:none;"
+                                    required="True" t-att-value="life.total_insurance"
+                                    t-att-placeholder="life.total_insurance">
+                                </div>
                                 <!-- <t t-esc="life.total_insurance"
                                   t-options="{
                                   'widget': 'monetary',
