@@ -4,6 +4,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
         $('.thankyou_req_quote').on('click', function(){
+            var requested_benefit = $('#requested_benefit').val();
             var gender = $('#gender').val();
             var state = $('#state').val();
             var smoke = $('#do_you_smoke').val();
@@ -12,9 +13,9 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var birth_date = $('#date_of_birth').val();
             var rate_your_health = $('#rating').val();
 
-            if(!birth_date || !gender || !state || !smoke || !policy_type) {
+            if(!birth_date || !birth_date || !gender || !state || !smoke || !policy_type) {
                 alert("Please fill below details");
-                $('#date_of_birth').focus();
+                $('#requested_benefit').focus();
                 return;
             }
 
@@ -24,6 +25,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             }
 
             ajax.jsonRpc('/thankyou/request_quote', 'call', {
+                'requested_benefit': requested_benefit,
                 'gender': gender.trim(),
                 'quote_state': state.trim(),
                 'smoke': smoke == "Yes" ? true : false,
