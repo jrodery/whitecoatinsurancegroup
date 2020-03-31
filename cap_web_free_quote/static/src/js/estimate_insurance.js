@@ -3,36 +3,37 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
     var ajax = require('web.ajax');
 
     $(document).ready(function () {
-        $('#requested_benefit').toLocaleString("en-US");
+        $('#requested_benefit').focus();
 
-        $(function() {
+        var FormatBenefit = function() {
           var $input = $('#requested_benefit');
+           // When user select text in the document, also abort.
+           var selection = window.getSelection().toString();
+           if (selection !== '') {
+               return;
+           }
 
-           $input.on("keyup", function(event) {
+           // When the arrow keys are pressed, abort.
+           if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
+               return;
+           }
 
-               // When user select text in the document, also abort.
-               var selection = window.getSelection().toString();
-               if (selection !== '') {
-                   return;
-               }
+           var $this = $(this);
 
-               // When the arrow keys are pressed, abort.
-               if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
-                   return;
-               }
+           // Get the value.
+           var input = $this.val();
 
-               var $this = $(this);
+           var input = input.replace(/[\D\s\._\-]+/g, "");
+                   input = input ? parseInt(input, 10) : 0;
 
-               // Get the value.
-               var input = $this.val();
-
-               var input = input.replace(/[\D\s\._\-]+/g, "");
-                       input = input ? parseInt(input, 10) : 0;
-
-               $this.val(function() {
-                   return (input === 0) ? "" : input.toLocaleString("en-US");
-               });
+           $this.val(function() {
+               return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
            });
+         });
+         FormatBenefit();
+
+         $input.on("keyup", function(event) {
+           FormatBenefit();
          });
 
 
