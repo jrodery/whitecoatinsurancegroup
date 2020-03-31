@@ -33,7 +33,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
               });
             });
           };
-
+          FormatBenefit();
 
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
