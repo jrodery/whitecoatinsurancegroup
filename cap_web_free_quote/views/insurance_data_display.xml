@@ -333,15 +333,11 @@
                                   <span class="currency">$</span>
                                   <input id="requested_benefit" name="requested_benefit"
                                     type="text" style="text-align: center;border:none;"
+                                    maxlength="15"
                                     required="True" t-att-value="life.total_insurance"
                                     t-att-placeholder="life.total_insurance"/>
                                 </div>
-                                <!-- <t t-esc="life.total_insurance"
-                                  t-options="{
-                                  'widget': 'monetary',
-                                  'display_currency': currency_id
-                                  }"
-                                  /> -->
+
                                 </span>
                               </div>
                               <div>

@@ -3,6 +3,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
     var ajax = require('web.ajax');
 
     $(document).ready(function () {
+        $('#requested_benefit').toLocaleString("en-US");
 
         $(function() {
           var $input = $('#requested_benefit');
