@@ -329,8 +329,9 @@
                             <div class="thankyou_panel_request_death_benefit_content">
                               <span>Death Benefit:
                                 <span>$
-                                  <input id="requested_benefit" name="requested_benefit" type="text"
-                                    required="True" t-value="life.total_insurance"/>
+                                  <input id="requested_benefit" name="requested_benefit"
+                                    type="text" style="text-align: center;border:none;"
+                                    required="True" t-att-value="life.total_insurance"/>
                                 </span>
                                 <!-- <t t-esc="life.total_insurance"
                                   t-options="{
