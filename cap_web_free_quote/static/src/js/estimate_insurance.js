@@ -3,37 +3,36 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
     var ajax = require('web.ajax');
 
     $(document).ready(function () {
-        $('#requested_benefit').focus();
+        var $req_benefit = $('#requested_benefit');
+        $req_benefit.focus();
 
         var FormatBenefit = function() {
-          var $input = $('#requested_benefit');
+          // When user select text in the document, also abort.
+          var selection = window.getSelection().toString();
+          if (selection !== '') {
+              return;
+          }
 
-           $input.on("keyup", function(event) {
-              // When user select text in the document, also abort.
-              var selection = window.getSelection().toString();
-              if (selection !== '') {
-                  return;
-              }
+          // When the arrow keys are pressed, abort.
+          if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
+              return;
+          }
 
-              // When the arrow keys are pressed, abort.
-              if ($.inArray(event.keyCode, [38,40,37,39]) !== -1) {
-                  return;
-              }
+          var $this = $(this);
 
-              var $this = $(this);
+          // Get the value.
+          var input = $this.val();
 
-              // Get the value.
-              var input = $this.val();
+          var input = input.replace(/[\D\s\._\-]+/g, "");
+                  input = input ? parseInt(input, 10) : 0;
 
-              var input = input.replace(/[\D\s\._\-]+/g, "");
-                      input = input ? parseInt(input, 10) : 0;
-
-              $this.val(function() {
-                  return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
-              });
-            });
-          };
+          $this.val(function() {
+              return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
+          });
+        };
+        $('#requested_benefit').on("keyup", function(event) {
           FormatBenefit();
+        });
 
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
