@@ -18,7 +18,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
               return;
           }
 
-          var $this = $(this);
+          var $this = $('#requested_benefit');
 
           // Get the value.
           var input = $this.val();
@@ -31,7 +31,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
           });
         };
         $('#requested_benefit').on("keyup", function(event) {
-          FormatBenefit();
+          FormatBenefit($('#requested_benefit'));
         });
 
         $('.thankyou_req_quote').on('click', function(){
