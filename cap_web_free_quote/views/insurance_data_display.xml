@@ -330,12 +330,12 @@
                               <span>Death Benefit:
 
                                 <div class="flex">
-                                  <span class="currency" style="position:absolute;left: 95px;">$</span>
+                                  <span class="currency" style="position:absolute;left: 80px;">$</span>
                                   <input id="requested_benefit" name="requested_benefit"
                                     type="text" maxlength="12"
                                     style="text-align: center;border:none;color:#07aff0;"
-                                    required="True" t-att-value="life.total_insurance"
-                                    placeholder="Requested Benefit"/>
+                                    required="True" t-att-value="'{0:,.2f}'.format(life.total_insurance)"
+                                    t-att-placeholder="'{0:,.2f}'.format(life.total_insurance)"/>
                                 </div>
 
                                 </span>
