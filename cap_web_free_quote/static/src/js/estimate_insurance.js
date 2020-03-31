@@ -4,24 +4,16 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
 
-        currencyInput = function() {
-          this.each(function() {
-            var wrapper = $("<div class='currency-input' />");
-            $(this).wrap(wrapper);
-            $(this).change(function() {
-              var min = parseFloat($(this).attr("min"));
-              var max = parseFloat($(this).attr("max"));
-              var value = this.valueAsNumber;
-              if(value < min)
-                value = min;
-              else if(value > max)
-                value = max;
-              $(this).val(value.toFixed(2));
-            });
-          });
-        };
+        var req_benefit = parseFloat($("#requested_benefit").val());
+        req_benefit = req_benefit.toFixed(2);
+        $("input[name='requested_benefit']").val(req_benefit)
 
-        $('input.currency').currencyInput();
+        $('#requested_benefit').focusout(function() {
+           var new_req_benefit = parseFloat($("#requested_benefit").val());
+           new_req_benefit = new_req_benefit.toFixed(2);
+           $("input[name='requested_benefit']").val(new_req_benefit)
+        });
+
 
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
