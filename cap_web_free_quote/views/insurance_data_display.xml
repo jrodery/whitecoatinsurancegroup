@@ -334,7 +334,7 @@
                                   <input id="requested_benefit" name="requested_benefit"
                                     type="text" style="text-align: center;border:none;"
                                     required="True" t-att-value="life.total_insurance"
-                                    t-att-placeholder="life.total_insurance">
+                                    t-att-placeholder="life.total_insurance"/>
                                 </div>
                                 <!-- <t t-esc="life.total_insurance"
                                   t-options="{
