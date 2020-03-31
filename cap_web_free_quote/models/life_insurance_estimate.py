@@ -205,6 +205,7 @@ class LifeInsuranceEstimate(models.Model):
                 rec.question_27_3
             ])
 
+    requested_benefit = fields.Text(string="Requested Benefit")
     date_of_birth = fields.Date(string="Date of Birth")
     gender = fields.Selection([
         ('Male', 'Male'),
