@@ -332,8 +332,8 @@
                                 <div class="flex">
                                   <span class="currency" style="position:absolute;left: 95px;">$</span>
                                   <input id="requested_benefit" name="requested_benefit"
-                                    type="text" style="text-align: center;border:none;"
-                                    maxlength="12"
+                                    type="text" maxlength="12"
+                                    style="text-align: center;border:none;color:#07aff0;"
                                     required="True" t-att-value="life.total_insurance"
                                     placeholder="Requested Benefit"/>
                                 </div>

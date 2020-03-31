@@ -27,7 +27,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
                    input = input ? parseInt(input, 10) : 0;
 
            $this.val(function() {
-               return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'}));
+               return (input === 0) ? "" : input.toLocaleString('en-EN', {style: 'currency', currency: 'USD'});
            });
          });
          FormatBenefit();
