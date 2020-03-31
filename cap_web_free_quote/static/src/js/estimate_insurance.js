@@ -32,7 +32,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
          };
          FormatBenefit();
 
-         $input.on("keyup", function(event) {
+         $('#requested_benefit').on("keyup", function(event) {
            FormatBenefit();
          });
 
