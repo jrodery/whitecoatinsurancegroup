@@ -10,8 +10,8 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
           face_amount.value = "$" + benefit.innerText
         }
 
-        setTimeout(RecalcBenefit,5000);
-        
+        setTimeout(RecalcBenefit,100);
+
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
             var gender = $('#gender').val();
