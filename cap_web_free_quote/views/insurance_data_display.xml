@@ -7,7 +7,7 @@
                     </script>
                     <div class="row">
                         <t t-set="life" t-value="insurance_data"/>
-                        <div class="offset-lg-2 col-lg-5 col-xs-6">
+                        <div class="offset-lg-1 col-lg-5 col-xs-6">
                           <div class="thankyou_content_wrapper text-center">
                             <!--Title That shows First/Last name and age-->
                             <div class="thankyou_customer_details_wrapper">
