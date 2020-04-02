@@ -4,23 +4,12 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
 
-        // function RecalcBenefit(){
-        //   var face_amount = document.querySelector("#ixn-website-quoter > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(7) > div:nth-child(2) > input[type=text]");
-        //   var benefit = document.querySelector("#wrap > section > div > div.offset-lg-1.col-lg-5.col-xs-6 > div > div:nth-child(2) > div.thankyou_panel_1_total_btn > span");
-        //   face_amount.value = "$" + benefit.innerText
-        // }
-        // setTimeout(RecalcBenefit,2500);
-
-        function checkContainer () {
-          if($('#ixn-website-quoter').is(':visible')){ //if the container is visible on the page
-            var face_amount = document.querySelector("#ixn-website-quoter > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(7) > div:nth-child(2) > input[type=text]");
-            var benefit = document.querySelector("#wrap > section > div > div.offset-lg-1.col-lg-5.col-xs-6 > div > div:nth-child(2) > div.thankyou_panel_1_total_btn > span");
-            face_amount.value = "$" + benefit.innerText
-          } else {
-            setTimeout(checkContainer, 50); //wait 50 ms, then try again
-          }
+        function RecalcBenefit(){
+          var face_amount = document.querySelector("#ixn-website-quoter > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(7) > div:nth-child(2) > input[type=text]");
+          var benefit = document.querySelector("#wrap > section > div > div.offset-lg-1.col-lg-5.col-xs-6 > div > div:nth-child(2) > div.thankyou_panel_1_total_btn > span");
+          face_amount.value = "$" + benefit.innerText
         }
-        checkContainer();
+        setTimeout(RecalcBenefit,2500);
 
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
