@@ -320,7 +320,7 @@
                           <script type="text/javascript">
                                 window.IXN_QUOTER_CONFIG = { id: "729b9afb-1384-4eaf-968f-19cb4db6344c" }
                           </script>
-                          <div id="ixn-website-quoter"></div>
+                          <div id="ixn-website-quoter"> </div>
                           <script type="text/javascript" src="https://wq.ixn.tech/js/website_quoter.widget.js"></script>
                           <!-- <div class="thankyou_content_wrapper_panel_title">
                             <span>Request Quotes</span>
