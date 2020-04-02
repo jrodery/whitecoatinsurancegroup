@@ -4,15 +4,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
 
-        function RecalcBenefit(){
-          var face_amount = document.querySelector("#ixn-website-quoter > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(7) > div:nth-child(2) > input[type=text]");
-          var benefit = document.querySelector("#wrap > section > div > div.offset-lg-1.col-lg-5.col-xs-6 > div > div:nth-child(2) > div.thankyou_panel_1_total_btn > span");
-          face_amount.value = "$" + benefit.innerText
-        }
-        setTimeout(RecalcBenefit,2500);
-
         $('.thankyou_req_quote').on('click', function(){
-            var requested_benefit = $('#requested_benefit').val();
             var gender = $('#gender').val();
             var state = $('#state').val();
             var smoke = $('#do_you_smoke').val();
@@ -21,9 +13,9 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             var birth_date = $('#date_of_birth').val();
             var rate_your_health = $('#rating').val();
 
-            if(!requested_benefit || !birth_date || !gender || !state || !smoke || !policy_type) {
+            if(!birth_date || !gender || !state || !smoke || !policy_type) {
                 alert("Please fill the form");
-                $('#requested_benefit').focus();
+                $('#birth_date').focus();
                 return;
             }
 
@@ -33,7 +25,6 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
             }
 
             ajax.jsonRpc('/thankyou/request_quote', 'call', {
-                'requested_benefit': requested_benefit,
                 'gender': gender.trim(),
                 'quote_state': state.trim(),
                 'smoke': smoke == "Yes" ? true : false,
