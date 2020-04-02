@@ -7,7 +7,7 @@
                     </script>
                     <div class="row">
                         <t t-set="life" t-value="insurance_data"/>
-                        <div class="offset-lg-1 col-lg-5 col-xs-6">
+                        <div class="offset-lg-2 col-lg-5 col-xs-6">
                           <div class="thankyou_content_wrapper text-center">
                             <!--Title That shows First/Last name and age-->
                             <div class="thankyou_customer_details_wrapper">
@@ -316,15 +316,18 @@
                         </div>
                         <!--Request Quote form-->
                         <div class="col-lg-6 col-xs-6 thankyou_content_wrapper request_quotes_form">
+
+                          <div class="thankyou_content_wrapper_panel_title">
+                            <span>Request Quotes</span>
+                          </div>
+
                           <link href="https://wq.ixn.tech/css/reset.css" rel="stylesheet" type="text/css"/>
                           <script type="text/javascript">
                                 window.IXN_QUOTER_CONFIG = { id: "729b9afb-1384-4eaf-968f-19cb4db6344c" }
                           </script>
                           <div id="ixn-website-quoter"> </div>
                           <script type="text/javascript" src="https://wq.ixn.tech/js/website_quoter.widget.js"></script>
-                          <!-- <div class="thankyou_content_wrapper_panel_title">
-                            <span>Request Quotes</span>
-                          </div>
+                          <!--
                           <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
                           <div class="thankyou_request_content_wrapper_panel">
                             <div class="thankyou_content_inner_title pt-2">
