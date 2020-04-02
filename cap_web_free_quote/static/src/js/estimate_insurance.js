@@ -4,6 +4,11 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
 
     $(document).ready(function () {
 
+        face_amount = document.querySelector("#ixn-website-quoter > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(7) > div:nth-child(2) > input[type=text]")
+        benefit = document.querySelector("#wrap > section > div > div.offset-lg-1.col-lg-5.col-xs-6 > div > div:nth-child(2) > div.thankyou_panel_1_total_btn > span")
+
+        face_amount.value = benefit.innerText
+
         $('.thankyou_req_quote').on('click', function(){
             var requested_benefit = $('#requested_benefit').val();
             var gender = $('#gender').val();
