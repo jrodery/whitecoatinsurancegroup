@@ -19,6 +19,7 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
           } else {
             setTimeout(checkContainer, 50); //wait 50 ms, then try again
           }
+        }
         checkContainer();
 
         $('.thankyou_req_quote').on('click', function(){
