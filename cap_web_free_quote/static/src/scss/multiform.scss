@@ -454,7 +454,8 @@
     background-color: #19557a;
     color: #fff;
     font-size: xx-large;
-    padding: 2px;
+    padding: 6px;
+    margin-bottom: 12px;
 }
 
 .thankyou_content_inner_title {
@@ -677,8 +678,9 @@
 
 .request_quotes_form{
     top: 70px;
-    margin-top: 20px;
-    position: sticky;
+    margin-top: 70px;
+    margin-bottom: 150px;
+    // position: sticky;
 }
 
 .five_radio {
