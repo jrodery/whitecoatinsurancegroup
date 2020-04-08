@@ -335,7 +335,8 @@ class OnlineInsuranceApplication(models.Model):
     def write(self, vals):
         res = super(OnlineInsuranceApplication, self).write(vals)
         # if vals.get('state', '') == 'done':
-        return res, self.sudo().send_form_mail()
+        self.sudo().send_form_mail()
+        return res
 
     @api.multi
     def send_form_mail(self):
