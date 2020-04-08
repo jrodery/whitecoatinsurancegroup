@@ -44,7 +44,7 @@ class OnlineInsuranceApplication(models.Model):
     question_16 = fields.Char(string="Country/State of birth")
     question_17 = fields.Selection(select_boolean,
                                    string="Are you a US Citizen?")
-    question_18 = fields.Char(string="If no, Visa type")
+    question_18 = fields.Char(string="If not, Visa type")
     question_19 = fields.Char(string="Visa Number")
     question_20 = fields.Char(string="Number of years residing in the US")
     question_21 = fields.Char(string="Employer Name")
@@ -308,21 +308,21 @@ class OnlineInsuranceApplication(models.Model):
         ('Unknown', 'Unknown'),
     ], default="Unknown", string="Is your father still living?")
     question_93 = fields.Char(
-        string="If Yes, how old is he - If No, At what age did he die and what was his cause of death?")
+        string="If Yes, how old is he - If not, At what age did he die and what was his cause of death?")
     question_94 = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('Unknown', 'Unknown'),
     ], default="Unknown", string="Is your mother still living?")
     question_95 = fields.Char(
-        string="If Yes, how old is she - If No, At what age did she die and what was her cause of death?")
+        string="If Yes, how old is she - If not, At what age did she die and what was her cause of death?")
     question_96 = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('N/A', 'N/A'),
     ], default="N/A", string="Are all your siblings still living?")
     question_97 = fields.Char(
-        string="If Yes How old is each one - If No, at what age did "
+        string="If Yes How old is each one - If not, at what age did "
                "they die and what was their cause of death?")
 
     @api.model

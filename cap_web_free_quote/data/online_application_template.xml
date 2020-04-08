@@ -34,7 +34,7 @@
                   <tr><td>Years lived at the current address?</td><td>${object.question_15}</td></tr>
                   <tr><td>Country/State of birth</td><td>${object.question_16}</td></tr>
                   <tr><td>Are you a US Citizen?</td><td>${object.question_17}</td></tr>
-                  <tr><td>If no, Visa type</td><td>${object.question_18}</td></tr>
+                  <tr><td>If not, Visa type</td><td>${object.question_18}</td></tr>
                   <tr><td>Visa Number</td><td>${object.question_19}</td></tr>
                   <tr><td>Number of years residing in the US</td><td>${object.question_20}</td></tr>
                   <tr><td>Employer Name</td><td>${object.question_21}</td></tr>
@@ -127,11 +127,11 @@
                   <tr><td>To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</td><td>${object.question_90}</td></tr>
                   <tr><td>Please provide details if you answered yes</td><td>${object.question_91}</td></tr>
                   <tr><td>Is your father still living?</td><td>${object.question_92}</td></tr>
-                  <tr><td>If Yes, how old is he - If No, At what age did he die and what was his cause of death?</td><td>${object.question_93}</td></tr>
+                  <tr><td>If Yes, how old is he - If not, At what age did he die and what was his cause of death?</td><td>${object.question_93}</td></tr>
                   <tr><td>Is your mother still living?</td><td>${object.question_94}</td></tr>
-                  <tr><td>If Yes, how old is she - If No, At what age did she die and what was her cause of death?</td><td>${object.question_95}</td></tr>
+                  <tr><td>If Yes, how old is she - If not, At what age did she die and what was her cause of death?</td><td>${object.question_95}</td></tr>
                   <tr><td>Are all your siblings still living?</td><td>${object.question_96}</td></tr>
-                  <tr><td>If Yes How old is each one - If No, at what age did they die and what was their cause of death?</td><td>${object.question_97}</td></tr>
+                  <tr><td>If Yes How old is each one - If not, at what age did they die and what was their cause of death?</td><td>${object.question_97}</td></tr>
              </tbody>
           </table>
           ]]>
