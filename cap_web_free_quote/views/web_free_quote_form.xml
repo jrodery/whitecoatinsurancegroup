@@ -194,9 +194,10 @@
                                     <option value="Unlimited">Unlimited</option>
                                 </select>
                                 <p class="col-form-label" title="If you are affiliated with a Hospital a discount may be available.  Please add the name of your hospital affiliation.">Hospital Affiliation: <i class="fa fa-info-circle"/></p>
-                                <input type="number" class="form-control o_website_form_input"
+                                <input type="text" class="form-control o_website_form_input"
                                        name="question_18"
-                                       required="" placeholder="Hospital Affiliation"/>        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                       required="" placeholder="Hospital Affiliation"/>
+
                                 <!-- <input class="form-field" type="hidden" name="subject" value="Quote Submission"/> -->
 
                                 <input type="button" name="previous" class="previous action-button-previous"
