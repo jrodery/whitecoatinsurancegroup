@@ -1,5 +1,5 @@
 <odoo>
-  <t name="Thank You" t-name="cap_web_free_quote.life_insurance_data_display_template">
+  <template id="life_insurance_data_display_template" name="Thank You">
           <t t-call="website.layout">
               <div id="wrap" class="insurance_data_css">
                   <section class="features">
@@ -90,7 +90,7 @@
                                   </div>
 
                                   <div class="thankyou_panel_1_total_btn">
-                                      <t t-esc="life.total_insurance" t-options="{                                        'widget': 'monetary',                                        'display_currency': currency_id                                        }"/>
+                                      <template t-esc="life.total_insurance" t-options="{                                        'widget': 'monetary',                                        'display_currency': currency_id                                        }"/>
                                   </div>
                               </div>
                               <!--Panel 1 End-->
@@ -370,5 +370,5 @@
                   </section>
               </div>
           </t>
-      </t>
+      </template>
 </odoo>
