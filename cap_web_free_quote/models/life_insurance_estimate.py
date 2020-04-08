@@ -252,8 +252,8 @@ class LifeInsuranceEstimate(models.Model):
         res = super(LifeInsuranceEstimate, self).write(vals)
         if vals.get('state', '') in ['done']:
             self.sudo().send_form_mail()
-        if vals.get('state', '') in ['draft', 'submitted', 'requested_quote']:
-            self.sudo().send_form_mail_admin()
+        # if vals.get('state', '') in ['draft', 'submitted', 'requested_quote']:
+        self.sudo().send_form_mail_admin()
         return res
 
     @api.multi
