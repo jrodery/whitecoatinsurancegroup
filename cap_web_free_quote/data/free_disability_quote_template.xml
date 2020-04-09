@@ -33,7 +33,7 @@
         <tr><td>COLA Benefit Period</td><td>${object.question_15}</td></tr>
         <tr><td>Guarantee</td><td>${object.question_16}</td></tr>
         <tr><td>Mental/Nervous Limitation</td><td>${object.question_17}</td></tr>
-        <tr><td>Hospital Affiliation</td><td>${'${0:,.2f}'.format(object.question_18)}</td></tr>
+        <tr><td>Hospital Affiliation</td><td>${object.question_18}</td></tr>
     </tbody>
 </table>]]></field>
     </record>
