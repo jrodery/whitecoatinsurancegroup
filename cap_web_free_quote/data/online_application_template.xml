@@ -22,120 +22,437 @@
                     <tr><td>First Name</td><td>${object.question_1}</td></tr>
                   % endif
 
-                  <tr><td>Last Name</td><td>${object.question_2}</td></tr>
+                  % if object.question_2:
+                    <tr><td>Last Name</td><td>${object.question_2}</td></tr>
+                  % endif
+
+                % if object.question_3:
                   <tr><td>Date of Birth</td><td>${object.question_3}</td></tr>
+                % endif
+
+                % if object.question_4:
                   <tr><td>Sex</td><td>${object.question_4}</td></tr>
+                % endif
+
+                % if object.question_5:
                   <tr><td>Home Street Address</td><td>${object.question_5}</td></tr>
+                % endif
+
+                % if object.question_6:
                   <tr><td>Home City</td><td>${object.question_6}</td></tr>
+                % endif
+
+                % if object.question_7:
                   <tr><td>Home State</td><td>${object.question_7}</td></tr>
+                % endif
+
+                % if object.question_8:
                   <tr><td>Home Zip</td><td>${object.question_8}</td></tr>
+                % endif
+
+                % if object.question_9:
                   <tr><td>Phone Number</td><td>${object.question_9}</td></tr>
+                % endif
+
+                % if object.question_10:
                   <tr><td>Email Address</td><td>${object.question_10}</td></tr>
+                % endif
+
+                % if object.question_11:
                   <tr><td>Social Security Number</td><td>${object.question_11}</td></tr>
+                % endif
+
+                % if object.question_12:
                   <tr><td>Drivers License Number</td><td>${object.question_12}</td></tr>
+                % endif
+
+                % if object.question_13:
                   <tr><td>License Issue State</td><td>${object.question_13}</td></tr>
+                % endif
+
+                % if object.question_14:
                   <tr><td>License Expiration Date</td><td>${object.question_14}</td></tr>
+                % endif
+
+                % if object.question_15:
                   <tr><td>Years lived at the current address?</td><td>${object.question_15}</td></tr>
+                % endif
+
+                % if object.question_16:
                   <tr><td>Country/State of birth</td><td>${object.question_16}</td></tr>
+                % endif
+
+                % if object.question_17:
                   <tr><td>Are you a US Citizen?</td><td>${object.question_17}</td></tr>
+                % endif
+
+                % if object.question_18:
                   <tr><td>If not, Visa type</td><td>${object.question_18}</td></tr>
+                % endif
+
+                % if object.question_19:
                   <tr><td>Visa Number</td><td>${object.question_19}</td></tr>
+                % endif
+
+                % if object.question_20:
                   <tr><td>Number of years residing in the US</td><td>${object.question_20}</td></tr>
+                % endif
+
+                % if object.question_21:
                   <tr><td>Employer Name</td><td>${object.question_21}</td></tr>
+                % endif
+
+                % if object.question_22:
                   <tr><td>Employer Street Address</td><td>${object.question_22}</td></tr>
+                % endif
+
+                % if object.question_23:
                   <tr><td>Employer City</td><td>${object.question_23}</td></tr>
+                % endif
+
+                % if object.question_24:
                   <tr><td>Employer State</td><td>${object.question_24}</td></tr>
+                % endif
+
+                % if object.question_25:
                   <tr><td>Employer Zip Code</td><td>${object.question_25}</td></tr>
+                % endif
+
+                % if object.question_26:
                   <tr><td>Occupation/Specialty</td><td>${object.question_26}</td></tr>
+                % endif
+
+                % if object.question_27:
                   <tr><td>Occupational duties</td><td>${object.question_27}</td></tr>
+                % endif
+
+                % if object.question_28:
                   <tr><td>The total number of years working in this occupation?</td><td>${object.question_28}</td></tr>
+                % endif
+
+                % if object.question_29:
                   <tr><td>The total number of years with the same employer?</td><td>${object.question_29}</td></tr>
+                % endif
+
+                % if object.question_30:
                   <tr><td>Do you work at least 30 hours per week?</td><td>${object.question_30}</td></tr>
+                % endif
+
+                % if object.question_31:
                   <tr><td>Have you ever had a professional license suspended or revoked, or is such license currently under review?</td><td>${object.question_31}</td></tr>
+                % endif
+
+                % if object.question_32:
                   <tr><td>If yes, please explain?</td><td>${object.question_32}</td></tr>
+                % endif
+
+                % if object.question_33:
                   <tr><td>Do you have any ownership in the business where you work?</td><td>${object.question_33}</td></tr>
+                % endif
+
+                % if object.question_34:
                   <tr><td>If yes, what percentage do you own?</td><td>${object.question_34}</td></tr>
+                % endif
+
+                % if object.question_35:
                   <tr><td>If Yes, what type of business is it?</td><td>${object.question_35}</td></tr>
+                % endif
+
+                % if object.question_36:
                   <tr><td>Are there more than 10 people employed with your current employer?</td><td>${object.question_36}</td></tr>
+                % endif
+
+                % if object.question_37:
                   <tr><td>What is your current projected YTD income?</td><td>${object.question_37}</td></tr>
+                % endif
+
+                % if object.question_38:
                   <tr><td>What was last year's Adjusted Gross Income Total?</td><td>${object.question_38}</td></tr>
+                % endif
+
+                % if object.question_39:
                   <tr><td>What was 2 years ago Adjusted Gross Income Total?</td><td>${object.question_39}</td></tr>
+                % endif
+
+                % if object.question_40:
                   <tr><td>Have you ever filed for personal or business bankruptcy?</td><td>${object.question_40}</td></tr>
+                % endif
+
+                % if object.question_41:
                   <tr><td>If Yes, please provide details including discharge date</td><td>${object.question_41}</td></tr>
+                % endif
+
+                % if object.question_42:
                   <tr><td>Do you have any existing Group or Individual Disability Insurance?</td><td>${object.question_42}</td></tr>
+                % endif
+
+                % if object.question_43:
                   <tr><td>If Yes, Carrier 1 name?</td><td>${object.question_43}</td></tr>
+                % endif
+
+                % if object.question_44:
                   <tr><td>Carrier 2 name?</td><td>${object.question_44}</td></tr>
+                % endif
+
+                % if object.question_45:
                   <tr><td>Carrier 1 total monthly benefit amount?</td><td>${object.question_45}</td></tr>
+                % endif
+
+                % if object.question_46:
                   <tr><td>Carrier 2 total monthly benefit amount?</td><td>${object.question_46}</td></tr>
+                % endif
+
+                % if object.question_47:
                   <tr><td>Is Carrier 1 employer paid?</td><td>${object.question_47}</td></tr>
+                % endif
+
+                % if object.question_48:
                   <tr><td>Is Carrier 2 employer paid?</td><td>${object.question_48}</td></tr>
+                % endif
+
+                % if object.question_49:
                   <tr><td>Will you be replacing any of your existing coverage?</td><td>${object.question_49}</td></tr>
+                % endif
+
+                % if object.question_50:
                   <tr><td>Do you want to provide any additional details regarding your current coverage?</td><td>${object.question_50}</td></tr>
+                % endif
+
+                % if object.question_51:
                   <tr><td>Have you used tobacco or nicotine products in any form within the last 5 years?</td><td>${object.question_51}</td></tr>
+                % endif
+
+                % if object.question_51_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_51_details}</td></tr>
+                % endif
 
+
+                % if object.question_52:
                   <tr><td>Have you ever applied for insurance or reinstatement which has been: Declined, Postponed, Rated, or Modified?</td><td>${object.question_52}</td></tr>
+                % endif
+
+                % if object.question_52_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_52_details}</td></tr>
+                % endif
 
+
+                % if object.question_53:
                   <tr><td>Have you ever received or claimed disability benefits for any injury, sickness or impaired condition?</td><td>${object.question_53}</td></tr>
+                % endif
+
+                % if object.question_53_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_53_details}</td></tr>
+                % endif
 
+
+                % if object.question_54:
                   <tr><td>Have you ever made any flights as a pilot, student pilot, or crew member of any aircraft?</td><td>${object.question_54}</td></tr>
+                % endif
+
+                % if object.question_54_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_54_details}</td></tr>
+                % endif
 
+
+                % if object.question_55:
                   <tr><td>Have you been convicted of a moving violation, had any traffic accidents, or had a driver's license revoked or suspended within the past 5 years?</td><td>${object.question_55}</td></tr>
+                % endif
+
+                % if object.question_55_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_55_details}</td></tr>
+                % endif
 
+
+                % if object.question_56:
                   <tr><td>Have you ever been charged with, or convicted of, or currently awaiting trial on the violation of any criminal law?</td><td>${object.question_56}</td></tr>
+                % endif
+
+                % if object.question_56_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_56_details}</td></tr>
+                % endif
 
+
+                % if object.question_57:
                   <tr><td>Do you belong to or intend to join the military in the next two years?</td><td>${object.question_57}</td></tr>
+                % endif
+
+                % if object.question_57_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_57_details}</td></tr>
+                % endif
 
-                  <tr><td>Engaged in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</td><td>${object.question_58}</td></tr>
+
+                % if object.question_58:
+                  <tr><td>Engaged  in or plan to engage in the next two years in any form of the following: Motorized Racing, Parachuting/Skydiving, Martial Arts, Scuba Diving, Mountain Climbing?</td><td>${object.question_58}</td></tr>
+                % endif
+
+                % if object.question_58_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_58_details}</td></tr>
+                % endif
 
+
+                % if object.question_60:
                   <tr><td>What is your Height?</td><td>${object.question_60}</td></tr>
+                % endif
+
+                % if object.question_61:
                   <tr><td>What is your weight?</td><td>${object.question_61}</td></tr>
+                % endif
+
+                % if object.question_62:
                   <tr><td>Have you seen a doctor within the past 5 years?</td><td>${object.question_62}</td></tr>
+                % endif
+
+                % if object.question_63:
                   <tr><td>If Yes, Please list all your doctor's names - Addresses - Telephone Numbers - Date of your last visit - Reason for your last visit.</td><td>${object.question_63}</td></tr>
+                % endif
+
+                % if object.question_64:
                   <tr><td>Do you currently take any prescription medications?</td><td>${object.question_64}</td></tr>
+                % endif
+
+                % if object.question_65:
                   <tr><td>If Yes, please list all medications names - doses - and the reason you are taking the medication.</td><td>${object.question_65}</td></tr>
+                % endif
+
+                % if object.question_66:
                   <tr><td>Has your weight changed by more than 10 lbs in the last twelve months?</td><td>${object.question_66}</td></tr>
+                % endif
+
+                % if object.question_67:
                   <tr><td>Have you ever been treated or diagnosed with High Blood Pressure or High Cholesterol?</td><td>${object.question_67}</td></tr>
-                  <tr><td>Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, recurrent headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system?</td><td>${object.question_68}</td></tr>
+                % endif
+
+                % if object.question_68:
+                  <tr><td>Have you ever been treated or diagnosed with dizziness, vertigo, fainting, seizures, current headache, speech defect, tremor, neuropathy, paralysis, multiple sclerosis, stroke, TIA, memory loss, dementia or any other disorder of the brain or nervous system?</td><td>${object.question_68}</td></tr>
+                % endif
+
+                % if object.question_69:
                   <tr><td>Have you ever been treated or diagnosed as having shortness of breath, chronic cough, bronchitis, asthma, emphysema, COPD, sleep apnea, or chronic respiratory disorder?</td><td>${object.question_69}</td></tr>
+                % endif
+
+                % if object.question_70:
                   <tr><td>Have you ever been treated or diagnosed as having chest pain, irregular heartbeat, heart murmur, heart valve disease, heart attack, coronary artery disease, heart failure, aneurysm or other heart or blood vessel disorder?</td><td>${object.question_70}</td></tr>
+                % endif
+
+                % if object.question_71:
                   <tr><td>Have you ever been treated or diagnosed as having intestinal bleeding, inflammatory bowel disease (including Crohn's disease or ulcerative colitis), hepatitis, diverticulitis, recurrent indigestion or any other esophagus, stomach, intestines, pancreas, liver or gallbladder disorder?</td><td>${object.question_71}</td></tr>
+                % endif
+
+                % if object.question_72:
                   <tr><td>Have you ever been treated or diagnosed as having sugar, protein, or blood in the urine; sexually transmitted disease (excluding HIV) chronic kidney disease, kidney stone or other kidney or bladder issues?</td><td>${object.question_72}</td></tr>
+                % endif
+
+                % if object.question_73:
                   <tr><td>Have you ever been treated or diagnosed as having diabetes, elevated blood sugar, thyroid, pituitary, adrenal or any other endocrine (glandular) disorders?</td><td>${object.question_73}</td></tr>
+                % endif
+
+                % if object.question_74:
                   <tr><td>Have you ever been treated or diagnosed as having breast, reproductive organ or prostate disorder?</td><td>${object.question_74}</td></tr>
+                % endif
+
+                % if object.question_75:
                   <tr><td>Have you ever had a C-section, miscarriage, or complication of pregnancy?</td><td>${object.question_75}</td></tr>
+                % endif
+
+                % if object.question_76:
                   <tr><td>Have you ever been treated or diagnosed as having a mass, polyp, cyst, tumor or cancer?</td><td>${object.question_76}</td></tr>
+                % endif
+
+                % if object.question_77:
                   <tr><td>Have you ever been treated or diagnosed as having allergies, skin disorders, anemia, bleeding, clotting, or other blood disorder?</td><td>${object.question_77}</td></tr>
+                % endif
+
+                % if object.question_78:
                   <tr><td>Have you ever been treated or diagnosed as having anxiety, depression, stress, ADHD, eating disorder or other psychiatric or mental health disorders?</td><td>${object.question_78}</td></tr>
+                % endif
+
+                % if object.question_79:
                   <tr><td>Have you ever been treated or diagnosed as having chronic fatigue, chronic pain, fibromyalgia, or fever of unknown cause?</td><td>${object.question_79}</td></tr>
+                % endif
+
+                % if object.question_80:
                   <tr><td>Are you currently pregnant?</td><td>${object.question_80}</td></tr>
+                % endif
+
+                % if object.question_81:
                   <tr><td>In the last 5 years have you received treatment from a licensed Chiropractor?</td><td>${object.question_81}</td></tr>
+                % endif
+
+                % if object.question_82:
                   <tr><td>In the last 5 years have you sought treatment from a licensed medical professional, had a checkup, illness, injury, or surgery; been a patient in a hospital; rehabilitation center or another medical facility; had an X-ray, EKG, heart scan, MRI or CT scan, biopsy or another diagnostic testing?</td><td>${object.question_82}</td></tr>
-                  <tr><td>In the last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</td><td>${object.question_83}</td></tr>
+                % endif
+
+                % if object.question_83:
+                  <tr><td>In last 5 years have you been advised by a licensed medical professional to have any diagnostic testing, hospitalization, or surgery which has not been completed?</td><td>${object.question_83}</td></tr>
+                % endif
+
+                % if object.question_83_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_83_details}</td></tr>
+                % endif
+
+                % if object.question_84:
                   <tr><td>In the last 10 years have you used marijuana, cocaine, heroin, barbiturates, tranquilizers, hallucinogens, amphetamines, narcotics, or any other drug, except as legally prescribed by a physician?</td><td>${object.question_84}</td></tr>
+                % endif
+
+                % if object.question_84_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_84_details}</td></tr>
+                % endif
+
+                % if object.question_85:
                   <tr><td>In the last 10 years have you sought, received or been advised to seek medical treatment from a licensed medical profession, counseling or participation in a support group for the use of alcohol or illegal drugs?</td><td>${object.question_85}</td></tr>
+                % endif
+
+                % if object.question_85_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_85_details}</td></tr>
+                % endif
+
+                % if object.question_87:
                   <tr><td>In the past 10 years have you consumed alcoholic beverages?</td><td>${object.question_87}</td></tr>
+                % endif
+
+                % if object.question_88:
                   <tr><td>If yes, how often do you drink?</td><td>${object.question_88}</td></tr>
+                % endif
+
+                % if object.question_89:
                   <tr><td>Have you ever tested positive for HIV or Aids?</td><td>${object.question_89}</td></tr>
+                % endif
+
+                % if object.question_89_details:
                   <tr><td>If yes, please provide details : yes</td><td>${object.question_89_details}</td></tr>
+                % endif
+
+                % if object.question_90:
                   <tr><td>To the best of your knowledge, have any of your immediate family members (Mother - Father - Sister - Brother) died of or been diagnosed as having coronary artery disease, stroke, diabetes, cancer, polycystic kidney disease, or Huntington's disease prior to their age of 60?</td><td>${object.question_90}</td></tr>
+                % endif
+
+                % if object.question_91:
                   <tr><td>Please provide details if you answered yes</td><td>${object.question_91}</td></tr>
+                % endif
+
+                % if object.question_92:
                   <tr><td>Is your father still living?</td><td>${object.question_92}</td></tr>
+                % endif
+
+                % if object.question_93:
                   <tr><td>If Yes, how old is he - If not, At what age did he die and what was his cause of death?</td><td>${object.question_93}</td></tr>
+                % endif
+
+                % if object.question_94:
                   <tr><td>Is your mother still living?</td><td>${object.question_94}</td></tr>
+                % endif
+
+                % if object.question_95:
                   <tr><td>If Yes, how old is she - If not, At what age did she die and what was her cause of death?</td><td>${object.question_95}</td></tr>
+                % endif
+
+                % if object.question_96:
                   <tr><td>Are all your siblings still living?</td><td>${object.question_96}</td></tr>
+                % endif
+
+                % if object.question_97:
                   <tr><td>If Yes How old is each one - If not, at what age did they die and what was their cause of death?</td><td>${object.question_97}</td></tr>
+                % endif
              </tbody>
           </table>
           ]]>
