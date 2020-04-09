@@ -2,7 +2,7 @@
 <odoo>
     <record id="mail_customer_online_insurance_application_form" model="mail.template">
         <field name="name">Customer Online Insurance Application</field>
-        <field name="email_from">${(user.email or 'info@whitecoatinsurancegroup.com')|safe}</field>
+        <field name="email_from">info@whitecoatinsurancegroup.com</field>
         <!-- <field name="email_to">${(object.question_10 or '')|safe}</field> -->
         <field name="email_to">info@whitecoatinsurancegroup.com</field>
         <field name="subject">Life Insurance Online Application</field>
