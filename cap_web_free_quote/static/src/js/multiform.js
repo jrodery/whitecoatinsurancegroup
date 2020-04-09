@@ -210,6 +210,12 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                         if(self.hasClass('insurance_done')) {
                             insurance_done();
                         }
+                        if(self.hasClass('submit_estimate')) {
+                            window.location.href = "/thank-you-page-evaluation";
+                        }
+                        if(self.hasClass('submit_quote')) {
+                            window.location.href = "/thank-you-page";
+                        }
                     });
                 }
             }
@@ -253,13 +259,6 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                 $('#msform').parent().addClass('offset-md-3');
                 $('#msform').parent().next().css("display", "none")
             }
-        });
-
-        $('#submit_quote').on('click', function(){
-            window.location.href = "/thank-you-page";
-        });
-        $('#submit_application').on('click', function(){
-            window.location.href = "/thank-you-page-evaluation";
         });
     });
 });
