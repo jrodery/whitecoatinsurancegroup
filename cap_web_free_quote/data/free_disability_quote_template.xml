@@ -70,7 +70,6 @@
         % if object.question_18:
           <tr><td>Hospital Affiliation</td><td>${object.question_18}</td></tr>
         % endif
-
     </tbody>
 </table>]]></field>
     </record>

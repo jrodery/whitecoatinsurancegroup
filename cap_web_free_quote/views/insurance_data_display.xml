@@ -1,441 +1,374 @@
 <odoo>
-    <template id="life_insurance_data_display_template" name="Thank You">
-        <t t-call="website.layout">
-            <div id="wrap" class="insurance_data_css">
-                <section class="features">
-                    <script>
-                    </script>
-                    <div class="row">
-                        <t t-set="life" t-value="insurance_data"/>
-                        <div class="offset-lg-2 col-lg-4 col-xs-6">
-                          <div class="thankyou_content_wrapper text-center">
-                            <!--Title That shows First/Last name and age-->
-                            <div class="thankyou_customer_details_wrapper">
-                                <h3>
-                                    <strong>
-                                        <span><t t-esc="life.question_28"/>&#160;&#160;<t t-esc="life.question_29"/>
-                                        </span>
-                                        <span>- Age <t t-esc="life.question_1"/>
-                                        </span>
-                                    </strong>
-                                </h3>
-                            </div>
-
-                            <t t-set="thk_invest_balance"
-                               t-value="life.total_insurance - (life.question_14_2 + life.question_22_1)"/>
-
-                            <!--Panel 1 Start-->
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/retirement.PNG"/>
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_title">
-                                            Desired Retirement Age
-                                        </div>
-                                        <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_2"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_7 > 0">
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/children.PNG"/>
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_title">
-                                            Kids/Future Kids
-                                        </div>
-                                        <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_7"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 > 0">
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/tuition.PNG"/>
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_title">
-                                            Tuition Responsibility
-                                        </div>
-                                        <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_14_2"
-                                               t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 > 0">
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/debt.PNG"/>
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_title">
-                                            Total Debt
-                                        </div>
-                                        <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_22_1"
-                                               t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_27_2 > 0">
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/expenses.PNG"/>
-                                    <div class="panel_1_gray_block_content_wrapper">
-                                        <div class="panel_1_gray_block_content_title">
-                                            Annual Recurring Expenses
-                                        </div>
-                                        <div class="panel_1_gray_block_content_details">
-                                            <t t-esc="life.question_27_2"
-                                               t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_pannel_overall_info_text">
-                                    Total Life Insurance Death Benefit Required to cover your lifestyle
-                                </div>
-
-                                <div class="thankyou_panel_1_total_btn">
-                                    <t t-esc="life.total_insurance"
-                                       t-options="{
-                                       'widget': 'monetary',
-                                       'display_currency': currency_id
-                                       }"
-                                    />
-                                </div>
-                            </div>
-                            <!--Panel 1 End-->
-
-                            <!--Panel 2 Start-->
-                            <div class="thankyou_content_wrapper_panel_title" t-if="life.question_14_2 > 0 or life.question_22_1 > 0 and thk_invest_balance > 0">
-                              <span>What's The Plan If you Die?</span>
-                            </div>
-
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="life.question_14_2 > 0 or life.question_22_1 > 0 and thk_invest_balance > 0">
-                              <t t-if="life.question_14_2 > 0 and life.question_22_1 > 0">
-                                <div class="thankyou_content_inner_title">
-                                  <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
-                                </div>
-                              </t>
-                              <t t-elif="life.question_14_2 > 0">
-                                <div class="thankyou_content_inner_title">
-                                  <span>Set Aside Funds for your Children's Education</span>
-                                </div>
-                              </t>
-                              <t t-elif="life.question_22_1 > 0">
-                                <div class="thankyou_content_inner_title">
-                                  <span>Pay Off Debts</span>
-                                </div>
-                              </t>
-
-                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 > 0">
-                                <div class="panel_1_gray_block_content_wrapper">
-                                  <div class="panel_1_gray_block_content_details">
-                                    <span t-esc="0 - life.question_14_2"
-                                      t-options="{
-                                      'widget': 'monetary',
-                                      'display_currency': currency_id
-                                      }"
-                                      />
-                                  </div>
-                                  <div class="panel_1_gray_block_content_title">
-                                    Tuition Savings
-                                  </div>
-                                </div>
-                                <img class="panel_1_gray_block_content_img"
-                                  src="/cap_web_free_quote/static/src/img/savings_tuition.PNG"/>
+  <template id="life_insurance_data_display_template" name="Thank You">
+          <t t-call="website.layout">
+              <div id="wrap" class="insurance_data_css">
+                  <section class="features">
+                      <script>
+                      </script>
+                      <div class="row">
+                          <t t-set="life" t-value="insurance_data"/>
+                          <div class="offset-lg-2 col-lg-4 col-xs-6">
+                            <div class="thankyou_content_wrapper text-center">
+                              <!--Title That shows First/Last name and age-->
+                              <div class="thankyou_customer_details_wrapper">
+                                  <h3>
+                                      <strong>
+                                          <span><t t-esc="life.question_28"/>  <t t-esc="life.question_29"/>
+                                          </span>
+                                          <span>- Age <t t-esc="life.question_1"/>
+                                          </span>
+                                      </strong>
+                                  </h3>
                               </div>
 
-                              <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 > 0">
+                              <t t-set="thk_invest_balance" t-value="life.total_insurance - (life.question_14_2 + life.question_22_1)"/>
+
+                              <!--Panel 1 Start-->
+                              <div class="thankyou_content_wrapper_panel thankyou_pannel_1">
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/retirement.PNG"/>
+                                      <div class="panel_1_gray_block_content_wrapper">
+                                          <div class="panel_1_gray_block_content_title">
+                                              Desired Retirement Age
+                                          </div>
+                                          <div class="panel_1_gray_block_content_details">
+                                              <t t-esc="life.question_2"/>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_7 &gt; 0">
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/children.PNG"/>
+                                      <div class="panel_1_gray_block_content_wrapper">
+                                          <div class="panel_1_gray_block_content_title">
+                                              Kids/Future Kids
+                                          </div>
+                                          <div class="panel_1_gray_block_content_details">
+                                              <t t-esc="life.question_7"/>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 &gt; 0">
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/tuition.PNG"/>
+                                      <div class="panel_1_gray_block_content_wrapper">
+                                          <div class="panel_1_gray_block_content_title">
+                                              Tuition Responsibility
+                                          </div>
+                                          <div class="panel_1_gray_block_content_details">
+                                              <t t-esc="life.question_14_2" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 &gt; 0">
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/debt.PNG"/>
+                                      <div class="panel_1_gray_block_content_wrapper">
+                                          <div class="panel_1_gray_block_content_title">
+                                              Total Debt
+                                          </div>
+                                          <div class="panel_1_gray_block_content_details">
+                                              <t t-esc="life.question_22_1" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_27_2 &gt; 0">
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/expenses.PNG"/>
+                                      <div class="panel_1_gray_block_content_wrapper">
+                                          <div class="panel_1_gray_block_content_title">
+                                              Annual Recurring Expenses
+                                          </div>
+                                          <div class="panel_1_gray_block_content_details">
+                                              <t t-esc="life.question_27_2" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="thankyou_pannel_overall_info_text">
+                                      Total Life Insurance Death Benefit Required to cover your lifestyle
+                                  </div>
+
+                                  <div class="thankyou_panel_1_total_btn">
+                                      <template t-esc="life.total_insurance" t-options="{                                        'widget': 'monetary',                                        'display_currency': currency_id                                        }"/>
+                                  </div>
+                              </div>
+                              <!--Panel 1 End-->
+
+                              <!--Panel 2 Start-->
+                              <div class="thankyou_content_wrapper_panel_title" t-if="life.question_14_2 &gt; 0 or life.question_22_1 &gt; 0 and thk_invest_balance &gt; 0">
+                                <span>What's The Plan If you Die?</span>
+                              </div>
+
+                              <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="life.question_14_2 &gt; 0 or life.question_22_1 &gt; 0 and thk_invest_balance &gt; 0">
+                                <t t-if="life.question_14_2 &gt; 0 and life.question_22_1 &gt; 0">
+                                  <div class="thankyou_content_inner_title">
+                                    <span>Pay Off Debt and Set Aside Funds for your Children's Education</span>
+                                  </div>
+                                </t>
+                                <t t-elif="life.question_14_2 &gt; 0">
+                                  <div class="thankyou_content_inner_title">
+                                    <span>Set Aside Funds for your Children's Education</span>
+                                  </div>
+                                </t>
+                                <t t-elif="life.question_22_1 &gt; 0">
+                                  <div class="thankyou_content_inner_title">
+                                    <span>Pay Off Debts</span>
+                                  </div>
+                                </t>
+
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 &gt; 0">
                                   <div class="panel_1_gray_block_content_wrapper">
-                                      <div class="panel_1_gray_block_content_details">
-                                          <span t-esc="0 - life.question_22_1"
-                                                t-options="{
-                                             'widget': 'monetary',
-                                             'display_currency': currency_id
-                                             }"
-                                          />
+                                    <div class="panel_1_gray_block_content_details">
+                                      <span t-esc="0 - life.question_14_2" t-options="{                                       'widget': 'monetary',                                       'display_currency': currency_id                                       }"/>
+                                    </div>
+                                    <div class="panel_1_gray_block_content_title">
+                                      Tuition Savings
+                                    </div>
+                                  </div>
+                                  <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/savings_tuition.PNG"/>
+                                </div>
+
+                                <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 &gt; 0">
+                                    <div class="panel_1_gray_block_content_wrapper">
+                                        <div class="panel_1_gray_block_content_details">
+                                            <span t-esc="0 - life.question_22_1" t-options="{                                              'widget': 'monetary',                                              'display_currency': currency_id                                              }"/>
+                                        </div>
+                                        <div class="panel_1_gray_block_content_title">
+                                            Pay Off Debts
+                                        </div>
+                                    </div>
+                                    <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG"/>
+                                </div>
+
+                                <t t-if="life.question_14_2 &gt; 0 and life.question_22_1 &gt; 0">
+                                  <div class="thankyou_pannel_overall_info_text">
+                                      Total Remaining Balance After Debts/Education are Paid
+                                  </div>
+                                </t>
+                                <t t-elif="life.question_14_2 &gt; 0">
+                                  <div class="thankyou_pannel_overall_info_text">
+                                      Total Remaining Balance After Education Paid
+                                  </div>
+                                </t>
+                                <t t-elif="life.question_22_1 &gt; 0">
+                                  <div class="thankyou_pannel_overall_info_text">
+                                      Total Remaining Balance After Debts are Paid
+                                  </div>
+                                </t>
+
+                                <div class="thankyou_panel_1_total_amount">
+                                    <t t-esc="thk_invest_balance" t-options="{                                      'widget': 'monetary',                                      'display_currency': currency_id                                      }"/>
+                                </div>
+                              </div>
+
+                              <!--Panel 2 End-->
+
+                              <!--Panel 3 Start-->
+                              <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance &gt; 0">
+                                  <div class="thankyou_content_inner_title">
+                                      <span>Invest the balance - The annual earned interest should cover your recurring annual expenses.
+                                      </span>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                      <div class="panel_2_gray_block_content_wrapper">
+                                          <div class="panel_2_gray_block_content_details">
+                                              <span t-esc="thk_invest_balance" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                          </div>
+                                          <div class="panel_2_gray_block_content_title">
+                                              Invest Balance
+                                          </div>
                                       </div>
-                                      <div class="panel_1_gray_block_content_title">
-                                          Pay Off Debts
+                                      <img class="panel_2_gray_block_content_img" src="/cap_web_free_quote/static/src/img/invest_balance.PNG"/>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_gray_block panel_1_gray_block">
+                                      <div class="panel_2_gray_block_content_wrapper">
+                                          <div class="panel_2_gray_block_content_details">
+                                              <span t-esc="thk_invest_balance * 0.05" t-options="{                                                     'widget': 'monetary',                                                     'display_currency': currency_id                                                   }"/>
+                                          </div>
+                                          <div class="panel_2_gray_block_content_title">
+                                              Annual Investment Income Covers Annual Recurring Expenses
+                                          </div>
+                                      </div>
+                                      <img class="panel_1_gray_block_content_img" src="/cap_web_free_quote/static/src/img/annual_investment.PNG"/>
+                                  </div>
+                              </div>
+                              <!--Panel 3 End-->
+
+                              <!--Panel 4 Start-->
+                              <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance &gt; 0">
+                                  <div class="thankyou_content_death_benefit">
+                                      <div class="thankyou_total_insurance">
+                                          <span t-esc="life.total_insurance" t-options="{                                                 'widget': 'monetary',                                                 'display_currency': currency_id                                               }"/>
+                                      </div>
+                                      <div class="thankyou_total_insurance">
+                                          <span>Death Benefit</span>
                                       </div>
                                   </div>
-                                  <img class="panel_1_gray_block_content_img"
-                                       src="/cap_web_free_quote/static/src/img/pay_off_debt.PNG"/>
+
+                                  <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_22_1 &gt; 0">
+                                      <div class="panel_2_white_block_content_wrapper">
+                                          <div class="panel_2_white_block_image_title">
+                                              Pays Off Your Debt
+                                          </div>
+                                      </div>
+                                      <img class="panel_2_gray_block_content_img" src="/cap_web_free_quote/static/src/img/debt_white.PNG"/>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_14_2 &gt; 0">
+                                      <div class="panel_2_white_block_content_wrapper">
+                                          <div class="panel_2_white_block_image_title">
+                                              Funds Your Kids Education
+                                          </div>
+                                      </div>
+                                      <img class="panel_2_gray_block_content_img" src="/cap_web_free_quote/static/src/img/tuition_white.PNG"/>
+                                  </div>
+
+                                  <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_27_2 &gt; 0">
+                                      <div class="panel_2_white_block_content_wrapper">
+                                          <div class="panel_2_white_block_image_title">
+                                              Covers All Your Annual Recurring Expenses
+                                          </div>
+                                      </div>
+                                      <img class="panel_2_gray_block_content_img" src="/cap_web_free_quote/static/src/img/expenses_white.PNG"/>
+                                  </div>
+
+                                  <div class="thankyou_panel_legacy_white_block" t-if="thk_invest_balance &gt; 0">
+                                      <div class="panel_2_white_block_legacy_worth_title pb-4">
+                                          And Still Leaves Behind A Financial Legacy Worth:
+                                      </div>
+                                      <div class="panel_2_white_block_legacy_worth_amount">
+                                          <span t-esc="thk_invest_balance" t-options="{                                                 'widget': 'monetary',                                                 'display_currency': currency_id                                               }"/>
+                                      </div>
+                                  </div>
                               </div>
-
-                              <t t-if="life.question_14_2 > 0 and life.question_22_1 > 0">
-                                <div class="thankyou_pannel_overall_info_text">
-                                    Total Remaining Balance After Debts/Education are Paid
-                                </div>
-                              </t>
-                              <t t-elif="life.question_14_2 > 0">
-                                <div class="thankyou_pannel_overall_info_text">
-                                    Total Remaining Balance After Education Paid
-                                </div>
-                              </t>
-                              <t t-elif="life.question_22_1 > 0">
-                                <div class="thankyou_pannel_overall_info_text">
-                                    Total Remaining Balance After Debts are Paid
-                                </div>
-                              </t>
-
-                              <div class="thankyou_panel_1_total_amount">
-                                  <t t-esc="thk_invest_balance"
-                                     t-options="{
-                                     'widget': 'monetary',
-                                     'display_currency': currency_id
-                                     }"
-                                  />
-                              </div>
-                            </div>
-
-                            <!--Panel 2 End-->
-
-                            <!--Panel 3 Start-->
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance > 0">
-                                <div class="thankyou_content_inner_title">
-                                    <span>Invest the balance - The annual earned interest should cover your recurring annual expenses.
-                                    </span>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
-                                    <div class="panel_2_gray_block_content_wrapper">
-                                        <div class="panel_2_gray_block_content_details">
-                                            <span t-esc="thk_invest_balance"
-                                                  t-options="{
-                                               'widget': 'monetary',
-                                               'display_currency': currency_id
-                                               }"
-                                            />
-                                        </div>
-                                        <div class="panel_2_gray_block_content_title">
-                                            Invest Balance
-                                        </div>
-                                    </div>
-                                    <img class="panel_2_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/invest_balance.PNG"/>
-                                </div>
-
-                                <div class="thankyou_panel_content_gray_block panel_1_gray_block">
-                                    <div class="panel_2_gray_block_content_wrapper">
-                                        <div class="panel_2_gray_block_content_details">
-                                            <span t-esc="thk_invest_balance * 0.05"
-                                                  t-options="{
-                                                    'widget': 'monetary',
-                                                    'display_currency': currency_id
-                                                  }"
-                                            />
-                                        </div>
-                                        <div class="panel_2_gray_block_content_title">
-                                            Annual Investment Income Covers Annual Recurring Expenses
-                                        </div>
-                                    </div>
-                                    <img class="panel_1_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/annual_investment.PNG"/>
-                                </div>
-                            </div>
-                            <!--Panel 3 End-->
-
-                            <!--Panel 4 Start-->
-                            <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance > 0">
-                                <div class="thankyou_content_death_benefit">
-                                    <div class="thankyou_total_insurance">
-                                        <span t-esc="life.total_insurance"
-                                              t-options="{
-                                                'widget': 'monetary',
-                                                'display_currency': currency_id
-                                              }"
-                                        />
-                                    </div>
-                                    <div class="thankyou_total_insurance">
-                                        <span>Death Benefit</span>
-                                    </div>
-                                </div>
-
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_22_1 > 0">
-                                    <div class="panel_2_white_block_content_wrapper">
-                                        <div class="panel_2_white_block_image_title">
-                                            Pays Off Your Debt
-                                        </div>
-                                    </div>
-                                    <img class="panel_2_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/debt_white.PNG"/>
-                                </div>
-
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_14_2 > 0">
-                                    <div class="panel_2_white_block_content_wrapper">
-                                        <div class="panel_2_white_block_image_title">
-                                            Funds Your Kids Education
-                                        </div>
-                                    </div>
-                                    <img class="panel_2_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/tuition_white.PNG"/>
-                                </div>
-
-                                <div class="thankyou_panel_content_white_block panel_1_gray_block" t-if="life.question_27_2 > 0">
-                                    <div class="panel_2_white_block_content_wrapper">
-                                        <div class="panel_2_white_block_image_title">
-                                            Covers All Your Annual Recurring Expenses
-                                        </div>
-                                    </div>
-                                    <img class="panel_2_gray_block_content_img"
-                                         src="/cap_web_free_quote/static/src/img/expenses_white.PNG"/>
-                                </div>
-
-                                <div class="thankyou_panel_legacy_white_block" t-if="thk_invest_balance > 0">
-                                    <div class="panel_2_white_block_legacy_worth_title pb-4">
-                                        And Still Leaves Behind A Financial Legacy Worth:
-                                    </div>
-                                    <div class="panel_2_white_block_legacy_worth_amount">
-                                        <span t-esc="thk_invest_balance"
-                                              t-options="{
-                                                'widget': 'monetary',
-                                                'display_currency': currency_id
-                                              }"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Panel 4 End-->
-                        </div>
-                        </div>
-                        <!--Request Quote form-->
-                        <div class="col-lg-4 col-xs-6 ">
-                          <div class="thankyou_content_wrapper request_quotes_form">
-
-                            <div class="thankyou_content_wrapper_panel_title">
-                              <span>Request Quotes</span>
-                            </div>
-
-                            <link href="https://wq.ixn.tech/css/reset.css" rel="stylesheet" type="text/css"/>
-                            <script type="text/javascript">
-                              window.IXN_QUOTER_CONFIG = { id: "729b9afb-1384-4eaf-968f-19cb4db6344c" }
-                            </script>
-                            <div id="ixn-website-quoter"> </div>
-                            <script type="text/javascript" src="https://wq.ixn.tech/js/website_quoter.widget.js"></script>
+                              <!--Panel 4 End-->
                           </div>
-                          <!--
-                          <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
-                          <div class="thankyou_request_content_wrapper_panel">
-                            <div class="thankyou_content_inner_title pt-2">
-                              <span t-esc="life.question_28 + ' ' + life.question_29"/>
-                              <span id="thankyou_quote_receive_msg" style="color: #056705; display: none;"> - Quote Request received! We will get back to you shortly.</span>
-                              <span id="thankyou_quote_receive_error_msg" style="color: #ff0000; display: none;"> - There is some problem to save.</span>
-                            </div>
-                            <div class="thankyou_panel_request_death_benefit_content">
-                              <span>Death Benefit:
+                          </div>
+                          <!--Request Quote form-->
+                          <div class="col-lg-4 col-xs-6 ">
+                            <div class="thankyou_content_wrapper request_quotes_form">
 
-                                <div class="flex">
-                                  <span class="currency" style="position:absolute;left: 80px;">$</span>
-                                  <input id="requested_benefit" name="requested_benefit"
-                                    type="text" maxlength="12"
-                                    style="text-align: center;border:none;color:#07aff0;"
-                                    required="True" t-att-value="'{0:,.2f}'.format(life.total_insurance)"
-                                    t-att-placeholder="'{0:,.2f}'.format(life.total_insurance)"/>
-                                </div>
-
-                                </span>
+                              <div class="thankyou_content_wrapper_panel_title">
+                                <span>Request Quotes</span>
                               </div>
-                              <div>
-                                <input id="date_of_birth" type="text" class="thankyou_input_data"
-                                  name="date_of_birth" required="True"
-                                  placeholder="Date of birth: MM/DD/YYYY"/>
+
+                              <link href="https://wq.ixn.tech/css/reset.css" rel="stylesheet" type="text/css"/>
+                              <script type="text/javascript">
+                                window.IXN_QUOTER_CONFIG = { id: "729b9afb-1384-4eaf-968f-19cb4db6344c" }
+                              </script>
+                              <div id="ixn-website-quoter"> </div>
+                              <script type="text/javascript" src="https://wq.ixn.tech/js/website_quoter.widget.js"/>
+                            </div>
+                            <!--
+                            <input type="hidden" t-att-value="life.ref_code" name="reference" id="reference"/>
+                            <div class="thankyou_request_content_wrapper_panel">
+                              <div class="thankyou_content_inner_title pt-2">
+                                <span t-esc="life.question_28 + ' ' + life.question_29"/>
+                                <span id="thankyou_quote_receive_msg" style="color: #056705; display: none;"> - Quote Request received! We will get back to you shortly.</span>
+                                <span id="thankyou_quote_receive_error_msg" style="color: #ff0000; display: none;"> - There is some problem to save.</span>
+                              </div>
+                              <div class="thankyou_panel_request_death_benefit_content">
+                                <span>Death Benefit:
+
+                                  <div class="flex">
+                                    <span class="currency" style="position:absolute;left: 80px;">$</span>
+                                    <input id="requested_benefit" name="requested_benefit"
+                                      type="text" maxlength="12"
+                                      style="text-align: center;border:none;color:#07aff0;"
+                                      required="True" t-att-value="'{0:,.2f}'.format(life.total_insurance)"
+                                      t-att-placeholder="'{0:,.2f}'.format(life.total_insurance)"/>
+                                  </div>
+
+                                  </span>
                                 </div>
                                 <div>
-                                  <select type="text" class="thankyou_input_data"
-                                    id="gender" name="gender" required="True" style="text-align-last:center;">
-                                    <option value="">Sex</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                  </select>
-                                </div>
-                                <div>
-                                  <input type="text" class="thankyou_input_data"
-                                    id="state" name="state" required="True"
-                                    placeholder="State"/>
+                                  <input id="date_of_birth" type="text" class="thankyou_input_data"
+                                    name="date_of_birth" required="True"
+                                    placeholder="Date of birth: MM/DD/YYYY"/>
                                   </div>
                                   <div>
                                     <select type="text" class="thankyou_input_data"
-                                      id="do_you_smoke" name="do_you_smoke" required="True" style="text-align-last:center;">
-                                      <option value="">Do You Smoke?</option>
-                                      <option value="Yes">Yes</option>
-                                      <option value="No">No</option>
+                                      id="gender" name="gender" required="True" style="text-align-last:center;">
+                                      <option value="">Sex</option>
+                                      <option value="Male">Male</option>
+                                      <option value="Female">Female</option>
                                     </select>
                                   </div>
+                                  <div>
+                                    <input type="text" class="thankyou_input_data"
+                                      id="state" name="state" required="True"
+                                      placeholder="State"/>
+                                    </div>
+                                    <div>
+                                      <select type="text" class="thankyou_input_data"
+                                        id="do_you_smoke" name="do_you_smoke" required="True" style="text-align-last:center;">
+                                        <option value="">Do You Smoke?</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                      </select>
+                                    </div>
 
-                                  <div class="thankyou_rate_health">
-                                    <span>Rate Your Health</span>
-                                    <div class="star-rating">
-                                      <span class="fa fa-star-o star1 star_label"  data-rating="1"></span>
-                                      <span class="fa fa-star-o" data-rating="2"></span>
-                                      <span class="fa fa-star-o star3 star_label" data-rating="3"></span>
-                                      <span class="fa fa-star-o" data-rating="4"></span>
-                                      <span class="fa fa-star-o star5 star_label" data-rating="5"></span>
-                                      <input type="hidden" id="rating" value="0"/>
+                                    <div class="thankyou_rate_health">
+                                      <span>Rate Your Health</span>
+                                      <div class="star-rating">
+                                        <span class="fa fa-star-o star1 star_label"  data-rating="1"></span>
+                                        <span class="fa fa-star-o" data-rating="2"></span>
+                                        <span class="fa fa-star-o star3 star_label" data-rating="3"></span>
+                                        <span class="fa fa-star-o" data-rating="4"></span>
+                                        <span class="fa fa-star-o star5 star_label" data-rating="5"></span>
+                                        <input type="hidden" id="rating" value="0"/>
+                                      </div>
                                     </div>
                                   </div>
+
+
+                                  <div class="thankyou_content_wrapper_panel">
+                                    <div class="thankyou_panel_request_death_benefit_content">
+                                      Choose Policy Type(s)
+                                    </div>
+                                    <div class="thankyou_policy_content pb-2">
+                                      <div class="thankyou_policy_radio">
+                                        <label class="thankyou_policy_radio_label">10 Year Level Term
+                                          <input type="radio" value="10 Year Level Term" name="policy_type" id="policy_type"/>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                      </div>
+                                      <div class="thankyou_policy_radio">
+                                        <label class="thankyou_policy_radio_label">15 Year Level Term
+                                          <input type="radio" name="policy_type" value="15 Year Level Term" id="policy_type"/>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                      </div>
+                                      <div class="thankyou_policy_radio">
+                                        <label class="thankyou_policy_radio_label">20 Year Level Term
+                                          <input type="radio" name="policy_type" value="20 Year Level Term" id="policy_type"/>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                      </div>
+                                      <div class="thankyou_policy_radio">
+                                        <label class="thankyou_policy_radio_label">30 Year Level Term
+                                          <input type="radio" name="policy_type" value="30 Year Level Term" id="policy_type"/>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                      </div>
+                                      <div class="thankyou_policy_radio">
+                                        <label class="thankyou_policy_radio_label">LifeTime Coverage
+                                          <input type="radio" name="policy_type" value="LifeTime Coverage" id="policy_type"/>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div id="msform" style="margin-top:0;">
+                                      <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit"/>
+                                    </div>
+                                  </div> -->
                                 </div>
-
-
-                                <div class="thankyou_content_wrapper_panel">
-                                  <div class="thankyou_panel_request_death_benefit_content">
-                                    Choose Policy Type(s)
-                                  </div>
-                                  <div class="thankyou_policy_content pb-2">
-                                    <div class="thankyou_policy_radio">
-                                      <label class="thankyou_policy_radio_label">10 Year Level Term
-                                        <input type="radio" value="10 Year Level Term" name="policy_type" id="policy_type"/>
-                                        <span class="checkmark"></span>
-                                      </label>
-                                    </div>
-                                    <div class="thankyou_policy_radio">
-                                      <label class="thankyou_policy_radio_label">15 Year Level Term
-                                        <input type="radio" name="policy_type" value="15 Year Level Term" id="policy_type"/>
-                                        <span class="checkmark"></span>
-                                      </label>
-                                    </div>
-                                    <div class="thankyou_policy_radio">
-                                      <label class="thankyou_policy_radio_label">20 Year Level Term
-                                        <input type="radio" name="policy_type" value="20 Year Level Term" id="policy_type"/>
-                                        <span class="checkmark"></span>
-                                      </label>
-                                    </div>
-                                    <div class="thankyou_policy_radio">
-                                      <label class="thankyou_policy_radio_label">30 Year Level Term
-                                        <input type="radio" name="policy_type" value="30 Year Level Term" id="policy_type"/>
-                                        <span class="checkmark"></span>
-                                      </label>
-                                    </div>
-                                    <div class="thankyou_policy_radio">
-                                      <label class="thankyou_policy_radio_label">LifeTime Coverage
-                                        <input type="radio" name="policy_type" value="LifeTime Coverage" id="policy_type"/>
-                                        <span class="checkmark"></span>
-                                      </label>
-                                    </div>
-                                  </div>
-                                  <div id="msform" style="margin-top:0;">
-                                    <input type="button" name="Submit" class="thankyou_req_quote action-button mb-4 mt-1" value="Submit"/>
-                                  </div>
-                                </div> -->
-                              </div>
-                    </div>
-                </section>
-            </div>
-        </t>
-    </template>
+                      </div>
+                  </section>
+              </div>
+          </t>
+      </template>
 </odoo>

@@ -3,7 +3,6 @@ odoo.define('cap_web_free_quote.estimate_insurance', function (require) {
     var ajax = require('web.ajax');
 
     $(document).ready(function () {
-
         $('.thankyou_req_quote').on('click', function(){
             var gender = $('#gender').val();
             var state = $('#state').val();

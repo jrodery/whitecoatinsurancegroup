@@ -67,9 +67,9 @@
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                         <input id="date_of_birth" type="text"
-                                          class="form-control form-input-text o_website_form_input format-date input-date-save"
-                                          name="question_3" required="True"
-                                          placeholder="Date of birth: MM/DD/YYYY"/>
+                                               class="form-control form-input-text o_website_form_input format-date input-date-save"
+                                               name="question_3" required="True"
+                                               placeholder="Date of birth: MM/DD/YYYY"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom" style="margin-bottom:10px">
                                               <select class="form-control o_website_form_input label_insurance_app"
@@ -934,7 +934,7 @@
                                         <textarea class="form-control o_website_form_input" style="display: none;"
                                           name="question_91" placeholder="Please provide details if you answered yes"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
                                           <p class="custom-control-inline">Is your father still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -948,10 +948,10 @@
                                           </div>
                                       </div>
 
-                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                        <textarea class="form-control o_website_form_input"
                                           name="question_93" placeholder="If Yes, how old is he - If not, At what age did he die and what was his cause of death?"/>
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
                                           <p class="custom-control-inline">Is your mother still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -965,11 +965,11 @@
                                           </div>
                                       </div>
 
-                                        <textarea class="form-control o_website_form_input" style="display: none;"
+                                        <textarea class="form-control o_website_form_input"
                                           name="question_95" placeholder="If Yes, how old is she - If not, At what age did she die and what was her cause of death?"/>
 
 
-                                      <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">
+                                      <div class="form-field o_website_form_custom o_website_form_required_custom">
                                           <p class="custom-control-inline">Are all your siblings still living?</p>
                                           <div class="custom-control custom-radio custom-control-inline">
                                               <input type="radio" class="custom-control-input question_radio"
@@ -988,7 +988,7 @@
                                           </div>
                                       </div>
 
-                                              <textarea class="form-control o_website_form_input" style="display: none;"
+                                              <textarea class="form-control o_website_form_input"
                                                 name="question_97" placeholder="If Yes How old is each one - If not, at what age did they die and what was their cause of death?"/>
                                       <input type="button" name="previous" class="previous action-button-previous"
                                              value="Previous"/>

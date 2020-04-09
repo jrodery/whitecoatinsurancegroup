@@ -21,13 +21,13 @@
     position: relative;
 }
 
+#msform .form-field {
+    text-align: left;
+}
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
     display: none;
-}
-
-#msform .form-field {
-    text-align: left;
 }
 
 /*inputs*/
