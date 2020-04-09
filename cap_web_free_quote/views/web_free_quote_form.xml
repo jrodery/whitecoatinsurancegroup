@@ -206,9 +206,14 @@
                                         data-store-model="free.disability.quote"
                                         data-route="/insurance/freequote-form"
                                         data-route-done="/insurance/freequote-form-done"
-                                        class="next estimate_next submit_quote action-button" value="Get Quote"/>
+                                        class="next estimate_next submit_estimate action-button" value="Get Quote"/>
                                 <!-- <button class="btn action-button o_website_form_send" data-original-title="" title="" aria-describedby="tooltip496317" style="">Get Quote</button> -->
                                 <span id="o_website_form_result" class="text-danger ml8"/>
+                              </fieldset>
+
+                              <!-- Thank You -->
+                              <fieldset>
+                                  <h2>Thank you for completing the Quote Request!<br/>We will contact you shortly.</h2>
                               </fieldset>
                               <!-- <input class="form-field" type="hidden" name="email_to" value="info@whitecoatinsurancegroup.com"/> -->
                             </form>
