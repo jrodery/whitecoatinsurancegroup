@@ -24,7 +24,7 @@ class FreeDisabilityQuote(models.Model):
     question_3 = fields.Char(string="Email",
                              track_visibility="onchange")
     question_4 = fields.Char(string="Phone")
-    question_5 = fields.Char(string="Area Code")
+    question_5 = fields.Char(string="Zip Code")
 
     # Step - 2
     question_6 = fields.Char(string="Medical Speciality")

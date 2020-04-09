@@ -29,7 +29,7 @@
           <tr><td>Phone</td><td>${object.question_4}</td></tr>
         % endif
         % if object.question_5:
-          <tr><td>Area Code</td><td>${object.question_5}</td></tr>
+          <tr><td>Zip Code</td><td>${object.question_5}</td></tr>
         % endif
         % if object.question_6:
           <tr><td>Medical speciality</td><td>${object.question_6}</td></tr>
