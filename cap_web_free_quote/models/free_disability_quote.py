@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of CAPTIVEA. Odoo 12 EE
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class FreeDisabilityQuote(models.Model):
