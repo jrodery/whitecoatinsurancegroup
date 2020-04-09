@@ -16,24 +16,60 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td>First Name</td><td>${object.question_1}</td></tr>
-        <tr><td>Last Name</td><td>${object.question_2}</td></tr>
-        <tr><td>Email</td><td>${object.question_3}</td></tr>
-        <tr><td>Phone</td><td>${object.question_4}</td></tr>
-        <tr><td>Area Code</td><td>${object.question_5}</td></tr>
-        <tr><td>Medical speciality</td><td>${object.question_6}</td></tr>
-        <tr><td>Date of Birth</td><td>${object.question_7}</td></tr>
-        <tr><td>Sex</td><td>${object.question_8}</td></tr>
-        <tr><td>State</td><td>${object.question_9}</td></tr>
-        <tr><td>Desired Monthly Benefit</td><td>${object.question_10}</td></tr>
-        <tr><td>Definition of Total Disability</td><td>${object.question_11}</td></tr>
-        <tr><td>Waiting/Elimination Period</td><td>${object.question_12}</td></tr>
-        <tr><td>Benefit Period</td><td>${object.question_13}</td></tr>
-        <tr><td>Residual/Partial Coverage</td><td>${object.question_14}</td></tr>
-        <tr><td>COLA Benefit Period</td><td>${object.question_15}</td></tr>
-        <tr><td>Guarantee</td><td>${object.question_16}</td></tr>
-        <tr><td>Mental/Nervous Limitation</td><td>${object.question_17}</td></tr>
-        <tr><td>Hospital Affiliation</td><td>${object.question_18}</td></tr>
+      % if object.question_1:
+          <tr><td>First Name</td><td>${object.question_1}</td></tr>
+        % endif
+        % if object.question_2:
+          <tr><td>Last Name</td><td>${object.question_2}</td></tr>
+        % endif
+        % if object.question_3:
+          <tr><td>Email</td><td>${object.question_3}</td></tr>
+        % endif
+        % if object.question_4:
+          <tr><td>Phone</td><td>${object.question_4}</td></tr>
+        % endif
+        % if object.question_5:
+          <tr><td>Area Code</td><td>${object.question_5}</td></tr>
+        % endif
+        % if object.question_6:
+          <tr><td>Medical speciality</td><td>${object.question_6}</td></tr>
+        % endif
+        % if object.question_7:
+          <tr><td>Date of Birth</td><td>${object.question_7}</td></tr>
+        % endif
+        % if object.question_8:
+          <tr><td>Sex</td><td>${object.question_8}</td></tr>
+        % endif
+        % if object.question_9:
+          <tr><td>State</td><td>${object.question_9}</td></tr>
+        % endif
+        % if object.question_10:
+          <tr><td>Desired Monthly Benefit</td><td>${'${0:,.2f}'.format(object.question_10)}</td></tr>
+        % endif
+        % if object.question_11:
+          <tr><td>Definition of Total Disability</td><td>${object.question_11}</td></tr>
+        % endif
+        % if object.question_12:
+          <tr><td>Waiting/Elimination Period</td><td>${object.question_12}</td></tr>
+        % endif
+        % if object.question_13:
+          <tr><td>Benefit Period</td><td>${object.question_13}</td></tr>
+        % endif
+        % if object.question_14:
+          <tr><td>Residual/Partial Coverage</td><td>${object.question_14}</td></tr>
+        % endif
+        % if object.question_15:
+          <tr><td>COLA Benefit Period</td><td>${object.question_15}</td></tr>
+        % endif
+        % if object.question_16:
+          <tr><td>Guarantee</td><td>${object.question_16}</td></tr>
+        % endif
+        % if object.question_17:
+          <tr><td>Mental/Nervous Limitation</td><td>${object.question_17}</td></tr>
+        % endif
+        % if object.question_18:
+          <tr><td>Hospital Affiliation</td><td>${object.question_18}</td></tr>
+        % endif
     </tbody>
 </table>]]></field>
     </record>
