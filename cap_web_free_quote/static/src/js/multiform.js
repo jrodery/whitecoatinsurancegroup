@@ -210,6 +210,12 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                         if(self.hasClass('insurance_done')) {
                             insurance_done();
                         }
+                        if(self.hasClass('submit_application')) {
+                            window.location.href = "/thank-you-page-evaluation";
+                        }
+                        if(self.hasClass('submit_quote')) {
+                            window.location.href = "/thank-you-page";
+                        }
                     });
                 }
             }

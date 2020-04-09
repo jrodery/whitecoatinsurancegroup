@@ -83,11 +83,9 @@
                               <fieldset>
                                 <h2 class="fs-title">request a quote</h2>
                                 <input type="text" class="form-control form-input-text o_website_form_input"
-                                                   name="question_1" required="True" placeholder="First Name"
-                                                   onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                                   name="question_1" required="True" placeholder="First Name"/>
                                  <input type="text" class="form-control form-input-text o_website_form_input"
-                                        name="question_2" required="True" placeholder="Last Name"
-                                        onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                        name="question_2" required="True" placeholder="Last Name"/>
                                   <input type="email"
                                          class="form-control form-input-text o_website_form_input format-email"
                                          name="question_3" required="True" placeholder="Email"/>
@@ -97,7 +95,7 @@
                                          maxlength="10"
                                          onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"/>
                                   <input type="text" class="form-control form-input-text o_website_form_input"
-                                         name="question_5" required="True" placeholder="Area Code"/>
+                                         name="question_5" required="True" placeholder="Zip Code"/>
                                   <input type="button" name="next" class="next estimate_next action-button"
                                          value="Next"
                                          data-route="/insurance/freequote-form"
@@ -112,8 +110,7 @@
                                        name="question_7" required="True"
                                        placeholder="Date of birth: MM/DD/YYYY"/>
                                 <input type="text" class="form-control form-input-text o_website_form_input"
-                                       name="question_9" required="True" placeholder="State"
-                                       onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"/>
+                                       name="question_9" required="True" placeholder="State"/>
                                 <select class="form-control o_website_form_input" name="question_8"
                                         required="True">
                                     <option value="Male">Male</option>
@@ -206,7 +203,7 @@
                                         data-store-model="free.disability.quote"
                                         data-route="/insurance/freequote-form"
                                         data-route-done="/insurance/freequote-form-done"
-                                        class="next estimate_next submit_estimate action-button" value="Get Quote"/>
+                                        class="next estimate_next submit_quote action-button" value="Get Quote"/>
                                 <!-- <button class="btn action-button o_website_form_send" data-original-title="" title="" aria-describedby="tooltip496317" style="">Get Quote</button> -->
                                 <span id="o_website_form_result" class="text-danger ml8"/>
                               </fieldset>
