@@ -254,5 +254,12 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                 $('#msform').parent().next().css("display", "none")
             }
         });
+
+        $('#submit_quote').on('click', function(){
+            window.location.href = "/thank-you-page";
+        });
+        $('#submit_application').on('click', function(){
+            window.location.href = "/thank-you-page-evaluation";
+        });
     });
 });
