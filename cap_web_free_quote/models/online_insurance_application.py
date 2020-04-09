@@ -244,7 +244,7 @@ class OnlineInsuranceApplication(models.Model):
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('N/A', 'N/A'),
-    ], default="N/A", string="Are you currently pregnant?")
+    ], string="Are you currently pregnant?")
     question_81 = fields.Selection(
         select_boolean,
         string="In the last 5 years have you received "
@@ -306,21 +306,21 @@ class OnlineInsuranceApplication(models.Model):
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('Unknown', 'Unknown'),
-    ], default="Unknown", string="Is your father still living?")
+    ], string="Is your father still living?")
     question_93 = fields.Char(
         string="If Yes, how old is he - If not, At what age did he die and what was his cause of death?")
     question_94 = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('Unknown', 'Unknown'),
-    ], default="Unknown", string="Is your mother still living?")
+    ], string="Is your mother still living?")
     question_95 = fields.Char(
         string="If Yes, how old is she - If not, At what age did she die and what was her cause of death?")
     question_96 = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No'),
         ('N/A', 'N/A'),
-    ], default="N/A", string="Are all your siblings still living?")
+    ], string="Are all your siblings still living?")
     question_97 = fields.Char(
         string="If Yes How old is each one - If not, at what age did "
                "they die and what was their cause of death?")
