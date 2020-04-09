@@ -992,7 +992,7 @@
                                                 name="question_97" placeholder="If Yes How old is each one - If not, at what age did they die and what was their cause of death?"/>
                                       <input type="button" name="previous" class="previous action-button-previous"
                                              value="Previous"/>
-                                      <input type="button" name="next" class="next estimate_next action-button" id="submit_application"
+                                      <input type="button" name="next" class="next estimate_next submit_application action-button"
                                              value="Submit"
                                              data-route="/insurance/insurance-application"
                                              data-route-done="/insurance/insurance-application-done"
