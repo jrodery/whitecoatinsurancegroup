@@ -56,7 +56,7 @@
                                               Tuition Responsibility
                                           </div>
                                           <div class="panel_1_gray_block_content_details">
-                                              <t t-esc="life.question_14_2" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                              <t t-esc="life.question_14_2" t-options="{'widget': 'monetary','display_currency': currency_id}"/>
                                           </div>
                                       </div>
                                   </div>
@@ -68,7 +68,7 @@
                                               Total Debt
                                           </div>
                                           <div class="panel_1_gray_block_content_details">
-                                              <t t-esc="life.question_22_1" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                              <t t-esc="life.question_22_1" t-options="{'widget': 'monetary','display_currency': currency_id}"/>
                                           </div>
                                       </div>
                                   </div>
@@ -80,7 +80,7 @@
                                               Annual Recurring Expenses
                                           </div>
                                           <div class="panel_1_gray_block_content_details">
-                                              <t t-esc="life.question_27_2" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                              <t t-esc="life.question_27_2" t-options="{'widget': 'monetary','display_currency': currency_id}"></t>
                                           </div>
                                       </div>
                                   </div>
@@ -90,7 +90,7 @@
                                   </div>
 
                                   <div class="thankyou_panel_1_total_btn">
-                                      <template t-esc="life.total_insurance" t-options="{                                        'widget': 'monetary',                                        'display_currency': currency_id                                        }"/>
+                                      <t t-esc="life.total_insurance" t-options="{'widget': 'monetary','display_currency': currency_id}"></t>
                                   </div>
                               </div>
                               <!--Panel 1 End-->
@@ -120,7 +120,7 @@
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_14_2 &gt; 0">
                                   <div class="panel_1_gray_block_content_wrapper">
                                     <div class="panel_1_gray_block_content_details">
-                                      <span t-esc="0 - life.question_14_2" t-options="{                                       'widget': 'monetary',                                       'display_currency': currency_id                                       }"/>
+                                      <span t-esc="0 - life.question_14_2" t-options="{'widget': 'monetary','display_currency': currency_id}"/>
                                     </div>
                                     <div class="panel_1_gray_block_content_title">
                                       Tuition Savings
@@ -132,7 +132,7 @@
                                 <div class="thankyou_panel_content_gray_block panel_1_gray_block" t-if="life.question_22_1 &gt; 0">
                                     <div class="panel_1_gray_block_content_wrapper">
                                         <div class="panel_1_gray_block_content_details">
-                                            <span t-esc="0 - life.question_22_1" t-options="{                                              'widget': 'monetary',                                              'display_currency': currency_id                                              }"/>
+                                            <span t-esc="0 - life.question_22_1" t-options="{'widget': 'monetary','display_currency': currency_id}"/>
                                         </div>
                                         <div class="panel_1_gray_block_content_title">
                                             Pay Off Debts
@@ -174,7 +174,7 @@
                                   <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                       <div class="panel_2_gray_block_content_wrapper">
                                           <div class="panel_2_gray_block_content_details">
-                                              <span t-esc="thk_invest_balance" t-options="{                                                'widget': 'monetary',                                                'display_currency': currency_id                                                }"/>
+                                              <span t-esc="thk_invest_balance" t-options="{'widget': 'monetary','display_currency': currency_id}"/>
                                           </div>
                                           <div class="panel_2_gray_block_content_title">
                                               Invest Balance
@@ -186,8 +186,8 @@
                                   <div class="thankyou_panel_content_gray_block panel_1_gray_block">
                                       <div class="panel_2_gray_block_content_wrapper">
                                           <div class="panel_2_gray_block_content_details">
-                                              <span t-esc="thk_invest_balance * 0.05" t-options="{                                                     'widget': 'monetary',                                                     'display_currency': currency_id                                                   }"/>
-                                          </div>
+                                              <span t-esc="thk_invest_balance * 0.05" t-options="'widget': 'monetary''display_currency': currency_id}"/>
+                                        </div>
                                           <div class="panel_2_gray_block_content_title">
                                               Annual Investment Income Covers Annual Recurring Expenses
                                           </div>
@@ -201,7 +201,7 @@
                               <div class="thankyou_content_wrapper_panel thankyou_pannel_1" t-if="thk_invest_balance &gt; 0">
                                   <div class="thankyou_content_death_benefit">
                                       <div class="thankyou_total_insurance">
-                                          <span t-esc="life.total_insurance" t-options="{                                                 'widget': 'monetary',                                                 'display_currency': currency_id                                               }"/>
+                                          <span t-esc="life.total_insurance" t-options="{ 'widget': 'monetary', 'display_currency': currency_id}"/>
                                       </div>
                                       <div class="thankyou_total_insurance">
                                           <span>Death Benefit</span>
@@ -240,7 +240,7 @@
                                           And Still Leaves Behind A Financial Legacy Worth:
                                       </div>
                                       <div class="panel_2_white_block_legacy_worth_amount">
-                                          <span t-esc="thk_invest_balance" t-options="{                                                 'widget': 'monetary',                                                 'display_currency': currency_id                                               }"/>
+                                          <span t-esc="thk_invest_balance" t-options="{ 'widget': 'monetary', 'display_currency': currency_id}"/>
                                       </div>
                                   </div>
                               </div>

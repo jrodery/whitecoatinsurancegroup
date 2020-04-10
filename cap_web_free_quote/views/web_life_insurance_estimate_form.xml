@@ -194,7 +194,7 @@
                                                    class="form-control form-input-text o_website_form_input"
                                                    style="display: none;"
                                                    name="question_7"
-                                                   placeholder="Current/Future Kids?"/>
+                                                   placeholder="# of Current/Future Kids?"/>
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_8" style="display: none;"
@@ -222,12 +222,14 @@
                                                     <label class="custom-control-label" for="question_11_no">No</label>
                                                 </div>
                                             </div>
-                                            <input type="number"
-                                                   class="form-control form-input-text o_website_form_input"
-                                                   name="question_12" style="display: none;"
-                                                   placeholder="College Savings goal"
-                                                   title="By the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
-
+                                            <div class="text-left mt-4">
+                                              <p class="custom-control-inline">By the time your child reaches college - how much do you think it will cost to send each individual child through school?</p>
+                                              <input type="number"
+                                                     class="form-control form-input-text o_website_form_input"
+                                                     name="question_12" style="display: none;"
+                                                     placeholder="College Savings/Kid Goal"
+                                                     title="By the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
+                                            </div>
                                             <div class="text-left mt-4" data-next="1" style="display: none;">
                                                 <p class="custom-control-inline">Do you currently have any money saved for college?</p>
 

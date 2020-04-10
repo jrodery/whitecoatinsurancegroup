@@ -49,20 +49,6 @@
                             </div>
                           </div>
                         </section>
-                        <style>
-                          span.title {
-                              font-weight: 200;
-                          }
-                          p.col-form-label{
-                            font-weight:bold;
-                            text-align:left;
-                            margin-top:8px
-                          }
-                          span.col-form-label-span{
-                            text-align:left;
-                            font-weight: normal;
-                          }
-                        </style>
                         <div class="row" style="height:650px;">
                           <div class="col-md-6 pb16" style="margin:0 auto;">
                             <form id="msform" style="height:auto;"

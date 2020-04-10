@@ -48,6 +48,19 @@
     border-radius: 0.25em;
 }
 
+#msform fieldset span.title {
+    font-weight: 200;
+}
+#msform fieldset p.col-form-label{
+  font-weight:bold;
+  text-align:left;
+  margin-top:8px
+}
+#msform fieldset span.col-form-label-span{
+  text-align:left;
+  font-weight: normal;
+}
+
 #msform input:focus, #msform textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
