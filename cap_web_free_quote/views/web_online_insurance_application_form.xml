@@ -144,7 +144,7 @@
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                               <input type="text" class="form-control o_website_form_input"
-                                                     name="question_15" required="True" placeholder="Years lived at the current address?"/>
+                                                     name="question_15" required="True" placeholder="Yrs at current address?"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                               <input type="text" class="form-control o_website_form_input"
@@ -208,11 +208,11 @@
                                   <fieldset>
                                       <div class="form-field o_website_form_custom">
                                         <input type="number" class="form-control o_website_form_input" required="True"
-                                               name="question_28" placeholder="The total number of years working in this occupation?"/>
+                                               name="question_28" placeholder="Years working in occupation?"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                         <input type="number" class="form-control o_website_form_input" required="True"
-                                               name="question_29" placeholder="The total number of years with the same employer?"/>
+                                               name="question_29" placeholder="Years with same employer?"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                           <p class="custom-control-inline">Do you work at least 30 hours per week?</p>
@@ -295,15 +295,15 @@
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                         <input type="text" class="form-control o_website_form_input"
-                                               name="question_37" required="True" placeholder="What is your current projected YTD income?"/>
+                                               name="question_37" required="True" placeholder="Current YTD income?"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                         <input type="number" class="form-control o_website_form_input"
-                                               name="question_38" required="True" placeholder="What was last year's Adjusted Gross Income Total?"/>
+                                               name="question_38" required="True" placeholder="Last Year's Income?"/>
                                       </div>
                                       <div class="form-field o_website_form_custom o_website_form_required_custom">
                                         <input type="number" class="form-control o_website_form_input"
-                                               name="question_39" required="True" placeholder="What was 2 years ago Adjusted Gross Income Total?"/>
+                                               name="question_39" required="True" placeholder="2 Years Ago Income"/>
                                       </div>
 
                                       <div class="form-field o_website_form_custom o_website_form_required_custom" data-next="1">

@@ -69,11 +69,9 @@
                                         <fieldset>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_28" required="True"
-                                                   onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"
                                                    placeholder="What is your First Name?"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_29" required="True"
-                                                   onkeypress="return (event.charCode &gt; 64 &amp;&amp; event.charCode &lt; 91) || (event.charCode &gt; 96 &amp;&amp; event.charCode &lt; 123)"
                                                    placeholder="What is your Last Name?"/>
                                             <input type="text"
                                                    class="form-control form-input-text format-email o_website_form_input"
@@ -83,7 +81,7 @@
                                                    class="form-control form-input-text o_website_form_input format-phone"
                                                    name="question_31" required="True" maxlength="10"
                                                    onkeypress="return (event.charCode &gt; 47 &amp;&amp; event.charCode &lt; 58)"
-                                                   placeholder="What's your best contact phone number?"/>
+                                                   placeholder="Mobile Phone"/>
                                             <input type="text" class="form-control form-input-text o_website_form_input"
                                                    name="question_32" required="True"
                                                    placeholder="What is the zip code of your area?"/>
@@ -123,7 +121,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_4" style="display: none;"
-                                                   placeholder="How much income does your spouse earn per year?"/>
+                                                   placeholder="Spouse Annual Income"/>
 
                                             <div class="text-left mt-4" data-next="1" style="display: none;">
                                                 <p class="custom-control-inline">Will your spouse continue to work if
@@ -161,7 +159,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_5_2" style="display: none;"
-                                                   placeholder="If you die, how much do you anticipate the annual child expense to be?"/>
+                                                   placeholder="Annual Child Expense"/>
 
                                             <input type="button" name="previous"
                                                    class="previous action-button-previous hide_total"
@@ -196,11 +194,11 @@
                                                    class="form-control form-input-text o_website_form_input"
                                                    style="display: none;"
                                                    name="question_7"
-                                                   placeholder="How many do you have or plan to have?"/>
+                                                   placeholder="Current/Future Kids?"/>
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_8" style="display: none;"
-                                                   placeholder="Age of your youngest child? If Unborn or infant, choose (0)"/>
+                                                   placeholder="Youngest Child's Age?"/>
                                             <!-- <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
@@ -227,7 +225,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_12" style="display: none;"
-                                                   placeholder="By the time your child reaches college - how much do you think it will cost to send each individual child through school?"
+                                                   placeholder="College Savings goal"
                                                    title="By the time your child reaches college - how much do you think it will cost to send each individual child through school?"/>
 
                                             <div class="text-left mt-4" data-next="1" style="display: none;">
@@ -248,7 +246,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_14" style="display: none;"
-                                                   placeholder="What is the approx balance of your college savings?"/>
+                                                   placeholder="Balance?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
@@ -295,7 +293,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_18" style="display: none;"
-                                                   placeholder="What is your total Credit Cards Balance?"/>
+                                                   placeholder="Credit Cards Balance?"/>
 
                                             <div class="text-left mt-4" data-next="1">
                                                 <p class="custom-control-inline">Do you have car payments?</p>
@@ -314,7 +312,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_20" style="display: none;"
-                                                   placeholder="What is the total remaining balance of what you owe?"/>
+                                                   placeholder="Car Payments Balance?"/>
 
                                             <div class="text-left mt-4" data-next="1">
                                                 <p class="custom-control-inline">Do you have any additional Debt (student loans, personal loans, etc...)</p>
@@ -333,7 +331,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_22" style="display: none;"
-                                                   placeholder="What is the total balance you owe?"/>
+                                                   placeholder="Remaining Balance?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="next" class="next estimate_next action-button"
@@ -347,11 +345,11 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input check_amount_format"
                                                    name="question_23" required="True"
-                                                   placeholder="What are your annual property taxes? If you rent, put 0"/>
+                                                   placeholder="Annual Property Taxes?"/>
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_24" required="True"
-                                                   placeholder="What is the cost of your Homeowners or Renters insurance policy annually?"/>
+                                                   placeholder="Homeowners Ins. Annual Cost?"/>
 
                                             <div class="text-left mt-4" data-next="1">
                                                 <p class="custom-control-inline">Are you responsible for paying HOA fees?</p>
@@ -374,7 +372,7 @@
                                             <input type="number"
                                                    class="form-control form-input-text o_website_form_input"
                                                    name="question_27" required="True"
-                                                   placeholder="How much per month do you spend on additional living expenses (Food, Electricity, Gas, ...)?"/>
+                                                   placeholder="Additional MonthlyExpenses?"/>
                                             <input type="button" name="previous" class="previous action-button-previous"
                                                    value="Previous"/>
                                             <input type="button" name="done"

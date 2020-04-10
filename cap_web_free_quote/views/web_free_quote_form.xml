@@ -83,9 +83,9 @@
                               <fieldset>
                                 <h2 class="fs-title">request a quote</h2>
                                 <input type="text" class="form-control form-input-text o_website_form_input"
-                                                   name="question_1" required="True" placeholder="First Name"/>
+                                                   name="question_1" required="True" placeholder="First name"/>
                                  <input type="text" class="form-control form-input-text o_website_form_input"
-                                        name="question_2" required="True" placeholder="Last Name"/>
+                                        name="question_2" required="True" placeholder="Last name"/>
                                   <input type="email"
                                          class="form-control form-input-text o_website_form_input format-email"
                                          name="question_3" required="True" placeholder="Email"/>
