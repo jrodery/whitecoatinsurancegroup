@@ -211,6 +211,9 @@ odoo.define('cap_web_free_quote.free_quote', function (require){
                             insurance_done();
                         }
                         if(self.hasClass('submit_application')) {
+                            window.location.href = "/tylifeapp";
+                        }
+                        if(self.hasClass('submit_disability')) {
                             window.location.href = "/tydisabilityapp";
                         }
                         if(self.hasClass('submit_quote')) {
